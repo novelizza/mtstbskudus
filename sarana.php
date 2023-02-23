@@ -52,7 +52,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link active" href="index.php">Beranda</a></li>
+                    <li><a class="nav-link" href="index.php">Beranda</a></li>
                     <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="sambutankepalamadrasah.php">Sambutan Kepala Madrasah</a></li>
@@ -66,7 +66,7 @@
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
                     <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
                         style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul>
+                        <ul style="margin-left: -40px;">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="brosur.php">Brosur</a></li>
                         </ul>
@@ -216,7 +216,7 @@
                 </div>
             </div><!-- End Tujuan Section -->
 
-            <!-- ======= Tujuan Section ======= -->
+            <!-- ======= Ekstrakulikuler Section ======= -->
             <div id="testimonials" class="testimonials-ekstra">
                 <div class="container">
                     <div class="swiper-slide">
@@ -229,7 +229,128 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-music-note-beamed" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Marching Band</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row flex-grow-1">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-calculator" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Olimpiade Matematika</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col h-100">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-fingerprint" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Olimpiade Biologi</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-droplet-half" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Olimpiade Fisika</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-globe-americas" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Olimpiade IPS</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-book-half" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">B.Arab & Qiroatul Kutub Matematika
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-translate" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Bahasa Inggris</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-translate" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Bahasa Jawa</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-pencil-fill" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Jurnalistik</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-image" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Desain Grafis</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-music-note-list" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Rebana</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-easel2-fill" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Kaligrafi</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-person-fill-up" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Pencak Silat</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body" style="text-align: center;">
+                                    <i class="bi bi-signpost-split" style="color: #4ECB71; font-size: 64px;"></i><br>
+                                    <h5 class="card-title">Pramuka
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Tujuan Section -->
 

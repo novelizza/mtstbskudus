@@ -44,38 +44,33 @@
         <div class="container d-flex justify-content-between">
 
             <div class="logo">
-                <h1><a href="index.php"><span>e</span>Business</a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <h6 style="color: white;">
+                    <img src="assets/img/logo.png" alt="" style="margin-right: 10px;">
+                    Madrasah Tsanawiyah NU Tasywiquth Thullab Salafiyah (TBS) Kudus
+                </h6>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="active" href="blog.php">Blog</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <li><a class="nav-link" href="index.php">Beranda</a></li>
+                    <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
+                            <li><a href="sambutankepalamadrasah.php">Sambutan Kepala Madrasah</a></li>
+                            <li><a href="profilmadrasah.php">Profil Madrasah</a></li>
+                            <li><a href="visimisi.php">Visi Misi & Tujuan</a></li>
+                            <li><a href="pendidik.php">Pendidik & Tenaga Kependidikan</a></li>
+                            <li><a href="kurikulum.php">Kurikulum</a></li>
+                            <li><a href="sarana.php">Sarana & Prasarana</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
+                    <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
+                        style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
+                        <ul style="margin-left: -40px;">
+                            <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
+                            <li><a href="brosur.php">Brosur</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -83,32 +78,247 @@
         </div>
     </header><!-- End Header -->
 
-    <main id="main">
+    <!-- ======= hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-        <!-- ======= Blog Header ======= -->
-        <div class="header-bg page-area">
-            <div class="container position-relative">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="slider-content text-center">
-                            <div class="header-bottom">
-                                <div class="layer2">
-                                    <h1 class="title2">My Blog</h1>
-                                </div>
-                                <div class="layer3">
-                                    <h2 class="title3">Profesional Blog Page</h2>
-                                </div>
+                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active"
+                        style="background-image: url(assets/img/hero-carousel/hero1.jpeg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h1 class="animate__animated animate__fadeInDown">Madrasah Tsanawiyah NU<br>Tasywiquth
+                                    Thullab Salafiyah Kudus</h1>
+                                <img src="assets/img/logo.png" alt="TBS KUDUS" style="width: 200px; height: 195px;">
                             </div>
                         </div>
                     </div>
+
+                    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero2.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h1 class="animate__animated animate__fadeInDown">Visi Misi & Tujuan</h1>
+                                <p class="animate__animated animate__fadeInUp">Madrasah Tsanawiyah NU Tasywiquth Thullab
+                                    Salafiyah Kudus</p>
+                                <a href="#about"
+                                    class="btn-get-started scrollto animate__animated animate__fadeInUp">Baca
+                                    Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero3.jpeg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h1 class="animate__animated animate__fadeInDown">Sarana & Prasarana</h1>
+                                <p class="animate__animated animate__fadeInUp">Madrasah Tsanawiyah NU Tasywiquth Thullab
+                                    Salafiyah Kudus</p>
+                                <a href="#about"
+                                    class="btn-get-started scrollto animate__animated animate__fadeInUp">Lihat</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
+
             </div>
-        </div><!-- End Blog Header -->
+        </div>
+    </section><!-- End Hero Section -->
+
+    <main id="main">
 
         <!-- ======= Blog Page ======= -->
         <div class="blog-page area-padding">
             <div class="container">
                 <div class="row">
+
+                    <!-- End left sidebar -->
+                    <!-- Start single blog -->
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="">
+                                            <img src="assets/img/blog/1.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="bi bi-chat"></i>
+                                            <a href="#">11 comments</a>
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
+                                        </span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4>
+                                            <a href="#">Post my imagine Items</a>
+                                        </h4>
+                                        <p>
+                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                                            bibendum sodales, augue velit.
+                                        </p>
+                                    </div>
+                                    <span>
+                                        <a href="" class="ready-btn">Read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="">
+                                            <img src="assets/img/blog/2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="bi bi-chat"></i>
+                                            <a href="#">7 comments</a>
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
+                                        </span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4>
+                                            <a href="#">Post my imagine Items</a>
+                                        </h4>
+                                        <p>
+                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                                            bibendum sodales, augue velit.
+                                        </p>
+                                    </div>
+                                    <span>
+                                        <a href="" class="ready-btn">Read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Start single blog -->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="">
+                                            <img src="assets/img/blog/3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="bi bi-chat"></i>
+                                            <a href="#">13 comments</a>
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
+                                        </span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4>
+                                            <a href="#">Post my imagine Items</a>
+                                        </h4>
+                                        <p>
+                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                                            bibendum sodales, augue velit.
+                                        </p>
+                                    </div>
+                                    <span>
+                                        <a href="" class="ready-btn">Read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="">
+                                            <img src="assets/img/blog/4.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="bi bi-chat"></i>
+                                            <a href="#">1 comments</a>
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
+                                        </span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4>
+                                            <a href="#">Post my imagine Items</a>
+                                        </h4>
+                                        <p>
+                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                                            bibendum sodales, augue velit.
+                                        </p>
+                                    </div>
+                                    <span>
+                                        <a href="" class="ready-btn">Read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Start single blog -->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="">
+                                            <img src="assets/img/blog/5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="bi bi-chat"></i>
+                                            <a href="#">10 comments</a>
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
+                                        </span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4>
+                                            <a href="#">Post my imagine Items</a>
+                                        </h4>
+                                        <p>
+                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                                            bibendum sodales, augue velit.
+                                        </p>
+                                    </div>
+                                    <span>
+                                        <a href="" class="ready-btn">Read more</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                            <div class="blog-pagination">
+                                <ul class="pagination">
+                                    <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="page-head-blog">
                             <div class="single-blog-page">
@@ -179,264 +389,6 @@
                                     </div>
                                 </div>
                                 <!-- recent end -->
-                            </div>
-                            <div class="single-blog-page">
-                                <div class="left-blog">
-                                    <h4>categories</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Portfolio</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Project</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">wordpress</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Joomla</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Html</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Website</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="single-blog-page">
-                                <div class="left-blog">
-                                    <h4>archive</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="#">07 July 2016</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">29 June 2016</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">13 May 2016</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">20 March 2016</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">09 Fabruary 2016</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="single-blog-page">
-                                <div class="left-tags blog-tags">
-                                    <div class="popular-tag left-side-tags left-blog">
-                                        <h4>popular tags</h4>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Portfolio</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Project</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Design</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Website</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Joomla</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Html</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">wordpress</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Masonry</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End left sidebar -->
-                    <!-- Start single blog -->
-                    <div class="col-md-8 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="single-blog">
-                                    <div class="single-blog-img">
-                                        <a href="blog-details.php">
-                                            <img src="assets/img/blog/1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="comments-type">
-                                            <i class="bi bi-chat"></i>
-                                            <a href="#">11 comments</a>
-                                        </span>
-                                        <span class="date-type">
-                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
-                                        </span>
-                                    </div>
-                                    <div class="blog-text">
-                                        <h4>
-                                            <a href="#">Post my imagine Items</a>
-                                        </h4>
-                                        <p>
-                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
-                                            bibendum sodales, augue velit.
-                                        </p>
-                                    </div>
-                                    <span>
-                                        <a href="blog-details.php" class="ready-btn">Read more</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End single blog -->
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="single-blog">
-                                    <div class="single-blog-img">
-                                        <a href="blog-details.php">
-                                            <img src="assets/img/blog/2.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="comments-type">
-                                            <i class="bi bi-chat"></i>
-                                            <a href="#">7 comments</a>
-                                        </span>
-                                        <span class="date-type">
-                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
-                                        </span>
-                                    </div>
-                                    <div class="blog-text">
-                                        <h4>
-                                            <a href="#">Post my imagine Items</a>
-                                        </h4>
-                                        <p>
-                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
-                                            bibendum sodales, augue velit.
-                                        </p>
-                                    </div>
-                                    <span>
-                                        <a href="blog-details.php" class="ready-btn">Read more</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Start single blog -->
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="single-blog">
-                                    <div class="single-blog-img">
-                                        <a href="blog-details.php">
-                                            <img src="assets/img/blog/3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="comments-type">
-                                            <i class="bi bi-chat"></i>
-                                            <a href="#">13 comments</a>
-                                        </span>
-                                        <span class="date-type">
-                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
-                                        </span>
-                                    </div>
-                                    <div class="blog-text">
-                                        <h4>
-                                            <a href="#">Post my imagine Items</a>
-                                        </h4>
-                                        <p>
-                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
-                                            bibendum sodales, augue velit.
-                                        </p>
-                                    </div>
-                                    <span>
-                                        <a href="blog-details.php" class="ready-btn">Read more</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End single blog -->
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="single-blog">
-                                    <div class="single-blog-img">
-                                        <a href="blog-details.php">
-                                            <img src="assets/img/blog/4.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="comments-type">
-                                            <i class="bi bi-chat"></i>
-                                            <a href="#">1 comments</a>
-                                        </span>
-                                        <span class="date-type">
-                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
-                                        </span>
-                                    </div>
-                                    <div class="blog-text">
-                                        <h4>
-                                            <a href="#">Post my imagine Items</a>
-                                        </h4>
-                                        <p>
-                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
-                                            bibendum sodales, augue velit.
-                                        </p>
-                                    </div>
-                                    <span>
-                                        <a href="blog-details.php" class="ready-btn">Read more</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Start single blog -->
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="single-blog">
-                                    <div class="single-blog-img">
-                                        <a href="blog-details.php">
-                                            <img src="assets/img/blog/5.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <span class="comments-type">
-                                            <i class="bi bi-chat"></i>
-                                            <a href="#">10 comments</a>
-                                        </span>
-                                        <span class="date-type">
-                                            <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
-                                        </span>
-                                    </div>
-                                    <div class="blog-text">
-                                        <h4>
-                                            <a href="#">Post my imagine Items</a>
-                                        </h4>
-                                        <p>
-                                            Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
-                                            mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
-                                            bibendum sodales, augue velit.
-                                        </p>
-                                    </div>
-                                    <span>
-                                        <a href="blog-details.php" class="ready-btn">Read more</a>
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- End single blog -->
-                            <div class="blog-pagination">
-                                <ul class="pagination">
-                                    <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
-                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>

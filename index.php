@@ -66,7 +66,7 @@
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
                     <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
                         style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul>
+                        <ul style="margin-left: -40px;">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="brosur.php">Brosur</a></li>
                         </ul>
@@ -203,7 +203,7 @@
                                     <a class="services-icon" href="#">
                                         <i class="bi bi-briefcase"></i>
                                     </a>
-                                    <h4>Expert Coder</h4>
+                                    <h4>Hafalan Al-Qur'an</h4>
                                     <p>
                                         will have to make sure the prototype looks finished by inserting text or
                                         photo.make sure the prototype looks finished by.
@@ -220,7 +220,7 @@
                                     <a class="services-icon" href="#">
                                         <i class="bi bi-card-checklist"></i>
                                     </a>
-                                    <h4>Creative Designer</h4>
+                                    <h4>Hafalan Kitab - Kitab</h4>
                                     <p>
                                         will have to make sure the prototype looks finished by inserting text or
                                         photo.make sure the prototype looks finished by.
@@ -238,7 +238,7 @@
                                     <a class="services-icon" href="#">
                                         <i class="bi bi-bar-chart"></i>
                                     </a>
-                                    <h4>Wordpress Developer</h4>
+                                    <h4>Teknologi Informasi</h4>
                                     <p>
                                         will have to make sure the prototype looks finished by inserting text or
                                         photo.make sure the prototype looks finished by.

@@ -66,7 +66,7 @@
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
                     <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
                         style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul>
+                        <ul style="margin-left: -40px;">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="brosur.php">Brosur</a></li>
                         </ul>
@@ -202,62 +202,96 @@
                     <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/hasa.jpeg" alt="" style="width: 80px; height: 100px;"><br>
+                                <img src="assets/img/guru/hasa.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/KH. MUSYAFFA_ DURRI.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/mut.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/KH. NOOR HABIB, S. Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/KH. AHMAD HAMDI ASMU_I, Lc.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/Drs. H. HAMZAH.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. MOCH. SA_DULLAH WAHHAB.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/AHMAD SYAFI_I, A.Md.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Drs. H. Hasan Bisyri MS</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/KH. MUSYAFFA_ DURRI.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Musyaffa' Durri</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/mut.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>H. Ahmad Muttaqin</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/KH. NOOR HABIB, S. Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Noor Habib, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/KH. AHMAD HAMDI ASMU_I, Lc.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Ahmad Hamdi Asmu'i, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/Drs. H. HAMZAH.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Drs. H. Hamzah</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. MOCH. SA_DULLAH WAHHAB.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Moch. Sa'dullah Wahhab</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/AHMAD SYAFI_I, A.Md.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Ahmad Syafi'i, A.Md</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -266,61 +300,95 @@
                     <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/ZAINURI.jpeg" alt="" style="width: 80px; height: 100px;"><br>
+                                <img src="assets/img/guru/ZAINURI.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. SILAHUDDIN, S. Ag., M.S.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. ABDUL FATAH, S.Ag, M.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MOH. ZAMRONI, S.Ag..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/Waluyo.jpg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/BUDI TJAHJADI, S.Pt..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/Rofiq.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/M. ABDURROHMAN, S. Ag..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Zainuri, S.Pd., S.Ag., M.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. SILAHUDDIN, S. Ag., M.S.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Silahuddin, S.Ag., M.S.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. ABDUL FATAH, S.Ag, M.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Abdul Fatah, S.Ag, M.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MOH. ZAMRONI, S.Ag..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Moh. Zamroni, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/Waluyo.jpg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Waluyo, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/BUDI TJAHJADI, S.Pt..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Budi Tjahjadi, S.Pt</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/Rofiq.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>H. Rofiq Setiawan, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/M. ABDURROHMAN, S. Ag..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>M. Abdurrohman, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -330,62 +398,96 @@
                         <td>
                             <center>
                                 <img src="assets/img/guru/YUSRON SYARAFI, S. Pd.T., S.Pd.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. MOCH. ATIK, BA..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MOKHAMMAD FAHMI, S.Pd..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUCHAMMAD SIRRIL WAFA, S.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/yuniar.jpg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/FATHUL HAKIM, S. Pd.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/ABDUL KHOLIQ, S. Pd.I.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/SAIFUL ANAM, S.Pd..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Yusron Syarafi, S.Pd.T., S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. MOCH. ATIK, BA..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Moch Atik, BA</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MOKHAMMAD FAHMI, S.Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Mokhammad Fahmi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUCHAMMAD SIRRIL WAFA, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muchammad Sirril Wafa, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/yuniar.jpg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Yuniar Fahmi Lathif, S.Pd., M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/FATHUL HAKIM, S. Pd.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Fathul Hakim, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/ABDUL KHOLIQ, S. Pd.I.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Abdul Kholiq, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/SAIFUL ANAM, S.Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Saiful Anam, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -395,63 +497,97 @@
                         <td>
                             <center>
                                 <img src="assets/img/guru/MIFTAHUL FALAH, S.Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/AHMAD MUDHOFAR, S.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/FAISAL ROHMAN, S. Pd..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUCHAMMAD SIRRIL WAFA, S.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/FAISOL ARIJUDDIN, S.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MAHDA HAIDAR RAHMAN, S.Pd., M.Pd.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MOHAMAD BISHRI, S. Pd..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD TURMUDZI, S.Pd..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Miftahul Falah, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/AHMAD MUDHOFAR, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Ahmad Mudhofar, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/FAISAL ROHMAN, S. Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Faisal Rohman, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUCHAMMAD SIRRIL WAFA, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muchammad Sirril Wafa, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/FAISOL ARIJUDDIN, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Faisol Arijuddin, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MAHDA HAIDAR RAHMAN, S.Pd., M.Pd.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Mahda haidar Rahman, S.Pd., M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MOHAMAD BISHRI, S. Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Mohammad Bishri, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD TURMUDZI, S.Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Turmudzi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -461,63 +597,97 @@
                         <td>
                             <center>
                                 <img src="assets/img/guru/SLAMET ANWARI, S. Pd.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/TOHA MUSHTOFA, S. Pd.I.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/ACHMAD AL FAROCH. S. Pd.I.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/ABD. MUIZ, A.Md., S.Ag.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/FATHUN QORIB, S.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. MUJIBURROHMAN, Lc.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. M. NAFIS `ILMI.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD ZAINUDDIN, M.Pd..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Slamet Anwari, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/TOHA MUSHTOFA, S. Pd.I.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Toha Mushtofa, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/ACHMAD AL FAROCH. S. Pd.I.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Achmad Al Faroch, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/ABD. MUIZ, A.Md., S.Ag.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Abd. Muiz, A.Md., S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/FATHUN QORIB, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Fathun Qorib, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. MUJIBURROHMAN, Lc.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. Mujiburrohman, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. M. NAFIS `ILMI.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>H. M. Nafis 'Ilmi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD ZAINUDDIN, M.Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Zainuddin, M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -527,63 +697,97 @@
                         <td>
                             <center>
                                 <img src="assets/img/guru/RIDLOL AISY, S.Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/H. SHOLIKHUDIN, S.Pd.I..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/YUSRON HARIYADI.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/NAFIDZIL `ALA, S.Sy..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD SYAIFUDDIN, S. Hi..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD ISLAHUL UMAM.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/AKHMAD SHOFI LUTFI, Lc.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/HELMY YAHYA, A.Md..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Ridlol Aisy, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/H. SHOLIKHUDIN, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Sholikhudin, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/YUSRON HARIYADI.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Yusron Hariyadi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/NAFIDZIL `ALA, S.Sy..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Nafidzil 'Ala, S.Sy</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD SYAIFUDDIN, S. Hi..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Syaifuddin, S.Hi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD ISLAHUL UMAM.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Islahul Umam</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/AKHMAD SHOFI LUTFI, Lc.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Akhmad Shofi Lutfi, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/HELMY YAHYA, A.Md..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Helmy Yahya, A.Md</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -593,59 +797,92 @@
                         <td>
                             <center>
                                 <img src="assets/img/guru/ACHMAD YASIN, S. Pd..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD FUAD ZARQOWI, SH..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/AUZI_NI SYUKRON KAMAL AHMAD, M.H..jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/muzakki.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/syafiin.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/fuad rijak.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/azizi.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/machub.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Achmad Yasin, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD FUAD ZARQOWI, SH..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Fuad Zarqowi, S.H</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/AUZI_NI SYUKRON KAMAL AHMAD, M.H..jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Auzi'ni Syukron Kamal Ahmad, M.H</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/muzakki.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Agus Hasan Muzakki, S.Pd.I, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/syafiin.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Syafii'uddin, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/fuad rijak.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Fuad Abdur Rozaq, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/azizi.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Akhmad Fakhri Azizi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/machub.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Machub Al Faizi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -654,56 +891,90 @@
                     <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/malikhan.jpeg" alt="" style="width: 80px; height: 100px;"><br>
+                                <img src="assets/img/guru/malikhan.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/arju.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/YUSUF.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/syihab.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/faiq.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/busro.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/nuril.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/akmal.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Malikhan, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/arju.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Arju Taufiq Irrahman, Ss</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/YUSUF.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Muchammad Nur Yusuf, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/syihab.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Mohammad Syihabuddin, S.Pd.I, M.S.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/faiq.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>M. Faiq</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/busro.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>H. Busro Lathif</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/nuril.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Riky Nuril Yahya, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/akmal.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Syarofiddin Akmal, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -712,35 +983,57 @@
                     <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/husnul.jpeg" alt="" style="width: 80px; height: 100px;"><br>
+                                <img src="assets/img/guru/husnul.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/irsyadul.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/indra.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/Minanur.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/fahrur.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Muhammad Husnul Wafa, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/irsyadul.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Irsyadul Ibaad, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/indra.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Indra Wahyudi, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/Minanur.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Minanur Rohman Mahrus Maulana, S.Pd.I, M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/fahrur.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Fahrur Rozi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
@@ -752,54 +1045,83 @@
                     <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/SISKANDAR.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
+                                <img src="assets/img/guru/SISKANDAR.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/FARID STIAWAN.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/ACHSIN YASRONI.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD SILMI.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MOCHAMAD YUSUF.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/HANDOYO.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/ismail.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Siskandar</b><br>
                                 <span style="color: #4ECB71;">Kepala Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/FARID STIAWAN.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Farid Stiawan</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/ACHSIN YASRONI.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Achsin Yasroni</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD SILMI.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Silmi</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MOCHAMAD YUSUF.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Mochammad Yusuf</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/HANDOYO.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Slamet Handoyo</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/ismail.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Ade Achmad Ismail, S.E</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
@@ -811,38 +1133,58 @@
                     <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/husnul.jpeg" alt="" style="width: 80px; height: 100px;"><br>
+                                <img src="assets/img/guru/husnul.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/Ulil Abshor.jpg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/SUTRIMO.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/MUHAMMAD SUFYAN.jpeg" alt=""
+                                    style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <img src="assets/img/guru/supriyono.jpeg" alt="" style="width: 80px; height: 100px;">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <b>Husnul Wafa</b><br>
                                 <span style="color: #4ECB71;">Pustakawan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/Ulil Abshor.jpg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Ulil Abshor, A.Md</b><br>
                                 <span style="color: #4ECB71;">Pustakawan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/SUTRIMO.jpeg" alt="" style="width: 80px; height: 100px;"><br>
                                 <b>Sutrimo</b><br>
                                 <span style="color: #4ECB71;">Penjaga Kebersihan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUHAMMAD SUFYAN.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Muhammad Sufyan</b><br>
                                 <span style="color: #4ECB71;">Penjaga dan Keamanan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/supriyono.jpeg" alt=""
-                                    style="width: 80px; height: 100px;"><br>
                                 <b>Supriyono</b><br>
                                 <span style="color: #4ECB71;">Penjaga dan Keamanan</span>
                             </center>

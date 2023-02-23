@@ -107,13 +107,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="data-siswa.php">
+                <a class="nav-link " href="data-siswa.php">
                     <i class="bi bi-person-vcard-fill"></i>
                     <span>Data Siswa</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="input-tes.php">
+                <a class="nav-link collapsed" href="input-tes.php">
                     <i class="bi bi-pencil-square"></i>
                     <span>Input Hasil Tes</span>
                 </a>
@@ -139,11 +139,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Input Hasil Tes</h1>
+            <h1>Data Siswa</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Input Hasil Tes</li>
+                    <li class="breadcrumb-item active">Data Siswa</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -163,7 +163,7 @@
                                         <th scope="col">NISN</th>
                                         <th scope="col">Nama Siswa</th>
                                         <th scope="col">Nomor HP</th>
-                                        <th scope="col">Nilai</th>
+                                        <th scope="col">Status</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
@@ -173,16 +173,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -190,16 +183,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacobs</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -207,16 +193,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -224,16 +203,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -241,16 +213,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -258,16 +223,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -275,16 +233,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -292,16 +243,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
+                                        <td><a href="#" class="btn btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -309,16 +253,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -326,16 +263,9 @@
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
+                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>
                                 </tbody>
