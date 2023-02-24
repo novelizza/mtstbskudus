@@ -107,6 +107,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="data-admin.php">
+                    <i class="bi bi-person-fill-gear"></i>
+                    <span>Data Admin</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link " href="data-siswa.php">
                     <i class="bi bi-person-vcard-fill"></i>
                     <span>Data Siswa</span>
@@ -140,7 +146,7 @@
 
         <div class="pagetitle">
             <h1>Data Siswa</h1>
-            <nav>
+            <nav style="--bs-breadcrumb-divider: '|';">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                     <li class="breadcrumb-item active">Data Siswa</li>

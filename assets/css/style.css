@@ -293,8 +293,8 @@ div#preloader {
     background: rgba(0, 0, 0, 0.8);
   }
 
-  #header .logo h1 {
-    font-size: 18px;
+  #header .logo h6 {
+    font-size: 16px;
   }
 }
 
@@ -485,7 +485,7 @@ div#preloader {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #324032;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -494,13 +494,13 @@ div#preloader {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #0d2529;
+  color: white;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #3ec1d5;
+  color: #4ECB71;
 }
 
 .navbar-mobile .getstarted,
@@ -516,7 +516,7 @@ div#preloader {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: #324032;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -535,7 +535,7 @@ div#preloader {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #3ec1d5;
+  color: #4ECB71;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {

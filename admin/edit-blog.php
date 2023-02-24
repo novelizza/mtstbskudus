@@ -125,13 +125,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="cetak-data.php">
+                <a class="nav-link collapsed" href="cetak-data.php">
                     <i class="bi bi-printer-fill"></i>
                     <span>Cetak Data</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="blog.php">
+                <a class="nav-link " href="blog.php">
                     <i class="bi bi-newspaper"></i>
                     <span>Blog / Artikel</span>
                 </a>
@@ -145,11 +145,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Cetak Data Siswa</h1>
+            <h1>Blog / Artikel</h1>
             <nav style="--bs-breadcrumb-divider: '|';">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Cetak Data Siswa</li>
+                    <li class="breadcrumb-item "><a href="blog.php">Blog / Artikel</a></li>
+                    <li class="breadcrumb-item active">Edit Blog / Artikel</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -161,117 +162,34 @@
 
                         <div class="card-body">
                             <h5 class="card-title">
-                                <div class="row">
-                                    <div class="col">
-                                        <button class="btn" style="background-color: #4ECB71;"><i
-                                                class="bi bi-printer-fill" style="color: white"></i>&nbsp;<span
-                                                style="color: white;">Cetak Data
-                                                Seluruh Siswa</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-success"><i class=" bi bi-printer-fill"
-                                                style="color: white"></i>&nbsp;<span style="color: white;">Cetak Data
-                                                Siswa
-                                                MTS</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-primary"><i class="bi bi-printer-fill"
-                                                style="color: white"></i>&nbsp;<span style="color: white;">Cetak Data
-                                                Siswa
-                                                MPTS</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-info"><i class="bi bi-printer-fill"
-                                                style="color: white"></i>&nbsp;<span style="color: white;">Cetak Data
-                                                Siswa
-                                                MI/MPTS</span></button>
-                                    </div>
-                                </div>
                             </h5>
 
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">NISN</th>
-                                        <th scope="col">Nama Siswa</th>
-                                        <th scope="col">Nomor HP</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacobs</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">8</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">9</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">10</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <form action="">
+                                <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Masukkan Judul
+                                            Artikel</b></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputText">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"><b>Masukkan Isi
+                                            Artikel</b></label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputNumber" class="col-sm-2 col-form-label"><b>Pilih Gambar
+                                            Artikel</b></label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <button class="btn btn-success btn-block" type="submit">SIMPAN</button>
+                                </div>
+                            </form>
 
                         </div>
 

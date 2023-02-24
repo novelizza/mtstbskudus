@@ -55,12 +55,6 @@
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li><!-- End Search Icon-->
-
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -106,16 +100,10 @@
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link " href="index.php">
+            <li class="nav-item ">
+                <a class="nav-link collapsed" href="index.php">
                     <i class="bi bi-house-door-fill"></i>
                     <span>Dashboard</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="data-admin.php">
-                    <i class="bi bi-person-fill-gear"></i>
-                    <span>Data Admin</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -137,7 +125,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="blog.php">
+                <a class="nav-link " href="blog.php">
                     <i class="bi bi-newspaper"></i>
                     <span>Blog / Artikel</span>
                 </a>
@@ -151,107 +139,56 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>Blog / Artikel</h1>
             <nav style="--bs-breadcrumb-divider: '|';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+                    <li class="breadcrumb-item "><a href="blog.php">Blog / Artikel</a></li>
+                    <li class="breadcrumb-item active">Tambah Blog / Artikel</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
 
         <section class="section dashboard">
             <div class="row">
-
-                <!-- Left side columns -->
-                <!-- <div class="col-lg-12">
-                    <div class="row"> -->
-
-                <!-- Sales Card -->
-                <div class="col">
-                    <div class="card info-card sales-card" style="background-color: #4ECB71">
+                <div class="col-12">
+                    <div class="card recent-sales overflow-auto">
 
                         <div class="card-body">
-                            <h5 class="card-title">Jumlah Siswa</span></h5>
+                            <h5 class="card-title">
+                            </h5>
 
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-people"></i>
+                            <form action="">
+                                <div class="row mb-3">
+                                    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Masukkan Judul
+                                            Artikel</b></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputText">
+                                    </div>
                                 </div>
-                                <div class="ps-3">
-                                    <h6>470</h6>
+                                <div class="row mb-3">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"><b>Masukkan Isi
+                                            Artikel</b></label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" style="height: 100px"></textarea>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="row mb-3">
+                                    <label for="inputNumber" class="col-sm-2 col-form-label"><b>Pilih Gambar
+                                            Artikel</b></label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="file" id="formFile">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <button class="btn btn-success btn-block" type="submit">SIMPAN</button>
+                                </div>
+                            </form>
+
                         </div>
 
                     </div>
-                </div><!-- End Sales Card -->
-
-                <!-- Sales Card -->
-                <div class="col">
-                    <div class="card info-card sales1-card" style="background-color: #2AB6D4">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Siswa MTS</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>200</h6>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Sales Card -->
-
-                <!-- Revenue Card -->
-                <div class="col">
-                    <div class="card info-card revenue-card" style="background-color: #9747FF">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Siswa MPTS</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>50</h6>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Revenue Card -->
-
-                <!-- Customers Card -->
-                <div class="col">
-
-                    <div class="card info-card customers-card" style="background-color: #4E53CB">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Siswa MI/MPTS</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>120</h6>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div><!-- End Customers Card -->
-                <!-- </div>
-                </div> -->
-                <!-- End Left side columns -->
-
+                </div>
             </div>
         </section>
 

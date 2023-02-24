@@ -107,7 +107,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="data-admin.php">
+                <a class="nav-link " href="data-admin.php">
                     <i class="bi bi-person-fill-gear"></i>
                     <span>Data Admin</span>
                 </a>
@@ -125,7 +125,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="cetak-data.php">
+                <a class="nav-link collapsed" href="cetak-data.php">
                     <i class="bi bi-printer-fill"></i>
                     <span>Cetak Data</span>
                 </a>
@@ -145,11 +145,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Cetak Data Siswa</h1>
+            <h1>Data Admin</h1>
             <nav style="--bs-breadcrumb-divider: '|';">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Cetak Data Siswa</li>
+                    <li class="breadcrumb-item active">Data Admin</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -160,34 +160,7 @@
                     <div class="card recent-sales overflow-auto">
 
                         <div class="card-body">
-                            <h5 class="card-title">
-                                <div class="row">
-                                    <div class="col">
-                                        <button class="btn" style="background-color: #4ECB71;"><i
-                                                class="bi bi-printer-fill" style="color: white"></i>&nbsp;<span
-                                                style="color: white;">Cetak Data
-                                                Seluruh Siswa</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-success"><i class=" bi bi-printer-fill"
-                                                style="color: white"></i>&nbsp;<span style="color: white;">Cetak Data
-                                                Siswa
-                                                MTS</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-primary"><i class="bi bi-printer-fill"
-                                                style="color: white"></i>&nbsp;<span style="color: white;">Cetak Data
-                                                Siswa
-                                                MPTS</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-info"><i class="bi bi-printer-fill"
-                                                style="color: white"></i>&nbsp;<span style="color: white;">Cetak Data
-                                                Siswa
-                                                MI/MPTS</span></button>
-                                    </div>
-                                </div>
-                            </h5>
+                            <h5 class="card-title"></h5>
 
                             <table class="table table-borderless datatable">
                                 <thead>
@@ -197,6 +170,7 @@
                                         <th scope="col">Nama Siswa</th>
                                         <th scope="col">Nomor HP</th>
                                         <th scope="col">Status</th>
+                                        <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -206,6 +180,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -213,6 +190,9 @@
                                         <td>Brandon Jacobs</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -220,6 +200,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">4</th>
@@ -227,6 +210,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">5</th>
@@ -234,6 +220,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">6</th>
@@ -241,6 +230,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">7</th>
@@ -248,6 +240,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">8</th>
@@ -255,6 +250,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
+                                        <td><a href="#" class="btn btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">9</th>
@@ -262,6 +260,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">10</th>
@@ -269,6 +270,9 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
+                                        <td><a href="#" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
