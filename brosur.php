@@ -175,7 +175,7 @@
                                         </p>
                                     </div>
                                     <span>
-                                        <a href="" class="ready-btn">Read more</a>
+                                        <a href="" class="ready-btn">Baca Selengkapnya</a>
                                     </span>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                                         </p>
                                     </div>
                                     <span>
-                                        <a href="" class="ready-btn">Read more</a>
+                                        <a href="" class="ready-btn">Baca Selengkapnya</a>
                                     </span>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
                                         </p>
                                     </div>
                                     <span>
-                                        <a href="" class="ready-btn">Read more</a>
+                                        <a href="" class="ready-btn">Baca Selengkapnya</a>
                                     </span>
                                 </div>
                             </div>
@@ -271,7 +271,7 @@
                                         </p>
                                     </div>
                                     <span>
-                                        <a href="" class="ready-btn">Read more</a>
+                                        <a href="" class="ready-btn">Baca Selengkapnya</a>
                                     </span>
                                 </div>
                             </div>
@@ -303,7 +303,7 @@
                                         </p>
                                     </div>
                                     <span>
-                                        <a href="" class="ready-btn">Read more</a>
+                                        <a href="" class="ready-btn">Baca Selengkapnya</a>
                                     </span>
                                 </div>
                             </div>
@@ -403,46 +403,64 @@
         <div class="footer-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="footer-content">
                             <div class="footer-head">
                                 <div class="footer-logo">
-                                    <h2><span>e</span>Business</h2>
-                                </div>
-
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                                <div class="footer-icons">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="bi bi-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="bi bi-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="bi bi-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                                        </li>
-                                    </ul>
+                                    <div class="row">
+                                        <div class="col-md-3" style="margin-top: 45px;">
+                                            <img src="assets/img/logo.png" alt="LOGO MTS"
+                                                style="width: 190px; height: 132px;">
+                                        </div>
+                                        <div class="col-md-9" style="margin-top: 50px;">
+                                            <h4>Madrasah Tsanawiyah NU Tasywiquth Thullab Salafiyah Kudus</h4>
+                                            <div class="footer-icons">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- end single footer -->
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <div class="footer-content">
                             <div class="footer-head">
-                                <h4>information</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                                </p>
+                                <h4>Kontak Kami</h4>
                                 <div class="footer-contacts">
-                                    <p><span>Tel:</span> +123 456 789</p>
-                                    <p><span>Email:</span> contact@example.com</p>
-                                    <p><span>Working Hours:</span> 9am-5pm</p>
+                                    <p>
+                                        <i class="bi bi-telephone-fill" style="color: #4ECB71;"></i>&nbsp; (0291) 434555
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0821-4428-5606
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-envelope-fill" style="color: #4ECB71;"></i>&nbsp;
+                                        mtstbs@yahoo.co.id
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-facebook" style="color: #4ECB71;"></i>&nbsp; MTS TBS Kudus
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-instagram" style="color: #4ECB71;"></i>&nbsp; @mts.tbs.kudus
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -451,38 +469,12 @@
                     <div class="col-md-4">
                         <div class="footer-content">
                             <div class="footer-head">
-                                <h4>Instagram</h4>
+                                <h4>Alamat Kami</h4>
                                 <div class="flicker-img">
-                                    <a href="#"><img src="assets/img/portfolio/1.jpg" alt=""></a>
-                                    <a href="#"><img src="assets/img/portfolio/2.jpg" alt=""></a>
-                                    <a href="#"><img src="assets/img/portfolio/3.jpg" alt=""></a>
-                                    <a href="#"><img src="assets/img/portfolio/4.jpg" alt=""></a>
-                                    <a href="#"><img src="assets/img/portfolio/5.jpg" alt=""></a>
-                                    <a href="#"><img src="assets/img/portfolio/6.jpg" alt=""></a>
+                                    <p>Jl. KH. Turaichan Adjhuri No.23, Pejaten, Kajeksan, Kec.Kota Kudus, Kabupaten
+                                        Kudus, Jawa Tengah 59314</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-area-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="copyright text-center">
-                            <p>
-                                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
-                            </p>
-                        </div>
-                        <div class="credits">
-                            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
-            -->
-                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
                     </div>
                 </div>
