@@ -53,7 +53,7 @@
                                 <div class="card-body p-8 p-lg-7 text-black">
 
                                     <form>
-                                        <div class="d-flex align-items-center mb-3">
+                                        <div class=" align-items-center mb-3">
                                             <img src="../assets/img/logo.png" style="width: 72px; height: 72px;">
                                         </div>
 
