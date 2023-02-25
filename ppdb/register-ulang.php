@@ -47,7 +47,7 @@
                         <div class="card-header" style="background-color: #324032;">
                             <h4 class="card-title">
                                 <img src="../assets/img/logo.png" alt="" style="width: 50px; height: 51px;">
-                                <span style="color: white;">Masukkan Data Diri Untuk Mendaftar</span>
+                                <span style="color: white;">Masukkan Data Diri Untuk Mendaftar Ulang</span>
                             </h4>
                         </div>
                         <div class="card-body">

@@ -160,16 +160,22 @@
                     <div class="card recent-sales overflow-auto">
 
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
+                            <h5 class="card-title">
+                                <div class="row">
+                                    <a class="btn btn-block" href="tambah-admin.php"
+                                        style="background-color: #4ECB71; float: right;"><span
+                                            style="color: white;">Tambah Admin</span></a>
+                                </div>
+                            </h5>
 
                             <table class="table table-borderless datatable">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
-                                        <th scope="col">NISN</th>
-                                        <th scope="col">Nama Siswa</th>
-                                        <th scope="col">Nomor HP</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">NIP</th>
+                                        <th scope="col">Nama Lengkap</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Password</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
@@ -178,100 +184,117 @@
                                         <th scope="row">1</th>
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        <td>admin</td>
+                                        <td>admin</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="edit-admin.php" class="btn btn-block btn-warning btn-sm"
+                                                        style="width: 100%;">Edit</a>
+                                                </div>
+                                                <div class="col">
+                                                    <button class="btn btn-danger btn-sm btn-block" style="width: 100%;"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#disablebackdrop">Hapus</button>
+                                                    <div class="modal fade" id="disablebackdrop" tabindex="-1"
+                                                        data-bs-backdrop="false">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Yakin Hapus Data Admin?</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-warning"
+                                                                        data-bs-dismiss="modal">Batal</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger">Hapus</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>1122334455667788</td>
-                                        <td>Brandon Jacobs</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        <td>Brandon Jacob</td>
+                                        <td>admin</td>
+                                        <td>admin</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="edit-admin.php" class="btn btn-block btn-warning btn-sm"
+                                                        style="width: 100%;">Edit</a>
+                                                </div>
+                                                <div class="col">
+                                                    <button class="btn btn-danger btn-sm btn-block" style="width: 100%;"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#disablebackdrop">Hapus</button>
+                                                    <div class="modal fade" id="disablebackdrop" tabindex="-1"
+                                                        data-bs-backdrop="false">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Yakin Hapus Data Admin?</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-warning"
+                                                                        data-bs-dismiss="modal">Batal</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger">Hapus</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
                                         <td>1122334455667788</td>
                                         <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">8</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                        <td><a href="#" class="btn btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">9</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">10</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
+                                        <td>admin</td>
+                                        <td>admin</td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="edit-admin.php" class="btn btn-block btn-warning btn-sm"
+                                                        style="width: 100%;">Edit</a>
+                                                </div>
+                                                <div class="col">
+                                                    <button class="btn btn-danger btn-sm btn-block" style="width: 100%;"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#disablebackdrop">Hapus</button>
+                                                    <div class="modal fade" id="disablebackdrop" tabindex="-1"
+                                                        data-bs-backdrop="false">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Yakin Hapus Data Admin?</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-warning"
+                                                                        data-bs-dismiss="modal">Batal</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger">Hapus</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>

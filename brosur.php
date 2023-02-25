@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>eBusiness Bootstrap Template - Index</title>
+    <title>MTS NU TBS KUDUS</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/logo.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -66,7 +66,7 @@
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
                     <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
                         style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul style="margin-left: -40px;">
+                        <ul style="margin-left: -60px;">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
                             <li><a href="brosur.php">Brosur</a></li>

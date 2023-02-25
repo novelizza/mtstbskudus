@@ -107,7 +107,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="data-admin.php">
+                <a class="nav-link " href="data-admin.php">
                     <i class="bi bi-person-fill-gear"></i>
                     <span>Data Admin</span>
                 </a>
@@ -131,7 +131,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="blog.php">
+                <a class="nav-link collapsed" href="blog.php">
                     <i class="bi bi-newspaper"></i>
                     <span>Blog / Artikel</span>
                 </a>
@@ -145,12 +145,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Blog / Artikel</h1>
+            <h1>Data Admin</h1>
             <nav style="--bs-breadcrumb-divider: '|';">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item "><a href="blog.php">Blog / Artikel</a></li>
-                    <li class="breadcrumb-item active">Tambah Blog / Artikel</li>
+                    <li class="breadcrumb-item "><a href="data-admin.php">Data Admin</a></li>
+                    <li class="breadcrumb-item active">Tambah Data Admin</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -165,29 +165,27 @@
                             </h5>
 
                             <form action="">
-                                <div class="row mb-3">
-                                    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Masukkan Judul
-                                            Artikel</b></label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputText">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="inputEmail5" class="form-label">NIP</label>
+                                        <input type="number" class="form-control" id="inputEmail5">
                                     </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputPassword" class="col-sm-2 col-form-label"><b>Masukkan Isi
-                                            Artikel</b></label>
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" style="height: 100px"></textarea>
+                                    <div class="col-md-6">
+                                        <label for="inputEmail5" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="inputEmail5">
                                     </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputNumber" class="col-sm-2 col-form-label"><b>Pilih Gambar
-                                            Artikel</b></label>
-                                    <div class="col-sm-10">
-                                        <input class="form-control" type="file" id="formFile">
+                                    <div class="col-md-6">
+                                        <label for="inputEmail5" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="inputEmail5">
                                     </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <button class="btn btn-success btn-block" type="submit">SIMPAN</button>
+                                    <div class="col-md-6">
+                                        <label for="inputEmail5" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="inputEmail5">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="btn btn-success" style="width: 100%;"
+                                            type="submit">SIMPAN</button>
+                                    </div>
                                 </div>
                             </form>
 
