@@ -290,11 +290,18 @@ div#preloader {
 @media (max-width: 768px) {
   #header {
     height: 64px;
-    background: rgba(0, 0, 0, 0.8);
+    background: #324032;
   }
 
   #header .logo h6 {
-    font-size: 16px;
+    font-size: 3vw;
+  }
+
+  #header .logo img {
+    padding: 0;
+    margin: 0;
+    display: none;
+    max-height: 40px;
   }
 }
 
@@ -313,7 +320,7 @@ div#preloader {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: #324032;
 }
 
 @media (min-width: 1025px) {
@@ -333,7 +340,7 @@ div#preloader {
 }
 
 .navbar ul {
-  margin: -20px;
+  /* margin: -20px; */
   padding: 0;
   display: flex;
   list-style: none;
@@ -349,7 +356,7 @@ div#preloader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 10px 10px 20px;
   font-size: 15px;
   font-weight: 500;
   color: #fff;
@@ -374,8 +381,8 @@ div#preloader {
 .navbar .dropdown ul {
   display: block;
   position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
+  right: 0px;
+  /* top: calc(100% + 30px); */
   margin: 0;
   padding: 10px 0;
   z-index: 99;
@@ -416,7 +423,7 @@ div#preloader {
 
 .navbar .dropdown .dropdown ul {
   top: 0;
-  left: calc(100% - 30px);
+  right: 0;
   visibility: hidden;
 }
 
@@ -466,7 +473,7 @@ div#preloader {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(1, 2, 2, 0.9);
+  background: #324032;
   transition: 0.3s;
   z-index: 999;
 }
@@ -517,7 +524,7 @@ div#preloader {
   opacity: 1;
   visibility: visible;
   background: #324032;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  /* box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25); */
 }
 
 .navbar-mobile .dropdown ul li {

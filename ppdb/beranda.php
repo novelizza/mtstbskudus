@@ -62,10 +62,10 @@
                             <li><a href="../sarana.php">Sarana & Prasarana</a></li>
                         </ul>
                     </li>
+                    <li><a class="nav-link" href="../brosur.php">Berita</a></li>
                     <li><a class="nav-link" href="../kontakkami.php">Kontak Kami</a></li>
-                    <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
-                        style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">
-                        <i class="bi bi-person-fill"></i><span> Akun</span>
+                    <li class="dropdown" style="background-color: #0275d8;">
+                        <a href=""><span> Akun</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="login.php">Logout</a></li>
                         </ul>
@@ -85,7 +85,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div>
                             <h2>Selamat Datang, <span style="color: #4ECB71;">Nama Siswa!</span></h2>
-                            <h4><span class="badge bg-success" style="width: 100%;">Selamat Anda Lolos MTS Kelas
+                            <h4><span class="badge bg-success" style="width: 100%;">Selamat Anda Diterima MTS Kelas
                                     7!</span></h4>
                         </div>
                     </div>

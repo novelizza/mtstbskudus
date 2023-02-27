@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>Dashboard Admin MTS NU TBS</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -72,7 +72,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <a class="dropdown-item d-flex align-items-center" href="edit-admin.php">
                                 <i class="bi bi-person"></i>
                                 <span>My Profile</span>
                             </a>
@@ -176,7 +176,6 @@
                                         <th scope="col">Nama Lengkap</th>
                                         <th scope="col">Username</th>
                                         <th scope="col">Password</th>
-                                        <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -186,38 +185,6 @@
                                         <td>Brandon Jacob</td>
                                         <td>admin</td>
                                         <td>admin</td>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="edit-admin.php" class="btn btn-block btn-warning btn-sm"
-                                                        style="width: 100%;">Edit</a>
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn btn-danger btn-sm btn-block" style="width: 100%;"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#disablebackdrop">Hapus</button>
-                                                    <div class="modal fade" id="disablebackdrop" tabindex="-1"
-                                                        data-bs-backdrop="false">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title">Yakin Hapus Data Admin?</h5>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="modal"
-                                                                        aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-warning"
-                                                                        data-bs-dismiss="modal">Batal</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-danger">Hapus</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -225,38 +192,6 @@
                                         <td>Brandon Jacob</td>
                                         <td>admin</td>
                                         <td>admin</td>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="edit-admin.php" class="btn btn-block btn-warning btn-sm"
-                                                        style="width: 100%;">Edit</a>
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn btn-danger btn-sm btn-block" style="width: 100%;"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#disablebackdrop">Hapus</button>
-                                                    <div class="modal fade" id="disablebackdrop" tabindex="-1"
-                                                        data-bs-backdrop="false">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title">Yakin Hapus Data Admin?</h5>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="modal"
-                                                                        aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-warning"
-                                                                        data-bs-dismiss="modal">Batal</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-danger">Hapus</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -264,38 +199,6 @@
                                         <td>Brandon Jacob</td>
                                         <td>admin</td>
                                         <td>admin</td>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a href="edit-admin.php" class="btn btn-block btn-warning btn-sm"
-                                                        style="width: 100%;">Edit</a>
-                                                </div>
-                                                <div class="col">
-                                                    <button class="btn btn-danger btn-sm btn-block" style="width: 100%;"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#disablebackdrop">Hapus</button>
-                                                    <div class="modal fade" id="disablebackdrop" tabindex="-1"
-                                                        data-bs-backdrop="false">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title">Yakin Hapus Data Admin?</h5>
-                                                                    <button type="button" class="btn-close"
-                                                                        data-bs-dismiss="modal"
-                                                                        aria-label="Close"></button>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-warning"
-                                                                        data-bs-dismiss="modal">Batal</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-danger">Hapus</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

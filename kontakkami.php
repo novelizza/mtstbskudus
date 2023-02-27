@@ -63,13 +63,14 @@
                             <li><a href="sarana.php">Sarana & Prasarana</a></li>
                         </ul>
                     </li>
+                    <li><a class="nav-link " href="brosur.php">Berita</a></li>
                     <li><a class="nav-link active" href="kontakkami.php">Kontak Kami</a></li>
-                    <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
-                        style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul style="margin-left: -60px;">
+                    <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul class="oke">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
-                            <li><a href="brosur.php">Brosur</a></li>
+                            <li><a href="#">Brosur</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,65 +79,6 @@
 
         </div>
     </header><!-- End Header -->
-
-    <!-- ======= hero Section ======= -->
-    <section id="hero">
-        <div class="hero-container">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
-
-                <div class="carousel-inner" role="listbox">
-
-                    <div class="carousel-item active"
-                        style="background-image: url(assets/img/hero-carousel/hero1.jpeg)">
-                        <div class="carousel-container">
-                            <div class="container">
-                                <h1 class="animate__animated animate__fadeInDown">Madrasah Tsanawiyah NU<br>Tasywiquth
-                                    Thullab Salafiyah Kudus</h1>
-                                <img src="assets/img/logo.png" alt="TBS KUDUS" style="width: 200px; height: 195px;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero2.jpg)">
-                        <div class="carousel-container">
-                            <div class="container">
-                                <h1 class="animate__animated animate__fadeInDown">Visi Misi & Tujuan</h1>
-                                <p class="animate__animated animate__fadeInUp">Madrasah Tsanawiyah NU Tasywiquth Thullab
-                                    Salafiyah Kudus</p>
-                                <a href="#about"
-                                    class="btn-get-started scrollto animate__animated animate__fadeInUp">Baca
-                                    Sekarang</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero3.jpeg)">
-                        <div class="carousel-container">
-                            <div class="container">
-                                <h1 class="animate__animated animate__fadeInDown">Sarana & Prasarana</h1>
-                                <p class="animate__animated animate__fadeInUp">Madrasah Tsanawiyah NU Tasywiquth Thullab
-                                    Salafiyah Kudus</p>
-                                <a href="#about"
-                                    class="btn-get-started scrollto animate__animated animate__fadeInUp">Lihat</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-                </a>
-
-                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-                </a>
-
-            </div>
-        </div>
-    </section><!-- End Hero Section -->
 
     <main id="main">
 

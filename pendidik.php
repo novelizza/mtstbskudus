@@ -63,13 +63,14 @@
                             <li><a href="sarana.php">Sarana & Prasarana</a></li>
                         </ul>
                     </li>
+                    <li><a class="nav-link" href="brosur.php">Berita</a></li>
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
-                    <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
-                        style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul style="margin-left: -60px;">
+                    <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul class="oke">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
-                            <li><a href="brosur.php">Brosur</a></li>
+                            <li><a href="#">Brosur</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,65 +79,6 @@
 
         </div>
     </header><!-- End Header -->
-
-    <!-- ======= hero Section ======= -->
-    <section id="hero">
-        <div class="hero-container">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
-
-                <div class="carousel-inner" role="listbox">
-
-                    <div class="carousel-item active"
-                        style="background-image: url(assets/img/hero-carousel/hero1.jpeg)">
-                        <div class="carousel-container">
-                            <div class="container">
-                                <h1 class="animate__animated animate__fadeInDown">Madrasah Tsanawiyah NU<br>Tasywiquth
-                                    Thullab Salafiyah Kudus</h1>
-                                <img src="assets/img/logo.png" alt="TBS KUDUS" style="width: 200px; height: 195px;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero2.jpg)">
-                        <div class="carousel-container">
-                            <div class="container">
-                                <h1 class="animate__animated animate__fadeInDown">Visi Misi & Tujuan</h1>
-                                <p class="animate__animated animate__fadeInUp">Madrasah Tsanawiyah NU Tasywiquth Thullab
-                                    Salafiyah Kudus</p>
-                                <a href="#about"
-                                    class="btn-get-started scrollto animate__animated animate__fadeInUp">Baca
-                                    Sekarang</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero3.jpeg)">
-                        <div class="carousel-container">
-                            <div class="container">
-                                <h1 class="animate__animated animate__fadeInDown">Sarana & Prasarana</h1>
-                                <p class="animate__animated animate__fadeInUp">Madrasah Tsanawiyah NU Tasywiquth Thullab
-                                    Salafiyah Kudus</p>
-                                <a href="#about"
-                                    class="btn-get-started scrollto animate__animated animate__fadeInUp">Lihat</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-                </a>
-
-                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-                </a>
-
-            </div>
-        </div>
-    </section><!-- End Hero Section -->
 
     <main id="main">
 
@@ -155,7 +97,13 @@
                         <td colspan="8">
                             <center>
                                 <img src="assets/img/guru/Salim.jpg" alt="" style="width: 200px; height: 200px;"><br>
-                                <b>Salim, S.Ag., M.Pd</b><br>
+                                <b>Salim, S.Ag., M.Pd</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">
+                            <center>
                                 <span style="color: #4ECB71;">Kepala Madrasah</span>
                             </center>
                         </td>
@@ -251,49 +199,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Drs. H. Hasan Bisyri MS</b><br>
+                                <b>Drs. H. Hasan Bisyri MS</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Musyaffa' Durri</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Ahmad Muttaqin</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Noor Habib, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Ahmad Hamdi Asmu'i, Lc</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Drs. H. Hamzah</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Moch. Sa'dullah Wahhab</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Ahmad Syafi'i, A.Md</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Musyaffa' Durri</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Ahmad Muttaqin</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Noor Habib, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Ahmad Hamdi Asmu'i, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Drs. H. Hamzah</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Moch. Sa'dullah Wahhab</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Ahmad Syafi'i, A.Md</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -348,49 +330,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Zainuri, S.Pd., S.Ag., M.Pd.I</b><br>
+                                <b>Zainuri, S.Pd., S.Ag., M.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Silahuddin, S.Ag., M.S.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Abdul Fatah, S.Ag, M.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Moh. Zamroni, S.Ag</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Waluyo, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Budi Tjahjadi, S.Pt</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Rofiq Setiawan, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>M. Abdurrohman, S.Ag</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Silahuddin, S.Ag., M.S.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Abdul Fatah, S.Ag, M.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Moh. Zamroni, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Waluyo, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Budi Tjahjadi, S.Pt</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Rofiq Setiawan, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>M. Abdurrohman, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -447,49 +463,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Yusron Syarafi, S.Pd.T., S.Pd</b><br>
+                                <b>Yusron Syarafi, S.Pd.T., S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Moch Atik, BA</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Mokhammad Fahmi, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muchammad Sirril Wafa, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Yuniar Fahmi Lathif, S.Pd., M.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Fathul Hakim, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Abdul Kholiq, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Saiful Anam, S.Pd</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Moch Atik, BA</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Mokhammad Fahmi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muchammad Sirril Wafa, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Yuniar Fahmi Lathif, S.Pd., M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Fathul Hakim, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Abdul Kholiq, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Saiful Anam, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -515,8 +565,7 @@
                         </td>
                         <td>
                             <center>
-                                <img src="assets/img/guru/MUCHAMMAD SIRRIL WAFA, S.Pd.I..jpeg" alt=""
-                                    style="width: 80px; height: 100px;">
+                                <img src="assets/img/guru/fahrur.jpeg" alt="" style="width: 80px; height: 100px;">
                             </center>
                         </td>
                         <td>
@@ -547,49 +596,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Miftahul Falah, S.Pd</b><br>
+                                <b>Miftahul Falah, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Ahmad Mudhofar, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Faisal Rohman, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Fahrur Rozi</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Faisol Arijuddin, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Mahda haidar Rahman, S.Pd., M.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Mohammad Bishri, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Turmudzi, S.Pd</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Ahmad Mudhofar, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Faisal Rohman, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muchammad Sirril Wafa, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Faisol Arijuddin, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Mahda haidar Rahman, S.Pd., M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Mohammad Bishri, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Turmudzi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -647,49 +730,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Slamet Anwari, S.Pd</b><br>
+                                <b>Slamet Anwari, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Toha Mushtofa, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Achmad Al Faroch, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Abd. Muiz, A.Md., S.Ag</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Fathun Qorib, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Mujiburrohman, Lc</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. M. Nafis 'Ilmi</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Zainuddin, M.Pd</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Toha Mushtofa, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Achmad Al Faroch, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Abd. Muiz, A.Md., S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Fathun Qorib, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Mujiburrohman, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. M. Nafis 'Ilmi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Zainuddin, M.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -747,49 +864,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Ridlol Aisy, S.Pd</b><br>
+                                <b>Ridlol Aisy, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Sholikhudin, S.Pd.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Yusron Hariyadi</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Nafidzil 'Ala, S.Sy</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Syaifuddin, S.Hi</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Islahul Umam</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Akhmad Shofi Lutfi, Lc</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Helmy Yahya, A.Md</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Sholikhudin, S.Pd.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Yusron Hariyadi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Nafidzil 'Ala, S.Sy</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Syaifuddin, S.Hi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Islahul Umam</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Akhmad Shofi Lutfi, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Helmy Yahya, A.Md</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -842,49 +993,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Achmad Yasin, S.Pd</b><br>
+                                <b>Achmad Yasin, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Fuad Zarqowi, S.H</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Auzi'ni Syukron Kamal Ahmad, M.H</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Agus Hasan Muzakki, S.Pd.I, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Syafii'uddin, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Fuad Abdur Rozaq, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Akhmad Fakhri Azizi, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Machub Al Faizi, S.Pd</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Fuad Zarqowi, S.H</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Auzi'ni Syukron Kamal Ahmad, M.H</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Agus Hasan Muzakki, S.Pd.I, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Syafii'uddin, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Fuad Abdur Rozaq, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Akhmad Fakhri Azizi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Machub Al Faizi, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -934,49 +1119,83 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Malikhan, Lc</b><br>
+                                <b>Malikhan, Lc</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Arju Taufiq Irrahman, Ss</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muchammad Nur Yusuf, S.Ag</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Mohammad Syihabuddin, S.Pd.I, M.S.I</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>M. Faiq</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>H. Busro Lathif</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Riky Nuril Yahya, S.Ag</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Syarofiddin Akmal, S.Pd</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Arju Taufiq Irrahman, Ss</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muchammad Nur Yusuf, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Mohammad Syihabuddin, S.Pd.I, M.S.I</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>M. Faiq</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>H. Busro Lathif</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Riky Nuril Yahya, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Syarofiddin Akmal, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -1002,40 +1221,47 @@
                                 <img src="assets/img/guru/Minanur.jpeg" alt="" style="width: 80px; height: 100px;">
                             </center>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             <center>
-                                <img src="assets/img/guru/fahrur.jpeg" alt="" style="width: 80px; height: 100px;">
+                                <b>Muhammad Husnul Wafa, S.Pd</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Irsyadul Ibaad, S.Ag</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Indra Wahyudi, Lc</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Minanur Rohman Mahrus Maulana, S.Pd.I, M.Pd</b>
                             </center>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <center>
-                                <b>Muhammad Husnul Wafa, S.Pd</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Irsyadul Ibaad, S.Ag</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Indra Wahyudi, Lc</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Minanur Rohman Mahrus Maulana, S.Pd.I, M.Pd</b><br>
-                                <span style="color: #4ECB71;">Guru</span>
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                                <b>Muhammad Fahrur Rozi</b><br>
                                 <span style="color: #4ECB71;">Guru</span>
                             </center>
                         </td>
@@ -1087,43 +1313,73 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Siskandar</b><br>
+                                <b>Siskandar</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Farid Stiawan</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Achsin Yasroni</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Silmi</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Mochammad Yusuf</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Slamet Handoyo</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Ade Achmad Ismail, S.E</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Kepala Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Farid Stiawan</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Achsin Yasroni</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Silmi</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Mochammad Yusuf</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Slamet Handoyo</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Ade Achmad Ismail, S.E</b><br>
                                 <span style="color: #4ECB71;">Staff Tata Usaha</span>
                             </center>
                         </td>
@@ -1162,31 +1418,53 @@
                     <tr>
                         <td>
                             <center>
-                                <b>Husnul Wafa</b><br>
+                                <b>Husnul Wafa</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Ulil Abshor, A.Md</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Sutrimo</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Muhammad Sufyan</b>
+                            </center>
+                        </td>
+                        <td>
+                            <center>
+                                <b>Supriyono</b>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>
                                 <span style="color: #4ECB71;">Pustakawan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Ulil Abshor, A.Md</b><br>
                                 <span style="color: #4ECB71;">Pustakawan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Sutrimo</b><br>
                                 <span style="color: #4ECB71;">Penjaga Kebersihan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Muhammad Sufyan</b><br>
                                 <span style="color: #4ECB71;">Penjaga dan Keamanan</span>
                             </center>
                         </td>
                         <td>
                             <center>
-                                <b>Supriyono</b><br>
                                 <span style="color: #4ECB71;">Penjaga dan Keamanan</span>
                             </center>
                         </td>

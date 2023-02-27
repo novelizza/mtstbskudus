@@ -63,13 +63,14 @@
                             <li><a href="sarana.php">Sarana & Prasarana</a></li>
                         </ul>
                     </li>
+                    <li><a class="nav-link" href="brosur.php">Berita</a></li>
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
-                    <li class="btn btn-primary dropdown dropdown-toggle" data-toggle="dropdown"
-                        style="background-color: #4ECB71; border-color: #4ECB71; margin-left: 20px;">PPDB
-                        <ul style="margin-left: -60px;">
+                    <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul class="oke">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
-                            <li><a href="brosur.php">Brosur</a></li>
+                            <li><a href="#">Brosur</a></li>
                         </ul>
                     </li>
                 </ul>
