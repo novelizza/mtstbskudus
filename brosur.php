@@ -392,7 +392,7 @@
                                         <i class="bi bi-telephone-fill" style="color: #4ECB71;"></i>&nbsp; (0291) 434555
                                     </p>
                                     <p>
-                                        <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0821-4428-5606
+                                        <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0811-2233-4455
                                     </p>
                                     <p>
                                         <i class="bi bi-envelope-fill" style="color: #4ECB71;"></i>&nbsp;
