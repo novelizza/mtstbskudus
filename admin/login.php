@@ -1,3 +1,65 @@
+<?php
+    session_start();
+
+    function http_request($url){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        $data = array(
+            "username" => $username,
+            "password" => $password
+        );
+
+        // persiapkan curl
+        $ch = curl_init(); 
+
+        // set url 
+        curl_setopt($ch, CURLOPT_URL, $url);
+
+        // return the transfer as a string 
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+
+        // $output contains the output string 
+        $output = curl_exec($ch); 
+
+        // tutup curl 
+        curl_close($ch);      
+
+        // mengembalikan hasil curl
+        return $output;
+    }
+
+    if(isset($_POST['login'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        $data = array(
+            "username" => $username,
+            "password" => $password
+        );
+
+        $login = http_request("http://localhost:4000/api/auth/admin");
+
+        if($login) {
+            // header("location: index.php");
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+          </div>";
+        }else {
+            echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+            <strong>Username atau Password Salah
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+          </div>";
+        }
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,23 +166,26 @@
 
                     <div class="card bg-glass">
                         <div class="card-body px-4 py-5 px-md-5">
-                            <form>
+                            <form method="post" action="">
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3">Masukkan Username</label>
-                                    <input type="email" id="form3Example3" class="form-control" />
+                                    <input type="text" id="form3Example3" class="form-control" name="username"
+                                        required />
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example4">Masukkan Password</label>
-                                    <input type="password" id="form3Example4" class="form-control" />
+                                    <input type="password" id="form3Example4" class="form-control" name="password"
+                                        required />
                                 </div>
 
                                 <!-- Submit button -->
-                                <a href="index.php" class="btn btn-primary btn-block mb-8" style="width: 100%;">
+                                <button type="submit" name="login" class="btn btn-primary btn-block mb-8"
+                                    style="width: 100%;">
                                     Login
-                                </a>
+                                </button>
                             </form>
                         </div>
                     </div>
