@@ -1,61 +1,57 @@
 <?php
-    session_start();
-
-    function http_request($url){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        
-        $data = array(
-            "username" => $username,
-            "password" => $password
-        );
-
-        // persiapkan curl
-        $ch = curl_init(); 
-
-        // set url 
-        curl_setopt($ch, CURLOPT_URL, $url);
-
-        // return the transfer as a string 
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-
-        // $output contains the output string 
-        $output = curl_exec($ch); 
-
-        // tutup curl 
-        curl_close($ch);      
-
-        // mengembalikan hasil curl
-        return $output;
-    }
+    $curl = curl_init();
 
     if(isset($_POST['login'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-        $data = array(
-            "username" => $username,
-            "password" => $password
-        );
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost:4000/api/auth/admin',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => 'username='.$username.'&password='.$password.'',
+            CURLOPT_HTTPHEADER => array(
+              'Content-Type: application/json'
+            ),
+          ));
+          
+          $response = curl_exec($curl);
+          curl_close($curl);
+          $result = file_get_contents($response);
+          $result = json_decode($response, TRUE);
+        //     echo $response;
 
-        $login = http_request("http://localhost:4000/api/auth/admin");
-
-        if($login) {
+        if($response){
             // header("location: index.php");
-            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>OKE</strong>You should check ".$response." some of those fields below.
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
+        // echo $result["session"];
+        // echo $result['session_expiry'];
         }else {
-            echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-            <strong>Username atau Password Salah
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Username atau Password Salah!</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
         }
+        // if($response) {
+        //     // header("location: index.php");
+        //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+        //     <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+        //   </div>";
+        // }else {
+        //     echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        //     <strong>Username atau Password Salah
+        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+        //   </div>";
+        // }
         
     }
 ?>
