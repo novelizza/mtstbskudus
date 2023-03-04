@@ -1,3 +1,64 @@
+<?php
+
+    session_start();
+
+    // access the stored session data
+    $username = $_SESSION['username'];
+    $session = $_SESSION['session'];
+    $session_expiry = $_SESSION['session_expiry'];
+    
+    function session_expired($session_expiry) {
+        $current_time = time();
+        if ($current_time > $session_expiry) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'http://localhost:4000/api/siswa',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    // CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_HTTPHEADER => array(
+        'session: '.$session.''
+    ),
+    ));
+
+    $response = curl_exec($curl);
+    $object = json_decode($response);
+
+        if ($object->response == 200) {
+            // access result object and session and session_expiry fields
+            $result = $object->result;
+            $avatar = $result->avatar;
+            $username_siswa = $result->username;
+            $nama_lengkap = $result->nama_lengkap;
+            $nisn = $result->nisn;
+            $tempat_lahir = $result->tempat_lahir;
+            $tanggal_lahir = $result->tanggal_lahir;
+            $tahun_masuk = $result->tahun_masuk;
+            $tujuan_masuk = $result->tujuan_masuk;
+            $bayar = $result->bayar;
+            $nilai = $result->nilai;
+            $keterangan = $result->keterangan;
+        } else {
+            // handle error response
+            echo 'Error: ' . $object->response . '<br>';
+            echo 'Message: ' . $object->message . '<br>';
+        }
+
+    curl_close($curl);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +128,7 @@
                     <li class="dropdown" style="background-color: #0275d8;">
                         <a href=""><span> Akun</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="login.php">Logout</a></li>
+                            <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -130,7 +191,7 @@
                     </div>
                     <div class="row g-0">
                         <div class="col-md-2">
-                            <img src="../assets/img/guru/Salim.jpg" class="img-fluid rounded-start" alt="..."
+                            <img src="<?php echo $avatar; ?>" class="img-fluid rounded-start" alt="..."
                                 style="margin:10px;">
                         </div>
                         <div class="col-md-5" style="margin-left: 10px;">
@@ -140,31 +201,31 @@
                                         <b>NISN</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p>1122334455667788</p>
+                                        <p><?php echo $nisn; ?></p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class=" row">
                                     <div class="col-md-4">
                                         <b>Nama Siswa</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p>Joko Handoko</p>
+                                        <p><?php echo $nama_lengkap; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>Nomor Telepon</b>
+                                        <b>Username</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p>08888888888</p>
+                                        <p><?php echo $session; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>Alamat</b>
+                                        <b>Tempat & Tanggal Lahir</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p>asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasaasasdasdasd</p>
+                                        <p><?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
                                     </div>
                                 </div>
                             </div>

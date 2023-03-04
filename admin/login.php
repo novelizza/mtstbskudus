@@ -1,58 +1,74 @@
 <?php
-    $curl = curl_init();
+
+    session_start();
 
     if(isset($_POST['login'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
         
+        $curl = curl_init();
+
+        $data = array(
+            'username' => $username,
+            'password' => $password
+        );
+
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://localhost:4000/api/auth/admin',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => 'username='.$username.'&password='.$password.'',
-            CURLOPT_HTTPHEADER => array(
-              'Content-Type: application/json'
-            ),
-          ));
-          
-          $response = curl_exec($curl);
-          curl_close($curl);
-          $result = file_get_contents($response);
-          $result = json_decode($response, TRUE);
-        //     echo $response;
+        CURLOPT_URL => 'http://localhost:4000/api/auth/admin',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data),
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        $response = curl_exec($curl);
+        $object = json_decode($response);
+
+        if ($object->response == 200) {
+            // access result object and session and session_expiry fields
+            $result = $object->result;
+            $session = $result->session;
+            $session_expiry = $result->session_expiry;
+        } else {
+            // handle error response
+            echo 'Error: ' . $object->response . '<br>';
+            echo 'Message: ' . $object->message . '<br>';
+        }
+
+        curl_close($curl);
+            // echo $response;
+            echo $session_expiry;
 
         if($response){
-            // header("location: index.php");
-                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-            <strong>OKE</strong>You should check ".$response." some of those fields below.
-            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-          </div>";
-        // echo $result["session"];
-        // echo $result['session_expiry'];
+            $_SESSION['logged_in'] = true;
+            $_SESSION['login_time'] = time();
+            $_SESSION['username'] = $username;
+            $_SESSION['session'] = $session;
+            $_SESSION['session_expiry'] = $session_expiry;
+            header("location: index.php");
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Username atau Password Salah!</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
-        }
-        // if($response) {
-        //     // header("location: index.php");
-        //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-        //     <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-        //   </div>";
-        // }else {
-        //     echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-        //     <strong>Username atau Password Salah
-        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-        //   </div>";
-        // }
-        
+        }   
+    }
+
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+        header("location: index.php");
+    }
+
+    if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
+        session_destroy();
+        header("location: login.php");
+        exit;
     }
 ?>
 

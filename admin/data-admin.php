@@ -1,3 +1,55 @@
+<?php
+
+    session_start();
+
+    $username = $_SESSION['username'];
+    $session = $_SESSION['session'];
+    $session_expiry = $_SESSION['session_expiry'];
+
+    function session_expired($session_expiry) {
+        $current_time = time();
+        if ($current_time > $session_expiry) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'http://localhost:4000/api/admin',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    // CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_HTTPHEADER => array(
+        'session: '.$session.''
+    ),
+    ));
+
+    $response = curl_exec($curl);
+    $object = json_decode($response);
+
+        if ($object->response == 200) {
+            // access result object and session and session_expiry fields
+            $result = $object->result;
+            $nama_lengkap = $result->nama_lengkap;
+            $nip = $result->nip;
+            $username_admin = $result->username;
+        } else {
+            // handle error response
+            echo 'Error: ' . $object->response . '<br>';
+            echo 'Message: ' . $object->message . '<br>';
+        }
+
+    curl_close($curl);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,13 +111,13 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $username ?></span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Web Designer</span>
+                            <h6><?php echo $username ?></h6>
+                            <span>Admin</span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -74,7 +126,7 @@
                         <li>
                             <a class="dropdown-item d-flex align-items-center" href="edit-admin.php">
                                 <i class="bi bi-person"></i>
-                                <span>My Profile</span>
+                                <span>Edit Akun</span>
                             </a>
                         </li>
                         <li>
@@ -175,30 +227,17 @@
                                         <th scope="col">NIP</th>
                                         <th scope="col">Nama Lengkap</th>
                                         <th scope="col">Username</th>
-                                        <th scope="col">Password</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                        // $no=0;
+                                        // while(count($result)){?>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>admin</td>
-                                        <td>admin</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>admin</td>
-                                        <td>admin</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>admin</td>
-                                        <td>admin</td>
+                                        <th scope="row"><?php echo $no; ?></th>
+                                        <td><?php echo $nip; ?></td>
+                                        <td><?php echo $nama_lengkap; ?></td>
+                                        <td><?php echo $username; ?></td>
                                     </tr>
                                 </tbody>
                             </table>

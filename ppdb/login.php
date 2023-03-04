@@ -1,3 +1,77 @@
+<?php
+
+    session_start();
+
+    if(isset($_POST['login'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        $curl = curl_init();
+
+        $data = array(
+            'username' => $username,
+            'password' => $password
+        );
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'http://localhost:4000/api/auth/siswa',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data),
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        $response = curl_exec($curl);
+        $object = json_decode($response);
+
+        if ($object->response == 200) {
+            // access result object and session and session_expiry fields
+            $result = $object->result;
+            $session = $result->session;
+            $session_expiry = $result->session_expiry;
+        } else {
+            // handle error response
+            echo 'Error: ' . $object->response . '<br>';
+            echo 'Message: ' . $object->message . '<br>';
+        }
+
+        curl_close($curl);
+            // echo $response;
+            echo $session_expiry;
+
+        if($response){
+            $_SESSION['logged_in'] = true;
+            $_SESSION['login_time'] = time();
+            $_SESSION['username'] = $username;
+            $_SESSION['session'] = $session;
+            $_SESSION['session_expiry'] = $session_expiry;
+            header("location: index.php");
+        }else {
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Username atau Password Salah!</strong>
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+          </div>";
+        }   
+    }
+
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+        header("location: beranda.php");
+    }
+
+    if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
+        session_destroy();
+        header("location: login.php");
+        exit;
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +126,7 @@
                             <div class="col-md-8 col-lg-6 d-flex align-items-center">
                                 <div class="card-body p-8 p-lg-7 text-black">
 
-                                    <form>
+                                    <form action="" method="post">
                                         <div class=" align-items-center mb-3">
                                             <img src="../assets/img/logo.png" style="width: 72px; height: 72px;">
                                         </div>
@@ -65,20 +139,20 @@
                                             terlebih dahulu</h6>
 
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="form2Example17"
-                                                class="form-control form-control-lg" />
+                                            <input type="text" id="form2Example17" class="form-control form-control-lg"
+                                                name="username" />
                                             <label class="form-label" for="form2Example17">Masukkan Username</label>
                                         </div>
 
                                         <div class="form-outline mb-4">
                                             <input type="password" id="form2Example27"
-                                                class="form-control form-control-lg" />
+                                                class="form-control form-control-lg" name="password" />
                                             <label class="form-label" for="form2Example27">Masukkan Password</label>
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <a class="btn btn-lg" href="beranda.php"
-                                                style="background-color: #4ECB71; color: white;">Login</a>
+                                            <button type="submit" class="btn btn-lg" name="login"
+                                                style="background-color: #4ECB71; color: white;">Login</button>
                                         </div>
 
                                         <a class="small text-muted" href="#!">Lupa Password?</a>

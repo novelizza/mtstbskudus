@@ -210,7 +210,7 @@
                                         <td>Brandon Jacob</td>
                                         <td>0811223344</td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
+                                        <td><a href="detail-siswa.php" class="btn  btn-sm"
                                                 style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>

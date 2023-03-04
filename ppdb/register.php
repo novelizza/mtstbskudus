@@ -1,3 +1,90 @@
+<?php
+
+    session_start();
+    // Check if registration is complete
+    if (isset($_SESSION['registration_complete']) && $_SESSION['registration_complete']) {
+        // Redirect to login page
+        header('Location: login.php');
+        exit;
+    }
+    
+    if(isset($_POST['register'])) {
+        $nama_lengkap = $_POST['nama_lengkap'];
+        $nisn = $_POST['nisn'];
+        $tempat_lahir = $_POST['tempat_lahir'];
+        $tanggal_lahir = $_POST['tanggal_lahir'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $password_ulang = $_POST['password_ulang'];
+        $daftar_mts = isset($_POST['mts']) ? true : false;
+        $daftar_mpts = isset($_POST['mpts']) ? true : false;
+        $image = $_FILES['avatar']['tmp_name'];
+
+        if($password != $password_ulang) {
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Masukkan Kembali Data Diri Anda dan Pastikan Password Sama</strong>
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+          </div>";
+        }else {
+            if(!$daftar_mts && !$daftar_mpts) {
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Masukkan Kembali Data Diri Anda dan Pastikan Pilih Daftar Salah Satu</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+            }else {
+                $selectedCheckbox = $daftar_mts ? 'MTS' : 'MPTS';
+                $curl = curl_init();
+                curl_setopt($curl, CURLOPT_URL, 'http://localhost:4000/api/siswa');
+                curl_setopt($curl, CURLOPT_POST, true);
+                curl_setopt($curl, CURLOPT_POSTFIELDS, array(
+                    'nama_lengkap' => $nama_lengkap,
+                    'nisn' => $nisn,
+                    'tempat_lahir' => $tempat_lahir,
+                    'tanggal_lahir' => $tanggal_lahir,
+                    'username' => $username,
+                    'password' => $password,
+                    'tujuan_masuk' => $selectedCheckbox,
+                    'avatar' => curl_file_create($image, $_FILES['avatar']['type'], $_FILES['avatar']['name'])
+                ));
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+                // Send cURL request and get response
+                $response = curl_exec($curl);
+                // Check for errors
+                if (curl_errno($curl)) {
+                    $errorMessage = curl_error($curl);
+                    // Handle error
+                }else {
+                    $_SESSION['registration_complete'] = true;
+                    header('location: login.php');
+                    exit;
+                }
+                // Close cURL session
+                curl_close($curl);
+            }
+        }
+    }
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'http://localhost:4000/api/siswa',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => array('avatar'=> new CURLFILE('/Users/acfa/Downloads/WhatsApp Image 2022-06-14 at 10.47.49.jpeg'),'username' => 'siswa4','password' => '123456789','nama_lengkap' => 'Coba Siswa4','nisn' => '123456789','tempat_lahir' => 'kudus','tanggal_lahir' => '2000-10-10'),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    echo $response;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,53 +139,57 @@
                         </div>
                         <div class="card-body">
                             <!-- No Labels Form -->
-                            <form class="row g-3">
+                            <form class="row" action="" method="post" enctype="multipart/form-data"
+                                onsubmit="return validateForm()">
                                 <div class="col-md-12">
                                     <label for=""><b>Masukkan Nama Lengkap</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="nama_lengkap" required>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan NISN</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="nisn" required>
                                     <label style="font-style: italic; color: grey;">NB : NISN bisa ditemukan di
                                         raport</label>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Tempat Lahir</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="tempat_lahir" required>
                                 </div>
-                                <div class="col-sm-12">
+                                <div class="col-sm-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Tanggal Lahir</b></label>
-                                    <input type="date" class="form-control">
+                                    <input type="date" class="form-control" name="tanggal_lahir" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
                                         Dengan KK</label>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Username</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="username" required>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Password</b></label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" class="form-control" name="password" id="password" required>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Ulang Password</b></label>
-                                    <input type="password" class="form-control">
+                                    <input type="password" class="form-control" name="password_ulang"
+                                        id="password_ulang" required>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <p><b>Daftar Madrasah</b></p>
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" name="mts"
+                                        value="MTS" onclick="handleCheckboxClick('mts', 'mpts')">
                                     <label class="form-check-label" for="gridCheck">
                                         <b>MTS</b>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" name="mpts"
+                                        value="MPTS" onclick="handleCheckboxClick('mts', 'mpts')">
                                     <label class="form-check-label" for="gridCheck">
                                         <b>MPTS</b>
                                     </label>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Foto</b></label>
-                                    <input class="form-control" type="file" id="formFile">
+                                    <input class="form-control" type="file" id="formFile" name="avatar" required>
                                     <label style="font-style: italic; color: grey;">
                                         NB : <br>
                                         1. Background foto WAJIB warna merah <br>
@@ -106,12 +197,35 @@
                                         3. Format foto berupa .jpg, .jpeg atau .png
                                     </label>
                                 </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg"
+                                <div class="text-center" style="margin-top: 20px;">
+                                    <button type="submit" class="btn btn-primary btn-lg" name="register"
                                         style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">Daftar
                                         Sekarang</button>
                                 </div>
                             </form><!-- End No Labels Form -->
+
+                            <script>
+                            function handleCheckboxClick(checkedId, uncheckedId) {
+                                const checkedCheckbox = document.getElementById(checkedId);
+                                const uncheckedCheckbox = document.getElementById(uncheckedId);
+
+                                if (checkedCheckbox.checked) {
+                                    uncheckedCheckbox.checked = false;
+                                }
+                            }
+
+                            function validateForm() {
+                                const checkbox1 = document.getElementById("mts");
+                                const checkbox2 = document.getElementById("mpts");
+
+                                if (!checkbox1.checked && !checkbox2.checked) {
+                                    alert("Please check at least one checkbox.");
+                                    return false;
+                                }
+
+                                return true;
+                            }
+                            </script>
 
                         </div>
                     </div>
@@ -119,6 +233,8 @@
             </div>
         </section>
     </main>
+
+    </script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

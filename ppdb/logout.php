@@ -7,7 +7,7 @@ $session = $_SESSION['session'];
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'http://localhost:4000/api/auth/admin',
+  CURLOPT_URL => 'http://localhost:4000/api/auth/siswa',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -26,3 +26,5 @@ curl_close($curl);
 
 session_destroy();
 header("location: login.php");
+
+?>
