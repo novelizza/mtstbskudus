@@ -52,7 +52,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['session'] = $session;
             $_SESSION['session_expiry'] = $session_expiry;
-            header("location: index.php");
+            header("location: beranda.php");
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Username atau Password Salah!</strong>

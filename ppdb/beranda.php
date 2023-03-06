@@ -10,6 +10,7 @@
     function session_expired($session_expiry) {
         $current_time = time();
         if ($current_time > $session_expiry) {
+            header('location: login.php');
             return true;
         } else {
             return false;
@@ -38,6 +39,7 @@
         if ($object->response == 200) {
             // access result object and session and session_expiry fields
             $result = $object->result;
+            $id_akun_siswa = $result->id_akun_siswa;
             $avatar = $result->avatar;
             $username_siswa = $result->username;
             $nama_lengkap = $result->nama_lengkap;
@@ -49,6 +51,8 @@
             $bayar = $result->bayar;
             $nilai = $result->nilai;
             $keterangan = $result->keterangan;
+            $_SESSION['id_akun_siswa'] = $id_akun_siswa;
+            $_SESSION['session'];
         } else {
             // handle error response
             echo 'Error: ' . $object->response . '<br>';
@@ -145,7 +149,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div>
-                            <h2>Selamat Datang, <span style="color: #4ECB71;">Nama Siswa!</span></h2>
+                            <h2>Selamat Datang, <span style="color: #4ECB71;"><?php echo $nama_lengkap; ?>!</span></h2>
                             <h4><span class="badge bg-success" style="width: 100%;">Selamat Anda Diterima MTS Kelas
                                     7!</span></h4>
                         </div>
@@ -191,8 +195,9 @@
                     </div>
                     <div class="row g-0">
                         <div class="col-md-2">
-                            <img src="<?php echo $avatar; ?>" class="img-fluid rounded-start" alt="..."
-                                style="margin:10px;">
+                            <img src="http://localhost:4000/api/avatar/<?php echo $avatar; ?>"
+                                class="img-fluid rounded-start" alt="..."
+                                style="margin:10px; height: 250px; width: 250px;">
                         </div>
                         <div class="col-md-5" style="margin-left: 10px;">
                             <div class="card-body">
@@ -217,7 +222,7 @@
                                         <b>Username</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p><?php echo $session; ?></p>
+                                        <p><?php echo $username_siswa; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">

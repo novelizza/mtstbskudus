@@ -21,12 +21,14 @@
         $image = $_FILES['avatar']['tmp_name'];
 
         if($password != $password_ulang) {
+            header('location: register.php');
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Masukkan Kembali Data Diri Anda dan Pastikan Password Sama</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
         }else {
             if(!$daftar_mts && !$daftar_mpts) {
+                header('location: register.php');
                 echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Masukkan Kembali Data Diri Anda dan Pastikan Pilih Daftar Salah Satu</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
@@ -49,7 +51,7 @@
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
                 // Send cURL request and get response
-                $response = curl_exec($curl);
+                curl_exec($curl);
                 // Check for errors
                 if (curl_errno($curl)) {
                     $errorMessage = curl_error($curl);
@@ -64,25 +66,6 @@
             }
         }
     }
-
-    $curl = curl_init();
-
-    curl_setopt_array($curl, array(
-    CURLOPT_URL => 'http://localhost:4000/api/siswa',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => '',
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 0,
-    CURLOPT_FOLLOWLOCATION => true,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => array('avatar'=> new CURLFILE('/Users/acfa/Downloads/WhatsApp Image 2022-06-14 at 10.47.49.jpeg'),'username' => 'siswa4','password' => '123456789','nama_lengkap' => 'Coba Siswa4','nisn' => '123456789','tempat_lahir' => 'kudus','tanggal_lahir' => '2000-10-10'),
-    ));
-
-    $response = curl_exec($curl);
-
-    curl_close($curl);
-    echo $response;
 
 ?>
 <!DOCTYPE html>

@@ -1,3 +1,73 @@
+<?php
+
+    session_start();
+    // Check if registration is complete
+    if (isset($_SESSION['registration_complete']) && $_SESSION['registration_complete']) {
+        // Redirect to login page
+        header('Location: login.php');
+        exit;
+    }
+    
+    if(isset($_POST['register'])) {
+        $nama_lengkap = $_POST['nama_lengkap'];
+        $nisn = $_POST['nisn'];
+        $tempat_lahir = $_POST['tempat_lahir'];
+        $tanggal_lahir = $_POST['tanggal_lahir'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $password_ulang = $_POST['password_ulang'];
+        $daftar_mts = isset($_POST['mts']) ? true : false;
+        $daftar_mpts = isset($_POST['mpts']) ? true : false;
+        $image = $_FILES['avatar']['tmp_name'];
+
+        if($password != $password_ulang) {
+            header('location: register.php');
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Masukkan Kembali Data Diri Anda dan Pastikan Password Sama</strong>
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+          </div>";
+        }else {
+            if(!$daftar_mts && !$daftar_mpts) {
+                header('location: register.php');
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Masukkan Kembali Data Diri Anda dan Pastikan Pilih Daftar Salah Satu</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+            }else {
+                $selectedCheckbox = $daftar_mts ? 'MTS' : 'MPTS';
+                $curl = curl_init();
+                curl_setopt($curl, CURLOPT_URL, 'http://localhost:4000/api/siswa');
+                curl_setopt($curl, CURLOPT_POST, true);
+                curl_setopt($curl, CURLOPT_POSTFIELDS, array(
+                    'nama_lengkap' => $nama_lengkap,
+                    'nisn' => $nisn,
+                    'tempat_lahir' => $tempat_lahir,
+                    'tanggal_lahir' => $tanggal_lahir,
+                    'username' => $username,
+                    'password' => $password,
+                    'tujuan_masuk' => $selectedCheckbox,
+                    'avatar' => curl_file_create($image, $_FILES['avatar']['type'], $_FILES['avatar']['name'])
+                ));
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+                // Send cURL request and get response
+                curl_exec($curl);
+                // Check for errors
+                if (curl_errno($curl)) {
+                    $errorMessage = curl_error($curl);
+                    // Handle error
+                }else {
+                    $_SESSION['registration_complete'] = true;
+                    header('location: login.php');
+                    exit;
+                }
+                // Close cURL session
+                curl_close($curl);
+            }
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
