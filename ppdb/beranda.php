@@ -39,19 +39,21 @@
         if ($object->response == 200) {
             // access result object and session and session_expiry fields
             $result = $object->result;
-            $id_akun_siswa = $result->id_akun_siswa;
-            $avatar = $result->avatar;
-            $username_siswa = $result->username;
-            $nama_lengkap = $result->nama_lengkap;
-            $nisn = $result->nisn;
-            $tempat_lahir = $result->tempat_lahir;
-            $tanggal_lahir = $result->tanggal_lahir;
-            $tahun_masuk = $result->tahun_masuk;
-            $tujuan_masuk = $result->tujuan_masuk;
-            $bayar = $result->bayar;
-            $nilai = $result->nilai;
-            $keterangan = $result->keterangan;
-            $va = $result->va;
+            $status_va = $result->status_va;
+            $response_data_siswa = $result->data_siswa;
+            $id_akun_siswa = $data_siswa->id_akun_siswa;
+            $avatar = $data_siswa->avatar;
+            $username_siswa = $data_siswa->username;
+            $nama_lengkap = $data_siswa->nama_lengkap;
+            $nisn = $data_siswa->nisn;
+            $tempat_lahir = $data_siswa->tempat_lahir;
+            $tanggal_lahir = $data_siswa->tanggal_lahir;
+            $tahun_masuk = $data_siswa->tahun_masuk;
+            $tujuan_masuk = $data_siswa->tujuan_masuk;
+            $bayar = $data_siswa->bayar;
+            $nilai = $data_siswa->nilai;
+            $keterangan = $data_siswa->keterangan;
+            $va = $data_siswa->va;
             $_SESSION['id_akun_siswa'] = $id_akun_siswa;
             $_SESSION['session'];
         } else {
@@ -204,7 +206,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>NISN</b>
+                                        <b><?php echo $status_va; ?></b>
                                     </div>
                                     <div class="col-md-4">
                                         <p><?php echo $nisn; ?></p>

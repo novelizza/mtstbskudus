@@ -76,7 +76,7 @@
         }else {
             // echo curl_exec($curl);
             header('location: data-diri.php');
-            exit();
+            exit;
         }
             // Close cURL session
         curl_close($curl);
@@ -175,8 +175,9 @@
             $errorMessage = curl_error($curl);
             // Handle error
         }else {
-            echo curl_exec($curl);
-            // header('location: data-diri.php');
+            // echo curl_exec($curl);
+            header('location: data-diri.php');
+            exit;
         }
             // Close cURL session
         curl_close($curl);
@@ -195,7 +196,6 @@
         $alamat_lengkap_ayah = $_POST['alamat_lengkap_ayah'];
 
         $tinggal_ibu = $_POST['tinggal_ibu'];
-        $milik_rumah_ibu = $_POST['milik_rumah_ibu'];
         $provinsi_ibu = $_POST['provinsi_ibu'];
         $kabupaten_ibu = $_POST['kabupaten_ibu'];
         $kecamatan_ibu = $_POST['kecamatan_ibu'];
@@ -206,7 +206,6 @@
         $alamat_lengkap_ibu = $_POST['alamat_lengkap_ibu'];
 
         $tinggal_wali = $_POST['tinggal_wali'];
-        $milik_rumah_wali = $_POST['milik_rumah_wali'];
         $provinsi_wali = $_POST['provinsi_wali'];
         $kabupaten_wali = $_POST['kabupaten_wali'];
         $kecamatan_wali = $_POST['kecamatan_wali'];
@@ -217,7 +216,6 @@
         $alamat_lengkap_wali = $_POST['alamat_lengkap_wali'];
 
         $tinggal_siswa = $_POST['tinggal_siswa'];
-        $milik_rumah_siswa = $_POST['milik_rumah_siswa'];
         $provinsi_siswa = $_POST['provinsi_siswa'];
         $kabupaten_siswa = $_POST['kabupaten_siswa'];
         $kecamatan_siswa = $_POST['kecamatan_siswa'];
@@ -226,6 +224,68 @@
         $rw_siswa = $_POST['rw_siswa'];
         $pos_siswa = $_POST['pos_siswa'];
         $alamat_lengkap_siswa = $_POST['alamat_lengkap_siswa'];
+        $ponpes = $_POST['ponpes'];
+
+        if($tinggal_ibu == "YA") {
+            $provinsi_ibu = $provinsi_ayah;
+            $kabupaten_ibu = $kabupaten_ayah;
+            $kecamatan_ibu = $kecamatan_ayah;
+            $kelurahan_ibu = $kelurahan_ayah;
+            $rt_ibu = $rt_ayah;
+            $rw_ibu = $rw_ayah;
+            $pos_ibu = $pos_ayah;
+            $alamat_lengkap_ibu = $alamat_lengkap_ayah;
+        }else {
+            $provinsi_ibu = $_POST['provinsi_ibu'];
+            $kabupaten_ibu = $_POST['kabupaten_ibu'];
+            $kecamatan_ibu = $_POST['kecamatan_ibu'];
+            $kelurahan_ibu = $_POST['kelurahan_ibu'];
+            $rt_ibu = $_POST['rt_ibu'];
+            $rw_ibu = $_POST['rw_ibu'];
+            $pos_ibu = $_POST['pos_ibu'];
+            $alamat_lengkap_ibu = $_POST['alamat_lengkap_ibu'];
+        }
+
+        if($tinggal_wali == "YA") {
+            $provinsi_wali = $provinsi_ayah;
+            $kabupaten_wali = $kabupaten_ayah;
+            $kecamatan_wali = $kecamatan_ayah;
+            $kelurahan_wali = $kelurahan_ayah;
+            $rt_wali = $rt_ayah;
+            $rw_wali = $rw_ayah;
+            $pos_wali = $pos_ayah;
+            $alamat_lengkap_wali = $alamat_lengkap_ayah;
+        }else {
+            $provinsi_wali = $_POST['provinsi_wali'];
+            $kabupaten_wali = $_POST['kabupaten_wali'];
+            $kecamatan_wali = $_POST['kecamatan_wali'];
+            $kelurahan_wali = $_POST['kelurahan_wali'];
+            $rt_wali = $_POST['rt_wali'];
+            $rw_wali = $_POST['rw_wali'];
+            $pos_wali = $_POST['pos_wali'];
+            $alamat_lengkap_wali = $_POST['alamat_lengkap_wali'];
+        }
+
+        if($tinggal_siswa == "YA") {
+            $provinsi_siswa = $provinsi_ayah;
+            $kabupaten_siswa = $kabupaten_ayah;
+            $kecamatan_siswa = $kecamatan_ayah;
+            $kelurahan_siswa = $kelurahan_ayah;
+            $rt_siswa = $rt_ayah;
+            $rw_siswa = $rw_ayah;
+            $pos_siswa = $pos_ayah;
+            $alamat_lengkap_siswa = $alamat_lengkap_ayah;
+        }else {
+            $provinsi_siswa = $_POST['provinsi_siswa'];
+            $kabupaten_siswa = $_POST['kabupaten_siswa'];
+            $kecamatan_siswa = $_POST['kecamatan_siswa'];
+            $kelurahan_siswa = $_POST['kelurahan_siswa'];
+            $rt_siswa = $_POST['rt_siswa'];
+            $rw_siswa = $_POST['rw_siswa'];
+            $pos_siswa = $_POST['pos_siswa'];
+            $alamat_lengkap_siswa = $_POST['alamat_lengkap_siswa'];
+            $ponpes = $_POST['ponpes'];
+        }
 
         $data_alamat_all = array(
             'tinggal_luar_negeri_ayah' => $tinggal_ayah,
@@ -238,27 +298,116 @@
             'RW_ayah' => $rw_ayah,
             'alamat_ayah' => $alamat_lengkap_ayah,
             'kode_pos_ayah' => $pos_ayah,
-            'tinggal_luar_negeri_ayah' => $tinggal_ayah,
-            'kepemilikan_rumah_ayah' => $milik_rumah_ayah,
-            'provinsi_ayah' => $provinsi_ayah,
-            'kabupaten_kota_ayah' => $kabupaten_ayah,
-            'kecamatan_ayah' => $kecamatan_ayah,
-            'kelurahan_desa_ayah' => $kelurahan_ayah,
-            'RT_ayah' => $rt_ayah,
-            'RW_ayah' => $rw_ayah,
-            'alamat_ayah' => $alamat_lengkap_ayah,
-            'kode_pos_ayah' => $pos_ayah,
-            'tinggal_luar_negeri_ayah' => $tinggal_ayah,
-            'kepemilikan_rumah_ayah' => $milik_rumah_ayah,
-            'provinsi_ayah' => $provinsi_ayah,
-            'kabupaten_kota_ayah' => $kabupaten_ayah,
-            'kecamatan_ayah' => $kecamatan_ayah,
-            'kelurahan_desa_ayah' => $kelurahan_ayah,
-            'RT_ayah' => $rt_ayah,
-            'RW_ayah' => $rw_ayah,
-            'alamat_ayah' => $alamat_lengkap_ayah,
-            'kode_pos_ayah' => $pos_ayah,
+            'provinsi_ibu' => $provinsi_ibu,
+            'kabupaten_kota_ibu' => $kabupaten_ibu,
+            'kecamatan_ibu' => $kecamatan_ibu,
+            'kelurahan_desa_ibu' => $kelurahan_ibu,
+            'RT_ibu' => $rt_ibu,
+            'RW_ibu' => $rw_ibu,
+            'alamat_ibu' => $alamat_lengkap_ibu,
+            'kode_pos_ibu' => $pos_ibu,
+            'provinsi_wali' => $provinsi_wali,
+            'kabupaten_kota_wali' => $kabupaten_wali,
+            'kecamatan_wali' => $kecamatan_wali,
+            'kelurahan_desa_wali' => $kelurahan_wali,
+            'RT_wali' => $rt_wali,
+            'RW_wali' => $rw_wali,
+            'alamat_wali' => $alamat_lengkap_wali,
+            'kode_pos_wali' => $pos_wali,
+            'provinsi_siswa' => $provinsi_siswa,
+            'kabupaten_kota_siswa' => $kabupaten_siswa,
+            'kecamatan_siswa' => $kecamatan_siswa,
+            'kelurahan_desa_siswa' => $kelurahan_siswa,
+            'RT_siswa' => $rt_siswa,
+            'RW_siswa' => $rw_siswa,
+            'alamat_siswa' => $alamat_lengkap_siswa,
+            'kode_pos_siswa' => $pos_siswa,
+            'pondok_pesantren' => $ponpes
         );
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'http://localhost:4000/api/siswa/data-alamat',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data_alamat_all),
+        CURLOPT_HTTPHEADER => array(
+            'session:'.$session.'',
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        curl_exec($curl);
+        // echo $responseDataDiri;
+        // Check for errors
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            // Handle error
+        }else {
+            // echo curl_exec($curl);
+            header('location: data-diri.php');
+            exit;
+        }
+            // Close cURL session
+        curl_close($curl);
+    }
+
+    if(isset($_POST['data_prestasi_siswa'])) {
+        $prestasi1 = $_POST['prestasi1'];
+        $tahun1 = $_POST['tahun_lomba_1'];
+        $nama1 = $_POST['nama_lomba_1'];
+        $bidang1 = $_POST['bidang_lomba_1'];
+        $penyelenggara1 = $_POST['penyelenggara_1'];
+        $tingkat1 = $_POST['tingkat_1'];
+        $peringkat1 = $_POST['peringkat_1'];
+
+        $data_prestasi = array(
+            'prestasi_ke' => $prestasi1,
+            'tahun' => $tahun1,
+            'nama_lomba' => $nama1,
+            'bidang_lomba' => $bidang1,
+            'nama_penyelenggara' => $penyelenggara1,
+            'lomba_tingkat' => $tingkat1,
+            'peringkat_yang_diraih' => $peringkat1
+        );
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'http://localhost:4000/api/siswa/data-prestasi',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data_prestasi),
+        CURLOPT_HTTPHEADER => array(
+            'session:'.$session.'',
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        curl_exec($curl);
+        // echo $responseDataDiri;
+        // Check for errors
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            // Handle error
+        }else {
+            // echo curl_exec($curl);
+            header('location: data-diri.php');
+            exit;
+        }
+            // Close cURL session
+        curl_close($curl);
     }
 ?>
 
@@ -839,7 +988,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
-                                    <input type="number" class="form-control" name="pos_ayah" required>
+                                    <input type="number" class="form-control" name="pos_ayah">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
@@ -856,45 +1005,33 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Sama Dengan Ayah</b></p>
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="YA" name="tinggal_ibu">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="YA"
+                                        name="tinggal_ibu">
                                     <label class="form-check-label" for="gridRadios1">
                                         YA
                                     </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="TIDAK" name="tinggal_ibu">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="TIDAK"
+                                        name="tinggal_ibu">
                                     <label class="form-check-label" for="gridRadios1">
                                         TIDAK
                                     </label>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Status Kepemilikan Rumah</b></label>
-                                    <select name="milik_rumah_ibu" class="form-select"
-                                        aria-label="Default select example">
-                                        <option value="" selected></option>
-                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
-                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
-                                        <option value="RUMAH DINAS">Rumah Dinas</option>
-                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
-                                        <option value="LAINNYA">Lainnya</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
                                     <label for=""><b>Provinsi</b></label>
-                                    <input type="text" class="form-control" name="provinsi_ibu" required>
+                                    <input type="text" class="form-control" name="provinsi_ibu">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kabupaten / Kota</b></label>
-                                    <input type="text" class="form-control" name="kabupaten_ibu" required>
+                                    <input type="text" class="form-control" name="kabupaten_ibu">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kecamatan</b></label>
-                                    <input type="text" class="form-control" name="kecamatan_ibu" required>
+                                    <input type="text" class="form-control" name="kecamatan_ibu">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kelurahan</b></label>
-                                    <input type="text" class="form-control" name="kelurahan_ibu" required>
+                                    <input type="text" class="form-control" name="kelurahan_ibu">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
@@ -906,7 +1043,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
-                                    <input class="pos_ibu" type="number" class="form-control">
+                                    <input type="number" class="form-control" name="pos_ibu">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
@@ -923,45 +1060,33 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Sama Dengan Ayah</b></p>
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="YA" name="tinggal_wali">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="YA"
+                                        name="tinggal_wali">
                                     <label class="form-check-label" for="gridRadios1">
                                         YA
                                     </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="TIDAK" name="tinggal_wali">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="TIDAK"
+                                        name="tinggal_wali">
                                     <label class="form-check-label" for="gridRadios1">
                                         TIDAK
                                     </label>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Status Kepemilikan Rumah</b></label>
-                                    <select class="form-select" aria-label="Default select example"
-                                        name="milik_rumah_wali">
-                                        <option value="" selected></option>
-                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
-                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
-                                        <option value="RUMAH DINAS">Rumah Dinas</option>
-                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
-                                        <option value="LAINNYA">Lainnya</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
                                     <label for=""><b>Provinsi</b></label>
-                                    <input type="text" class="form-control" name="provinsi_wali" required>
+                                    <input type="text" class="form-control" name="provinsi_wali">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kabupaten / Kota</b></label>
-                                    <input name="kabupaten_wali" type="text" class="form-control" required>
+                                    <input name="kabupaten_wali" type="text" class="form-control">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kecamatan</b></label>
-                                    <input name="camat_wali" type="text" class="form-control" required>
+                                    <input name="camat_wali" type="text" class="form-control">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kelurahan</b></label>
-                                    <input name="lurah_wali" type="text" class="form-control" required>
+                                    <input name="lurah_wali" type="text" class="form-control">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
@@ -969,16 +1094,16 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RW</b></label>
-                                    <input name="rw_wali" type="number" class="form-control" required>
+                                    <input name="rw_wali" type="number" class="form-control">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
-                                    <input name="pos_wali" type="number" class="form-control" required>
+                                    <input name="pos_wali" type="number" class="form-control">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
-                                    <textarea name="alamat_lengkap_wali" class="form-control" style="height: 100px"
-                                        required></textarea>
+                                    <textarea name="alamat_lengkap_wali" class="form-control"
+                                        style="height: 100px"></textarea>
                                 </div><br>
                                 <!-- End Data Alamat Wali Murid -->
 
@@ -989,52 +1114,41 @@
                                         Alamat Siswa</span>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck" name="sama_ayah"
-                                        value="Sama dengan Ayah">
-                                    <label class="form-check-label" for="gridCheck">
-                                        <b>Sama Dengan Ayah</b>
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="YA"
+                                        name="tinggal_siswa">
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Sama dengan Ayah
+                                    </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="checkbox" id="gridCheck"
-                                        name="pondok_pesantren" value="Pondok Pesantren">
-                                    <label class="form-check-label" for="gridCheck">
-                                        <b>Pondok Pesantren</b>
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="PONPES"
+                                        name="tinggal_siswa">
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Pondok Pesantren
                                     </label>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Status Kepemilikan Rumah</b></label>
-                                    <select class="form-select" aria-label="Default select example"
-                                        name="milik_rumah_siswa">
-                                        <option value="" selected></option>
-                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
-                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
-                                        <option value="RUMAH DINAS">Rumah Dinas</option>
-                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
-                                        <option value="LAINNYA">Lainnya</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
                                     <label for=""><b>Provinsi</b></label>
-                                    <input type="text" class="form-control" name="provinsi_siswa" required>
+                                    <input type="text" class="form-control" name="provinsi_siswa">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kabupaten / Kota</b></label>
-                                    <input type="text" class="form-control" name="kabupaten_siswa" required>
+                                    <input type="text" class="form-control" name="kabupaten_siswa">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kecamatan</b></label>
-                                    <input type="text" class="form-control" name="kecamatan_siswa" required>
+                                    <input type="text" class="form-control" name="kecamatan_siswa">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kelurahan</b></label>
-                                    <input type="text" class="form-control" name="kelurahan_siswa" required>
+                                    <input type="text" class="form-control" name="kelurahan_siswa">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
-                                    <input type="number" class="form-control" name="rt_siswa" required>
+                                    <input type="number" class="form-control" name="rt_siswa">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RW</b></label>
-                                    <input type="number" class="form-control" name="rw_siswa" required>
+                                    <input type="number" class="form-control" name="rw_siswa">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
@@ -1042,11 +1156,11 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
-                                    <textarea class="form-control" style="height: 100px" name="alamat_lengkap_siswa"
-                                        required></textarea>
+                                    <textarea class="form-control" style="height: 100px"
+                                        name="alamat_lengkap_siswa"></textarea>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Pondok Pesantren</b></label>
+                                    <label for=""><b>Nama Pondok Pesantren</b></label>
                                     <input type="text" class="form-control" name="ponpes">
                                     <label style="font-style: italic; color: grey;">NB : Isi Jika Anda Dari
                                         Pondok Pesntren</label>
@@ -1063,7 +1177,7 @@
                         <!-- Data Prestasi Siswa -->
                         <div class="tab-pane fade show" id="contact1-justified" role="tabpanel"
                             aria-labelledby="home-tab">
-                            <form class="row g-3">
+                            <form class="row g-3" action="" method="post">
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Prestasi
@@ -1071,27 +1185,28 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
-                                    <input type="number" class="form-control">
+                                    <input type="hidden" class="form-control" name="prestasi1" value="1">
+                                    <input type="number" class="form-control" name="tahun_lomba_1">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="nama_lomba_1">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="bidang_lomba_1">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="penyelenggara_1">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="tingkat_1">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peirngkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="peringkat_1">
                                 </div><br>
                                 <div class="col-md-12">
                                     <span class="badge"
@@ -1100,27 +1215,28 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
-                                    <input type="number" class="form-control">
+                                    <input type="hidden" class="form-control" name="prestasi2" value="2">
+                                    <input type="number" class="form-control" name="tahun_lomba_2">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="nama_lomba_2">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="bidang_lomba_2">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="penyelenggara_2">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="tingkat_2">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peirngkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="peringkat_2">
                                 </div><br>
                                 <div class="col-md-12">
                                     <span class="badge"
@@ -1129,30 +1245,31 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
-                                    <input type="number" class="form-control">
+                                    <input type="hidden" class="form-control" name="prestasi3" value="3">
+                                    <input type="number" class="form-control" name="tahun_lomba_3">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="nama_lomba_3">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="bidang_lomba_3">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="penyelenggara_3">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="tingkat_3">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peirngkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="peringkat_3">
                                 </div><br>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg"
+                                    <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa"
                                         style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
                                 </div>
                             </form>
