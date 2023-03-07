@@ -160,13 +160,13 @@
                             <h2>Selamat Datang, <span style="color: #4ECB71;"><?php echo $nama_lengkap; ?>!</span></h2>
 
                             <?php
-                                if($keterangan == 3) {
+                                if($keterangan == 0) {
                                     echo "<h4><span class='badge bg-success' style='width: 100%;'>Selamat Anda Diterima MTS Kelas
                                     7!</span></h4>";
                                 }elseif($keterangan == 1) {
                                     echo "<h4><span class='badge' style='width: 100%; background-color: #4E53CB'>Selamat Anda Diterima MPTS!</span></h4>";
-                                }else {
-
+                                }elseif($keterangan == NULL) {
+                                    NULL;
                                 }
                             ?>
 
