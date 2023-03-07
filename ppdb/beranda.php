@@ -39,8 +39,9 @@
         if ($object->response == 200) {
             // access result object and session and session_expiry fields
             $result = $object->result;
-            $status_va = $result->status_va;
+            $status_va = $result->statusVa;
             $response_data_siswa = $result->data_siswa;
+            $
             $id_akun_siswa = $data_siswa->id_akun_siswa;
             $avatar = $data_siswa->avatar;
             $username_siswa = $data_siswa->username;
