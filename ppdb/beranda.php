@@ -48,9 +48,7 @@
 
             $fix_data_siswa = $object_data_siswa->dataValues;
 
-            console.log($object_data_siswa);
-            console.log($fix_data_siswa);
-            console.log("----------------");
+            
             
             $id_akun_siswa = $object_data_siswa->id_akun_siswa;
             $avatar = $object_data_siswa->avatar;
@@ -73,6 +71,10 @@
             echo 'Error: ' . $object->response . '<br>';
             echo 'Message: ' . $object->message . '<br>';
         }
+    
+        echo "$object_data_siswa";
+            echo "fix_data_siswa";
+            echo "--------------";
 
     curl_close($curl);
 
