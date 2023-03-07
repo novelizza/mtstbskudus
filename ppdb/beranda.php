@@ -72,7 +72,7 @@
             echo 'Message: ' . $object->message . '<br>';
         }
     
-        // echo $result;
+        echo $result;
             // echo $response_data_siswa;
             echo $status_va;
             echo "--------------";
