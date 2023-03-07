@@ -171,7 +171,7 @@
 
                         <?php
                             if($status_va == 1) {
-                                echo "<h5><i class='bi bi-x' style='color: #4ECB71'></i>&nbsp; Pembayaran
+                                echo "<h5><i class='bi bi-x-circle-fill' style='color: #df4759'></i>&nbsp; Pembayaran
                                 Belum
                                 LUNAS!</h5>";
                             }else {
@@ -194,6 +194,21 @@
                             <i class="bi bi-printer-fill"></i><span> Cetak Kartu Tes</span>
                         </a>
                     </div>
+                    <?php
+                        if($status_va == 1) {
+                            echo "<div class='col-md-6'>
+                            <button type='submit' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;' disabled>
+                                <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
+                            </button>
+                        </div>";
+                        }else {
+                            echo "<div class='col-md-6'>
+                            <button type='submit' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;'>
+                                <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
+                            </button>
+                        </div>";
+                        }
+                    ?>
                     <div class="col-md-6">
                         <a class="btn" href="beranda.php" style="background-color: #2AB6D4; color: white; width: 100%;">
                             <i class="bi bi-printer-fill"></i><span> Cetak Bukti Pembayaran</span>
