@@ -160,7 +160,7 @@
                             <h2>Selamat Datang, <span style="color: #4ECB71;"><?php echo $nama_lengkap; ?>!</span></h2>
 
                             <?php
-                                if($keterangan == 0) {
+                                if($keterangan == 3) {
                                     echo "<h4><span class='badge bg-success' style='width: 100%;'>Selamat Anda Diterima MTS Kelas
                                     7!</span></h4>";
                                 }elseif($keterangan == 1) {
@@ -244,7 +244,7 @@
                                         <b>NISN</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <b><?php echo $nisn; ?></b>
+                                        <p><?php echo $nisn; ?></p>
                                     </div>
                                 </div>
                                 <div class=" row">
@@ -252,7 +252,7 @@
                                         <b>Nama Siswa</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p><?php echo $nama_siswa; ?></p>
+                                        <p><?php echo $nama_lengkap; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
