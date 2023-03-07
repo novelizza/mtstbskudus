@@ -63,8 +63,8 @@
                             <li><a href="sarana.php">Sarana & Prasarana</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link " href="brosur.php">Berita</a></li>
-                    <li><a class="nav-link active" href="kontakkami.php">Kontak Kami</a></li>
+                    <li><a class="nav-link" href="brosur.php">Berita</a></li>
+                    <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
                     <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul class="oke">
@@ -87,80 +87,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-headline text-center">
-                            <h2><span style="color: #4ECB71;">Kontak</span> Kami</h2>
-                        </div>
+                        <img src="assets/img/Brosur PPDB 2.png" alt="">
                     </div>
                 </div>
                 <div class="row">
-                    <!-- single-well start-->
-                    <div class="col-md-5 col-sm-3 col-xs-3">
-                        <div class="well-left">
-                            <div class="single-well">
-                                <a href="#">
-                                    <img src="assets/img/logo.png" alt="Salim" style="width: 400px; height: 400px;">
-                                </a>
-                            </div>
-                        </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <a href="download-brosur.php?file=Brosur%20PPDB%202.png" class="btn btn-primary btn-lg"
+                            name="data_prestasi_siswa"
+                            style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN
+                            BROSUR</a>
                     </div>
-                    <!-- single-well end-->
-                    <div class="col-md-5 col-sm-5 col-xs-12">
-                        <div class="well-middle">
-                            <div class="single-well">
-                                <h4>
-                                    <i class="bi bi-telephone-fill" style="color: #4ECB71;"></i>&nbsp; (0291) 434555
-                                </h4><br>
-                                <h4>
-                                    <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0811-2233-4455
-                                </h4><br>
-                                <h4>
-                                    <i class="bi bi-envelope-fill" style="color: #4ECB71;"></i>&nbsp; mtstbs@yahoo.co.id
-                                </h4><br>
-                                <h4>
-                                    <i class="bi bi-facebook" style="color: #4ECB71;"></i>&nbsp; MTS TBS Kudus
-                                </h4><br>
-                                <h4>
-                                    <i class="bi bi-instagram" style="color: #4ECB71;"></i>&nbsp; @mts.tbs.kudus
-                                </h4><br>
-                                <h4>
-                                    <i class="bi bi-geo-alt-fill" style="color: #4ECB71;"></i>&nbsp; Jl. KH. Turaichan
-                                    Adjhuri No.23, Pejaten, Kajeksan, Kec.Kota Kudus, Kabupaten Kudus, Jawa Tengah 59314
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End col-->
                 </div>
             </div>
         </div>
         <!-- End About Section -->
-
-        <div id="contact" class="contact-area">
-            <div class="contact-inner area-padding">
-                <div class="contact-overly"></div>
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="section-headline text-center">
-                                <h2><span style="color: #4ECB71;">Lihat</span> Lokasi</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-
-                        <!-- Start Google Map -->
-                        <div class="col-md-12">
-                            <!-- Start Map -->
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7438735197193!2d110.83363001386869!3d-6.800982595084388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70c4c94294199f%3A0xae6fd89863dbe376!2sIslamic%20Middle%20School%20of%20TBS%20Kudus!5e0!3m2!1sen!2sid!4v1675927679313!5m2!1sen!2sid"
-                                width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-                            <!-- End Map -->
-                        </div>
-                        <!-- End Google Map -->
-                    </div>
-                </div>
-            </div>
-        </div><!-- End Contact Section -->
 
         <!-- ======= Footer ======= -->
         <footer>

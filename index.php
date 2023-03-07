@@ -70,7 +70,7 @@
                         <ul class="oke">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
-                            <li><a href="#">Brosur</a></li>
+                            <li><a href="foto-brosur.php">Brosur</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -173,7 +173,7 @@
                                     Salah satu madrasah di Kabupaten Kudus yang sudah memiliki akreditasi A yang
                                     mengedepankan pembelajaran agama Islam dan berfokus untuk mencetak siswa-siswa yang
                                     tangguh dalam imtag, unggul dalam iptek, terdepan dalam prestasi berwawasan
-                                    ahlussunnah wal jama'ah an-nahdliyah
+                                    ahlussunnah wal jama'ah an-nahdliyah.
                                 </p>
                             </div>
                         </div>
