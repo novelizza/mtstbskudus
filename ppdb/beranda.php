@@ -73,7 +73,8 @@
         }
     
         // echo $result;
-            echo $response_data_siswa;
+            // echo $response_data_siswa;
+            echo $status_va;
             echo "--------------";
 
     curl_close($curl);
