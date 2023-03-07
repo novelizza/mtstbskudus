@@ -33,6 +33,7 @@
     ),
     ));
 
+
     $response = curl_exec($curl);
     $object = json_decode($response);
 
@@ -72,9 +73,10 @@
             echo 'Message: ' . $object->message . '<br>';
         }
     
-        echo $result;
+        // echo $result;
             // echo $response_data_siswa;
-            echo $status_va;
+            console.log($result);
+            // echo $status_va;
             echo "--------------";
 
     curl_close($curl);
