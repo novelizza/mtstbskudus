@@ -44,12 +44,6 @@
             $status_va = $result->statusVa;
 
             $data_siswa = $result->data_siswa;
-            // $akun_siswa = $data_siswa->akun_siswa;
-            // $nama_siswa = $akun_siswa->dataValues->nama_lengkap;
-
-            // $object_data_siswa = $response_data_siswa->akun_siswa;
-
-            // $fix_data_siswa = $object_data_siswa->dataValues;
             
             $id_akun_siswa = $data_siswa->id_akun_siswa;
             $avatar = $data_siswa->avatar;
@@ -57,13 +51,13 @@
             $nama_lengkap = $data_siswa->nama_lengkap;
             $nisn = $data_siswa->nisn;
             $tempat_lahir = $data_siswa->tempat_lahir;
-            // $tanggal_lahir = $fix_data_siswa->tanggal_lahir;
-            // $tahun_masuk = $fix_data_siswa->tahun_masuk;
-            // $tujuan_masuk = $fix_data_siswa->tujuan_masuk;
-            // $bayar = $fix_data_siswa->bayar;
-            // $nilai = $fix_data_siswa->nilai;
-            // $keterangan = $fix_data_siswa->keterangan;
-            // $va = $fix_data_siswa->va;
+            $tanggal_lahir = $data_siswa->tanggal_lahir;
+            $tahun_masuk = $data_siswa->tahun_masuk;
+            $tujuan_masuk = $data_siswa->tujuan_masuk;
+            $bayar = $data_siswa->bayar;
+            $nilai = $data_siswa->nilai;
+            $keterangan = $data_siswa->keterangan;
+            $va = $data_siswa->va;
 
             $_SESSION['id_akun_siswa'] = $id_akun_siswa;
             $_SESSION['session'];
@@ -72,13 +66,6 @@
             echo 'Error: ' . $object->response . '<br>';
             echo 'Message: ' . $object->message . '<br>';
         }
-    
-        // echo $result;
-            // echo $response_data_siswa;
-            // console.log($result);
-            // echo $status_va;
-            // echo "--------------";
-            echo $data['result']['akun_siswa']['dataValues']['nama_lengkap'];
 
     curl_close($curl);
 
@@ -246,7 +233,7 @@
                     </div>
                     <div class="row g-0">
                         <div class="col-md-2">
-                            <img src="http://localhost:4000/api/avatar/<?php echo $avatar; ?>"
+                            <img src="<?php echo "http://localhost:4000/api/avatar/".$avatar; ?>"
                                 class="img-fluid rounded-start" alt="..."
                                 style="margin:10px; height: 250px; width: 250px;">
                         </div>
