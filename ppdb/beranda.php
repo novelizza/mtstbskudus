@@ -226,7 +226,7 @@
                             </div>
                             <div class="col-md-6">
                                 <span style="float: right; color: white; font-weight: bold; font-size: 16px;">
-                                    <div class="row">
+                                    <div class="row" style="float: right;">
                                         <p style="float: right; color: white; font-weight: bold; font-size: 16px;">Nomor
                                             Billing</p>
                                         <?php echo $va; ?>

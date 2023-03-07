@@ -183,7 +183,7 @@
                                     <div class="col">
                                         <img src="https://image.mtsnutbs.sch.id/avatar/<?php echo $avatar; ?>"
                                             class="img-fluid rounded-start" alt="..."
-                                            style="margin:10px; height: 100px; width: 100px; float: right;">
+                                            style="margin:10px; height: 150px; width: 150px; float: right;">
                                     </div>
                                 </div>
                             </div>
