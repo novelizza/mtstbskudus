@@ -73,7 +73,7 @@
         }
     
         echo $result;
-            echo $response_data_siswa;
+            // echo $response_data_siswa;
             echo "--------------";
 
     curl_close($curl);
