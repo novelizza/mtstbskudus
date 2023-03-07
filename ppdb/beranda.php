@@ -160,7 +160,7 @@
                             <h2>Selamat Datang, <span style="color: #4ECB71;"><?php echo $nama_lengkap; ?>!</span></h2>
 
                             <?php
-                                if($keterangan == 0) {
+                                if($keterangan == 2) {
                                     echo "<h4><span class='badge bg-success' style='width: 100%;'>Selamat Anda Diterima MTS Kelas
                                     7!</span></h4>";
                                 }elseif($keterangan == 1) {
