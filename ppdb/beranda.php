@@ -165,7 +165,7 @@
                                     7!</span></h4>";
                                 }elseif($keterangan == 1) {
                                     echo "<h4><span class='badge' style='width: 100%; background-color: #4E53CB'>Selamat Anda Diterima MPTS!</span></h4>";
-                                }elseif($keterangan == NULL) {
+                                }elseif($keterangan.is_null()) {
                                     NULL;
                                 }
                             ?>
