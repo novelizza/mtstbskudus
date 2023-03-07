@@ -57,13 +57,13 @@
             $nama_lengkap = $data_siswa->nama_lengkap;
             $nisn = $data_siswa->nisn;
             $tempat_lahir = $data_siswa->tempat_lahir;
-            $tanggal_lahir = $fix_data_siswa->tanggal_lahir;
-            $tahun_masuk = $fix_data_siswa->tahun_masuk;
-            $tujuan_masuk = $fix_data_siswa->tujuan_masuk;
-            $bayar = $fix_data_siswa->bayar;
-            $nilai = $fix_data_siswa->nilai;
-            $keterangan = $fix_data_siswa->keterangan;
-            $va = $fix_data_siswa->va;
+            // $tanggal_lahir = $fix_data_siswa->tanggal_lahir;
+            // $tahun_masuk = $fix_data_siswa->tahun_masuk;
+            // $tujuan_masuk = $fix_data_siswa->tujuan_masuk;
+            // $bayar = $fix_data_siswa->bayar;
+            // $nilai = $fix_data_siswa->nilai;
+            // $keterangan = $fix_data_siswa->keterangan;
+            // $va = $fix_data_siswa->va;
 
             $_SESSION['id_akun_siswa'] = $id_akun_siswa;
             $_SESSION['session'];
