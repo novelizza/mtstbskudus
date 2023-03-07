@@ -254,7 +254,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b><?php echo $status_va; ?></b>
+                                        <b><?php echo $data['result']['akun_siswa']['dataValues']['nama_lengkap']; ?></b>
                                     </div>
                                     <div class="col-md-4">
                                         <p><?php echo $nisn; ?></p>
