@@ -72,8 +72,8 @@
             echo 'Message: ' . $object->message . '<br>';
         }
     
-        echo "$object_data_siswa";
-            echo "fix_data_siswa";
+        echo $object_data_siswa;
+            echo $fix_data_siswa;
             echo "--------------";
 
     curl_close($curl);
