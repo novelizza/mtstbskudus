@@ -46,12 +46,12 @@
 
             $object_data_siswa = $response_data_siswa->akun_siswa;
 
-            $fix_data_siswa = $object_data_siswa->dataValues;
+            // $fix_data_siswa = $object_data_siswa->dataValues;
             
-            $id_akun_siswa = $fix_data_siswa->id_akun_siswa;
-            $avatar = $fix_data_siswa->avatar;
-            $username_siswa = $fix_data_siswa->username;
-            $nama_lengkap = $fix_data_siswa->nama_lengkap;
+            $id_akun_siswa = $object_data_siswa->id_akun_siswa;
+            $avatar = $object_data_siswa->avatar;
+            $username_siswa = $object_data_siswa->username;
+            $nama_lengkap = $object_data_siswa->nama_lengkap;
             $nisn = $fix_data_siswa->nisn;
             $tempat_lahir = $fix_data_siswa->tempat_lahir;
             $tanggal_lahir = $fix_data_siswa->tanggal_lahir;
