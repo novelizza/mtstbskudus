@@ -105,9 +105,16 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <center>
+                        <h5>
+                            <p><b>“TANGGUH DALAM IMTAQ, UNGGUL DALAM IPTEK, TERDEPAN DALAM PRESTASI BERWAWASAN
+                                    AHLUSSUNNAH
+                                    WAL
+                                    JAMA’AH AN-NAHDLIYAH"</b></p>
+                        </h5>
+                    </center>
                 </div>
-            </div><!-- End Visi Section -->
+            </div><br><!-- End Visi Section -->
 
             <!-- ======= Misi Section ======= -->
             <div id="testimonials" class="testimonials">
@@ -123,9 +130,26 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <h6>
+                        <p>a. Menyelenggarakan pendidikan yang berwawasan Ahlussunah Waljama’ah An-Nahdliyah;</p>
+                        <p>b. Mewujudkan pembelajaran dan pembiasaan dalam mempelajari Kitab-kitab salaf;</p>
+                        <p>c. Mewujudkan pembentukan karakter Islami yang mampu mengaktualisasikan diri dalam
+                            masyarakat;
+                        </p>
+                        <p>d. Melaksanakan pembelajaran dan bimbingan dengan intensif untuk mencapai ketuntasan dan daya
+                            serap yang tinggi;</p>
+                        <p>e. Mengembangkan Potensi peserta didik dalam kegiatan pembelajaran dan Bimbingan secara
+                            optimal;
+                        </p>
+                        <p>f. Menumbuhkembangkan Potensi peserta didik dalam pemahaman Ajaran Islam ala Ahlussunah
+                            Waljama’ah An-Nahdliyah;</p>
+                        <p>g. Meningkatkan disiplin dan menumbuhkan penghayatan, pengamalan Ajaran Islam dengan
+                            keteladanan
+                            yang berasaskan Ahlussunah Waljama’ah An-Nahdliyah;</p>
+                        <p>h. Meningkatkan penguasaan ilmu pengetahuan dan teknologi berwawasan global.</p>
+                    </h6>
                 </div>
-            </div><!-- End Misi Section -->
+            </div><br><!-- End Misi Section -->
 
             <!-- ======= Tujuan Section ======= -->
             <div id="testimonials" class="testimonials">
@@ -141,7 +165,17 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <h6>
+                        <p>Tujuan pendidikan Madrasah Tsanawiyah NU Tasywiquth Thullab Salafiyah (TBS) Kudus adalah
+                            meletakkan dasar kecerdasan, pengetahuan, kepribadian, akhlak mulia serta keterampilan untuk
+                            hidup mandiri dan mempersiapkan pendidikan lebih lanjut. Bertolak dari tujuan pendidikan
+                            dasar
+                            tersebut, Madrasah Tsanawiyah NU Tasywiquth Thullab Salafiyah (TBS) Kudus mempunyai tujuan
+                            khusus sebagai berikut :</p>
+                        <p>1. Membentuk ilmuwan muslim yang akrom serta solih</p>
+                        <p>2. Membekali siswa agar mampu mengamalkan ilmunya yang berhaluan Ahlussunah Waljama'ah
+                            An-Nahdliyah</p>
+                    </h6>
                 </div>
             </div><!-- End Tujuan Section -->
 

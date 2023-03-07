@@ -167,15 +167,13 @@
                         <div class="well-middle">
                             <div class="single-well">
                                 <a href="#">
-                                    <h4 class="sec-head">project Maintenance</h4>
+                                    <h4 class="sec-head">Madrasah Tsanawiyah NU Tasywiquth Thullab Salafiyah Kudus</h4>
                                 </a>
                                 <p>
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
+                                    Salah satu madrasah di Kabupaten Kudus yang sudah memiliki akreditasi A yang
+                                    mengedepankan pembelajaran agama Islam dan berfokus untuk mencetak siswa-siswa yang
+                                    tangguh dalam imtag, unggul dalam iptek, terdepan dalam prestasi berwawasan
+                                    ahlussunnah wal jama'ah an-nahdliyah
                                 </p>
                             </div>
                         </div>
@@ -203,12 +201,13 @@
                             <div class="services-details">
                                 <div class="single-services">
                                     <a class="services-icon" href="#">
-                                        <i class="bi bi-briefcase"></i>
+                                        <i class="bi bi-journal-medical"></i>
                                     </a>
-                                    <h4>Hafalan Al-Qur'an</h4>
+                                    <h4>Kitab Kuning</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        MTS NU TBS menjadikan Kitab Kuning sebagai salah satu sistem pembelajarannya
+                                        dengan menjadikan pelajaran prioritas dalam kemadrasahan dan didukung pula
+                                        dengan sistem <i>bandongan</i>, <i>sorogan</i>, dan <i>halaqoh</i>.
                                     </p>
                                 </div>
                             </div>
@@ -220,12 +219,16 @@
                             <div class="services-details">
                                 <div class="single-services">
                                     <a class="services-icon" href="#">
-                                        <i class="bi bi-card-checklist"></i>
+                                        <i class="bi bi-moon-stars"></i>
                                     </a>
-                                    <h4>Hafalan Kitab - Kitab</h4>
+                                    <h4>Falak</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        Materi Ilmu Falak yang diajarkan adalah materi dasar dengan perhitungan yang
+                                        mudah dan simpel seperti; hisal awal bulan hijriyah <i>'urfi/isthilahi</i>,
+                                        penanggalan jawa Islam, hijri syamsi, pranoto mongso, hisal awal bulan haqiqi
+                                        taqribi, hisab gerhana bulan haqiqi taqribi, pengenalan beragam model sistem
+                                        kalender, penyusunan kalendermiladiyah, sampai pembuatan jadwal selisih istiwa'
+                                        dengan waktu setempat serta pembuatan jadwal transit matahari.
                                     </p>
                                 </div>
                             </div>
@@ -238,12 +241,15 @@
                             <div class="services-details">
                                 <div class="single-services">
                                     <a class="services-icon" href="#">
-                                        <i class="bi bi-bar-chart"></i>
+                                        <i class="bi bi-award"></i>
                                     </a>
-                                    <h4>Teknologi Informasi</h4>
+                                    <h4>Pengembangan Diri</h4>
                                     <p>
-                                        will have to make sure the prototype looks finished by inserting text or
-                                        photo.make sure the prototype looks finished by.
+                                        MTS NU TBS Kudus memperhatikan pengembangan diri siswa melalui program
+                                        ekstrakulikuler yang beragam. Mulai dari kepramukaan, PMR, Seni Rebana, baca
+                                        Kitab Al-Qur'an, Kaligrafi hingga berbagai bidang olahraga. Selain itu, MTS NU
+                                        TBS Kudus juga mempunyai Bimbingan Konseling yang membantu para siswa
+                                        mengembangkan potensi yang dimiliki.
                                     </p>
                                 </div>
                             </div>

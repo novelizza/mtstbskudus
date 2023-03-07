@@ -111,12 +111,15 @@
                         <div class="well-middle">
                             <div class="single-well">
                                 <p>
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
+                                    Salah satu madrasah di Kabupaten Kudus yang sudah memiliki akreditasi A yang
+                                    mengedepankan pembelajaran agama Islam dan berfokus untuk mencetak siswa-siswa yang
+                                    tangguh dalam imtag, unggul dalam iptek, terdepan dalam prestasi berwawasan
+                                    ahlussunnah wal jama'ah an-nahdliyah.
+                                </p>
+                                <p>
+                                    MTS NU TBS Kudus juga mempunyai berbagai macam program unggulan seperti Kitab
+                                    Kuning, Falak dan Program Pengembangan Diri melalui berbagai macam ekstrakulikuler
+                                    mulai dari bidang akademis hingga bidang olahraga.
                                 </p>
                             </div>
                         </div>

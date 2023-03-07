@@ -109,12 +109,34 @@
                         <div class="well-middle">
                             <div class="single-well">
                                 <p>
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
-                                    Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-                                    aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
-                                    adipisicing elit. Itaque quas officiis iure
+                                    Kurikulum MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus menerapkan Kurikulum
+                                    Pendidikan Nasional yang dipadukan dengan Kurikulum Kementerian Agama dan
+                                    dikembangkan sesuai dengan visi, misi dan tujuan MTs NU Tasywiquth Thullab Salafiyah
+                                    (TBS) Kudus. Selain itu Kurikulum MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus
+                                    juga memuat Kurikulum Lokal. Dengan demikian, peserta didik MTs NU Tasywiquth
+                                    Thullab Salafiyah (TBS) Kudus akan mendapatkan pendidikan serta pelajaran umum dan
+                                    juga agama.
+                                </p>
+                                <p>
+                                    MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus juga menerapkan program-program dan
+                                    penanaman nilai-nilai keagaman serta ketrampilan kepada peserta didik antara lain
+                                    melalui kegiatan literasi (tadarus) Al Qur’an, membaca sholawat nariyah dan Asmaul
+                                    husna pada awal jam pembelajaran. Pembiasaan 3S (senyum, salam dan salim) dan budaya
+                                    santri selalu ditanamkan dalam diri peserta didik MTs NU Tasywiquth Thullab
+                                    Salafiyah (TBS) Kudus. Setiap hari sabtu terdapat program “Dakwah Kelas” untuk
+                                    membentuk karakter salafiyah peserta didik dan juga melatih kemampuan peserta didik
+                                    dalam menyampaikan hal baik.
+                                </p>
+                                <p>
+                                    Selain itu MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus juga menyelenggarakan
+                                    beberapa jenis kegiatan ekstrakuriler yang dapat digunakan untuk mengembangkan bakat
+                                    dan minat peserta didik.
+                                </p>
+                                <p>
+                                    Dengan memadukan ketiga kurikulum tersebut dan pengembangan kurikulum madrasah serta
+                                    program-program madrasah, maka diharapkan akan membentuk peserta didik muslim yang
+                                    akrom serta solih dan mampu mengamalkan ilmunya yang berhaluan Ahlussunah Waljama’ah
+                                    An-Nahdliyah.
                                 </p>
                             </div>
                         </div>
