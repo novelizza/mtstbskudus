@@ -131,70 +131,59 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                                        <b>Jadwal Tes</b>
-                                    </div>
-                                    <div class="col">
-                                        <p>: Senin, 1 Mei 2023 M</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <b>Jadwal Tes</b>
+                                            </div>
+                                            <div class="col">
+                                                <p>: Senin, 1 Mei 2023 M</p>
+                                            </div>
+                                        </div>
+                                        <div class=" row">
+                                            <div class="col">
+                                                <b>Nomor Tes</b>
+                                            </div>
+                                            <div class="col">
+                                                <p>: <?php echo $va; ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <b>Ruang Tes</b>
+                                            </div>
+                                            <div class="col">
+                                                <p><?php echo $username_siswa; ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <b>NISN</b>
+                                            </div>
+                                            <div class="col">
+                                                <p>: <?php echo $nisn; ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <b>Nama Calon Siswa</b>
+                                            </div>
+                                            <div class="col">
+                                                <p>: <?php echo $nama_lengkap; ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <b>Tempat, Tanggal Lahir</b>
+                                            </div>
+                                            <div class="col">
+                                                <p>: <?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col">
                                         <img src="https://image.mtsnutbs.sch.id/avatar/<?php echo $avatar; ?>"
                                             class="img-fluid rounded-start" alt="..."
-                                            style="margin:10px; height: 250px; width: 250px;">
-                                    </div>
-                                </div>
-                                <div class=" row">
-                                    <div class="col">
-                                        <b>Nomor Tes</b>
-                                    </div>
-                                    <div class="col">
-                                        <p>: <?php echo $va; ?></p>
-                                    </div>
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <b>Ruang Tes</b>
-                                    </div>
-                                    <div class="col">
-                                        <p><?php echo $username_siswa; ?></p>
-                                    </div>
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <b>NISN</b>
-                                    </div>
-                                    <div class="col">
-                                        <p>: <?php echo $nisn; ?></p>
-                                    </div>
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <b>Nama Calon Siswa</b>
-                                    </div>
-                                    <div class="col">
-                                        <p>: <?php echo $nama_lengkap; ?></p>
-                                    </div>
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <b>Tempat, Tanggal Lahir</b>
-                                    </div>
-                                    <div class="col">
-                                        <p>: <?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
-                                    </div>
-                                    <div class="col">
-
+                                            style="margin:10px; height: 100px; width: 100px; float: right;">
                                     </div>
                                 </div>
                             </div>

@@ -358,35 +358,6 @@
                         ";
                     }
                 ?>
-                <!-- Card with an image on left -->
-                <div class="card mb-3">
-                    <div class="card-header" style="background-color:#4ECB71;">
-                        <!-- <h4 style="color: white; font-weight: bold; margin-top: 10px;">Timeline Pendaftaran</h4> -->
-                        <span style="color: white; font-weight: bold; font-size: 18px;"> Timeline Pendaftaran </span>
-                    </div>
-                    <div class="row g-0">
-                        <div class="col-md-5" style="margin-left: 10px;">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>1. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>2. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>3. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>4. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>5. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>6. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>7. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>8. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>9. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>10. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>11. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>12. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Card with an image on left -->
             </div>
             <!-- End About Section -->
 
