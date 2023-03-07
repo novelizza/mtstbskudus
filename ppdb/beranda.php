@@ -43,7 +43,9 @@
 
             $status_va = $result->statusVa;
 
-            $response_data_siswa = $result->data_siswa;
+            $data_siswa = $result->data_siswa;
+            $akun_siswa = $data_siswa->akun_siswa;
+            $nama_siswa = $akun_siswa->dataValues->nama_lengkap;
 
             $object_data_siswa = $response_data_siswa->akun_siswa;
 
@@ -254,10 +256,10 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b><?php echo $data['result']['data_siswa']['akun_siswa']['dataValues']['nama_lengkap']; ?></b>
+                                        <b>NISN</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <b><?php echo $data['result']['statusVa']; ?></b>
+                                        <b><?php echo $nisn; ?></b>
                                     </div>
                                 </div>
                                 <div class=" row">
@@ -265,7 +267,7 @@
                                         <b>Nama Siswa</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p><?php echo $nama_lengkap; ?></p>
+                                        <p><?php echo $nama_siswa; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
