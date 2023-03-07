@@ -78,6 +78,7 @@
             // console.log($result);
             // echo $status_va;
             // echo "--------------";
+            echo $data['result']['akun_siswa']['dataValues']['nama_lengkap'];
 
     curl_close($curl);
 
