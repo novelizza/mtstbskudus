@@ -181,6 +181,85 @@
             // Close cURL session
         curl_close($curl);
     }
+
+    if(isset($_POST['data_alamat'])) {
+        $tinggal_ayah = $_POST['tinggal_ayah'];
+        $milik_rumah_ayah = $_POST['milik_rumah_ayah'];
+        $provinsi_ayah = $_POST['provinsi_ayah'];
+        $kabupaten_ayah = $_POST['kabupaten_ayah'];
+        $kecamatan_ayah = $_POST['kecamatan_ayah'];
+        $kelurahan_ayah = $_POST['kelurahan_ayah'];
+        $rt_ayah = $_POST['rt_ayah'];
+        $rw_ayah = $_POST['rw_ayah'];
+        $pos_ayah = $_POST['pos_ayah'];
+        $alamat_lengkap_ayah = $_POST['alamat_lengkap_ayah'];
+
+        $tinggal_ibu = $_POST['tinggal_ibu'];
+        $milik_rumah_ibu = $_POST['milik_rumah_ibu'];
+        $provinsi_ibu = $_POST['provinsi_ibu'];
+        $kabupaten_ibu = $_POST['kabupaten_ibu'];
+        $kecamatan_ibu = $_POST['kecamatan_ibu'];
+        $kelurahan_ibu = $_POST['kelurahan_ibu'];
+        $rt_ibu = $_POST['rt_ibu'];
+        $rw_ibu = $_POST['rw_ibu'];
+        $pos_ibu = $_POST['pos_ibu'];
+        $alamat_lengkap_ibu = $_POST['alamat_lengkap_ibu'];
+
+        $tinggal_wali = $_POST['tinggal_wali'];
+        $milik_rumah_wali = $_POST['milik_rumah_wali'];
+        $provinsi_wali = $_POST['provinsi_wali'];
+        $kabupaten_wali = $_POST['kabupaten_wali'];
+        $kecamatan_wali = $_POST['kecamatan_wali'];
+        $kelurahan_wali = $_POST['kelurahan_wali'];
+        $rt_wali = $_POST['rt_wali'];
+        $rw_wali = $_POST['rw_wali'];
+        $pos_wali = $_POST['pos_wali'];
+        $alamat_lengkap_wali = $_POST['alamat_lengkap_wali'];
+
+        $tinggal_siswa = $_POST['tinggal_siswa'];
+        $milik_rumah_siswa = $_POST['milik_rumah_siswa'];
+        $provinsi_siswa = $_POST['provinsi_siswa'];
+        $kabupaten_siswa = $_POST['kabupaten_siswa'];
+        $kecamatan_siswa = $_POST['kecamatan_siswa'];
+        $kelurahan_siswa = $_POST['kelurahan_siswa'];
+        $rt_siswa = $_POST['rt_siswa'];
+        $rw_siswa = $_POST['rw_siswa'];
+        $pos_siswa = $_POST['pos_siswa'];
+        $alamat_lengkap_siswa = $_POST['alamat_lengkap_siswa'];
+
+        $data_alamat_all = array(
+            'tinggal_luar_negeri_ayah' => $tinggal_ayah,
+            'kepemilikan_rumah_ayah' => $milik_rumah_ayah,
+            'provinsi_ayah' => $provinsi_ayah,
+            'kabupaten_kota_ayah' => $kabupaten_ayah,
+            'kecamatan_ayah' => $kecamatan_ayah,
+            'kelurahan_desa_ayah' => $kelurahan_ayah,
+            'RT_ayah' => $rt_ayah,
+            'RW_ayah' => $rw_ayah,
+            'alamat_ayah' => $alamat_lengkap_ayah,
+            'kode_pos_ayah' => $pos_ayah,
+            'tinggal_luar_negeri_ayah' => $tinggal_ayah,
+            'kepemilikan_rumah_ayah' => $milik_rumah_ayah,
+            'provinsi_ayah' => $provinsi_ayah,
+            'kabupaten_kota_ayah' => $kabupaten_ayah,
+            'kecamatan_ayah' => $kecamatan_ayah,
+            'kelurahan_desa_ayah' => $kelurahan_ayah,
+            'RT_ayah' => $rt_ayah,
+            'RW_ayah' => $rw_ayah,
+            'alamat_ayah' => $alamat_lengkap_ayah,
+            'kode_pos_ayah' => $pos_ayah,
+            'tinggal_luar_negeri_ayah' => $tinggal_ayah,
+            'kepemilikan_rumah_ayah' => $milik_rumah_ayah,
+            'provinsi_ayah' => $provinsi_ayah,
+            'kabupaten_kota_ayah' => $kabupaten_ayah,
+            'kecamatan_ayah' => $kecamatan_ayah,
+            'kelurahan_desa_ayah' => $kelurahan_ayah,
+            'RT_ayah' => $rt_ayah,
+            'RW_ayah' => $rw_ayah,
+            'alamat_ayah' => $alamat_lengkap_ayah,
+            'kode_pos_ayah' => $pos_ayah,
+        );
+    }
 ?>
 
 <!DOCTYPE html>
@@ -710,14 +789,14 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Tinggal Di Luar Negeri</b></p>
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="YA" name="tinggal_ayah">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="0"
+                                        name="tinggal_ayah">
                                     <label class="form-check-label" for="gridRadios1">
                                         YA
                                     </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="TIDAK" name="tinggal_ayah">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="1"
+                                        name="tinggal_ayah">
                                     <label class="form-check-label" for="gridRadios1">
                                         TIDAK
                                     </label>
@@ -727,11 +806,11 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="milik_rumah_ayah">
                                         <option value="" selected></option>
-                                        <option value="Milik Sendiri">Milik Sendiri</option>
-                                        <option value="Milik Orang Tua">Milik Orang Tua</option>
-                                        <option value="Rumah Dinas">Rumah Dinas</option>
-                                        <option value="Sewa/Kontrak">Sewa / Kontrak</option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
+                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
+                                        <option value="RUMAH DINAS">Rumah Dinas</option>
+                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
+                                        <option value="LAINNYA">Lainnya</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -794,11 +873,11 @@
                                     <select name="milik_rumah_ibu" class="form-select"
                                         aria-label="Default select example">
                                         <option value="" selected></option>
-                                        <option value="Milik Sendiri">Milik Sendiri</option>
-                                        <option value="Milik Orang Tua">Milik Orang Tua</option>
-                                        <option value="Rumah Dinas">Rumah Dinas</option>
-                                        <option value="Sewa/Kontrak">Sewa / Kontrak</option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
+                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
+                                        <option value="RUMAH DINAS">Rumah Dinas</option>
+                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
+                                        <option value="LAINNYA">Lainnya</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -861,11 +940,11 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="milik_rumah_wali">
                                         <option value="" selected></option>
-                                        <option value="Milik Sendiri">Milik Sendiri</option>
-                                        <option value="Milik Orang Tua">Milik Orang Tua</option>
-                                        <option value="Rumah Dinas">Rumah Dinas</option>
-                                        <option value="Sewa/Kontrak">Sewa / Kontrak</option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
+                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
+                                        <option value="RUMAH DINAS">Rumah Dinas</option>
+                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
+                                        <option value="LAINNYA">Lainnya</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -910,92 +989,72 @@
                                         Alamat Siswa</span>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" name="sama_ayah"
+                                        value="Sama dengan Ayah">
                                     <label class="form-check-label" for="gridCheck">
                                         <b>Sama Dengan Ayah</b>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck"
+                                        name="pondok_pesantren" value="Pondok Pesantren">
                                     <label class="form-check-label" for="gridCheck">
                                         <b>Pondok Pesantren</b>
                                     </label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Status Kepemilikan Rumah</b></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected></option>
-                                        <option value="1">Milik Sendiri</option>
-                                        <option value="2">Milik Orang Tua</option>
-                                        <option value="2">Rumah Dinas</option>
-                                        <option value="2">Sewa / Kontrak</option>
-                                        <option value="2">Lainnya</option>
+                                    <select class="form-select" aria-label="Default select example"
+                                        name="milik_rumah_siswa">
+                                        <option value="" selected></option>
+                                        <option value="MILIK SENDIRI">Milik Sendiri</option>
+                                        <option value="MILIK ORANG TUA">Milik Orang Tua</option>
+                                        <option value="RUMAH DINAS">Rumah Dinas</option>
+                                        <option value="SEWA/KONTRAK">Sewa / Kontrak</option>
+                                        <option value="LAINNYA">Lainnya</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Provinsi</b></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected></option>
-                                        <option value="1">Jawa Tengah</option>
-                                        <option value="2">Jawa Barat</option>
-                                        <option value="2">Jawa Timur</option>
-                                        <option value="2">DKI Jakarta</option>
-                                        <option value="2">Daerah Istimewa Yogyakarta</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="provinsi_siswa" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kabupaten / Kota</b></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected></option>
-                                        <option value="1">Kabupaten Kudus</option>
-                                        <option value="2">Kabupaten Jepara</option>
-                                        <option value="2">Kabupaten Pati</option>
-                                        <option value="2">Kabupaten Rembang</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="kabupaten_siswa" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kecamatan</b></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected></option>
-                                        <option value="1">Gebog</option>
-                                        <option value="2">Dawe</option>
-                                        <option value="2">Bae</option>
-                                        <option value="2">Kota</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="kecamatan_siswa" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kelurahan</b></label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option value="1" selected></option>
-                                        <option value="1">Besito</option>
-                                        <option value="2">Karangmalang</option>
-                                        <option value="2">Singocandi</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="kelurahan_siswa" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
-                                    <input type="number" class="form-control">
+                                    <input type="number" class="form-control" name="rt_siswa" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RW</b></label>
-                                    <input type="number" class="form-control">
+                                    <input type="number" class="form-control" name="rw_siswa" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
-                                    <input type="number" class="form-control">
+                                    <input type="number" class="form-control" name="pos_siswa">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
-                                    <textarea class="form-control" style="height: 100px"></textarea>
+                                    <textarea class="form-control" style="height: 100px" name="alamat_lengkap_siswa"
+                                        required></textarea>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pondok Pesantren</b></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="ponpes">
                                     <label style="font-style: italic; color: grey;">NB : Isi Jika Anda Dari
                                         Pondok Pesntren</label>
                                 </div><br>
                                 <!-- End Data Alamat Siswa -->
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg"
+                                    <button type="submit" class="btn btn-primary btn-lg" name="data_alamat"
                                         style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
                                 </div>
                             </form>

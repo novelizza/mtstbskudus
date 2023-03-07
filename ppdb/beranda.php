@@ -51,6 +51,7 @@
             $bayar = $result->bayar;
             $nilai = $result->nilai;
             $keterangan = $result->keterangan;
+            $va = $result->va;
             $_SESSION['id_akun_siswa'] = $id_akun_siswa;
             $_SESSION['session'];
         } else {
@@ -188,8 +189,8 @@
                                 <span style="color: white; font-weight: bold; font-size: 18px;">Data Diri Anda</span>
                             </div>
                             <div class="col-md-6">
-                                <span style="float: right; color: white; font-weight: bold; font-size: 16px;">Nomor
-                                    Billing</span>
+                                <span
+                                    style="float: right; color: white; font-weight: bold; font-size: 16px;"><?php echo $va; ?></span>
                             </div>
                         </div>
                     </div>
