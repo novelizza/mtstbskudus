@@ -75,9 +75,9 @@
     
         // echo $result;
             // echo $response_data_siswa;
-            console.log($result);
+            // console.log($result);
             // echo $status_va;
-            echo "--------------";
+            // echo "--------------";
 
     curl_close($curl);
 
