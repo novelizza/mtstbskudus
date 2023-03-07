@@ -39,10 +39,15 @@
         if ($object->response == 200) {
             // access result object and session and session_expiry fields
             $result = $object->result;
+
             $status_va = $result->statusVa;
+
             $response_data_siswa = $result->data_siswa;
+
             $object_data_siswa = $response_data_siswa->akun_siswa;
+
             $fix_data_siswa = $object_data_siswa->dataValues;
+            
             $id_akun_siswa = $fix_data_siswa->id_akun_siswa;
             $avatar = $fix_data_siswa->avatar;
             $username_siswa = $fix_data_siswa->username;
@@ -56,6 +61,7 @@
             $nilai = $fix_data_siswa->nilai;
             $keterangan = $fix_data_siswa->keterangan;
             $va = $fix_data_siswa->va;
+
             $_SESSION['id_akun_siswa'] = $id_akun_siswa;
             $_SESSION['session'];
         } else {
@@ -162,9 +168,19 @@
                 </div>
                 <div class="row g-3">
                     <div class="col-md-6">
-                        <h5><i class="bi bi-check-circle-fill" style="color: #4ECB71"></i>&nbsp; Pembayaran
-                            Sudah
-                            LUNAS!</h5>
+
+                        <?php
+                            if($status_va == 1) {
+                                echo "<h5><i class='bi bi-x' style='color: #4ECB71'></i>&nbsp; Pembayaran
+                                Belum
+                                LUNAS!</h5>";
+                            }else {
+                                echo "<h5><i class='bi bi-check-circle-fill' style='color: #4ECB71'></i>&nbsp; Pembayaran
+                                Sudah
+                                LUNAS!</h5>";
+                            }
+                        ?>
+
                     </div>
                     <div class="col-md-6">
                         <a class="btn" href="data-diri.php"
