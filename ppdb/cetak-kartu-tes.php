@@ -152,7 +152,15 @@
                                                 <b>Ruang Tes</b>
                                             </div>
                                             <div class="col">
-                                                <p><?php echo $username_siswa; ?></p>
+                                                <p>:
+                                                    <?php
+                                                        if($id_akun_siswa <= 40) {
+                                                            echo "Ruang Kelas 1";
+                                                        }elseif ($id_akun_siswa <= 41 && $id_akun_siswa <= 80) {
+                                                            echo "Ruang Kelas 2";
+                                                        }
+                                                    ?>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="row">
