@@ -238,7 +238,7 @@
                     </div>
                     <div class="row g-0">
                         <div class="col-md-2">
-                            <img src="../../mtstbskudus-API/image/siswa<?php echo $avatar; ?>"
+                            <img src="https://image.mtsnutbs.sch.id/avatar/<?php echo $avatar; ?>"
                                 class="img-fluid rounded-start" alt="..."
                                 style="margin:10px; height: 250px; width: 250px;">
                         </div>

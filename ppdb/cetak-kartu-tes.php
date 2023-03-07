@@ -73,12 +73,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <!-- <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>MTS NU TBS KUDUS</title>
     <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="" name="keywords"> -->
 
     <!-- Favicons -->
     <link href="../assets/img/logo.png" rel="icon">
@@ -110,42 +110,6 @@
 
 <body style="background-color: #f5f5f5;">
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center">
-        <div class="container d-flex justify-content-between">
-
-            <div class="logo">
-                <h6 style="color: white;">
-                    <img src="../assets/img/logo.png" alt="" style="margin-right: 10px;">
-                    Madrasah Tsanawiyah NU Tasywiquth Thullab Salafiyah (TBS) Kudus
-                </h6>
-            </div>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link" href="../index.php">Beranda</a></li>
-                    <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="../sambutankepalamadrasah.php">Sambutan Kepala Madrasah</a></li>
-                            <li><a href="../profilmadrasah.php">Profil Madrasah</a></li>
-                            <li><a href="../visimisi.php">Visi Misi & Tujuan</a></li>
-                            <li><a href="../pendidik.php">Pendidik & Tenaga Kependidikan</a></li>
-                            <li><a href="../kurikulum.php">Kurikulum</a></li>
-                            <li><a href="../sarana.php">Sarana & Prasarana</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link" href="../brosur.php">Berita</a></li>
-                    <li><a class="nav-link" href="../kontakkami.php">Kontak Kami</a></li>
-                    <li class="dropdown" style="background-color: #0275d8;">
-                        <a href=""><span> Akun</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="logout.php">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-        </div>
-    </header><!-- End Header -->
 
     <main id="main">
 
@@ -155,240 +119,137 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div>
-                            <h2>Selamat Datang, <span style="color: #4ECB71;"><?php echo $nama_lengkap; ?>!</span></h2>
-
-                            <?php
-                                if($keterangan == 2) {
-                                    echo "<h4><span class='badge bg-success' style='width: 100%;'>Selamat Anda Diterima MTS Kelas
-                                    7!</span></h4>";
-                                }elseif($keterangan == 1) {
-                                    echo "<h4><span class='badge' style='width: 100%; background-color: #4E53CB'>Selamat Anda Diterima MPTS!</span></h4>";
-                                }elseif($keterangan == 0) {
-                                    NULL;
-                                }
-                            ?>
-
+                            <img src="../assets/img/header.png" alt="">
                         </div>
                     </div>
-                </div>
-                <div class="row g-3">
-                    <div class="col-md-6">
-
-                        <?php
-                            if($status_va == 1) {
-                                echo "<h5><i class='bi bi-x-circle-fill' style='color: #df4759'></i>&nbsp; Pembayaran
-                                Belum
-                                LUNAS!</h5>";
-                            }else {
-                                echo "<h5><i class='bi bi-check-circle-fill' style='color: #4ECB71'></i>&nbsp; Pembayaran
-                                Sudah
-                                LUNAS!</h5>";
-                            }
-                        ?>
-
-                    </div>
-                    <div class="col-md-6">
-                        <a class="btn" href="data-diri.php"
-                            style="background-color: #4ECB71; color: white; float: right;">Lengkapi Data
-                            Diri</a>
-                    </div>
-                </div><br>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <a class="btn" href="cetak-kartu-tes.php"
-                            style="background-color: #4E53CB; color: white; width: 100%;" name="cetak_kartu_tes">
-                            <i class="bi bi-printer-fill"></i><span> Cetak Kartu Tes</span>
-                        </a>
-                    </div>
-                    <?php
-                        if($status_va == 1) {
-                            echo "<div class='col-md-6'>
-                            <button type='submit' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;' disabled>
-                                <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
-                            </button>
-                        </div>";
-                        }else {
-                            echo "<div class='col-md-6'>
-                            <button type='submit' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;'>
-                                <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
-                            </button>
-                        </div>";
-                        }
-                    ?>
                 </div><br>
 
                 <!-- Card with an image on left -->
                 <div class="card mb-3">
-                    <div class="card-header" style="background-color:#4ECB71;">
-                        <div class="row g-0 align-items-center">
-                            <div class="col-md-6">
-                                <span style="color: white; font-weight: bold; font-size: 18px;">Data Diri Anda</span>
-                            </div>
-                            <div class="col-md-6">
-                                <span style="float: right; color: white; font-weight: bold; font-size: 16px;">
-                                    <div class="row">
-                                        <p style="float: right; color: white; font-weight: bold; font-size: 16px;">Nomor
-                                            Billing</p>
-                                        <?php echo $va; ?>
-                                    </div>
-
-                                </span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row g-0">
-                        <div class="col-md-2">
-                            <img src="<?php echo "localhost:4000/api/avatar/".$avatar; ?>"
-                                class="img-fluid rounded-start" alt="..."
-                                style="margin:10px; height: 250px; width: 250px;">
-                        </div>
-                        <div class="col-md-5" style="margin-left: 10px;">
+                        <div class="col" style="margin-left: 10px;">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>NISN</b>
+                                        <b>Jadwal Tes</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p><?php echo $keterangan; ?></p>
+                                        <p>: Senin, 1 Mei 2023 M</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="https://image.mtsnutbs.sch.id/avatar/<?php echo $avatar; ?>"
+                                            class="img-fluid rounded-start" alt="..."
+                                            style="margin:10px; height: 250px; width: 250px;">
                                     </div>
                                 </div>
                                 <div class=" row">
-                                    <div class="col-md-4">
-                                        <b>Nama Siswa</b>
+                                    <div class="col">
+                                        <b>Nomor Tes</b>
                                     </div>
-                                    <div class="col-md-4">
-                                        <p><?php echo $nama_lengkap; ?></p>
+                                    <div class="col">
+                                        <p>: <?php echo $va; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>Username</b>
+                                        <b>Ruang Tes</b>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <p><?php echo $username_siswa; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>Tempat & Tanggal Lahir</b>
+                                        <b>NISN</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p><?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
+                                        <p>: <?php echo $nisn; ?></p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-12">
-
+                                    <div class="col-md-4">
+                                        <b>Nama Calon Siswa</b>
                                     </div>
-                                </div><br>
+                                    <div class="col-md-4">
+                                        <p>: <?php echo $nama_lengkap; ?></p>
+                                    </div>
+                                </div>
                                 <div class="row">
-                                    <div class="col-md-12">
-
+                                    <div class="col-md-4">
+                                        <b>Tempat, Tanggal Lahir</b>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- End Card with an image on left -->
-
-                <?php
-                    if($keterangan == 1 || $keterangan == 2) {
-                        echo "
-                                <div class='card mb-3'>
-                                <div class='card-header' style='background-color:#4ECB71;'>
-                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Timeline Pendaftaran </span>
-                                </div>
-                                <div class='row g-0'>
-                                    <div class='col-md-5' style='margin-left: 10px;'>
-                                        <div class='card-body'>
-                                            <div class='row'>
-                                                <div class='col-md-12'>
-                                                    <p>1. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>2. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>3. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>4. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>5. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>6. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>7. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>8. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>9. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>10. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>11. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>12. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ";
-                    }else {
-                        echo "
-                                <div class='card mb-3'>
-                                <div class='card-header' style='background-color:#4ECB71;'>
-                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Cara Pembayaran </span>
-                                </div>
-                                <div class='row g-0'>
-                                    <div class='col-md-5' style='margin-left: 10px;'>
-                                        <div class='card-body'>
-                                            <div class='row'>
-                                                <div class='col-md-12'>
-                                                    <p>1. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>2. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>3. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>4. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>5. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>6. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>7. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>8. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>9. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>10. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>11. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>12. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ";
-                    }
-                ?>
-                <!-- Card with an image on left -->
-                <div class="card mb-3">
-                    <div class="card-header" style="background-color:#4ECB71;">
-                        <!-- <h4 style="color: white; font-weight: bold; margin-top: 10px;">Timeline Pendaftaran</h4> -->
-                        <span style="color: white; font-weight: bold; font-size: 18px;"> Timeline Pendaftaran </span>
-                    </div>
-                    <div class="row g-0">
-                        <div class="col-md-5" style="margin-left: 10px;">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>1. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>2. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>3. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>4. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>5. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>6. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>7. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>8. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>9. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>10. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>11. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                        <p>12. kasdlasdlasdlasldasldalsdalsdasd</p>
+                                    <div class="col-md-4">
+                                        <p>: <?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div><!-- End Card with an image on left -->
-            </div>
-            <!-- End About Section -->
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <center>
+                                    Tes Imla' Pegon
+                                </center>
+                            </th>
+                            <th scope="col">
+                                <center>
+                                    Tes CBT
+                                </center>
+                            </th>
+                            <th scope="col">
+                                <center>
+                                    Tes Baca Al-Qur'an
+                                </center>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width: 33%">
+                                <center>
+                                    <div style="height: 200px; position: relative;">
+                                        <span
+                                            style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
+                                            (...........................) <br>
+                                            <i>Nama terang dan ttd</i>
+                                        </span>
+                                    </div>
+                                </center>
+                            </td>
+                            <td style="width: 33%">
+                                <center>
+                                    <div style="height: 200px; position: relative;">
+                                        <span
+                                            style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
+                                            (...........................) <br>
+                                            <i>Nama terang dan ttd</i>
+                                        </span>
+                                    </div>
+                                </center>
+                            </td>
+                            <td style="width: 33%">
+                                <center>
+                                    <div style="height: 200px; position: relative;">
+                                        <span
+                                            style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
+                                            (...........................) <br>
+                                            <i>Nama terang dan ttd</i>
+                                        </span>
+                                    </div>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+
+                <b><i>
+                        <p>*Keterangan :</p>
+                        <p>1. Kartu harap dibawa ketika mengikuti tes seleksi.</p>
+                        <p>2. Tes seleksi dilaksanakan mulai pukul 08.00 WIB.</p></b></i>
 
     </main>
 
