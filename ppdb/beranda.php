@@ -249,7 +249,7 @@
                                         <b>NISN</b>
                                     </div>
                                     <div class="col-md-4">
-                                        <p><?php echo $keterangan; ?></p>
+                                        <p><?php echo $nisn; ?></p>
                                     </div>
                                 </div>
                                 <div class=" row">
