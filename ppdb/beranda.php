@@ -47,6 +47,10 @@
             $object_data_siswa = $response_data_siswa->akun_siswa;
 
             $fix_data_siswa = $object_data_siswa->dataValues;
+
+            console.log($object_data_siswa);
+            console.log($fix_data_siswa);
+            console.log("----------------");
             
             $id_akun_siswa = $object_data_siswa->id_akun_siswa;
             $avatar = $object_data_siswa->avatar;
