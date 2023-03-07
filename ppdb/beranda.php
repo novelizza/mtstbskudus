@@ -41,20 +41,20 @@
             $result = $object->result;
             $status_va = $result->statusVa;
             $response_data_siswa = $result->data_siswa;
-            $
-            $id_akun_siswa = $data_siswa->id_akun_siswa;
-            $avatar = $data_siswa->avatar;
-            $username_siswa = $data_siswa->username;
-            $nama_lengkap = $data_siswa->nama_lengkap;
-            $nisn = $data_siswa->nisn;
-            $tempat_lahir = $data_siswa->tempat_lahir;
-            $tanggal_lahir = $data_siswa->tanggal_lahir;
-            $tahun_masuk = $data_siswa->tahun_masuk;
-            $tujuan_masuk = $data_siswa->tujuan_masuk;
-            $bayar = $data_siswa->bayar;
-            $nilai = $data_siswa->nilai;
-            $keterangan = $data_siswa->keterangan;
-            $va = $data_siswa->va;
+            $object_data_siswa = $response_data_siswa->akun_siswa;
+            $id_akun_siswa = $object_data_siswa->id_akun_siswa;
+            $avatar = $object_data_siswa->avatar;
+            $username_siswa = $object_data_siswa->username;
+            $nama_lengkap = $object_data_siswa->nama_lengkap;
+            $nisn = $object_data_siswa->nisn;
+            $tempat_lahir = $object_data_siswa->tempat_lahir;
+            $tanggal_lahir = $object_data_siswa->tanggal_lahir;
+            $tahun_masuk = $object_data_siswa->tahun_masuk;
+            $tujuan_masuk = $object_data_siswa->tujuan_masuk;
+            $bayar = $object_data_siswa->bayar;
+            $nilai = $object_data_siswa->nilai;
+            $keterangan = $object_data_siswa->keterangan;
+            $va = $object_data_siswa->va;
             $_SESSION['id_akun_siswa'] = $id_akun_siswa;
             $_SESSION['session'];
         } else {
