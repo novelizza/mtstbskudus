@@ -44,21 +44,19 @@
             $status_va = $result->statusVa;
 
             $data_siswa = $result->data_siswa;
-            $akun_siswa = $data_siswa->akun_siswa;
-            $nama_siswa = $akun_siswa->dataValues->nama_lengkap;
+            // $akun_siswa = $data_siswa->akun_siswa;
+            // $nama_siswa = $akun_siswa->dataValues->nama_lengkap;
 
-            $object_data_siswa = $response_data_siswa->akun_siswa;
+            // $object_data_siswa = $response_data_siswa->akun_siswa;
 
-            $fix_data_siswa = $object_data_siswa->dataValues;
-
+            // $fix_data_siswa = $object_data_siswa->dataValues;
             
-            
-            $id_akun_siswa = $object_data_siswa->id_akun_siswa;
-            $avatar = $object_data_siswa->avatar;
-            $username_siswa = $object_data_siswa->username;
-            $nama_lengkap = $object_data_siswa->nama_lengkap;
-            $nisn = $fix_data_siswa->nisn;
-            $tempat_lahir = $fix_data_siswa->tempat_lahir;
+            $id_akun_siswa = $data_siswa->id_akun_siswa;
+            $avatar = $data_siswa->avatar;
+            $username_siswa = $data_siswa->username;
+            $nama_lengkap = $data_siswa->nama_lengkap;
+            $nisn = $data_siswa->nisn;
+            $tempat_lahir = $data_siswa->tempat_lahir;
             $tanggal_lahir = $fix_data_siswa->tanggal_lahir;
             $tahun_masuk = $fix_data_siswa->tahun_masuk;
             $tujuan_masuk = $fix_data_siswa->tujuan_masuk;
