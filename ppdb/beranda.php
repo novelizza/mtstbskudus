@@ -161,8 +161,18 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div>
                             <h2>Selamat Datang, <span style="color: #4ECB71;"><?php echo $nama_lengkap; ?>!</span></h2>
-                            <h4><span class="badge bg-success" style="width: 100%;">Selamat Anda Diterima MTS Kelas
-                                    7!</span></h4>
+
+                            <?php
+                                if($keterangan == 0) {
+                                    echo "<h4><span class='badge bg-success' style='width: 100%;'>Selamat Anda Diterima MTS Kelas
+                                    7!</span></h4>";
+                                }elseif($keterangan == 1) {
+                                    echo "<h4><span class='badge' style='width: 100%; background-color: #4E53CB'>Selamat Anda Diterima MPTS!</span></h4>";
+                                }else {
+
+                                }
+                            ?>
+
                         </div>
                     </div>
                 </div>
@@ -209,11 +219,6 @@
                         </div>";
                         }
                     ?>
-                    <div class="col-md-6">
-                        <a class="btn" href="beranda.php" style="background-color: #2AB6D4; color: white; width: 100%;">
-                            <i class="bi bi-printer-fill"></i><span> Cetak Bukti Pembayaran</span>
-                        </a>
-                    </div>
                 </div><br>
 
                 <!-- Card with an image on left -->
