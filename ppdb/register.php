@@ -137,7 +137,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan NISN</b></label>
-                                    <input type="text" class="form-control" name="nisn" required>
+                                    <input type="number" class="form-control" name="nisn" required>
                                     <label style="font-style: italic; color: grey;">NB : NISN bisa ditemukan di
                                         raport</label>
                                 </div>
@@ -149,7 +149,7 @@
                                     <label for=""><b>Masukkan Tanggal Lahir</b></label>
                                     <input type="date" class="form-control" name="tanggal_lahir" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
-                                        Dengan KK</label>
+                                        Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Username</b></label>
@@ -179,7 +179,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Foto</b></label>
-                                    <input class="form-control" type="file" id="formFile" name="avatar" required>
+                                    <input class="form-control" type="file" name="avatar" required>
                                     <label style="font-style: italic; color: grey;">
                                         NB : <br>
                                         1. Background foto WAJIB warna merah <br>

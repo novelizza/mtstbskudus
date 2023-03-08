@@ -150,6 +150,14 @@
         );
         
 
+        if($nik_ayah && $nik_ibu && nik_wali < 16 || $nik_ayah && $nik_ibu && nik_wali > 16) {
+            header('location: data-diri.php');
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Pastikan NIK 16 Digit</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+        }
+
         $curl = curl_init();
     
         curl_setopt_array($curl, array(
@@ -669,7 +677,7 @@
                                         required>
                                         <option value="" selected></option>
                                         <option value="Orang Tua">Orang Tua</option>
-                                        <option value="Wali Murid">Wali Murid</option>
+                                        <option value="Wali">Wali</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -763,9 +771,8 @@
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
                                     <input type="date" class="form-control" name="tanggal_ayah" required>
-                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir
-                                        Sesuai
-                                        Dengan KK</label>
+                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
+                                        Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pendidikan Terakhir</b></label>
@@ -863,9 +870,8 @@
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
                                     <input type="date" class="form-control" name="tanggal_ibu" required>
-                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir
-                                        Sesuai
-                                        Dengan KK</label>
+                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
+                                        Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pendidikan Terakhir</b></label>
@@ -927,7 +933,7 @@
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Data
-                                        Wali Murid (Jika Ada)</span>
+                                        Wali (Jika Ada)</span>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
@@ -961,9 +967,8 @@
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
                                     <input type="date" class="form-control" name="tanggal_wali">
-                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir
-                                        Sesuai
-                                        Dengan KK</label>
+                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
+                                        Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pendidikan Terakhir</b></label>
@@ -1153,11 +1158,11 @@
                                 </div><br>
                                 <!-- End Data Alamat Ibu Kandung -->
 
-                                <!-- Data Alamat Wali Murid -->
+                                <!-- Data Alamat Wali -->
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Data
-                                        Alamat Wali Murid (Jika Ada)</span>
+                                        Alamat Wali (Jika Ada)</span>
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Sama Dengan Ayah</b></p>
@@ -1206,7 +1211,7 @@
                                     <textarea name="alamat_lengkap_wali" class="form-control"
                                         style="height: 100px"></textarea>
                                 </div><br>
-                                <!-- End Data Alamat Wali Murid -->
+                                <!-- End Data Alamat Wali -->
 
                                 <!-- Data Alamat Siswa -->
                                 <div class="col-md-12">

@@ -111,7 +111,7 @@
                                     <i class="bi bi-telephone-fill" style="color: #4ECB71;"></i>&nbsp; (0291) 434555
                                 </h4><br>
                                 <h4>
-                                    <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0811-2233-4455
+                                    <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0857-1244-4421
                                 </h4><br>
                                 <h4>
                                     <i class="bi bi-envelope-fill" style="color: #4ECB71;"></i>&nbsp; mtstbs@yahoo.co.id
@@ -214,7 +214,7 @@
                                             434555
                                         </p>
                                         <p>
-                                            <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0811-2233-4455
+                                            <i class="bi bi-whatsapp" style="color: #4ECB71;"></i>&nbsp; 0857-1244-4421
                                         </p>
                                         <p>
                                             <i class="bi bi-envelope-fill" style="color: #4ECB71;"></i>&nbsp;
