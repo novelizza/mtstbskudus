@@ -191,7 +191,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Nomor HP Orang Tua/Wali</b></label>
-                                    <input type="text" class="form-control" name="hp_wali" required>
+                                    <input type="number" class="form-control" name="hp_wali" required>
                                 </div>
                                 <div class="text-center" style="margin-top: 20px;">
                                     <button type="submit" class="btn btn-primary btn-lg" name="register"
