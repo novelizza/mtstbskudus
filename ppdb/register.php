@@ -19,6 +19,7 @@
         $daftar_mts = isset($_POST['mts']) ? true : false;
         $daftar_mpts = isset($_POST['mpts']) ? true : false;
         $image = $_FILES['avatar']['tmp_name'];
+        $hp_wali = $_POST['hp_wali'];
 
         if(strpos(trim($username), ' ') !== false){
             header('location: register.php');
@@ -53,7 +54,8 @@
                     'username' => $username,
                     'password' => $password,
                     'tujuan_masuk' => $selectedCheckbox,
-                    'avatar' => curl_file_create($image, $_FILES['avatar']['type'], $_FILES['avatar']['name'])
+                    'avatar' => curl_file_create($image, $_FILES['avatar']['type'], $_FILES['avatar']['name']),
+                    'no_hp_wali' => $hp_wali
                 ));
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
@@ -186,6 +188,10 @@
                                         2. Ukuran foto maksimal 5 MB <br>
                                         3. Format foto berupa .jpg, .jpeg atau .png
                                     </label>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 20px;">
+                                    <label for=""><b>Masukkan Nomor HP Orang Tua/Wali</b></label>
+                                    <input type="text" class="form-control" name="hp_wali" required>
                                 </div>
                                 <div class="text-center" style="margin-top: 20px;">
                                     <button type="submit" class="btn btn-primary btn-lg" name="register"
