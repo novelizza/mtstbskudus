@@ -27,22 +27,20 @@
             <strong>Masukkan Kembali Data Diri Anda dan Pastikan Username Tidak Boleh Mengandung Spasi</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
-        }
-        elseif($password != $password_ulang) {
+        }elseif($password != $password_ulang) {
             header('location: register.php');
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Masukkan Kembali Data Diri Anda dan Pastikan Password Sama</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
-        }else {
-            if(!$daftar_mts && !$daftar_mpts) {
-                header('location: register.php');
+        }elseif(!$daftar_mts && !$daftar_mpts) {
+            header('location: register.php');
                 echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Masukkan Kembali Data Diri Anda dan Pastikan Pilih Daftar Salah Satu</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>";
-            }else {
-                $selectedCheckbox = $daftar_mts ? 'MTS' : 'MPTS';
+        }else {
+            $selectedCheckbox = $daftar_mts ? 'MTS' : 'MPTS';
                 $curl = curl_init();
                 curl_setopt($curl, CURLOPT_URL, 'http://localhost:4000/api/siswa');
                 curl_setopt($curl, CURLOPT_POST, true);
@@ -60,19 +58,19 @@
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
                 // Send cURL request and get response
-                curl_exec($curl);
+                $respone = curl_exec($curl);
                 // Check for errors
                 if (curl_errno($curl)) {
                     $errorMessage = curl_error($curl);
                     // Handle error
                 }else {
-                    $_SESSION['registration_complete'] = true;
-                    header('location: login.php');
+                    // $_SESSION['registration_complete'] = true;
+                    // header('location: login.php');
+                    echo $respone;
                     exit;
                 }
                 // Close cURL session
                 curl_close($curl);
-            }
         }
     }
 
