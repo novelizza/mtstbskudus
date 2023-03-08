@@ -64,9 +64,9 @@
                     $errorMessage = curl_error($curl);
                     // Handle error
                 }else {
-                    // $_SESSION['registration_complete'] = true;
-                    // header('location: login.php');
-                    echo $respone;
+                    $_SESSION['registration_complete'] = true;
+                    header('location: login.php');
+                    // echo $respone;
                     exit;
                 }
                 // Close cURL session
