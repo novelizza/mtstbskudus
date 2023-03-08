@@ -155,7 +155,9 @@
                                                 style="background-color: #4ECB71; color: white;">Login</button>
                                         </div>
 
-                                        <a class="small text-muted" href="#!">Lupa Password?</a>
+                                        <a class="small text-muted"
+                                            href="https://wa.me/6285712444421?text=Halo%20saya%20ingin%20bertanya">Lupa
+                                            Password?</a>
                                         <p class="mb-5 pb-lg-2" style="color: #393f81;">Belum punya akun? <a
                                                 href="register.php" style="color: #4ECB71;"><span
                                                     style="font-size: larger; font-weight: bolder;">Buat Akun</span></a>

@@ -195,37 +195,6 @@
         $pos_ayah = $_POST['pos_ayah'];
         $alamat_lengkap_ayah = $_POST['alamat_lengkap_ayah'];
 
-        $tinggal_ibu = $_POST['tinggal_ibu'];
-        $provinsi_ibu = $_POST['provinsi_ibu'];
-        $kabupaten_ibu = $_POST['kabupaten_ibu'];
-        $kecamatan_ibu = $_POST['kecamatan_ibu'];
-        $kelurahan_ibu = $_POST['kelurahan_ibu'];
-        $rt_ibu = $_POST['rt_ibu'];
-        $rw_ibu = $_POST['rw_ibu'];
-        $pos_ibu = $_POST['pos_ibu'];
-        $alamat_lengkap_ibu = $_POST['alamat_lengkap_ibu'];
-
-        $tinggal_wali = $_POST['tinggal_wali'];
-        $provinsi_wali = $_POST['provinsi_wali'];
-        $kabupaten_wali = $_POST['kabupaten_wali'];
-        $kecamatan_wali = $_POST['kecamatan_wali'];
-        $kelurahan_wali = $_POST['kelurahan_wali'];
-        $rt_wali = $_POST['rt_wali'];
-        $rw_wali = $_POST['rw_wali'];
-        $pos_wali = $_POST['pos_wali'];
-        $alamat_lengkap_wali = $_POST['alamat_lengkap_wali'];
-
-        $tinggal_siswa = $_POST['tinggal_siswa'];
-        $provinsi_siswa = $_POST['provinsi_siswa'];
-        $kabupaten_siswa = $_POST['kabupaten_siswa'];
-        $kecamatan_siswa = $_POST['kecamatan_siswa'];
-        $kelurahan_siswa = $_POST['kelurahan_siswa'];
-        $rt_siswa = $_POST['rt_siswa'];
-        $rw_siswa = $_POST['rw_siswa'];
-        $pos_siswa = $_POST['pos_siswa'];
-        $alamat_lengkap_siswa = $_POST['alamat_lengkap_siswa'];
-        $ponpes = $_POST['ponpes'];
-
         if($tinggal_ibu == "YA") {
             $provinsi_ibu = $provinsi_ayah;
             $kabupaten_ibu = $kabupaten_ayah;
@@ -235,7 +204,7 @@
             $rw_ibu = $rw_ayah;
             $pos_ibu = $pos_ayah;
             $alamat_lengkap_ibu = $alamat_lengkap_ayah;
-        }else {
+        }elseif($tinggal_ibu == "TIDAK") {
             $provinsi_ibu = $_POST['provinsi_ibu'];
             $kabupaten_ibu = $_POST['kabupaten_ibu'];
             $kecamatan_ibu = $_POST['kecamatan_ibu'];
@@ -244,6 +213,15 @@
             $rw_ibu = $_POST['rw_ibu'];
             $pos_ibu = $_POST['pos_ibu'];
             $alamat_lengkap_ibu = $_POST['alamat_lengkap_ibu'];
+        }else {
+            $provinsi_ibu = "";
+            $kabupaten_ibu = "";
+            $kecamatan_ibu = "";
+            $kelurahan_ibu = "";
+            $rt_ibu = "";
+            $rw_ibu = "";
+            $pos_ibu = "";
+            $alamat_lengkap_ibu = "";
         }
 
         if($tinggal_wali == "YA") {
@@ -255,7 +233,7 @@
             $rw_wali = $rw_ayah;
             $pos_wali = $pos_ayah;
             $alamat_lengkap_wali = $alamat_lengkap_ayah;
-        }else {
+        }elseif($tinggal_wali == "TIDAK") {
             $provinsi_wali = $_POST['provinsi_wali'];
             $kabupaten_wali = $_POST['kabupaten_wali'];
             $kecamatan_wali = $_POST['kecamatan_wali'];
@@ -264,6 +242,15 @@
             $rw_wali = $_POST['rw_wali'];
             $pos_wali = $_POST['pos_wali'];
             $alamat_lengkap_wali = $_POST['alamat_lengkap_wali'];
+        }else {
+            $provinsi_wali = "";
+            $kabupaten_wali = "";
+            $kecamatan_wali = "";
+            $kelurahan_wali = "";
+            $rt_wali = "";
+            $rw_wali = "";
+            $pos_wali = "";
+            $alamat_lengkap_wali = "";
         }
 
         if($tinggal_siswa == "YA") {
@@ -275,7 +262,7 @@
             $rw_siswa = $rw_ayah;
             $pos_siswa = $pos_ayah;
             $alamat_lengkap_siswa = $alamat_lengkap_ayah;
-        }else {
+        }elseif($tinggal_siswa == "TIDAK") {
             $provinsi_siswa = $_POST['provinsi_siswa'];
             $kabupaten_siswa = $_POST['kabupaten_siswa'];
             $kecamatan_siswa = $_POST['kecamatan_siswa'];
@@ -285,6 +272,16 @@
             $pos_siswa = $_POST['pos_siswa'];
             $alamat_lengkap_siswa = $_POST['alamat_lengkap_siswa'];
             $ponpes = $_POST['ponpes'];
+        }else {
+            $provinsi_siswa = "";
+            $kabupaten_siswa = "";
+            $kecamatan_siswa = "";
+            $kelurahan_siswa = "";
+            $rt_siswa = "";
+            $rw_siswa = "";
+            $pos_siswa = "";
+            $alamat_lengkap_siswa = "";
+            $ponpes = "";
         }
 
         $data_alamat_all = array(
@@ -358,7 +355,7 @@
         curl_close($curl);
     }
 
-    if(isset($_POST['data_prestasi_siswa'])) {
+    if(isset($_POST['data_prestasi_siswa_1'])) {
         $prestasi1 = $_POST['prestasi1'];
         $tahun1 = $_POST['tahun_lomba_1'];
         $nama1 = $_POST['nama_lomba_1'];
@@ -375,6 +372,110 @@
             'nama_penyelenggara' => $penyelenggara1,
             'lomba_tingkat' => $tingkat1,
             'peringkat_yang_diraih' => $peringkat1
+        );
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'http://localhost:4000/api/siswa/data-prestasi',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data_prestasi),
+        CURLOPT_HTTPHEADER => array(
+            'session:'.$session.'',
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        curl_exec($curl);
+        // echo $responseDataDiri;
+        // Check for errors
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            // Handle error
+        }else {
+            // echo curl_exec($curl);
+            header('location: data-diri.php');
+            exit;
+        }
+            // Close cURL session
+        curl_close($curl);
+    }
+
+    if(isset($_POST['data_prestasi_siswa_2'])) {
+        $prestasi2 = $_POST['prestasi2'];
+        $tahun2 = $_POST['tahun_lomba_2'];
+        $nama2 = $_POST['nama_lomba_2'];
+        $bidang2 = $_POST['bidang_lomba_2'];
+        $penyelenggara2 = $_POST['penyelenggara_2'];
+        $tingkat2 = $_POST['tingkat_2'];
+        $peringkat2 = $_POST['peringkat_2'];
+
+        $data_prestasi = array(
+            'prestasi_ke' => $prestasi2,
+            'tahun' => $tahun2,
+            'nama_lomba' => $nama2,
+            'bidang_lomba' => $bidang2,
+            'nama_penyelenggara' => $penyelenggara2,
+            'lomba_tingkat' => $tingkat2,
+            'peringkat_yang_diraih' => $peringkat2
+        );
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'http://localhost:4000/api/siswa/data-prestasi',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data_prestasi),
+        CURLOPT_HTTPHEADER => array(
+            'session:'.$session.'',
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        curl_exec($curl);
+        // echo $responseDataDiri;
+        // Check for errors
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            // Handle error
+        }else {
+            // echo curl_exec($curl);
+            header('location: data-diri.php');
+            exit;
+        }
+            // Close cURL session
+        curl_close($curl);
+    }
+
+    if(isset($_POST['data_prestasi_siswa_3'])) {
+        $prestasi3 = $_POST['prestasi3'];
+        $tahun3 = $_POST['tahun_lomba_3'];
+        $nama3 = $_POST['nama_lomba_3'];
+        $bidang3 = $_POST['bidang_lomba_3'];
+        $penyelenggara3 = $_POST['penyelenggara_3'];
+        $tingkat3 = $_POST['tingkat_3'];
+        $peringkat3 = $_POST['peringkat_3'];
+
+        $data_prestasi = array(
+            'prestasi_ke' => $prestasi3,
+            'tahun' => $tahun3,
+            'nama_lomba' => $nama3,
+            'bidang_lomba' => $bidang3,
+            'nama_penyelenggara' => $penyelenggara3,
+            'lomba_tingkat' => $tingkat3,
+            'peringkat_yang_diraih' => $peringkat3
         );
 
         $curl = curl_init();
@@ -1186,28 +1287,32 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi1" value="1">
-                                    <input type="number" class="form-control" name="tahun_lomba_1">
+                                    <input type="number" class="form-control" name="tahun_lomba_1" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control" name="nama_lomba_1">
+                                    <input type="text" class="form-control" name="nama_lomba_1" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control" name="bidang_lomba_1">
+                                    <input type="text" class="form-control" name="bidang_lomba_1" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control" name="penyelenggara_1">
+                                    <input type="text" class="form-control" name="penyelenggara_1" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control" name="tingkat_1">
+                                    <input type="text" class="form-control" name="tingkat_1" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peirngkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control" name="peringkat_1">
-                                </div><br>
+                                    <input type="text" class="form-control" name="peringkat_1" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_1"
+                                        style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
+                                </div>
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Prestasi
@@ -1216,28 +1321,32 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi2" value="2">
-                                    <input type="number" class="form-control" name="tahun_lomba_2">
+                                    <input type="number" class="form-control" name="tahun_lomba_2" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control" name="nama_lomba_2">
+                                    <input type="text" class="form-control" name="nama_lomba_2" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control" name="bidang_lomba_2">
+                                    <input type="text" class="form-control" name="bidang_lomba_2" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control" name="penyelenggara_2">
+                                    <input type="text" class="form-control" name="penyelenggara_2" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control" name="tingkat_2">
+                                    <input type="text" class="form-control" name="tingkat_2" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peirngkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control" name="peringkat_2">
-                                </div><br>
+                                    <input type="text" class="form-control" name="peringkat_2" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_2"
+                                        style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
+                                </div>
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Prestasi
@@ -1246,30 +1355,30 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi3" value="3">
-                                    <input type="number" class="form-control" name="tahun_lomba_3">
+                                    <input type="number" class="form-control" name="tahun_lomba_3" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control" name="nama_lomba_3">
+                                    <input type="text" class="form-control" name="nama_lomba_3" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control" name="bidang_lomba_3">
+                                    <input type="text" class="form-control" name="bidang_lomba_3" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control" name="penyelenggara_3">
+                                    <input type="text" class="form-control" name="penyelenggara_3" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control" name="tingkat_3">
+                                    <input type="text" class="form-control" name="tingkat_3" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peirngkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control" name="peringkat_3">
+                                    <input type="text" class="form-control" name="peringkat_3" required>
                                 </div><br>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa"
+                                    <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_3"
                                         style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
                                 </div>
                             </form>

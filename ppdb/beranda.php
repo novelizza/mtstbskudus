@@ -203,15 +203,15 @@
                     <?php
                         if($status_va == 1) {
                             echo "<div class='col-md-6'>
-                            <button type='submit' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;' disabled>
+                            <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;' disabled>
                                 <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
-                            </button>
+                            </a>
                         </div>";
                         }else {
                             echo "<div class='col-md-6'>
-                            <button type='submit' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;'>
+                            <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;'>
                                 <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
-                            </button>
+                            </a>
                         </div>";
                         }
                     ?>
@@ -296,29 +296,18 @@
                 </div><!-- End Card with an image on left -->
 
                 <?php
-                    if($keterangan == 1 || $keterangan == 2) {
+                    if($status_va == 1) {
                         echo "
                                 <div class='card mb-3'>
                                 <div class='card-header' style='background-color:#4ECB71;'>
-                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Timeline Pendaftaran </span>
+                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Segera Lakukan Pembayaran Untuk Melanjutkan Proses Pendaftaran </span>
                                 </div>
                                 <div class='row g-0'>
                                     <div class='col-md-5' style='margin-left: 10px;'>
                                         <div class='card-body'>
                                             <div class='row'>
                                                 <div class='col-md-12'>
-                                                    <p>1. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>2. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>3. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>4. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>5. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>6. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>7. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>8. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>9. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>10. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>11. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>12. kasdlasdlasdlasldasldalsdalsdasd</p>
+                                                    <p>Menunggu, sedang integrasi pembayaran</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -326,29 +315,23 @@
                                 </div>
                             </div>
                         ";
-                    }else {
+                    }elseif ($status_va == 2) {
                         echo "
                                 <div class='card mb-3'>
                                 <div class='card-header' style='background-color:#4ECB71;'>
-                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Cara Pembayaran </span>
+                                    <span style='color: white; font-weight: bold; font-size: 18px;'> DATA YANG WAJIB DIISI </span>
                                 </div>
                                 <div class='row g-0'>
                                     <div class='col-md-5' style='margin-left: 10px;'>
                                         <div class='card-body'>
                                             <div class='row'>
                                                 <div class='col-md-12'>
-                                                    <p>1. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>2. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>3. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>4. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>5. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>6. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>7. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>8. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>9. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>10. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>11. kasdlasdlasdlasldasldalsdalsdasd</p>
-                                                    <p>12. kasdlasdlasdlasldasldalsdalsdasd</p>
+                                                    <p>Silahkan Lengkapi Data Diri Anda Seperti : </p>
+                                                    <p>1. Data Diri Siswa</p>
+                                                    <p>2. Data Orang Tua/Wali</p>
+                                                    <p>3. Data Alamat</p>
+                                                    <p>4. Data Prestasi</p>
+                                                    <p><i>Form data diri bisa diisi dengan menekan tombol 'Lengkapi Data Diri'</i></p>
                                                 </div>
                                             </div>
                                         </div>

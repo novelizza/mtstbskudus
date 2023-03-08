@@ -126,6 +126,11 @@
 
                 <!-- Card with an image on left -->
                 <div class="card mb-3">
+                    <div class="card-header" style="height: 40px;">
+                        <center>
+                            <h3>KARTU TES</h3>
+                        </center>
+                    </div>
                     <div class="row g-0">
                         <div class="col" style="margin-left: 10px;">
                             <div class="card-body">
@@ -256,7 +261,7 @@
                             </td>
                         </tr>
                     </tbody>
-                </table><br><br>
+                </table>
 
                 <b><i>
                         <p>*Keterangan :</p>
