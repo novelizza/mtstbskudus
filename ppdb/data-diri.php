@@ -49,37 +49,53 @@
 
         // echo $data_string;
 
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'http://localhost:4000/api/siswa/data-siswa',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => http_build_query($data),
-        CURLOPT_HTTPHEADER => array(
-            'session: '.$session.'',
-            'Content-Type: application/x-www-form-urlencoded'
-        ),
-        ));
-
-        curl_exec($curl);
-        // echo $response;
-        // Check for errors
-        if (curl_errno($curl)) {
-            $errorMessage = curl_error($curl);
-            // Handle error
-        }else {
-            // echo curl_exec($curl);
+        if(intval($nik_siswa) < 16 || intval($nik_siswa) > 16) {
             header('location: data-diri.php');
-            exit;
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Pastikan NIK 16 Digit</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+        }elseif(strlen($sekolah_siswa) < 5) {
+            header('location: data-diri.php');
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Asal Sekolah Harus Lebih Dari 5 Huruf</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>";
+        }else {
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost:4000/api/siswa/data-siswa',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => http_build_query($data),
+            CURLOPT_HTTPHEADER => array(
+                'session: '.$session.'',
+                'Content-Type: application/x-www-form-urlencoded'
+            ),
+            ));
+
+            curl_exec($curl);
+            // echo $response;
+            // Check for errors
+            if (curl_errno($curl)) {
+                $errorMessage = curl_error($curl);
+                // Handle error
+            }else {
+                // echo curl_exec($curl);
+                header('location: data-diri.php');
+                exit;
+            }
+                // Close cURL session
+            curl_close($curl);
         }
-            // Close cURL session
-        curl_close($curl);
+
+        
     }
 
     if(isset($_POST['data_ortu_wali'])) {
@@ -150,45 +166,45 @@
         );
         
 
-        if($nik_ayah && $nik_ibu && nik_wali < 16 || $nik_ayah && $nik_ibu && nik_wali > 16) {
+        if(intval($nik_ayah) && intval($nik_ibu) && intval($nik_wali) < 16 || intval($nik_ayah) && intval($nik_ibu) && intval($nik_wali) > 16) {
             header('location: data-diri.php');
                 echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Pastikan NIK 16 Digit</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>";
-        }
-
-        $curl = curl_init();
-    
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => http_build_query($data_ortu),
-        CURLOPT_HTTPHEADER => array(
-            'session: '.$session.'',
-            'Content-Type: application/x-www-form-urlencoded'
-        ),
-        ));
-    
-        curl_exec($curl);
-        // echo $responseDataDiri;
-        // Check for errors
-        if (curl_errno($curl)) {
-            $errorMessage = curl_error($curl);
-            // Handle error
         }else {
-            // echo curl_exec($curl);
-            header('location: data-diri.php');
-            exit;
+            $curl = curl_init();
+    
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => http_build_query($data_ortu),
+            CURLOPT_HTTPHEADER => array(
+                'session: '.$session.'',
+                'Content-Type: application/x-www-form-urlencoded'
+            ),
+            ));
+        
+            curl_exec($curl);
+            // echo $responseDataDiri;
+            // Check for errors
+            if (curl_errno($curl)) {
+                $errorMessage = curl_error($curl);
+                // Handle error
+            }else {
+                // echo curl_exec($curl);
+                header('location: data-diri.php');
+                exit;
+            }
+                // Close cURL session
+            curl_close($curl);
         }
-            // Close cURL session
-        curl_close($curl);
     }
 
     if(isset($_POST['data_alamat'])) {
@@ -645,7 +661,7 @@
                                     <input type="date" class="form-control" name="tanggal_siswa" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir
                                         Sesuai
-                                        Dengan KK</label>
+                                        Dengan KK Dengan Format Tangga/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Jenis Kelamin</b></label>
@@ -669,7 +685,9 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP Siswa</b></label>
-                                    <input type="number" class="form-control" name="hp_siswa" required>
+                                    <input type="text" class="form-control" name="hp_siswa" required>
+                                    <label style="font-style: italic; color: grey;">Isi "-" Jika Tidak Punya Nomor
+                                        HP</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Yang Membiayai</b></label>
@@ -701,7 +719,9 @@
                                         name="prasekolah">
                                     <label class="form-check-label" for="gridRadios1">
                                         PAUD
-                                    </label>
+                                    </label><br>
+                                    <label style="font-style: italic; color: grey;">Kosongi Jika Anda Tidak
+                                        Prasekolah</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Asal Sekolah</b></label>
@@ -826,7 +846,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
-                                    <input type="number" class="form-control" name="hp_ayah" required>
+                                    <input type="text" class="form-control" name="hp_ayah" required>
                                 </div><br>
                                 <!-- End Data Ayah Kandung -->
 
@@ -925,7 +945,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
-                                    <input type="number" class="form-control" name="hp_ibu" required>
+                                    <input type="text" class="form-control" name="hp_ibu" required>
                                 </div><br>
                                 <!-- End Data Ibu Kandung -->
 
@@ -933,16 +953,17 @@
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Data
-                                        Wali (Jika Ada)</span>
+                                        Wali (Isi Jika Ada / Jika Tidak Ada Isi "-")</span>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
-                                    <input type="text" class="form-control" name="nama_wali">
+                                    <input type="text" class="form-control" name="nama_wali" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Status</b></label>
-                                    <select class="form-select" aria-label="Default select example" name="status_wali">
-                                        <option value="" selected></option>
+                                    <select class="form-select" aria-label="Default select example" name="status_wali"
+                                        required>
+                                        <option value="-" selected></option>
                                         <option value="Hidup">Masih Hidup</option>
                                         <option value="Meninggal">Meninggal</option>
                                         <option value="Tidak Tahu">Tidak Diketahui</option>
@@ -950,31 +971,32 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
-                                    <select class="form-select" aria-label="Default select example" name="warga_wali">
-                                        <option value="" selected></option>
+                                    <select class="form-select" aria-label="Default select example" name="warga_wali"
+                                        required>
+                                        <option value="-" selected></option>
                                         <option value="WNI">WNI (Warga Negara Indonesia)</option>
                                         <option value="WNA">WNA (Warga Negara Asing)</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
-                                    <input type="number" class="form-control" name="nik_wali">
+                                    <input type="number" class="form-control" name="nik_wali" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
-                                    <input type="text" class="form-control" name="lahir_wali">
+                                    <input type="text" class="form-control" name="lahir_wali" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
-                                    <input type="date" class="form-control" name="tanggal_wali">
+                                    <input type="date" class="form-control" name="tanggal_wali" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
                                         Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pendidikan Terakhir</b></label>
                                     <select class="form-select" aria-label="Default select example"
-                                        name="pendidikan_wali">
-                                        <option value="" selected></option>
+                                        name="pendidikan_wali" required>
+                                        <option value="-" selected></option>
                                         <option value="SD">SD</option>
                                         <option value="SLTP">SLTP</option>
                                         <option value="SLTA">SLTA</option>
@@ -987,8 +1009,8 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Pekerjaan Utama</b></label>
                                     <select class="form-select" aria-label="Default select example"
-                                        name="pekerjaan_wali">
-                                        <option value="" selected></option>
+                                        name="pekerjaan_wali" required>
+                                        <option value="-" selected></option>
                                         <option value="Tidak Bekerja">Tidak Bekerja</option>
                                         <option value="Pensiunan">Pensiunan</option>
                                         <option value="PNS">PNS</option>
@@ -1004,8 +1026,8 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Penghasilan Rata - Rata</b></label>
                                     <select class="form-select" aria-label="Default select example"
-                                        name="penghasilan_wali">
-                                        <option value="" selected></option>
+                                        name="penghasilan_wali" required>
+                                        <option value="-" selected></option>
                                         <option value="Kurang Dari 5000000">Kurang Dari Rp 5.000.000</option>
                                         <option value="5000000-10000000">Rp 5.000.000 - Rp 10.000.000
                                         </option>
@@ -1022,7 +1044,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
-                                    <input type="number" class="form-control" name="hp_wali">
+                                    <input type="text" class="form-control" name="hp_wali" required>
                                 </div><br>
                                 <!-- End Data Wali -->
 

@@ -65,14 +65,14 @@
                     </li>
                     <li><a class="nav-link" href="brosur.php">Berita</a></li>
                     <li><a class="nav-link" href="kontakkami.php">Kontak Kami</a></li>
-                    <!-- <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
+                    <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul class="oke">
                             <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
                             <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
                             <li><a href="foto-brosur.php">Brosur</a></li>
                         </ul>
-                    </li> -->
+                    </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -92,8 +92,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <a href="download-brosur.php?file=Brosur%20PPDB%202.png" class="btn btn-primary btn-lg"
-                            name="data_prestasi_siswa"
+                        <a href="download-brosur.php?file=asset/img/Brosur%20PPDB%202.png"
+                            class="btn btn-primary btn-lg" name="data_prestasi_siswa"
                             style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN
                             BROSUR</a>
                     </div>
