@@ -154,6 +154,8 @@
                                 <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Username</b></label>
                                     <input type="text" class="form-control" name="username" required>
+                                    <label style="font-style: italic; color: grey;">NB : Username Tidak Boleh
+                                        Menggunakan Spasi dan Kata-Kata Kotor</label>
                                 </div>
                                 <div class="col-md-12" style="margin-top: 20px;">
                                     <label for=""><b>Masukkan Password</b></label>
