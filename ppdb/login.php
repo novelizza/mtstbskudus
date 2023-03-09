@@ -29,7 +29,33 @@
         ));
 
         $response = curl_exec($curl);
-        $object = json_decode($response);
+
+        curl_close($curl);
+        echo $response;
+        // $curl = curl_init();
+
+        // $data = array(
+        //     'username' => $username,
+        //     'password' => $password
+        // );
+
+        // curl_setopt_array($curl, array(
+        // CURLOPT_URL => 'http://localhost:4000/api/auth/siswa',
+        // CURLOPT_RETURNTRANSFER => true,
+        // CURLOPT_ENCODING => '',
+        // CURLOPT_MAXREDIRS => 10,
+        // CURLOPT_TIMEOUT => 0,
+        // CURLOPT_FOLLOWLOCATION => true,
+        // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        // CURLOPT_CUSTOMREQUEST => 'POST',
+        // CURLOPT_POSTFIELDS => http_build_query($data),
+        // CURLOPT_HTTPHEADER => array(
+        //     'Content-Type: application/x-www-form-urlencoded'
+        // ),
+        // ));
+
+        // $response = curl_exec($curl);
+        // $object = json_decode($response);
 
         // if ($object->response == 200) {
         //     // access result object and session and session_expiry fields
@@ -85,8 +111,8 @@
         //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
         //   </div>";
         // }
-        curl_close($curl);
-        echo $object;
+        // curl_close($curl);
+        // echo $object;
     }
 
         
