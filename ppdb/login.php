@@ -86,6 +86,12 @@
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
         sleep(3);
         header("location: beranda.php");
+    }else {
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Login Gagal! Silahkan Coba Lagi</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+        sleep(3);
+        header("location: login.php");
     }
 
     if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
