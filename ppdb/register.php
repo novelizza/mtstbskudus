@@ -69,7 +69,7 @@
                     // header('location: register.php');
                 }else {
                     $_SESSION['registration_complete'] = true;
-                    echo "<script>alert('Error: REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'login.php';</script>";
+                    echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'login.php';</script>";
                     // sleep(3);
                     // header('location: login.php');
                     // echo $respone;

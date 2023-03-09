@@ -63,6 +63,8 @@
             }
         } 
 
+        curl_close($curl);
+
         
 
         
