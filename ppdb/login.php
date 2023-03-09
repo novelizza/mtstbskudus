@@ -28,8 +28,8 @@
         ),
         ));
 
-        curl_exec($curl);
-        $object = json_decode(curl_exec($curl));
+        $response = curl_exec($curl);
+        $object = json_decode($response);
 
         // if ($object->response == 200) {
         //     // access result object and session and session_expiry fields
@@ -46,7 +46,7 @@
         //     echo 'Message: ' . $object->message . '<br>';
         // }
 
-        echo $object;
+        
 
         // if($response){
         //     if ($object->response == 200) {
@@ -86,6 +86,7 @@
         //   </div>";
         // }
         curl_close($curl);
+        echo $object;
     }
 
         
