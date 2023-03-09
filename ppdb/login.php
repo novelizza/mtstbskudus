@@ -6,7 +6,9 @@
     $register = $_SESSION['registration_complete'];
 
     if($_SESSION['registration_complete'] == true) {
-        echo "<script>alert('Error: REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
+        echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
+    }elseif($_SESSION['registration_complete'] != true) {
+        echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'register.php';</script>";
     }
 
     if(isset($_POST['login'])){
@@ -36,48 +38,24 @@
         ));
 
         $response = curl_exec($curl);
+        $object = json_decode($response);
 
-        curl_close($curl);
-        // echo $response;
-        // $curl = curl_init();
-
-        // $data = array(
-        //     'username' => $username,
-        //     'password' => $password
-        // );
-
-        // curl_setopt_array($curl, array(
-        // CURLOPT_URL => 'http://localhost:4000/api/auth/siswa',
-        // CURLOPT_RETURNTRANSFER => true,
-        // CURLOPT_ENCODING => '',
-        // CURLOPT_MAXREDIRS => 10,
-        // CURLOPT_TIMEOUT => 0,
-        // CURLOPT_FOLLOWLOCATION => true,
-        // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        // CURLOPT_CUSTOMREQUEST => 'POST',
-        // CURLOPT_POSTFIELDS => http_build_query($data),
-        // CURLOPT_HTTPHEADER => array(
-        //     'Content-Type: application/x-www-form-urlencoded'
-        // ),
-        // ));
-
-        // $response = curl_exec($curl);
-        // $object = json_decode($response);
-
-        // if ($object->response == 200) {
-        //     // access result object and session and session_expiry fields
-        //     $result = $object->result;
-        //     $session = $result->session;
-        //     $session_expiry = $result->session_expiry;
-        //     print $response;
-        //     print $object;
-        // } else {
-        //     // handle error response
-        //     // echo $response;
-        //     header('location: login.php');
-        //     echo 'Error: ' . $object->response . '<br>';
-        //     echo 'Message: ' . $object->message . '<br>';
-        // }
+        if ($object->response == 200) {
+            // access result object and session and session_expiry fields
+            $result = $object->result;
+            $session = $result->session;
+            $session_expiry = $result->session_expiry;
+            $_SESSION['logged_in'] = true;
+            $_SESSION['login_time'] = time();
+            $_SESSION['username'] = $username;
+            $_SESSION['session'] = $session;
+            $_SESSION['session_expiry'] = $session_expiry;
+            echo "<script>alert('LOGIN BERHASIL! LANJUTKAN PROSES PENDAFTARAN!');</script>";
+            header("location: beranda.php");
+        } else {
+            echo "<script>alert('LOGIN GAGAL! PASTIKAN USERNAME DAN PASSWORD ANDA SUDAH BENAR!');</script>";
+            header("location: beranda.php");
+        }
 
         
 
