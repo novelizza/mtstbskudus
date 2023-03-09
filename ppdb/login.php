@@ -37,7 +37,7 @@
             $session = $result->session;
             $session_expiry = $result->session_expiry;
             echo $response;
-            
+            echo $object;
         } else {
             // handle error response
             // echo $response;
