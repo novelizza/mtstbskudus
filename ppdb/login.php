@@ -188,7 +188,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="text" id="form2Example17" class="form-control form-control-lg"
-                                                name="username" />
+                                                name="username" required />
                                             <label class="form-label" for="form2Example17">Masukkan Username <br>
                                                 <i>(Pastikan username tidak mengandung spasi dan kata-kata kotor)</i>
                                             </label>
@@ -196,7 +196,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="password" id="form2Example27"
-                                                class="form-control form-control-lg" name="password" />
+                                                class="form-control form-control-lg" name="password" required />
                                             <label class="form-label" for="form2Example27">Masukkan Password</label>
                                         </div>
 
