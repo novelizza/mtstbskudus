@@ -36,8 +36,10 @@
             $result = $object->result;
             $session = $result->session;
             $session_expiry = $result->session_expiry;
-            echo $response;
-            echo $object;
+            print $response;
+            print $object;
+            console.log($response);
+            console.log($object);
         } else {
             // handle error response
             // echo $response;
