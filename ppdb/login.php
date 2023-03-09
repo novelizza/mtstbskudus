@@ -64,10 +64,17 @@
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
                 sleep(1);
                 header("location: beranda.php");
-            } else {
+            } elseif($object->response == 500) {
                 // handle error response
-                // echo $response;
-                header('location: login.php');
+                echo $object;
+                echo 'Error: ' . $object->response . '<br>';
+                echo 'Message: ' . $object->message . '<br>';
+            }elseif($object->response == 401) {
+                echo $object;
+                echo 'Error: ' . $object->response . '<br>';
+                echo 'Message: ' . $object->message . '<br>';
+            }elseif($object->response == 201) {
+                echo $object;
                 echo 'Error: ' . $object->response . '<br>';
                 echo 'Message: ' . $object->message . '<br>';
             }
