@@ -2,6 +2,13 @@
 
     session_start();
 
+    $_SESSION['registration_complete'] = true;
+    $register = $_SESSION['registration_complete'];
+
+    if($_SESSION['registration_complete'] == true) {
+        echo "<script>alert('Error: REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
+    }
+
     if(isset($_POST['login'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
