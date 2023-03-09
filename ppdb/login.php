@@ -31,24 +31,38 @@
         $response = curl_exec($curl);
         $object = json_decode($response);
 
-        if ($object->response == 200) {
-            // access result object and session and session_expiry fields
-            $result = $object->result;
-            $session = $result->session;
-            $session_expiry = $result->session_expiry;
-            print $response;
-            print $object;
-        } else {
-            // handle error response
-            // echo $response;
-            header('location: login.php');
-            echo 'Error: ' . $object->response . '<br>';
-            echo 'Message: ' . $object->message . '<br>';
-        }
+        // if ($object->response == 200) {
+        //     // access result object and session and session_expiry fields
+        //     $result = $object->result;
+        //     $session = $result->session;
+        //     $session_expiry = $result->session_expiry;
+        //     print $response;
+        //     print $object;
+        // } else {
+        //     // handle error response
+        //     // echo $response;
+        //     header('location: login.php');
+        //     echo 'Error: ' . $object->response . '<br>';
+        //     echo 'Message: ' . $object->message . '<br>';
+        // }
 
         echo $response;
 
         if($response){
+            if ($object->response == 200) {
+                // access result object and session and session_expiry fields
+                $result = $object->result;
+                $session = $result->session;
+                $session_expiry = $result->session_expiry;
+                print $response;
+                print $object;
+            } else {
+                // handle error response
+                // echo $response;
+                header('location: login.php');
+                echo 'Error: ' . $object->response . '<br>';
+                echo 'Message: ' . $object->message . '<br>';
+            }
             $_SESSION['logged_in'] = true;
             $_SESSION['login_time'] = time();
             $_SESSION['username'] = $username;
@@ -58,7 +72,7 @@
                 <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
             sleep(1);
-            header("location: login.php");
+            header("location: beranda.php");
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Username atau Password Salah!</strong>
