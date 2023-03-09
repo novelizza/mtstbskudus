@@ -40,22 +40,30 @@
         $response = curl_exec($curl);
         $object = json_decode($response);
 
-        if ($object->response == 200) {
-            // access result object and session and session_expiry fields
-            $result = $object->result;
-            $session = $result->session;
-            $session_expiry = $result->session_expiry;
-            $_SESSION['logged_in'] = true;
-            $_SESSION['login_time'] = time();
-            $_SESSION['username'] = $username;
-            $_SESSION['session'] = $session;
-            $_SESSION['session_expiry'] = $session_expiry;
-            echo "<script>alert('LOGIN BERHASIL! LANJUTKAN PROSES PENDAFTARAN!');</script>";
-            header("location: beranda.php");
-        } else {
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
             echo "<script>alert('LOGIN GAGAL! PASTIKAN USERNAME DAN PASSWORD ANDA SUDAH BENAR!');</script>";
-            header("location: beranda.php");
-        }
+            header("location: login.php");
+        }else{
+            if ($object->response == 200) {
+                // access result object and session and session_expiry fields
+                $result = $object->result;
+                $session = $result->session;
+                $session_expiry = $result->session_expiry;
+                $_SESSION['logged_in'] = true;
+                $_SESSION['login_time'] = time();
+                $_SESSION['username'] = $username;
+                $_SESSION['session'] = $session;
+                $_SESSION['session_expiry'] = $session_expiry;
+                echo "<script>alert('LOGIN BERHASIL! LANJUTKAN PROSES PENDAFTARAN!');</script>";
+                header("location: beranda.php");
+            } else {
+                echo "<script>alert('LOGIN GAGAL! PASTIKAN USERNAME DAN PASSWORD ANDA SUDAH BENAR!');</script>";
+                header("location: login.php");
+            }
+        } 
+
+        
 
         
 
