@@ -187,33 +187,62 @@
                         ?>
 
                     </div>
-                    <div class="col-md-6">
-                        <a class="btn" href="data-diri.php"
-                            style="background-color: #4ECB71; color: white; float: right;">Lengkapi Data
-                            Diri</a>
-                    </div>
-                </div><br>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <a class="btn" href="cetak-kartu-tes.php"
-                            style="background-color: #4E53CB; color: white; width: 100%;" name="cetak_kartu_tes">
-                            <i class="bi bi-printer-fill"></i><span> Cetak Kartu Tes</span>
-                        </a>
-                    </div>
                     <?php
                         if($status_va == 1) {
-                            echo "<div class='col-md-6'>
-                            <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;' disabled>
-                                <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
-                            </a>
-                        </div>";
+                            echo "
+                                <div class='col-md-6'>
+                                    <a class='btn' href='data-diri.php'
+                                        style='background-color: #4ECB71; color: white; float: right;' disabled>Lengkapi Data
+                                        Diri</a>
+                                </div>
+                            ";
                         }else {
-                            echo "<div class='col-md-6'>
-                            <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;'>
-                                <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
-                            </a>
-                        </div>";
+                            echo "
+                                <div class='col-md-6'>
+                                    <a class='btn' href='data-diri.php'
+                                        style='background-color: #4ECB71; color: white; float: right;' disabled>Lengkapi Data
+                                        Diri</a>
+                                </div>
+                            ";
                         }
+                    ?>
+                </div><br>
+                <div class="row g-3">
+                    <?php
+                        if($status_va == 1) {
+                            echo "
+                                <div class='col-md-12'>
+                                    <a class='btn' href='cetak-kartu-tes.php'
+                                        style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes' disabled>
+                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                                    </a>
+                                </div>
+                            ";
+                        }else {
+                            echo "
+                                <div class='col-md-12'>
+                                    <a class='btn' href='cetak-kartu-tes.php'
+                                        style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
+                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                                    </a>
+                                </div>
+                            ";
+                        }
+                    ?>
+                    <?php
+                        // if($status_va == 1) {
+                        //     echo "<div class='col-md-6'>
+                        //     <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;' disabled>
+                        //         <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
+                        //     </a>
+                        // </div>";
+                        // }else {
+                        //     echo "<div class='col-md-6'>
+                        //     <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: #2AB6D4; color: white; width: 100%;'>
+                        //         <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
+                        //     </a>
+                        // </div>";
+                        // }
                     ?>
                 </div><br>
 

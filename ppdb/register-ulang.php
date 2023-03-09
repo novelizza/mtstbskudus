@@ -45,7 +45,7 @@
                     'tanggal_lahir' => $tanggal_lahir,
                     'username' => $username,
                     'password' => $password,
-                    'tujuan_masuk' => $selectedCheckbox,
+                    'tujuan_masuk' => 'MTS',
                     'avatar' => curl_file_create($image, $_FILES['avatar']['type'], $_FILES['avatar']['name'])
                 ));
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
