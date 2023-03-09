@@ -38,11 +38,10 @@
             $session_expiry = $result->session_expiry;
             print $response;
             print $object;
-            console.log($response);
-            console.log($object);
         } else {
             // handle error response
             // echo $response;
+            header('location: login.php');
             echo 'Error: ' . $object->response . '<br>';
             echo 'Message: ' . $object->message . '<br>';
         }
@@ -59,7 +58,7 @@
                 <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
             sleep(1);
-            header("location: beranda.php");
+            header("location: login.php");
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Username atau Password Salah!</strong>
@@ -162,8 +161,6 @@
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <span class="h5 fw-bold mb-0">Selamat Datang di PPDB MTS NU TBS Kudus</span>
-                                            <?php echo $response; ?>
-                                            <?php echo $object; ?>
                                         </div>
 
                                         <h6 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan login
