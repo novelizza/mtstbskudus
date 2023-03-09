@@ -145,7 +145,9 @@
                                         <div class="form-outline mb-4">
                                             <input type="text" id="form2Example17" class="form-control form-control-lg"
                                                 name="username" />
-                                            <label class="form-label" for="form2Example17">Masukkan Username</label>
+                                            <label class="form-label" for="form2Example17">Masukkan Username <br>
+                                                <i>(Pastikan username tidak mengandung spasi dan kata-kata kotor)</i>
+                                            </label>
                                         </div>
 
                                         <div class="form-outline mb-4">
