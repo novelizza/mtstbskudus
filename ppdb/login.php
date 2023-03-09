@@ -1,95 +1,95 @@
 <?php
 
-    session_start();
+    // session_start();
 
-    if(isset($_POST['login'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+    // if(isset($_POST['login'])){
+    //     $username = $_POST['username'];
+    //     $password = $_POST['password'];
         
-        $curl = curl_init();
+    //     $curl = curl_init();
 
-        $data = array(
-            'username' => $username,
-            'password' => $password
-        );
+    //     $data = array(
+    //         'username' => $username,
+    //         'password' => $password
+    //     );
 
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'http://localhost:4000/api/auth/siswa',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => http_build_query($data),
-        CURLOPT_HTTPHEADER => array(
-            'Content-Type: application/x-www-form-urlencoded'
-        ),
-        ));
+    //     curl_setopt_array($curl, array(
+    //     CURLOPT_URL => 'http://localhost:4000/api/auth/siswa',
+    //     CURLOPT_RETURNTRANSFER => true,
+    //     CURLOPT_ENCODING => '',
+    //     CURLOPT_MAXREDIRS => 10,
+    //     CURLOPT_TIMEOUT => 30,
+    //     CURLOPT_FOLLOWLOCATION => true,
+    //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    //     CURLOPT_CUSTOMREQUEST => 'POST',
+    //     CURLOPT_POSTFIELDS => http_build_query($data),
+    //     CURLOPT_HTTPHEADER => array(
+    //         'Content-Type: application/x-www-form-urlencoded'
+    //     ),
+    //     ));
 
-        curl_exec($curl);
-        $object = json_decode($response);
+    //     curl_exec($curl);
+    //     $object = json_decode($response);
 
-        if ($object->response == 200) {
-            // access result object and session and session_expiry fields
-            $result = $object->result;
-            $session = $result->session;
-            $session_expiry = $result->session_expiry;
+    //     if ($object->response == 200) {
+    //         // access result object and session and session_expiry fields
+    //         $result = $object->result;
+    //         $session = $result->session;
+    //         $session_expiry = $result->session_expiry;
 
             
-        } else {
-            // handle error response
-            echo 'Error: ' . $object->response . '<br>';
-            echo 'Message: ' . $object->message . '<br>';
-        //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-        //     <strong>Username atau Password Salah!</strong>
-        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-        //   </div>";
-        //   header('location: login.php');
-        }
-            // echo $response;
-            // echo $session_expiry;
+    //     } else {
+    //         // handle error response
+    //         echo 'Error: ' . $object->response . '<br>';
+    //         echo 'Message: ' . $object->message . '<br>';
+    //     //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+    //     //     <strong>Username atau Password Salah!</strong>
+    //     //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+    //     //   </div>";
+    //     //   header('location: login.php');
+    //     }
+    //         // echo $response;
+    //         // echo $session_expiry;
 
-        if($response){
-            $_SESSION['logged_in'] = true;
-            $_SESSION['login_time'] = time();
-            $_SESSION['username'] = $username;
-            $_SESSION['session'] = $session;
-            $_SESSION['session_expiry'] = $session_expiry;
-            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-            sleep(3);
-            header("location: beranda.php");
-        }else {
-            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-            <strong>Username atau Password Salah!</strong>
-            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-          </div>";
-        }
-        curl_close($curl);   
-    }
+    //     if($response){
+    //         $_SESSION['logged_in'] = true;
+    //         $_SESSION['login_time'] = time();
+    //         $_SESSION['username'] = $username;
+    //         $_SESSION['session'] = $session;
+    //         $_SESSION['session_expiry'] = $session_expiry;
+    //         echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+    //             <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
+    //             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+    //         sleep(3);
+    //         header("location: beranda.php");
+    //     }else {
+    //         echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+    //         <strong>Username atau Password Salah!</strong>
+    //         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+    //       </div>";
+    //     }
+    //     curl_close($curl);   
+    // }
 
-    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-        sleep(3);
-        header("location: beranda.php");
-    }else {
-        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Login Gagal! Silahkan Coba Lagi</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-        sleep(3);
-        header("location: login.php");
-    }
+    // if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+    //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+    //             <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
+    //             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+    //     sleep(3);
+    //     header("location: beranda.php");
+    // }else {
+    //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+    //             <strong>Login Gagal! Silahkan Coba Lagi</strong>
+    //             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+    //     sleep(3);
+    //     header("location: login.php");
+    // }
 
-    if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
-        session_destroy();
-        header("location: login.php");
-        exit;
-    }
+    // if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
+    //     session_destroy();
+    //     header("location: login.php");
+    //     exit;
+    // }
 
 ?>
 <!DOCTYPE html>
