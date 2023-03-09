@@ -53,7 +53,7 @@
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-            sleep(3);
+            sleep(30);
             header("location: beranda.php");
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>

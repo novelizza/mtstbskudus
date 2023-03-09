@@ -179,7 +179,7 @@
                             if($status_va == 1) {
                                 echo "<h5><i class='bi bi-x-circle-fill' style='color: #df4759'></i>&nbsp; Pembayaran
                                 Belum
-                                LUNAS!</h5>";
+                                LUNAS! Segera Lakukan Pembayaran untuk Melanjutkan Proses Pendaftaran</h5>";
                             }else {
                                 echo "<h5><i class='bi bi-check-circle-fill' style='color: #4ECB71'></i>&nbsp; Pembayaran
                                 Sudah
