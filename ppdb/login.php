@@ -42,7 +42,7 @@
             echo 'Message: ' . $object->message . '<br>';
         }
             // echo $response;
-            echo $session_expiry;
+            // echo $session_expiry;
 
         if($response){
             $_SESSION['logged_in'] = true;
@@ -66,7 +66,7 @@
 
     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
         echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Pastikan Untuk Mengingat Username dan Password Anda</strong>
+                <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
         sleep(3);
         header("location: beranda.php");
