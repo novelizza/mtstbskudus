@@ -92,25 +92,25 @@
 
         
 
-    // if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-    //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-    //             <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
-    //             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-    //     sleep(1);
-    //     header("location: beranda.php");
-    // }else {
-    //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-    //             <strong>Login Gagal! Silahkan Coba Lagi</strong>
-    //             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-    //     sleep(1);
-    //     header("location: login.php");
-    // }
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+        // sleep(1);
+        header("location: beranda.php");
+    }else {
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Login Gagal! Silahkan Coba Lagi</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+        // sleep(1);
+        header("location: login.php");
+    }
 
-    // if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
-    //     session_destroy();
-    //     header("location: login.php");
-    //     exit;
-    // }
+    if($_SESSION['login_time'] && time() > $_SESSION['session_expiry']) {
+        session_destroy();
+        header("location: login.php");
+        exit;
+    }
 
 ?>
 <!DOCTYPE html>
