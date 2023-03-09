@@ -111,15 +111,33 @@
                         <div class="well-middle">
                             <div class="single-well">
                                 <p>
-                                    Salah satu madrasah di Kabupaten Kudus yang sudah memiliki akreditasi A yang
-                                    mengedepankan pembelajaran agama Islam dan berfokus untuk mencetak siswa-siswa yang
-                                    tangguh dalam imtag, unggul dalam iptek, terdepan dalam prestasi berwawasan
-                                    ahlussunnah wal jama'ah an-nahdliyah.
+                                    MTS NU Tasywiquth Thullab Salafiyah Kudus adalah salah satu lembaga pendidikan di
+                                    Kudus yang berfokus pada pendidikan agama dan umum. Lembaga ini didirikan oleh
+                                    Nahdlatul Ulama pada tahun 2000 dan telah melayani masyarakat di Kudus dan
+                                    sekitarnya selama lebih dari dua dekade. MTS NU Tasywiquth Thullab Salafiyah Kudus
+                                    memiliki visi untuk menghasilkan lulusan yang berkualitas, mandiri, dan berakhlak
+                                    mulia, serta siap untuk berkontribusi dalam membangun bangsa dan agama.
                                 </p>
                                 <p>
-                                    MTS NU TBS Kudus juga mempunyai berbagai macam program unggulan seperti Kitab
-                                    Kuning, Falak dan Program Pengembangan Diri melalui berbagai macam ekstrakulikuler
-                                    mulai dari bidang akademis hingga bidang olahraga.
+                                    Sebagai lembaga pendidikan yang berbasis Islam, MTS NU Tasywiquth Thullab Salafiyah
+                                    Kudus memberikan perhatian khusus pada pendidikan agama dan akhlak. Selain pelajaran
+                                    umum seperti matematika, IPA, dan bahasa Inggris, siswa juga mempelajari pelajaran
+                                    agama seperti Al-Quran, hadis, aqidah, fiqh, dan akhlak. Lembaga ini juga
+                                    memfasilitasi kegiatan ekstrakurikuler yang bertujuan untuk mengembangkan bakat
+                                    siswa seperti pramuka, olahraga, seni dan budaya, serta kegiatan keagamaan seperti
+                                    pengajian, kajian kitab, dan lain-lain.
+                                </p>
+                                <p>
+                                    Selain itu, MTS NU Tasywiquth Thullab Salafiyah Kudus juga memiliki sarana dan
+                                    prasarana yang memadai untuk mendukung proses belajar-mengajar. Lembaga ini memiliki
+                                    fasilitas ruang kelas yang nyaman dan dilengkapi dengan teknologi modern seperti
+                                    proyektor dan internet. Selain itu, lembaga ini juga memiliki perpustakaan yang
+                                    lengkap dan memadai dengan koleksi buku-buku agama dan umum yang dapat digunakan
+                                    oleh siswa dan guru. Selain itu, lembaga ini juga memiliki sarana olahraga seperti
+                                    lapangan futsal dan basket yang dapat digunakan untuk kegiatan ekstrakurikuler atau
+                                    kegiatan lainnya. Dengan adanya sarana dan prasarana yang memadai, diharapkan siswa
+                                    dapat belajar dengan nyaman dan maksimal di MTS NU Tasywiquth Thullab Salafiyah
+                                    Kudus.
                                 </p>
                             </div>
                         </div>
