@@ -2,8 +2,8 @@
 
     session_start();
 
-    $_SESSION['registration_complete'] = true;
-    $register = $_SESSION['registration_complete'];
+    // $_SESSION['registration_complete'] = true;
+    // $register = $_SESSION['registration_complete'];
 
     // if($_SESSION['registration_complete'] == true) {
     //     echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
