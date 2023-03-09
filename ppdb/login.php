@@ -30,7 +30,6 @@
 
         $response = curl_exec($curl);
         $object = json_decode($response);
-    }
 
         if ($object->response == 200) {
             // access result object and session and session_expiry fields
@@ -41,14 +40,18 @@
             
         } else {
             // handle error response
+            echo $response;
             echo 'Error: ' . $object->response . '<br>';
             echo 'Message: ' . $object->message . '<br>';
+        }
+    }
+
+        
         //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
         //     <strong>Username atau Password Salah!</strong>
         //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
         //   </div>";
         //   header('location: login.php');
-        }
             // echo $response;
             // echo $session_expiry;
 
