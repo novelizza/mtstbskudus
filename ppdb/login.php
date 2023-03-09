@@ -54,8 +54,16 @@
                 $result = $object->result;
                 $session = $result->session;
                 $session_expiry = $result->session_expiry;
-                print $response;
-                print $object;
+                $_SESSION['logged_in'] = true;
+                $_SESSION['login_time'] = time();
+                $_SESSION['username'] = $username;
+                $_SESSION['session'] = $session;
+                $_SESSION['session_expiry'] = $session_expiry;
+                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+                sleep(1);
+                header("location: beranda.php");
             } else {
                 // handle error response
                 // echo $response;
@@ -63,16 +71,7 @@
                 echo 'Error: ' . $object->response . '<br>';
                 echo 'Message: ' . $object->message . '<br>';
             }
-            $_SESSION['logged_in'] = true;
-            $_SESSION['login_time'] = time();
-            $_SESSION['username'] = $username;
-            $_SESSION['session'] = $session;
-            $_SESSION['session_expiry'] = $session_expiry;
-            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-            sleep(1);
-            header("location: beranda.php");
+            
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Username atau Password Salah!</strong>
