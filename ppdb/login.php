@@ -28,7 +28,7 @@
         ),
         ));
 
-        $response = curl_exec($curl);
+        curl_exec($curl);
         $object = json_decode($response);
 
         if ($object->response == 200) {
