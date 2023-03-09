@@ -64,15 +64,13 @@
                     $errorMessage = curl_error($curl);
                     // Handle error
                     header('location: register.php');
-                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    echo "<div class='alert alert-danger' role='alert'>
                     <strong>Register Gagal, Silahkan Coba Lagi!</strong>
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                     </div>";
                 }else {
                     $_SESSION['registration_complete'] = true;
-                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    echo "<div class='alert alert-danger' role='alert'>
                     <strong>Register Berhasil!</strong>
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                     </div>";
                     sleep(10);
                     header('location: login.php');
