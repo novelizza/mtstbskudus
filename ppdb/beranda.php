@@ -189,7 +189,7 @@
 
                     </div>
                     <?php
-                        if($isLengkap == "1") {
+                        if($isLengkap == "0") {
                             echo "
                                 <div class='col-md-6'>
                                     <a class='disabled' href='data-diri.php'
