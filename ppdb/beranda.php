@@ -189,11 +189,11 @@
 
                     </div>
                     <?php
-                        if($isLengkap == "0") {
+                        if($status_va == "1") {
                             echo "
                                 <div class='col-md-6'>
                                     <a class='btn' href='data-diri.php'
-                                        style='background-color: #404040; color: white; float: right;' onclick='return false;'>Lengkapi Data
+                                        style='background-color: grey; color: white; float: right;' onclick='return false;'>Lengkapi Data
                                         Diri</a>
                                 </div>
                             ";
@@ -210,25 +210,25 @@
                 </div><br>
                 <div class="row g-3">
                     <?php
-                        // if($status_va == 1) {
-                        //     echo "
-                        //         <div class='col-md-12'>
-                        //             <a class='btn' href='cetak-kartu-tes.php'
-                        //                 style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes' disabled>
-                        //                 <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
-                        //             </a>
-                        //         </div>
-                        //     ";
-                        // }else {
-                        //     echo "
-                        //         <div class='col-md-12'>
-                        //             <a class='btn' href='cetak-kartu-tes.php'
-                        //                 style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
-                        //                 <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
-                        //             </a>
-                        //         </div>
-                        //     ";
-                        // }
+                        if($isLengkap == 0) {
+                            echo "
+                                <div class='col-md-12'>
+                                    <a class='btn' href='cetak-kartu-tes.php'
+                                        style='background-color: grey; color: white; width: 100%;' name='cetak_kartu_tes' onclick='return false;'>
+                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                                    </a>
+                                </div>
+                            ";
+                        }else {
+                            echo "
+                                <div class='col-md-12'>
+                                    <a class='btn' href='cetak-kartu-tes.php'
+                                        style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
+                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                                    </a>
+                                </div>
+                            ";
+                        }
                     ?>
                     <?php
                         // if($status_va == 1) {
