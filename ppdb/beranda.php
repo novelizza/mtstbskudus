@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 <div class="row g-3">
-                    <div class="col-md-6">
+                    <div class="col-md-7">
 
                         <?php
                             if($status_va == 1) {
@@ -191,7 +191,7 @@
                     <?php
                         if($status_va == "1") {
                             echo "
-                                <div class='col-md-6'>
+                                <div class='col-md-5'>
                                     <a class='btn' href='data-diri.php'
                                         style='background-color: grey; color: white; float: right;' onclick='return false;'>Lengkapi Data
                                         Diri</a>
@@ -199,7 +199,7 @@
                             ";
                         }else {
                             echo "
-                                <div class='col-md-6'>
+                                <div class='col-md-5'>
                                     <a class='btn' href='data-diri.php'
                                         style='background-color: #4ECB71; color: white; float: right;' disabled>Lengkapi Data
                                         Diri</a>
