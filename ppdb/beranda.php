@@ -180,10 +180,12 @@
                                 echo "<h5><i class='bi bi-x-circle-fill' style='color: #df4759'></i>&nbsp; Pembayaran
                                 Belum
                                 LUNAS! Segera Lakukan Pembayaran untuk Melanjutkan Proses Pendaftaran</h5>";
-                            }else {
+                            }elseif($status_va == 2) {
                                 echo "<h5><i class='bi bi-check-circle-fill' style='color: #4ECB71'></i>&nbsp; Pembayaran
                                 Sudah
                                 LUNAS!</h5>";
+                            }else {
+                                echo "";
                             }
                         ?>
 
