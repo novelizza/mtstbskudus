@@ -389,7 +389,7 @@
                                                     <p>11. Agen46 Proses Transaksi</p>
                                                     <p>12. Apabila transaksi Sukses anda akan menerima bukti pembayaran dari Agen46 tersebut.</p><br><br>
 
-                                                    <b>Pembayaran BNI Virtual Account dengan ATM Bersama<b><br>
+                                                    <b>Pembayaran BNI Virtual Account dengan ATM Bersama</b><br>
                                                     <p>1. Masukkan kartu ke mesin ATM Bersama.</p>
                                                     <p>2. Pilih 'Transaksi Lainnya'.</p>
                                                     <p>3. Pilih menu 'Transfer'.</p>
@@ -408,7 +408,7 @@
                                                     <p>6. Konfirmasi rincian Anda akan tampil di layar, cek dan apabila sudah sesuai silahkan lanjutkan transaksi sampai dengan selesai.</p>
                                                     <p>7. Transaksi Berhasil.</p><br><br>
 
-                                                    <b>Pembayaran BNI Virtual Account dari OVO<b><br>
+                                                    <b>Pembayaran BNI Virtual Account dari OVO</b><br>
                                                     <p>1. Buka aplikasi OVO</p>
                                                     <p>2. Pilih menu Transfer</p>
                                                     <p>3. Pilih 'Rekening Bank'</p>
