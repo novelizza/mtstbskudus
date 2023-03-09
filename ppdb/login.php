@@ -52,6 +52,10 @@
             $_SESSION['username'] = $username;
             $_SESSION['session'] = $session;
             $_SESSION['session_expiry'] = $session_expiry;
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+            sleep(3);
             header("location: beranda.php");
         }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
