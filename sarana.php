@@ -164,7 +164,7 @@
                 <div class="container">
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <h1 style="text-align: left;">Laboratorium Falak</h1>
+                            <h1 style="text-align: left;">Laboratorium Falak & Menara Rukyah</h1>
                         </div>
                     </div>
                 </div>
@@ -172,26 +172,15 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <p>Materi ilmu falak yang diajarkan di MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus adalah materi
+                        dasar dengan perhitungan yang mudah dan simpel seperti; hisab awal bulan hijriyah
+                        ‘urfi/isthilahi, penanggalan jawa Islam, hijri syamsi, pranoto mongso, hisab awal bulan haqiqi
+                        taqribi, hisab gerhana bulan haqiqi taqribi, pengenalan beragam model sistem kalender,
+                        penyusunan kalender miladiyah, sampai pembuatan jadwal selisih istiwa’ dengan waktu setempat
+                        (daerah) serta pembuatan jadwal transit Matahari. </p>
                 </div>
             </div><!-- End Tujuan Section -->
-
-            <!-- ======= Tujuan Section ======= -->
-            <div id="testimonials" class="testimonials-menara">
-                <div class="container">
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <h1 style="text-align: left;">Menara Rukyah</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="about">
-                <div class="container">
-                    <p>asdasdasdasdasd</p>
-                </div>
-            </div><!-- End Tujuan Section -->
+            <!-- End Tujuan Section -->
 
             <!-- ======= Tujuan Section ======= -->
             <div id="testimonials" class="testimonials-lapangan">

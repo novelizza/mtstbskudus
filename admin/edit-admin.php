@@ -309,12 +309,12 @@ function session_expired($session_expiry) {
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Nama Lengkap</label>
                                         <input type="text" class="form-control" id="inputEmail5" name="nama"
-                                            value="<?php echo $result_nip; ?>" required>
+                                            value="<?php echo $result_nama; ?>" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Username</label>
                                         <input type="text" class="form-control" id="inputEmail5" name="username"
-                                            value="<?php echo $result_nip; ?>" required>
+                                            value="<?php echo $result_username; ?>" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Password Baru</label>
