@@ -37,6 +37,21 @@
             $session = $result->session;
             $session_expiry = $result->session_expiry;
 
+            
+        } else {
+            // handle error response
+            echo 'Error: ' . $object->response . '<br>';
+            echo 'Message: ' . $object->message . '<br>';
+        //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+        //     <strong>Username atau Password Salah!</strong>
+        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+        //   </div>";
+        //   header('location: login.php');
+        }
+            // echo $response;
+            // echo $session_expiry;
+
+        if($response){
             $_SESSION['logged_in'] = true;
             $_SESSION['login_time'] = time();
             $_SESSION['username'] = $username;
@@ -45,38 +60,14 @@
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                 <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-            sleep(30);
+            sleep(3);
             header("location: beranda.php");
-        } else {
-            // handle error response
-            echo 'Error: ' . $object->response . '<br>';
-            echo 'Message: ' . $object->message . '<br>';
+        }else {
             echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
             <strong>Username atau Password Salah!</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
-          header('location: login.php');
         }
-            // echo $response;
-            // echo $session_expiry;
-
-        // if($response){
-        //     $_SESSION['logged_in'] = true;
-        //     $_SESSION['login_time'] = time();
-        //     $_SESSION['username'] = $username;
-        //     $_SESSION['session'] = $session;
-        //     $_SESSION['session_expiry'] = $session_expiry;
-        //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-        //         <strong>Login Berhasil! Pastikan Untuk Mengingat Username dan Password Anda</strong>
-        //         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
-        //     sleep(30);
-        //     header("location: beranda.php");
-        // }else {
-        //     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-        //     <strong>Username atau Password Salah!</strong>
-        //     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-        //   </div>";
-        // }
         curl_close($curl);   
     }
 
