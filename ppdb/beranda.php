@@ -41,6 +41,7 @@
             $result = $object->result;
 
             $status_va = $result->statusVa;
+            $isLengkap = $result->isLengkap;
 
             $data_siswa = $result->data_siswa;
             
@@ -187,8 +188,13 @@
                         ?>
 
                     </div>
+                    <div class='col-md-6'>
+                        <a class='btn' href='data-diri.php'
+                            style='background-color: #4ECB71; color: white; float: right;' disabled>Lengkapi Data
+                            Diri</a>
+                    </div>
                     <?php
-                        if($status_va == 1) {
+                        if($isLengkap == "1") {
                             echo "
                                 <div class='col-md-6'>
                                     <a class='btn' href='data-diri.php'
@@ -209,25 +215,25 @@
                 </div><br>
                 <div class="row g-3">
                     <?php
-                        if($status_va == 1) {
-                            echo "
-                                <div class='col-md-12'>
-                                    <a class='btn' href='cetak-kartu-tes.php'
-                                        style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes' disabled>
-                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
-                                    </a>
-                                </div>
-                            ";
-                        }else {
-                            echo "
-                                <div class='col-md-12'>
-                                    <a class='btn' href='cetak-kartu-tes.php'
-                                        style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
-                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
-                                    </a>
-                                </div>
-                            ";
-                        }
+                        // if($status_va == 1) {
+                        //     echo "
+                        //         <div class='col-md-12'>
+                        //             <a class='btn' href='cetak-kartu-tes.php'
+                        //                 style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes' disabled>
+                        //                 <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                        //             </a>
+                        //         </div>
+                        //     ";
+                        // }else {
+                        //     echo "
+                        //         <div class='col-md-12'>
+                        //             <a class='btn' href='cetak-kartu-tes.php'
+                        //                 style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
+                        //                 <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                        //             </a>
+                        //         </div>
+                        //     ";
+                        // }
                     ?>
                     <?php
                         // if($status_va == 1) {
@@ -329,14 +335,95 @@
                         echo "
                                 <div class='card mb-3'>
                                 <div class='card-header' style='background-color:#4ECB71;'>
-                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Segera Lakukan Pembayaran Untuk Melanjutkan Proses Pendaftaran </span>
+                                    <span style='color: white; font-weight: bold; font-size: 18px;'> Cara Pembayaran </span>
                                 </div>
                                 <div class='row g-0'>
                                     <div class='col-md-5' style='margin-left: 10px;'>
                                         <div class='card-body'>
                                             <div class='row'>
                                                 <div class='col-md-12'>
-                                                    <p>Menunggu, sedang integrasi pembayaran</p>
+                                                    <b>BNI Virtual Account Billing</b><br>
+                                                    <b>Pembayaran BNI Virtual Account dengan <u>ATM BNI</u></b><br>
+                                                    <p>1. Masukkan Kartu Anda.</p>
+                                                    <p>2. Pilih Bahasa.</p>
+                                                    <p>3. Masukkan PIN ATM Anda.</p>
+                                                    <p>4. Pilih 'Menu Lainnya'.</p>
+                                                    <p>5. Pilih 'Transfer'.</p>
+                                                    <p>6. Pilih Jenis rekening yang akan Anda gunakan (Contoh; 'Dari Rekening Tabungan').</p>
+                                                    <p>7. Pilih “Virtual Account Billing”</p>
+                                                    <p>8. Masukkan nomor Virtual Account Anda (contoh: 8277087781881441).</p>
+                                                    <p>9. Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi</p>
+                                                    <p>10. Konfirmasi, apabila telah sesuai, lanjutkan transaksi.</p>
+                                                    <p>11. Transaksi Anda telah selesai.</p><br><br>
+
+                                                    <b>Pembayaran BNI Virtual Account dengan <u>mobile banking BNI</u></b><br>
+                                                    <p>1. Akses BNI Mobile Banking dari handphone kemudian masukkan user ID dan password.</p>
+                                                    <p>2. Pilih menu 'Transfer'.</p>
+                                                    <p>3. Pilih menu 'Virtual Account Billing' kemudian pilih rekening debet.</p>
+                                                    <p>4. Masukkan nomor Virtual Account Anda (contoh: 8277087781881441) pada menu 'inputbaru'.</p>
+                                                    <p>5. Tagihan yang harus dibayarkan akan muncul pada layar konfirmasi.</p>
+                                                    <p>6. Konfirmasi transaksi dan masukkan Password Transaksi.</p>
+                                                    <p>7. Pembayaran Anda Telah Berhasil.</p><br><br>
+
+                                                    <b>Pembayaran BNI Virtual Account dengan <u>BNI sms banking</u></b>
+                                                    <p>1. Buka aplikasi SMS Banking BNI</p>
+                                                    <p>2. Pilih menu Transfer</p>
+                                                    <p>3. Pilih menu Trf rekening BNI</p>
+                                                    <p>4. Masukkan nomor rekening tujuan dengan 16 digit Nomor Virtual Account (contoh: 8277087781881441).</p>
+                                                    <p>5. Masukkan nominal transfer sesuai tagihan atau kewajiban Anda. Nominal yang berbeda tidak dapat diproses.</p>
+                                                    <p>6. Pilih 'Proses' kemudian 'Setuju'</p>
+                                                    <p>7. Reply sms dengan ketik pin sesuai perintah</p>
+                                                    <p>8. Transaksi Berhasil</p><br>
+
+                                                    <p>Atau Dapat juga langsung mengetik sms dengan format:</p>
+                                                        <b>TRF[SPASI]NomorVA[SPASI]NOMINAL</b><br>
+                                                        <p>dan kemudian kirim ke 3346</p>
+                                                        <p>Contoh : TRF 8277087781881441 44000</p><br><br>
+
+                                                    <b>Pembayaran BNI Virtual Account dari Cabang atau Outlet BNI (Teller)</b><br>
+                                                    <p>1. Kunjungi Kantor Cabang/outlet BNI terdekat</p>
+                                                    <p>2. Informasikan kepada Teller, bahwa ingin melakukan pembayaran “Virtual Account Billing” 3. Serahkan nomor Virtual Account Anda kepada Teller</p>
+                                                    <p>4. Teller melakukan konfirmasi kepada Anda.</p>
+                                                    <p>5. Teller memproses Transaksi</p>
+                                                    <p>6. Apabila transaksi Sukses anda akan menerima bukti pembayaran dari Teller tersebut.</p>
+                                                    <b>Pembayaran BNI Virtual Account dari Agen46</b><br>
+                                                    <p>7. Kunjungi Agen46 terdekat (warung/took/kios dengan tulisan Agen46)</p>
+                                                    <p>8. Informasikan kepada Agen46, bahwa ingin melakukan pembayaran 'Virtual Account Billing'</p>
+                                                    <p>9. Serahkan nomor Virtual Account Anda kepada Agen46</p>
+                                                    <p>10. Agen46 melakukan konfirmasi kepada Anda.</p>
+                                                    <p>11. Agen46 Proses Transaksi</p>
+                                                    <p>12. Apabila transaksi Sukses anda akan menerima bukti pembayaran dari Agen46 tersebut.</p><br><br>
+
+                                                    <b>Pembayaran BNI Virtual Account dengan ATM Bersama<b><br>
+                                                    <p>1. Masukkan kartu ke mesin ATM Bersama.</p>
+                                                    <p>2. Pilih 'Transaksi Lainnya'.</p>
+                                                    <p>3. Pilih menu 'Transfer'.</p>
+                                                    <p>4. Pilih 'Transfer ke Bank Lain'.</p>
+                                                    <p>5. Masukkan kode bank BNI (009) dan 16 Digit Nomor Virtual Account (contoh: 8277087781881441).</p>
+                                                    <p>6. Masukkan nominal transfer sesuai tagihan atau kewajiban Anda. Nominal yang berbeda tidak dapat diproses.</p>
+                                                    <p>7. Konfirmasi rincian Anda akan tampil di layar, cek dan tekan 'Ya' untuk melanjutkan.</p>
+                                                    <p>8. Transaksi Berhasil.</p>
+
+                                                    <b>Pembayaran BNI Virtual Account dari Bank Lain</b><br><br>
+                                                    <p>1. Pilih menu 'Transfer antar bank' atau 'Transfer online antarbank'.</p>
+                                                    <p>2. Masukkan kode bank BNI (009) atau pilih bank yang dituju yaitu BNI.</p>
+                                                    <p>3. Masukan 16 Digit Nomor Virtual Account pada kolom rekening tujuan, (contoh: 8277087781881441).</p>
+                                                    <p>4. Masukkan nominal transfer sesuai tagihan atau kewajiban Anda. Nominal yang berbeda tidak dapat diproses.</p>
+                                                    <p>5. Masukkan jumlah pembayaran : 44000.</p>
+                                                    <p>6. Konfirmasi rincian Anda akan tampil di layar, cek dan apabila sudah sesuai silahkan lanjutkan transaksi sampai dengan selesai.</p>
+                                                    <p>7. Transaksi Berhasil.</p><br><br>
+
+                                                    <b>Pembayaran BNI Virtual Account dari OVO<b><br>
+                                                    <p>1. Buka aplikasi OVO</p>
+                                                    <p>2. Pilih menu Transfer</p>
+                                                    <p>3. Pilih 'Rekening Bank'</p>
+                                                    <p>4. Masukkan kode bank BNI (009) atau pilih bank yang dituju yaitu BNI.</p>
+                                                    <p>5. Masukan 16 Digit Nomor Virtual Account pada kolom rekening tujuan, (contoh: 8277087781881441).</p>
+                                                    <p>6. Masukkan nominal transfer sesuai tagihan atau kewajiban Anda</p>
+                                                    <p>7. Pilih 'Transfer'</p>
+                                                    <p>8. Konfirmasi rincian Anda akan tampil di layar, cek dan apabila sudah sesuai silahkan pilih 'Konfirmasi' untuk lanjutkan transaksi sampai dengan selesai </p>
+                                                    <p>9. Transaksi Berhasil</p>
+
                                                 </div>
                                             </div>
                                         </div>
