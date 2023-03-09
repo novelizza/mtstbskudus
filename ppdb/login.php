@@ -162,6 +162,8 @@
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <span class="h5 fw-bold mb-0">Selamat Datang di PPDB MTS NU TBS Kudus</span>
+                                            <?php echo $response; ?>
+                                            <?php echo $object; ?>
                                         </div>
 
                                         <h6 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan login
