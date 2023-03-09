@@ -1,10 +1,136 @@
 <?php
 
-    session_start();
+session_start();
 
-    $username = $_SESSION['username'];
-    $session = $_SESSION['session'];
-    $session_expiry = $_SESSION['session_expiry'];
+$username = $_SESSION['username'];
+$session = $_SESSION['session'];
+$session_expiry = $_SESSION['session_expiry'];
+
+
+function session_expired($session_expiry) {
+    $current_time = time();
+    if ($current_time > $session_expiry) {
+        header('location: login.php');
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'http://localhost:4000/api/admin/',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    // CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_HTTPHEADER => array(
+        'session: '.$session.''
+    ),
+    ));
+
+    $response = curl_exec($curl);
+    $object = json_decode($response, true);
+    $data_response = $object['response'];
+
+    // echo $response;
+    if($object['response'] == 200) {
+        $result = $object['result'];
+        $result_id_admin = $result['id_akun_admin'];
+        $result_nip = $result['nip'];
+        $result_nama = $result['nama_lengkap'];
+        $result_username = $result['username'];
+        $result_createdAt = $result['createdAt'];
+        $result_updateAt = $result['updatedAt'];
+    }else {
+        echo $object['response'];
+        echo $object['message'];
+    }
+
+    if(isset($_POST['edit-admin'])){
+        $nip = $_POST['nip'];
+        $nama = $_POST['nama'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if($password == "" || $password == NULL) {
+            $data_baru_no_pass = array(
+                'nama_lengkap' => $nama,
+                'nip' => $nip,
+                'username' => $username
+            );
+
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost:4000/api/admin/add-admin',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'PUT',
+            CURLOPT_POSTFIELDS => http_build_query($data_baru_no_pass),
+            CURLOPT_HTTPHEADER => array(
+                'session: '.$session.'',
+                'Content-Type: application/x-www-form-urlencoded'
+            ),
+            ));
+
+            $response = curl_exec($curl);
+
+            if($response) {
+                header('location: data-admin.php');
+                exit;
+            }else {
+                echo curl_error($curl);
+            }
+
+            curl_close($curl);
+        }else {
+            $data_baru = array(
+                'nama_lengkap' => $nama,
+                'nip' => $nip,
+                'username' => $username,
+                'password' => $password
+            );
+
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost:4000/api/admin/add-admin',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'PUT',
+            CURLOPT_POSTFIELDS => http_build_query($data_baru),
+            CURLOPT_HTTPHEADER => array(
+                'session: '.$session.'',
+                'Content-Type: application/x-www-form-urlencoded'
+            ),
+            ));
+
+            $response = curl_exec($curl);
+
+            if($response) {
+                header('location: data-admin.php');
+                exit;
+            }else {
+                echo curl_error($curl);
+            }
+
+            curl_close($curl);
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -177,22 +303,27 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">NIP</label>
-                                        <input type="number" class="form-control" id="inputEmail5">
+                                        <input type="number" class="form-control" id="inputEmail5" name="nip"
+                                            value="<?php echo $result_nip; ?>" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="inputEmail5">
+                                        <input type="text" class="form-control" id="inputEmail5" name="nama"
+                                            value="<?php echo $result_nip; ?>" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="inputEmail5">
+                                        <input type="text" class="form-control" id="inputEmail5" name="username"
+                                            value="<?php echo $result_nip; ?>" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="inputEmail5" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="inputEmail5">
+                                        <label for="inputEmail5" class="form-label">Password Baru</label>
+                                        <input type="password" class="form-control" id="inputEmail5" name="password">
+                                        <label for="inputEmail5" class="form-label"><i>NB : Kosongkan Jika Anda Tidak
+                                                Ingin Merubah Password Anda</i></label>
                                     </div>
                                     <div class="col-md-12">
-                                        <button class="btn btn-success" style="width: 100%;"
+                                        <button class="btn btn-success" style="width: 100%;" name="edit-admin"
                                             type="submit">SIMPAN</button>
                                     </div>
                                 </div>

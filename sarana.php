@@ -108,6 +108,23 @@
                 </div>
             </div><!-- End Visi Section -->
 
+            <!-- ======= Tujuan Section ======= -->
+            <div id="testimonials" class="testimonials-mushola">
+                <div class="container">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <h1 style="text-align: left;">Mushola</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about">
+                <div class="container">
+                    <p>asdasdasdasdasd</p>
+                </div>
+            </div><!-- End Tujuan Section -->
+
             <!-- ======= Misi Section ======= -->
             <div id="testimonials" class="testimonials-kom">
                 <div class="container">
@@ -143,11 +160,62 @@
             </div><!-- End Tujuan Section -->
 
             <!-- ======= Tujuan Section ======= -->
+            <div id="testimonials" class="testimonials-menara">
+                <div class="container">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <h1 style="text-align: left;">Laboratorium Falak</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about">
+                <div class="container">
+                    <p>asdasdasdasdasd</p>
+                </div>
+            </div><!-- End Tujuan Section -->
+
+            <!-- ======= Tujuan Section ======= -->
+            <div id="testimonials" class="testimonials-menara">
+                <div class="container">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <h1 style="text-align: left;">Menara Rukyah</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about">
+                <div class="container">
+                    <p>asdasdasdasdasd</p>
+                </div>
+            </div><!-- End Tujuan Section -->
+
+            <!-- ======= Tujuan Section ======= -->
             <div id="testimonials" class="testimonials-lapangan">
                 <div class="container">
                     <div class="swiper-slide">
                         <div class="testimonial-item">
                             <h1 style="text-align: left;">Lapangan Olahraga</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about">
+                <div class="container">
+                    <p>asdasdasdasdasd</p>
+                </div>
+            </div><!-- End Tujuan Section -->
+
+            <!-- ======= Tujuan Section ======= -->
+            <div id="testimonials" class="testimonials-studio">
+                <div class="container">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <h1 style="text-align: left;">Studio</h1>
                         </div>
                     </div>
                 </div>
@@ -219,7 +287,7 @@
                             <div class="card">
                                 <div class="card-body" style="text-align: center;">
                                     <i class="bi bi-book-half" style="color: #4ECB71; font-size: 64px;"></i><br>
-                                    <h5 class="card-title">B.Arab & Qiroatul Kutub Matematika
+                                    <h5 class="card-title">Matematika
                                     </h5>
                                 </div>
                             </div>

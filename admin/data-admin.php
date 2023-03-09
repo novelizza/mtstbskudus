@@ -9,6 +9,7 @@
     function session_expired($session_expiry) {
         $current_time = time();
         if ($current_time > $session_expiry) {
+            header('location: login.php');
             return true;
         } else {
             return false;
@@ -18,7 +19,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'http://localhost:4000/api/admin',
+    CURLOPT_URL => 'http://localhost:4000/api/admin/',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -32,20 +33,23 @@
     ));
 
     $response = curl_exec($curl);
-    $object = json_decode($response);
+    $object = json_decode($response, true);
+    $data_response = $object['response'];
 
-        if ($object->response == 200) {
-            // access result object and session and session_expiry fields
-            $result = $object->result;
-            $nama_lengkap = $result->nama_lengkap;
-            $nip = $result->nip;
-            $username_admin = $result->username;
-        } else {
-            // handle error response
-            echo 'Error: ' . $object->response . '<br>';
-            echo 'Message: ' . $object->message . '<br>';
-        }
-
+    // echo $response;
+    if($object['response'] == 200) {
+        $result = $object['result'];
+        $result_id_admin = $result['id_akun_admin'];
+        $result_nip = $result['nip'];
+        $result_nama = $result['nama_lengkap'];
+        $result_username = $result['username'];
+        $result_createdAt = $result['createdAt'];
+        $result_updateAt = $result['updatedAt'];
+    }else {
+        echo $object['response'];
+        echo $object['message'];
+    }
+    
     curl_close($curl);
     
 ?>
@@ -214,34 +218,68 @@
                         <div class="card-body">
                             <h5 class="card-title">
                                 <div class="row">
-                                    <a class="btn btn-block" href="tambah-admin.php"
-                                        style="background-color: #4ECB71; float: right;"><span
-                                            style="color: white;">Tambah Admin</span></a>
+                                    <div class="col">
+                                        <a class="btn " href="tambah-admin.php"
+                                            style="background-color: #4ECB71; width: 100%;"><span
+                                                style="color: white;">Tambah Admin</span></a>
+                                    </div>
+                                    <div class="col">
+                                        <a class="btn btn-warning" href="edit-admin.php" style="width: 100%;"><span
+                                                style="color: white;">Edit Admin</span></a>
+                                    </div>
+                                </div><br>
+                                <div class="row" style="width: 60%">
+                                    <div class="col">
+                                        <b>ID ADMIN</b>
+                                    </div>
+                                    <div class="col">
+                                        <?php echo $result_id_admin; ?>
+                                    </div>
+                                </div><br>
+                                <div class="row" style="width: 60%">
+                                    <div class="col">
+                                        <b>NIP</b>
+                                    </div>
+                                    <div class="col">
+                                        <?php echo $result_nip; ?>
+                                    </div>
+                                </div><br>
+                                <div class="row" style="width: 60%">
+                                    <div class="col">
+                                        <b>NAMA LENGKAP</b>
+                                    </div>
+                                    <div class="col">
+                                        <?php echo $result_nama; ?>
+                                    </div>
+                                </div><br>
+                                <div class="row" style="width: 60%">
+                                    <div class="col">
+                                        <b>USERNAME</b>
+                                    </div>
+                                    <div class="col">
+                                        <?php echo $result_username; ?>
+                                    </div>
+                                </div><br>
+                                <div class="row" style="width: 60%">
+                                    <div class="col">
+                                        <b>DIBUAT PADA</b>
+                                    </div>
+                                    <div class="col">
+                                        <?php echo $result_createdAt; ?>
+                                    </div>
+                                </div><br>
+                                <div class="row" style="width: 60%">
+                                    <div class="col">
+                                        <b>TERAKHIR DIUPDATE PADA</b>
+                                    </div>
+                                    <div class="col">
+                                        <?php echo $result_updateAt; ?>
+                                    </div>
                                 </div>
                             </h5>
-
-                            <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">NIP</th>
-                                        <th scope="col">Nama Lengkap</th>
-                                        <th scope="col">Username</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php 
-                                        // $no=0;
-                                        // while(count($result)){?>
-                                    <tr>
-                                        <th scope="row"><?php echo $no; ?></th>
-                                        <td><?php echo $nip; ?></td>
-                                        <td><?php echo $nama_lengkap; ?></td>
-                                        <td><?php echo $username; ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
+                            <div class="row">
+                                <div class="col"></div>
+                            </div>
                         </div>
 
                     </div>

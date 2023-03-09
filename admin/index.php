@@ -5,6 +5,42 @@
     $username = $_SESSION['username'];
     $session = $_SESSION['session'];
     $session_expiry = $_SESSION['session_expiry'];
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'http://localhost:4000/api/admin/dashboard',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_HTTPHEADER => array(
+        'session: '.$session.''
+    ),
+    ));
+
+    $response = curl_exec($curl);
+    $object = json_decode($response);
+
+    if($object->response == 200) {
+        $result = $object->result;
+        $allSiswa = $result->allSiswa;
+        $allMTSSiswa = $result->allMTSSiswa;
+        $allMPTSSiswa = $result->AllMPTSSiswa;
+    }
+
+    curl_close($curl);
+    // echo $response;
+
+    if(time() > $session_expiry) {
+        header('location: login.php');
+        session_destroy();
+        exit;
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -188,7 +224,16 @@
                                     <i class="bi bi-people"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>470</h6>
+                                    <h6>
+                                        <?php
+                                            if($allSiswa > 0) {
+                                                echo $allSiswa.' Siswa'; 
+                                            }
+                                            else {
+                                                echo '0 Siswa';
+                                            }
+                                        ?>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +253,16 @@
                                     <i class="bi bi-people"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>200</h6>
+                                    <h6>
+                                        <?php
+                                            if($allMTSSiswa > 0) {
+                                                echo $allSiswa.' Siswa'; 
+                                            }
+                                            else {
+                                                echo '0 Siswa';
+                                            }
+                                        ?>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
@@ -228,35 +282,22 @@
                                     <i class="bi bi-people"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>50</h6>
+                                    <h6>
+                                        <?php
+                                            if($allMPTSSiswa > 0) {
+                                                echo $allSiswa.' Siswa'; 
+                                            }
+                                            else {
+                                                echo '0 Siswa';
+                                            }
+                                        ?>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div><!-- End Revenue Card -->
-
-                <!-- Customers Card -->
-                <div class="col">
-
-                    <div class="card info-card customers-card" style="background-color: #4E53CB">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Siswa MI/MPTS</span></h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>120</h6>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div><!-- End Customers Card -->
                 <!-- </div>
                 </div> -->
                 <!-- End Left side columns -->

@@ -1469,6 +1469,81 @@ div#preloader {
   color: #fff;
 }
 
+.testimonials-mushola {
+  /* padding: 30px 0; */
+  background: url("../img/download.jpeg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.testimonials-mushola::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-mushola .testimonial-item h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+
+.testimonials-menara {
+  /* padding: 30px 0; */
+  background: url("../img/menara-rukyah.jpeg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.testimonials-menara::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-menara .testimonial-item h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+
+.testimonials-studio {
+  /* padding: 30px 0; */
+  background: url("../img/studio.jpeg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.testimonials-studio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-studio .testimonial-item h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+
 .testimonials-ekstra {
   /* padding: 30px 0; */
   background: url("../img/ekstra.jpeg") no-repeat;

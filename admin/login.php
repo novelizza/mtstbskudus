@@ -42,9 +42,9 @@
             echo 'Message: ' . $object->message . '<br>';
         }
 
-        curl_close($curl);
+        
             // echo $response;
-            echo $session_expiry;
+            // echo $session_expiry;
 
         if($response){
             $_SESSION['logged_in'] = true;
@@ -58,7 +58,8 @@
             <strong>Username atau Password Salah!</strong>
             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>";
-        }   
+        }
+        curl_close($curl);   
     }
 
     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
