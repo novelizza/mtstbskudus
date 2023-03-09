@@ -63,16 +63,14 @@
                 if (curl_errno($curl)) {
                     $errorMessage = curl_error($curl);
                     // Handle error
+                    
+                    echo "<script>alert('Error: REGISTER GAGAL! SILAHKAN ULANGI LAGI');</script>";
+                    sleep(3);
                     header('location: register.php');
-                    echo "<div class='alert alert-danger' role='alert'>
-                    <strong>Register Gagal, Silahkan Coba Lagi!</strong>
-                    </div>";
                 }else {
                     $_SESSION['registration_complete'] = true;
-                    echo "<div class='alert alert-danger' role='alert'>
-                    <strong>Register Berhasil!</strong>
-                    </div>";
-                    sleep(10);
+                    echo "<script>alert('Error: REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
+                    sleep(3);
                     header('location: login.php');
                     // echo $respone;
                     exit;
