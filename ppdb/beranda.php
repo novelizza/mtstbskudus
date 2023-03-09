@@ -192,8 +192,8 @@
                         if($isLengkap == "0") {
                             echo "
                                 <div class='col-md-6'>
-                                    <a class='disabled' href='data-diri.php'
-                                        style='background-color: #4ECB71; color: white; float: right;' disabled>Lengkapi Data
+                                    <a class='btn' href='data-diri.php'
+                                        style='background-color: #4ECB71; color: white; float: right;' onclick='return false;'>Lengkapi Data
                                         Diri</a>
                                 </div>
                             ";
