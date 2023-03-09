@@ -254,7 +254,8 @@
                             <div class="col-md-6">
                                 <span style="color: white; font-weight: bold; font-size: 18px;">Data Diri Anda</span>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6"
+                                style="float: right; color: white; font-weight: bold; font-size: 16px;">
                                 <span style="float: right; color: white; font-weight: bold; font-size: 16px;">
                                     <div class="row" style="float: right;">
                                         <p style="float: right; color: white; font-weight: bold; font-size: 16px;">Nomor
