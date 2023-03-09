@@ -104,7 +104,24 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/img/kelas.jpeg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Sarana ruang kelas pada sebuah MTs NU TBS merupakan fasilitas utama yang digunakan dalam
+                                proses pembelajaran. Ruang kelas di MTs
+                                NU TBS dilengkapi dengan fasilitas yang memadai seperti meja, kursi, whiteboard, dan
+                                juga proyektor. Ruang kelas di MTs NU TBS didesain dengan baik dan nyaman untuk
+                                mendukung kenyamanan siswa dalam belajar, sehingga siswa dapat berpartisipasi aktif dan
+                                mengoptimalkan proses pembelajaran. Fasilitas ruang kelas ini juga memberikan suasana
+                                yang kondusif dan nyaman bagi siswa untuk belajar dan berdiskusi. Selain itu, ruang
+                                kelas di MTs NU TBS juga dibuat untuk menciptakan interaksi yang baik antara siswa dan
+                                guru, sehingga tercipta suasana belajar yang positif dan efektif. Dengan adanya sarana
+                                ruang kelas yang baik di MTs NU TBS, diharapkan siswa dapat mengembangkan kemampuan
+                                mereka dengan optimal dan siap menghadapi tantangan di masa depan.</p>
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Visi Section -->
 
@@ -121,7 +138,22 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Sarana mushola pada sebuah MTs NU TBS merupakan
+                                fasilitas yang sangat penting bagi siswa dan staf dalam menjalankan aktivitas keagamaan.
+                                Mushola di MTs NU TBS menyediakan ruangan yang nyaman untuk beribadah seperti sholat,
+                                membaca Al-Quran, dan kegiatan keagamaan lainnya. Mushola juga merupakan tempat bagi
+                                siswa untuk memperdalam pemahaman mereka tentang nilai-nilai Islam, serta mengembangkan
+                                kecintaan mereka pada agama. Fasilitas ini juga memfasilitasi kegiatan pengajian,
+                                tausiyah, dan kegiatan keagamaan lainnya. Dengan adanya sarana mushola di MTs NU TBS,
+                                diharapkan siswa dan staf dapat mengoptimalkan waktu mereka dalam beribadah dan
+                                memperkuat nilai-nilai keagamaan yang menjadi landasan pendidikan di MTs NU TBS.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="assets/img/download.jpeg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Tujuan Section -->
 
@@ -138,7 +170,24 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/img/labkom.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Sarana lab komputer pada sebuah MTs NU TBS merupakan fasilitas yang
+                                sangat penting dalam proses pembelajaran dan pengembangan teknologi informasi di
+                                kalangan siswa. Lab komputer dilengkapi dengan berbagai perangkat keras dan lunak yang
+                                memadai seperti komputer, projector, printer, dan software pendukung untuk membantu
+                                siswa belajar tentang teknologi informasi, pemrograman, dan desain grafis. Fasilitas ini
+                                memungkinkan siswa untuk mendapatkan pengalaman yang praktis dalam mengoperasikan dan
+                                memanfaatkan teknologi informasi dalam kehidupan sehari-hari. Selain itu, siswa juga
+                                dapat mengembangkan keterampilan teknologi yang dibutuhkan untuk mempersiapkan diri
+                                dalam menghadapi tantangan masa depan yang semakin kompleks. Dengan adanya sarana lab
+                                komputer di MTs NU TBS, diharapkan siswa dapat menjadi lebih terampil dalam bidang
+                                teknologi informasi dan mampu bersaing di era digital saat ini.</p>
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Misi Section -->
 
@@ -155,7 +204,23 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Sarana lab bahasa pada sebuah MTs NU TBS merupakan fasilitas yang sangat
+                                penting dalam proses pembelajaran bahasa. Lab bahasa dilengkapi dengan berbagai
+                                perangkat seperti komputer, speaker, headphone, dan juga software untuk membantu siswa
+                                dalam belajar bahasa. Dalam lab bahasa, siswa dapat berlatih berbicara, mendengarkan,
+                                membaca, dan menulis bahasa dengan bantuan teknologi, seperti software pengenalan suara
+                                dan pengejaan kata. Fasilitas ini juga memungkinkan siswa untuk belajar bahasa dengan
+                                cara yang lebih interaktif dan menyenangkan melalui aktivitas seperti menonton video,
+                                mendengarkan lagu, dan bermain game edukasi. Dengan adanya sarana lab bahasa di MTs NU
+                                TBS, diharapkan siswa dapat lebih terampil dalam berbahasa dan siap menghadapi tantangan
+                                di masa depan.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="assets/img/lab-bhs.jpeg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Tujuan Section -->
 
@@ -172,12 +237,22 @@
 
             <div id="about">
                 <div class="container">
-                    <p>Materi ilmu falak yang diajarkan di MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus adalah materi
-                        dasar dengan perhitungan yang mudah dan simpel seperti; hisab awal bulan hijriyah
-                        ‘urfi/isthilahi, penanggalan jawa Islam, hijri syamsi, pranoto mongso, hisab awal bulan haqiqi
-                        taqribi, hisab gerhana bulan haqiqi taqribi, pengenalan beragam model sistem kalender,
-                        penyusunan kalender miladiyah, sampai pembuatan jadwal selisih istiwa’ dengan waktu setempat
-                        (daerah) serta pembuatan jadwal transit Matahari. </p>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/img/falak.jpeg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Materi ilmu falak yang diajarkan di MTs NU Tasywiquth Thullab Salafiyah (TBS) Kudus
+                                adalah materi
+                                dasar dengan perhitungan yang mudah dan simpel seperti; hisab awal bulan hijriyah
+                                ‘urfi/isthilahi, penanggalan jawa Islam, hijri syamsi, pranoto mongso, hisab awal bulan
+                                haqiqi
+                                taqribi, hisab gerhana bulan haqiqi taqribi, pengenalan beragam model sistem kalender,
+                                penyusunan kalender miladiyah, sampai pembuatan jadwal selisih istiwa’ dengan waktu
+                                setempat
+                                (daerah) serta pembuatan jadwal transit Matahari. </p>
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Tujuan Section -->
             <!-- End Tujuan Section -->
@@ -195,7 +270,26 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Sarana lapangan olahraga pada sebuah MTs NU TBS merupakan fasilitas yang penting untuk
+                                mengembangkan kemampuan olahraga siswa dan
+                                membentuk karakter yang sehat dan sportif. Lapangan olahraga di MTs NU TBS terdiri dari
+                                lapangan basket, lapangan sepakbola, dan lapangan futsal. Lapangan olahraga ini
+                                dilengkapi dengan fasilitas yang memadai seperti jaring, bola, dan peralatan lain yang
+                                dibutuhkan untuk kegiatan olahraga. Fasilitas ini digunakan oleh siswa untuk berlatih
+                                dan bermain olahraga setelah jam pelajaran selesai atau pada waktu yang telah ditentukan
+                                oleh sekolah. Selain itu, lapangan olahraga juga digunakan untuk menyelenggarakan
+                                kegiatan-kegiatan olahraga seperti turnamen dan pertandingan antar sekolah, sehingga
+                                siswa dapat belajar tentang kerja sama, persaingan sehat, dan disiplin. Dengan adanya
+                                sarana lapangan olahraga yang baik di MTs NU TBS, diharapkan siswa dapat terlatih dalam
+                                olahraga dan membentuk karakter yang sehat serta siap menghadapi tantangan di masa
+                                depan.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="assets/img/olahraga.jpeg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Tujuan Section -->
 
@@ -212,7 +306,25 @@
 
             <div id="about">
                 <div class="container">
-                    <p>asdasdasdasdasd</p>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/img/studio.jpeg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="col-8" style="display: flex; align-items: center;">
+                            <p>Sarana studio pada sebuah MTs NU TBS merupakan
+                                fasilitas yang penting dalam mengembangkan kreativitas siswa di bidang seni dan budaya.
+                                Studio di MTs NU TBS memiliki berbagai macam fasilitas untuk mendukung kegiatan seni
+                                seperti alat musik, peralatan rekaman, dan peralatan fotografi. Studio ini memfasilitasi
+                                kegiatan seperti bimbingan belajar, seni dan budaya, serta kegiatan ekskul lainnya.
+                                Selain itu, studio di MTs NU TBS juga digunakan sebagai tempat untuk mengadakan acara
+                                pertunjukan dan pameran seni, sehingga siswa dapat menunjukkan bakat mereka dan belajar
+                                tentang seni dan budaya yang beragam. Fasilitas studio yang lengkap dan memadai di MTs
+                                NU TBS, diharapkan siswa dapat mengembangkan kreativitas mereka dengan optimal dan
+                                terlatih dalam bidang seni dan budaya. Dengan adanya sarana studio yang baik, diharapkan
+                                juga siswa dapat menghasilkan karya yang berkualitas dan siap bersaing di masa depan.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div><!-- End Tujuan Section -->
 
