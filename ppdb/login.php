@@ -55,7 +55,7 @@
                 $_SESSION['username'] = $username;
                 $_SESSION['session'] = $session;
                 $_SESSION['session_expiry'] = $session_expiry;
-                echo "<script>alert('LOGIN BERHASIL! LANJUTKAN PROSES PENDAFTARAN!');</script>";
+                echo "<script>alert('LOGIN BERHASIL! LANJUTKAN PROSES PENDAFTARAN!'); window.location.href = 'beranda.php';</script>";
                 header("location: beranda.php");
             } else {
                 echo "<script>alert('LOGIN GAGAL! PASTIKAN USERNAME DAN PASSWORD ANDA SUDAH BENAR!');</script>";
