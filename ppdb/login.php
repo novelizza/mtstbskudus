@@ -5,11 +5,11 @@
     $_SESSION['registration_complete'] = true;
     $register = $_SESSION['registration_complete'];
 
-    if($_SESSION['registration_complete'] == true) {
-        echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
-    }elseif($_SESSION['registration_complete'] != true) {
-        echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'register.php';</script>";
-    }
+    // if($_SESSION['registration_complete'] == true) {
+    //     echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
+    // }elseif($_SESSION['registration_complete'] != true) {
+    //     echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'register.php';</script>";
+    // }
 
     if(isset($_POST['login'])){
         $username = $_POST['username'];

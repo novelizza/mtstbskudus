@@ -64,14 +64,14 @@
                     $errorMessage = curl_error($curl);
                     // Handle error
                     
-                    echo "<script>alert('Error: REGISTER GAGAL! SILAHKAN ULANGI LAGI');</script>";
-                    sleep(3);
-                    header('location: register.php');
+                    echo "<script>alert('REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'register.php';</script>";
+                    // sleep(3);
+                    // header('location: register.php');
                 }else {
                     $_SESSION['registration_complete'] = true;
-                    echo "<script>alert('Error: REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!');</script>";
-                    sleep(3);
-                    header('location: login.php');
+                    echo "<script>alert('Error: REGISTER BERHASIL! PASTIKAN ANDA MENGINGAT USERNAME DAN PASSWORD ANDA!'); window.location.href = 'login.php';</script>";
+                    // sleep(3);
+                    // header('location: login.php');
                     // echo $respone;
                     exit;
                 }
