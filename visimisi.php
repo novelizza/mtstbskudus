@@ -91,14 +91,7 @@
                         }
 
                     ?>
-                    <li class="dropdown" style="background-color: #0275d8;"><a href="#"><span>PPDB</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul class="oke">
-                            <li><a href="ppdb/login.php">Daftar Madrasah</a></li>
-                            <li><a href="ppdb/register-ulang.php">Daftar Ulang MI/MPTS</a></li>
-                            <li><a href="foto-brosur.php">Brosur</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

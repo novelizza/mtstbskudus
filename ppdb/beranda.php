@@ -177,7 +177,7 @@
 
                         <?php
                             if($status_va == 1) {
-                                echo "<h5><i class='bi bi-x-circle-fill' style='color: #df4759'></i>&nbsp; Silahkan Melakukan Pembayaran Rp. 200.000 Melalui Nomor Billing</h5>";
+                                echo "<h5><i class='bi bi-x-circle-fill' style='color: #df4759'></i>&nbsp; Silahkan Melakukan Pembayaran Rp. 192.000 Melalui Nomor Billing</h5>";
                             }elseif($status_va == 2) {
                                 echo "<h5><i class='bi bi-check-circle-fill' style='color: #4ECB71'></i>&nbsp; Pembayaran
                                 Sudah

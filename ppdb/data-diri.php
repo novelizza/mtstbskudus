@@ -47,20 +47,18 @@
             'kepala_keluarga' => $kepala_siswa
         );
 
+        // echo "<script>alert('NIK HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+        $nik_siswaa = strval($_POST['nik_siswa']);
+        // echo strlen($nik_siswaa);
+
         // echo $data_string;
 
-        if(intval($nik_siswa) < 16 || intval($nik_siswa) > 16) {
-            header('location: data-diri.php');
-                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Pastikan NIK 16 Digit</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>";
+        if(strlen($nik_siswaa) < 16) {
+            echo "<script>alert('NIK HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+        }elseif(strlen($nik_siswaa) > 16) {
+            echo "<script>alert('NIK HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
         }elseif(strlen($sekolah_siswa) < 5) {
-            header('location: data-diri.php');
-                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Asal Sekolah Harus Lebih Dari 5 Huruf</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>";
+            echo "<script>alert('ASAL SEKOLAH MINIMAL 5 HURUF! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
         }else {
             $curl = curl_init();
 
@@ -80,21 +78,18 @@
             ),
             ));
 
-            curl_exec($curl);
-            // echo $response;
-            // Check for errors
-            if (curl_errno($curl)) {
+            $response = curl_exec($curl);
+
+            curl_close($curl);
+                if (curl_errno($curl)) {
                 $errorMessage = curl_error($curl);
+                echo "<script>alert('INPUT DATA DIRI SISWA GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
                 // Handle error
             }else {
                 // echo curl_exec($curl);
-                header('location: data-diri.php');
-                exit;
+                echo "<script>alert('INPUT DATA DIRI SISWA BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ORANG TUA, ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
             }
-                // Close cURL session
-            curl_close($curl);
         }
-
         
     }
 
@@ -131,50 +126,84 @@
         $pekerjaan_wali = $_POST['pekerjaan_wali'];
         $penghasilan_wali = $_POST['penghasilan_wali'];
         $hp_wali = $_POST['hp_wali'];
-
-        $data_ortu = array(
-            'nama_lengkap_ayah' => $nama_ayah,
-            'status_ayah' => $status_ayah,
-            'kewarganegaraan_ayah' => $warga_ayah,
-            'nik_ayah' => $nik_ayah,
-            'tempat_lahir_ayah' => $lahir_ayah,
-            'tanggal_lahir_ayah' => $tanggal_ayah,
-            'pendidikan_terakhir_ayah' => $pendidikan_ayah,
-            'pekerjaan_utama_ayah' => $pekerjaan_ayah, 
-            'penghasilan_rata_rata_ayah' => $penghasilan_ayah,
-            'no_hp_ayah' => $hp_ayah,
-            'nama_lengkap_ibu' => $nama_ibu,
-            'status_ibu' => $status_ibu,
-            'kewarganegaraan_ibu' => $warga_ibu,
-            'nik_ibu' => $nik_ibu,
-            'tempat_lahir_ibu' => $lahir_ibu,
-            'tanggal_lahir_ibu' => $tanggal_ibu,
-            'pendidikan_terakhir_ibu' => $pendidikan_ibu,
-            'pekerjaan_utama_ibu' => $pekerjaan_ibu, 
-            'penghasilan_rata_rata_ibu' => $penghasilan_ibu,
-            'no_hp_ibu' => $hp_ibu,
-            'nama_lengkap_wali' => $nama_wali,
-            'status_wali' => $status_wali,
-            'kewarganegaraan_wali' => $warga_wali,
-            'nik_wali' => $nik_ibu,
-            'tempat_lahir_wali' => $lahir_wali,
-            'tanggal_lahir_wali' => $tanggal_wali,
-            'pendidikan_terakhir_wali' => $pendidikan_wali,
-            'pekerjaan_utama_wali' => $pekerjaan_wali, 
-            'penghasilan_rata_rata_wali' => $penghasilan_wali,
-            'no_hp_wali' => $hp_wali
-        );
         
+        $nik_ayahh = strval($_POST['nik_ayah']);
+        $nik_ibuu = strval($_POST['nik_ibu']);
+        $nik_walii = strval($_POST['nik_wali']);
 
-        if(intval($nik_ayah) && intval($nik_ibu) && intval($nik_wali) < 16 || intval($nik_ayah) && intval($nik_ibu) && intval($nik_wali) > 16) {
-            header('location: data-diri.php');
-                echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Pastikan NIK 16 Digit</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>";
+        if(strlen($nik_ayahh) < 16) {
+            echo "<script>alert('NIK AYAH HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+        }elseif(strlen($nik_ayahh) > 16){
+            echo "<script>alert('NIK AYAH HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+        }elseif(strlen($nik_ibuu) < 16){
+            echo "<script>alert('NIK IBU HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+        }elseif(strlen($nik_ibuu) > 16){
+            echo "<script>alert('NIK IBU HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
         }else {
+            if($_POST['nama_wali'] != NULL || $_POST['nama_wali'] != "-") {
+                if(strlen($nik_walii < 16)) {
+                    echo "<script>alert('NIK WALI HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+                }elseif(strlen($nik_walii > 16)) {
+                    echo "<script>alert('NIK WALI HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+                }else {
+                    $nama_wali = $_POST['nama_wali'];
+                    $status_wali = $_POST['status_wali'];
+                    $warga_wali = $_POST['warga-wali'];
+                    $nik_wali = $_POST['nik_wali'];
+                    $lahir_wali = $_POST['lahir_wali'];
+                    $tanggal_wali = $_POST['tanggal_wali'];
+                    $pendidikan_wali = $_POST['pendidikan_wali'];
+                    $pekerjaan_wali = $_POST['pekerjaan_wali'];
+                    $penghasilan_wali = $_POST['penghasilan_wali'];
+                    $hp_wali = $_POST['hp_wali'];
+                }
+            }elseif($_POST['nama_wali'] == NULL || $_POST['nama_wali'] == "-") {
+                $nama_wali = NULL;
+                $status_wali = NULL;
+                $warga_wali = NULL;
+                $nik_wali = NULL;
+                $lahir_wali = NULL;
+                $tanggal_wali = NULL;
+                $pendidikan_wali = NULL;
+                $pekerjaan_wali = NULL;
+                $penghasilan_wali = NULL;
+                $hp_wali = NULL;
+            }
+            $data_ortu = array(
+                'nama_lengkap_ayah' => $nama_ayah,
+                'status_ayah' => $status_ayah,
+                'kewarganegaraan_ayah' => $warga_ayah,
+                'nik_ayah' => $nik_ayah,
+                'tempat_lahir_ayah' => $lahir_ayah,
+                'tanggal_lahir_ayah' => $tanggal_ayah,
+                'pendidikan_terakhir_ayah' => $pendidikan_ayah,
+                'pekerjaan_utama_ayah' => $pekerjaan_ayah, 
+                'penghasilan_rata_rata_ayah' => $penghasilan_ayah,
+                'no_hp_ayah' => $hp_ayah,
+                'nama_lengkap_ibu' => $nama_ibu,
+                'status_ibu' => $status_ibu,
+                'kewarganegaraan_ibu' => $warga_ibu,
+                'nik_ibu' => $nik_ibu,
+                'tempat_lahir_ibu' => $lahir_ibu,
+                'tanggal_lahir_ibu' => $tanggal_ibu,
+                'pendidikan_terakhir_ibu' => $pendidikan_ibu,
+                'pekerjaan_utama_ibu' => $pekerjaan_ibu, 
+                'penghasilan_rata_rata_ibu' => $penghasilan_ibu,
+                'no_hp_ibu' => $hp_ibu,
+                'nama_lengkap_wali' => $nama_wali,
+                'status_wali' => $status_wali,
+                'kewarganegaraan_wali' => $warga_wali,
+                'nik_wali' => $nik_wali,
+                'tempat_lahir_wali' => $lahir_wali,
+                'tanggal_lahir_wali' => $tanggal_wali,
+                'pendidikan_terakhir_wali' => $pendidikan_wali,
+                'pekerjaan_utama_wali' => $pekerjaan_wali, 
+                'penghasilan_rata_rata_wali' => $penghasilan_wali,
+                'no_hp_wali' => $hp_wali
+            );
+
             $curl = curl_init();
-    
+
             curl_setopt_array($curl, array(
             CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
             CURLOPT_RETURNTRANSFER => true,
@@ -190,25 +219,26 @@
                 'Content-Type: application/x-www-form-urlencoded'
             ),
             ));
-        
-            curl_exec($curl);
-            // echo $responseDataDiri;
-            // Check for errors
-            if (curl_errno($curl)) {
+
+            $response = curl_exec($curl);
+
+            curl_close($curl);
+                if (curl_errno($curl)) {
                 $errorMessage = curl_error($curl);
+                echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
                 // Handle error
             }else {
                 // echo curl_exec($curl);
-                header('location: data-diri.php');
-                exit;
+                echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
             }
-                // Close cURL session
-            curl_close($curl);
         }
     }
 
     if(isset($_POST['data_alamat'])) {
         $tinggal_ayah = $_POST['tinggal_ayah'];
+        $tinggal_ibu = $_POST['tinggal_ibu'];
+        $tinggal_wali = $_POST['tinggal_wali'];
+        $tinggal_siswa = $_POST['tinggal_siswa'];
         $milik_rumah_ayah = $_POST['milik_rumah_ayah'];
         $provinsi_ayah = $_POST['provinsi_ayah'];
         $kabupaten_ayah = $_POST['kabupaten_ayah'];
@@ -219,7 +249,7 @@
         $pos_ayah = $_POST['pos_ayah'];
         $alamat_lengkap_ayah = $_POST['alamat_lengkap_ayah'];
 
-        if($tinggal_ibu == "YA") {
+        if($tinggal_ibu == "0") {
             $provinsi_ibu = $provinsi_ayah;
             $kabupaten_ibu = $kabupaten_ayah;
             $kecamatan_ibu = $kecamatan_ayah;
@@ -228,7 +258,7 @@
             $rw_ibu = $rw_ayah;
             $pos_ibu = $pos_ayah;
             $alamat_lengkap_ibu = $alamat_lengkap_ayah;
-        }elseif($tinggal_ibu == "TIDAK") {
+        }elseif($tinggal_ibu == "1") {
             $provinsi_ibu = $_POST['provinsi_ibu'];
             $kabupaten_ibu = $_POST['kabupaten_ibu'];
             $kecamatan_ibu = $_POST['kecamatan_ibu'];
@@ -248,7 +278,7 @@
             $alamat_lengkap_ibu = "";
         }
 
-        if($tinggal_wali == "YA") {
+        if($tinggal_wali == "0") {
             $provinsi_wali = $provinsi_ayah;
             $kabupaten_wali = $kabupaten_ayah;
             $kecamatan_wali = $kecamatan_ayah;
@@ -257,7 +287,7 @@
             $rw_wali = $rw_ayah;
             $pos_wali = $pos_ayah;
             $alamat_lengkap_wali = $alamat_lengkap_ayah;
-        }elseif($tinggal_wali == "TIDAK") {
+        }elseif($tinggal_wali == "1") {
             $provinsi_wali = $_POST['provinsi_wali'];
             $kabupaten_wali = $_POST['kabupaten_wali'];
             $kecamatan_wali = $_POST['kecamatan_wali'];
@@ -277,7 +307,7 @@
             $alamat_lengkap_wali = "";
         }
 
-        if($tinggal_siswa == "YA") {
+        if($tinggal_siswa == "0") {
             $provinsi_siswa = $provinsi_ayah;
             $kabupaten_siswa = $kabupaten_ayah;
             $kecamatan_siswa = $kecamatan_ayah;
@@ -286,7 +316,7 @@
             $rw_siswa = $rw_ayah;
             $pos_siswa = $pos_ayah;
             $alamat_lengkap_siswa = $alamat_lengkap_ayah;
-        }elseif($tinggal_siswa == "TIDAK") {
+        }elseif($tinggal_siswa == "1") {
             $provinsi_siswa = $_POST['provinsi_siswa'];
             $kabupaten_siswa = $_POST['kabupaten_siswa'];
             $kecamatan_siswa = $_POST['kecamatan_siswa'];
@@ -307,6 +337,11 @@
             $alamat_lengkap_siswa = "";
             $ponpes = "";
         }
+
+        // echo $tinggal_ayah;
+        // echo $tinggal_ibu;
+        // echo $tinggal_wali;
+        // echo $tinggal_siswa;
 
         $data_alamat_all = array(
             'tinggal_luar_negeri_ayah' => $tinggal_ayah,
@@ -359,24 +394,22 @@
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => http_build_query($data_alamat_all),
         CURLOPT_HTTPHEADER => array(
-            'session:'.$session.'',
+            'session: '.$session.'',
             'Content-Type: application/x-www-form-urlencoded'
         ),
         ));
 
-        curl_exec($curl);
-        // echo $responseDataDiri;
-        // Check for errors
+        $response = curl_exec($curl);
+
+        curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
-            // Handle error
+            echo "<script>alert('INPUT DATA ALAMAT GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+        // Handle error
         }else {
             // echo curl_exec($curl);
-            header('location: data-diri.php');
-            exit;
+            echo "<script>alert('INPUT DATA ALAMAT BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
         }
-            // Close cURL session
-        curl_close($curl);
     }
 
     if(isset($_POST['data_prestasi_siswa_1'])) {
@@ -416,19 +449,17 @@
         ),
         ));
 
-        curl_exec($curl);
-        // echo $responseDataDiri;
-        // Check for errors
+        $response = curl_exec($curl);
+
+        curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
-            // Handle error
+            echo "<script>alert('INPUT DATA PRESTASI 1 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+        // Handle error
         }else {
             // echo curl_exec($curl);
-            header('location: data-diri.php');
-            exit;
+            echo "<script>alert('INPUT DATA PRESTASI 1 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 2!'); window.location.href = 'data-diri.php';</script>";
         }
-            // Close cURL session
-        curl_close($curl);
     }
 
     if(isset($_POST['data_prestasi_siswa_2'])) {
@@ -468,19 +499,17 @@
         ),
         ));
 
-        curl_exec($curl);
-        // echo $responseDataDiri;
-        // Check for errors
+        $response = curl_exec($curl);
+
+        curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
-            // Handle error
+            echo "<script>alert('INPUT DATA PRESTASI 2 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+        // Handle error
         }else {
             // echo curl_exec($curl);
-            header('location: data-diri.php');
-            exit;
+            echo "<script>alert('INPUT DATA PRESTASI 2 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 3!'); window.location.href = 'data-diri.php';</script>";
         }
-            // Close cURL session
-        curl_close($curl);
     }
 
     if(isset($_POST['data_prestasi_siswa_3'])) {
@@ -520,19 +549,17 @@
         ),
         ));
 
-        curl_exec($curl);
-        // echo $responseDataDiri;
-        // Check for errors
+        $response = curl_exec($curl);
+
+        curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
-            // Handle error
+            echo "<script>alert('INPUT DATA PRESTASI 3 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+        // Handle error
         }else {
             // echo curl_exec($curl);
-            header('location: data-diri.php');
-            exit;
+            echo "<script>alert('INPUT DATA PRESTASI 3 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 2!'); window.location.href = 'data-diri.php';</script>";
         }
-            // Close cURL session
-        curl_close($curl);
     }
 ?>
 
@@ -641,7 +668,7 @@
                                     <label for=""><b>NIK</b></label>
                                     <input type="number" class="form-control" name="nik_siswa" required>
                                     <label style="font-style: italic; color: grey;">NB : NIK bisa ditemukan di
-                                        Kartu Keluarga</label>
+                                        Kartu Keluargaaa</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
@@ -973,14 +1000,14 @@
                                     <label for=""><b>Kewarganegaraan</b></label>
                                     <select class="form-select" aria-label="Default select example" name="warga_wali"
                                         required>
-                                        <option value="-" selected></option>
+                                        <option value="-" selected>-</option>
                                         <option value="WNI">WNI (Warga Negara Indonesia)</option>
                                         <option value="WNA">WNA (Warga Negara Asing)</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
-                                    <input type="number" class="form-control" name="nik_wali" required>
+                                    <input type="text" class="form-control" name="nik_wali" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
@@ -996,7 +1023,7 @@
                                     <label for=""><b>Pendidikan Terakhir</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pendidikan_wali" required>
-                                        <option value="-" selected></option>
+                                        <option value="-" selected>-</option>
                                         <option value="SD">SD</option>
                                         <option value="SLTP">SLTP</option>
                                         <option value="SLTA">SLTA</option>
@@ -1010,7 +1037,7 @@
                                     <label for=""><b>Pekerjaan Utama</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pekerjaan_wali" required>
-                                        <option value="-" selected></option>
+                                        <option value="-" selected>-</option>
                                         <option value="Tidak Bekerja">Tidak Bekerja</option>
                                         <option value="Pensiunan">Pensiunan</option>
                                         <option value="PNS">PNS</option>
@@ -1027,7 +1054,7 @@
                                     <label for=""><b>Penghasilan Rata - Rata</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_wali" required>
-                                        <option value="-" selected></option>
+                                        <option value="-" selected>-</option>
                                         <option value="Kurang Dari 5000000">Kurang Dari Rp 5.000.000</option>
                                         <option value="5000000-10000000">Rp 5.000.000 - Rp 10.000.000
                                         </option>
@@ -1133,13 +1160,13 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Sama Dengan Ayah</b></p>
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="YA"
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="0"
                                         name="tinggal_ibu">
                                     <label class="form-check-label" for="gridRadios1">
                                         YA
                                     </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="TIDAK"
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="1"
                                         name="tinggal_ibu">
                                     <label class="form-check-label" for="gridRadios1">
                                         TIDAK
@@ -1163,7 +1190,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
-                                    <input name="rt_ibu" type="number" class="form-control">
+                                    <input type="number" class="form-control" name="rt_ibu">
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RW</b></label>
@@ -1188,13 +1215,13 @@
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Sama Dengan Ayah</b></p>
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="YA"
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="0"
                                         name="tinggal_wali">
                                     <label class="form-check-label" for="gridRadios1">
                                         YA
                                     </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="TIDAK"
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="1"
                                         name="tinggal_wali">
                                     <label class="form-check-label" for="gridRadios1">
                                         TIDAK
@@ -1242,13 +1269,13 @@
                                         Alamat Siswa</span>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="YA"
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="0"
                                         name="tinggal_siswa">
                                     <label class="form-check-label" for="gridRadios1">
                                         Sama dengan Ayah
                                     </label>
                                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="PONPES"
+                                    <input class="form-check-input" type="radio" id="gridRadios1" value="1"
                                         name="tinggal_siswa">
                                     <label class="form-check-label" for="gridRadios1">
                                         Pondok Pesantren
