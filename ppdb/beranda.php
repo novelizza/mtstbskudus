@@ -291,7 +291,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b>NISN</b>
+                                        <b><?php echo $status_va; ?></b>
                                     </div>
                                     <div class="col-md-4">
                                         <p><?php echo $nisn; ?></p>
