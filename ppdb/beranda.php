@@ -197,7 +197,7 @@
                                         Diri</a>
                                 </div>
                             ";
-                        }else {
+                        }elseif($status_va == "2") {
                             echo "
                                 <div class='col-md-5'>
                                     <a class='btn' href='data-diri.php'
@@ -205,6 +205,8 @@
                                         Diri</a>
                                 </div>
                             ";
+                        }else {
+                            "";
                         }
                     ?>
                 </div><br>
