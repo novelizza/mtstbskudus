@@ -907,7 +907,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Asal Sekolah</b></label>
-                                    <input type="number" class="form-control" name="sekolah_siswa"
+                                    <input type="text" class="form-control" name="sekolah_siswa"
                                         value="<?php echo $asalSekolahTampil ;?>">
                                     <label style="font-style: italic; color: grey;">NB : Asal Sekolah Harus Lebih Dari 3
                                         Huruf</label>
@@ -1359,6 +1359,8 @@
                                     <label for=""><b>Nomor HP</b></label>
                                     <input type="text" class="form-control" name="hp_ayah"
                                         value="<?php echo $hpAyahTampil; ?>" required>
+                                    <label style="font-style: italic; color: grey;">NB : Isi "-" Jika Ayah Tidak Punya
+                                        Nomor Hp</label>
                                 </div><br>
                                 <!-- End Data Ayah Kandung -->
 
@@ -1722,6 +1724,8 @@
                                     <label for=""><b>Nomor HP</b></label>
                                     <input type="text" class="form-control" name="hp_ibu"
                                         value="<?php echo $hpIbuTampil; ?>" required>
+                                    <label style="font-style: italic; color: grey;">NB : Isi "-" Jika Ibu Tidak Punya
+                                        Nomor Hp</label>
                                 </div><br>
                                 <!-- End Data Ibu Kandung -->
 
@@ -2059,6 +2063,8 @@
                                     <label for=""><b>Nomor HP</b></label>
                                     <input type="text" class="form-control" name="hp_wali"
                                         value="<?php echo $hpWaliTampil; ?>" required>
+                                    <label style="font-style: italic; color: grey;">NB : Isi "-" Jika Wali Tidak Punya
+                                        Nomor Hp</label>
                                 </div><br>
                                 <!-- End Data Wali -->
 
