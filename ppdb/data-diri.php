@@ -767,33 +767,78 @@
                                     <label for=""><b>Yang Membiayai</b></label>
                                     <select class="form-select" aria-label="Default select example" name="biaya_siswa"
                                         required>
-                                        <option value="" selected></option>
-                                        <option value="Orang Tua">Orang Tua</option>
-                                        <option value="Wali">Wali</option>
+                                        <?php
+                                            if($biayaTampil == "Orang Tua") {
+                                                echo "<option value='Orang Tua' selected>Orang Tua</option>";
+                                                echo "<option value='Wali'>Wali</option>";
+                                            }elseif($biayaTampil == "Wali") {
+                                                echo "<option value='Orang Tua'>Orang Tua</option>";
+                                                echo "<option value='Wali' selected>Wali</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Orang Tua'>Orang Tua</option>";
+                                                echo "<option value='Wali'>Wali</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kebutuhan Khusus</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="kebutuhan_siswa" required>
-                                        <option selected></option>
-                                        <option value="0">Ya</option>
-                                        <option value="1">Tidak</option>
+                                        <?php
+                                            if($kebutuhanTampil == 0) {
+                                                echo "<option value='0' selected>Ya</option>";
+                                                echo "<option value='1'>Tidak</option>";
+                                            }elseif($kebutuhanTampil == 1) {
+                                                echo "<option value='0'>Ya</option>";
+                                                echo "<option value='1' selected>Tidak</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='0'>Ya</option>";
+                                                echo "<option value='1'>Tidak</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <p><b>Pendidikan Pra Sekolah</b></p>
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="TK / RA"
-                                        name="prasekolah">
-                                    <label class="form-check-label" for="gridRadios1">
-                                        TK / RA
-                                    </label>
-                                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <input class="form-check-input" type="radio" id="gridRadios1" value="PAUD"
-                                        name="prasekolah">
-                                    <label class="form-check-label" for="gridRadios1">
-                                        PAUD
-                                    </label><br>
+                                    <?php
+                                        if($praSekolahTampil == "TK / RA") {
+                                            echo "<input class='form-check-input' type='radio' id='gridRadios1' value='TK / RA'
+                                            name='prasekolah' checked>";
+                                            echo "<label class='form-check-label' for='gridRadios1'>
+                                                TK / RA
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                                            echo "<input class='form-check-input' type='radio' id='gridRadios1' value='PAUD'
+                                            name='prasekolah'>";
+                                            echo "<label class='form-check-label' for='gridRadios1'>
+                                                PAUD
+                                            </label>";
+                                        }elseif($praSekolahTampil == "PAUD") {
+                                            echo "<input class='form-check-input' type='radio' id='gridRadios1' value='TK / RA'
+                                            name='prasekolah>";
+                                            echo "<label class='form-check-label' for='gridRadios1'>
+                                                TK / RA
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                                            echo "<input class='form-check-input' type='radio' id='gridRadios1' value='PAUD'
+                                            name='prasekolah' checked>";
+                                            echo "<label class='form-check-label' for='gridRadios1'>
+                                                PAUD
+                                            </label>";
+                                        }else {
+                                            echo "<input class='form-check-input' type='radio' id='gridRadios1' value='TK / RA'
+                                            name='prasekolah'>";
+                                            echo "<label class='form-check-label' for='gridRadios1'>
+                                                TK / RA
+                                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                                            echo "<input class='form-check-input' type='radio' id='gridRadios1' value='PAUD'
+                                            name='prasekolah'>";
+                                            echo "<label class='form-check-label' for='gridRadios1'>
+                                                PAUD
+                                            </label>";
+                                        }
+                                    ?><br>
                                     <label style="font-style: italic; color: grey;">Kosongi Jika Anda Tidak
                                         Prasekolah</label>
                                 </div>
