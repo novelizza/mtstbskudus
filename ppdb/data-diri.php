@@ -156,6 +156,68 @@
                     $pekerjaan_wali = $_POST['pekerjaan_wali'];
                     $penghasilan_wali = $_POST['penghasilan_wali'];
                     $hp_wali = $_POST['hp_wali'];
+
+                    $data_ortu = array(
+                        'nama_lengkap_ayah' => $nama_ayah,
+                        'status_ayah' => $status_ayah,
+                        'kewarganegaraan_ayah' => $warga_ayah,
+                        'nik_ayah' => $nik_ayah,
+                        'tempat_lahir_ayah' => $lahir_ayah,
+                        'tanggal_lahir_ayah' => $tanggal_ayah,
+                        'pendidikan_terakhir_ayah' => $pendidikan_ayah,
+                        'pekerjaan_utama_ayah' => $pekerjaan_ayah, 
+                        'penghasilan_rata_rata_ayah' => $penghasilan_ayah,
+                        'no_hp_ayah' => $hp_ayah,
+                        'nama_lengkap_ibu' => $nama_ibu,
+                        'status_ibu' => $status_ibu,
+                        'kewarganegaraan_ibu' => $warga_ibu,
+                        'nik_ibu' => $nik_ibu,
+                        'tempat_lahir_ibu' => $lahir_ibu,
+                        'tanggal_lahir_ibu' => $tanggal_ibu,
+                        'pendidikan_terakhir_ibu' => $pendidikan_ibu,
+                        'pekerjaan_utama_ibu' => $pekerjaan_ibu, 
+                        'penghasilan_rata_rata_ibu' => $penghasilan_ibu,
+                        'no_hp_ibu' => $hp_ibu,
+                        'nama_lengkap_wali' => $nama_wali,
+                        'kewarganegaraan_wali' => $warga_wali,
+                        'nik_wali' => $nik_wali,
+                        'tempat_lahir_wali' => $lahir_wali,
+                        'tanggal_lahir_wali' => $tanggal_wali,
+                        'pendidikan_terakhir_wali' => $pendidikan_wali,
+                        'pekerjaan_utama_wali' => $pekerjaan_wali, 
+                        'penghasilan_rata_rata_wali' => $penghasilan_wali,
+                        'no_hp_wali' => $hp_wali
+                    );
+        
+                    $curl = curl_init();
+        
+                    curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => http_build_query($data_ortu),
+                    CURLOPT_HTTPHEADER => array(
+                        'session: '.$session.'',
+                        'Content-Type: application/x-www-form-urlencoded'
+                    ),
+                    ));
+        
+                    $response = curl_exec($curl);
+        
+                    curl_close($curl);
+                        if (curl_errno($curl)) {
+                        $errorMessage = curl_error($curl);
+                        echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+                        // Handle error
+                    }else {
+                        // echo curl_exec($curl);
+                        echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
+                    }
                 }
             }elseif($_POST['nama_wali'] == NULL || $_POST['nama_wali'] == "-") {
                 $nama_wali = NULL;
@@ -167,67 +229,68 @@
                 $pekerjaan_wali = NULL;
                 $penghasilan_wali = NULL;
                 $hp_wali = NULL;
-            }
-            $data_ortu = array(
-                'nama_lengkap_ayah' => $nama_ayah,
-                'status_ayah' => $status_ayah,
-                'kewarganegaraan_ayah' => $warga_ayah,
-                'nik_ayah' => $nik_ayah,
-                'tempat_lahir_ayah' => $lahir_ayah,
-                'tanggal_lahir_ayah' => $tanggal_ayah,
-                'pendidikan_terakhir_ayah' => $pendidikan_ayah,
-                'pekerjaan_utama_ayah' => $pekerjaan_ayah, 
-                'penghasilan_rata_rata_ayah' => $penghasilan_ayah,
-                'no_hp_ayah' => $hp_ayah,
-                'nama_lengkap_ibu' => $nama_ibu,
-                'status_ibu' => $status_ibu,
-                'kewarganegaraan_ibu' => $warga_ibu,
-                'nik_ibu' => $nik_ibu,
-                'tempat_lahir_ibu' => $lahir_ibu,
-                'tanggal_lahir_ibu' => $tanggal_ibu,
-                'pendidikan_terakhir_ibu' => $pendidikan_ibu,
-                'pekerjaan_utama_ibu' => $pekerjaan_ibu, 
-                'penghasilan_rata_rata_ibu' => $penghasilan_ibu,
-                'no_hp_ibu' => $hp_ibu,
-                'nama_lengkap_wali' => $nama_wali,
-                'kewarganegaraan_wali' => $warga_wali,
-                'nik_wali' => $nik_wali,
-                'tempat_lahir_wali' => $lahir_wali,
-                'tanggal_lahir_wali' => $tanggal_wali,
-                'pendidikan_terakhir_wali' => $pendidikan_wali,
-                'pekerjaan_utama_wali' => $pekerjaan_wali, 
-                'penghasilan_rata_rata_wali' => $penghasilan_wali,
-                'no_hp_wali' => $hp_wali
-            );
 
-            $curl = curl_init();
-
-            curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => http_build_query($data_ortu),
-            CURLOPT_HTTPHEADER => array(
-                'session: '.$session.'',
-                'Content-Type: application/x-www-form-urlencoded'
-            ),
-            ));
-
-            $response = curl_exec($curl);
-
-            curl_close($curl);
-                if (curl_errno($curl)) {
-                $errorMessage = curl_error($curl);
-                echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
-                // Handle error
-            }else {
-                // echo curl_exec($curl);
-                echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
+                $data_ortu = array(
+                    'nama_lengkap_ayah' => $nama_ayah,
+                    'status_ayah' => $status_ayah,
+                    'kewarganegaraan_ayah' => $warga_ayah,
+                    'nik_ayah' => $nik_ayah,
+                    'tempat_lahir_ayah' => $lahir_ayah,
+                    'tanggal_lahir_ayah' => $tanggal_ayah,
+                    'pendidikan_terakhir_ayah' => $pendidikan_ayah,
+                    'pekerjaan_utama_ayah' => $pekerjaan_ayah, 
+                    'penghasilan_rata_rata_ayah' => $penghasilan_ayah,
+                    'no_hp_ayah' => $hp_ayah,
+                    'nama_lengkap_ibu' => $nama_ibu,
+                    'status_ibu' => $status_ibu,
+                    'kewarganegaraan_ibu' => $warga_ibu,
+                    'nik_ibu' => $nik_ibu,
+                    'tempat_lahir_ibu' => $lahir_ibu,
+                    'tanggal_lahir_ibu' => $tanggal_ibu,
+                    'pendidikan_terakhir_ibu' => $pendidikan_ibu,
+                    'pekerjaan_utama_ibu' => $pekerjaan_ibu, 
+                    'penghasilan_rata_rata_ibu' => $penghasilan_ibu,
+                    'no_hp_ibu' => $hp_ibu,
+                    'nama_lengkap_wali' => $nama_wali,
+                    'kewarganegaraan_wali' => $warga_wali,
+                    'nik_wali' => $nik_wali,
+                    'tempat_lahir_wali' => $lahir_wali,
+                    'tanggal_lahir_wali' => $tanggal_wali,
+                    'pendidikan_terakhir_wali' => $pendidikan_wali,
+                    'pekerjaan_utama_wali' => $pekerjaan_wali, 
+                    'penghasilan_rata_rata_wali' => $penghasilan_wali,
+                    'no_hp_wali' => $hp_wali
+                );
+    
+                $curl = curl_init();
+    
+                curl_setopt_array($curl, array(
+                CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS => http_build_query($data_ortu),
+                CURLOPT_HTTPHEADER => array(
+                    'session: '.$session.'',
+                    'Content-Type: application/x-www-form-urlencoded'
+                ),
+                ));
+    
+                $response = curl_exec($curl);
+    
+                curl_close($curl);
+                    if (curl_errno($curl)) {
+                    $errorMessage = curl_error($curl);
+                    echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+                    // Handle error
+                }else {
+                    // echo curl_exec($curl);
+                    echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
+                }
             }
         }
     }
