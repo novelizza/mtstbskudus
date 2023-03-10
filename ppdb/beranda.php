@@ -219,7 +219,7 @@
                                     </a>
                                 </div>
                             ";
-                        }else {
+                        }elseif($isLengkap == 1) {
                             echo "
                                 <div class='col-md-12'>
                                     <a class='btn' href='cetak-kartu-tes.php'
@@ -228,6 +228,8 @@
                                     </a>
                                 </div>
                             ";
+                        }else {
+                            "";
                         }
                     ?>
                     <?php
