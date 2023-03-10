@@ -951,19 +951,45 @@
                                     <label for=""><b>Status</b></label>
                                     <select class="form-select" aria-label="Default select example" name="status_ayah"
                                         required>
-                                        <option value="" selected></option>
-                                        <option value="Hidup">Masih Hidup</option>
-                                        <option value="Meninggal">Meninggal</option>
-                                        <option value="Tidak Tahu">Tidak Diketahui</option>
+                                        <?php
+                                            if($statusAyahTampil == "Hidup"){
+                                                echo "<option value='Hidup' selected>Masih Hidup</option>";
+                                                echo "<option value='Meninggal'>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
+                                            }elseif($statusAyahTampil == "Meninggal"){
+                                                echo "<option value='Hidup'>Masih Hidup</option>";
+                                                echo "<option value='Meninggal' selected>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
+                                            }elseif($statusAyahTampil == "Tidak Tahu"){
+                                                echo "<option value='Hidup'>Masih Hidup</option>";
+                                                echo "<option value='Meninggal'>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu' selected>Tidak Diketahui</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Hidup'>Masih Hidup</option>";
+                                                echo "<option value='Meninggal'>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
                                     <select class="form-select" aria-label="Default select example" name="warga_ayah"
                                         required>
-                                        <option value="" selected></option>
-                                        <option value="WNI">WNI (Warga Negara Indonesia)</option>
-                                        <option value="WNA">WNA (Warga Negara Asing)</option>
+                                        <?php
+                                            if($wargaAyahTampil == 0){
+                                                echo "<option value='0' selected>WNA (Warga Negara Asing)</option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                            }elseif($wargaAyahTampil == 1) {
+                                                echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -987,55 +1013,289 @@
                                     <label for=""><b>Pendidikan Terakhir</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pendidikan_ayah" required>
-                                        <option value="" selected></option>
-                                        <option value="SD">SD</option>
-                                        <option value="SLTP">SLTP</option>
-                                        <option value="SLTA">SLTA</option>
-                                        <option value="D3">D3</option>
-                                        <option value="S1/D4">S1/D4</option>
-                                        <option value="S2">S2</option>
-                                        <option value="S3">S3</option>
+                                        <?php
+                                            if($pendidikanAyahTampil == "SD"){
+                                                echo "<option value='SD' selected>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanAyahTampil == "SLTP"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP' selected>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanAyahTampil == "SLTA"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA' selected>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanAyahTampil == "D3"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3' selected>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanAyahTampil == "S1/D4") {
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3' >D3</option>";
+                                                echo "<option value='S1/D4' selected>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanAyahTampil == "S2"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2' selected>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanAyahTampil == "S3") {
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3' selected>S3</option>";
+                                            }else {
+                                                echo "<option value=''></option>";
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pekerjaan Utama</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pekerjaan_ayah" required>
-                                        <option value="" selected></option>
-                                        <option value="Tidak Bekerja">Tidak Bekerja</option>
-                                        <option value="Pensiunan">Pensiunan</option>
-                                        <option value="PNS">PNS</option>
-                                        <option value="TNI/POLRI">TNI / Polri</option>
-                                        <option value="Dosen/Guru">Dosen / Guru</option>
-                                        <option value="Pegawai Swasta">Pegawai Swasta</option>
-                                        <option value="Wiraswasta">Wiraswasta</option>
-                                        <option value="Buruh (Tani/Pabrik/Bangunan)">Buruh (Tani / Pabrik / Bangunan)
-                                        </option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <?php
+                                            if($pekerjaanAyahTampil == "Tidak Bekerja") {
+                                                echo "<option value='Tidak Bekerja' selected>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "Pensiunan") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan' selected>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "PNS") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS' selected>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "TNI/POLRI") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI' selected>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "Dosen/Guru") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru' selected>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "Pegawai Swasta") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta' selected>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "Wiraswasta") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta' selected>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "Buruh (Tani/Pabrik/Bangunan)") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)' selected>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanAyahTampil == "Lainnya") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya' selected>Lainnya</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Penghasilan Rata - Rata</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_ayah" required>
-                                        <option value="" selected></option>
-                                        <option value="Kurang Dari 5000000">Kurang Dari Rp 5.000.000</option>
-                                        <option value="5000000-10000000">Rp 5.000.000 - Rp 10.000.000
-                                        </option>
-                                        <option value="10000000-20000000">Rp 10.000.000 - Rp 20.000.000
-                                        </option>
-                                        <option value="20000000-30000000">Rp 20.000.000 - Rp 30.000.000
-                                        </option>
-                                        <option value="30000000-50000000">Rp 30.000.000 - Rp 50.000.000
-                                        </option>
-                                        <option value="Diatas 50000000">Lebih Dari Rp 50.000.000</option>
+                                        <?php
+                                            if($penghasilanAyahTampil == "Kurang Dari 5000000") {
+                                                echo "<option value='Kurang Dari 5000000' selected>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "5000000-10000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000' selected>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "10000000-20000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000' selected>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "20000000-30000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' selected>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "30000000-50000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000' selected>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "Diatas 50000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }
+                                        ?>
                                     </select>
                                     <label style="font-style: italic; color: grey;">NB : Penghasilan Dalam 1
                                         Bulan</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
-                                    <input type="text" class="form-control" name="hp_ayah" required>
+                                    <input type="text" class="form-control" name="hp_ayah"
+                                        value="<?php echo $hpAyahTampil; ?>" required>
                                 </div><br>
                                 <!-- End Data Ayah Kandung -->
 
@@ -1047,38 +1307,68 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
-                                    <input type="text" class="form-control" name="nama_ibu" required>
+                                    <input type="text" class="form-control" name="nama_ibu"
+                                        value="<?php echo $namaIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Status</b></label>
                                     <select class="form-select" aria-label="Default select example" name="status_ibu"
                                         required>
-                                        <option value="" selected></option>
-                                        <option value="Hidup">Masih Hidup</option>
-                                        <option value="Meninggal">Meninggal</option>
-                                        <option value="Tidak Tahu">Tidak Diketahui</option>
+                                        <?php
+                                            if($statusIbuTampil == "Hidup"){
+                                                echo "<option value='Hidup' selected>Masih Hidup</option>";
+                                                echo "<option value='Meninggal'>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
+                                            }elseif($statusIbuTampil == "Meninggal"){
+                                                echo "<option value='Hidup'>Masih Hidup</option>";
+                                                echo "<option value='Meninggal' selected>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
+                                            }elseif($statusIbuTampil == "Tidak Tahu"){
+                                                echo "<option value='Hidup'>Masih Hidup</option>";
+                                                echo "<option value='Meninggal'>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu' selected>Tidak Diketahui</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Hidup'>Masih Hidup</option>";
+                                                echo "<option value='Meninggal'>Meninggal</option>";
+                                                echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
                                     <select class="form-select" aria-label="Default select example" name="warga_ibu"
                                         required>
-                                        <option value="" selected></option>
-                                        <option value="WNI">WNI (Warga Negara Indonesia)</option>
-                                        <option value="WNA">WNA (Warga Negara Asing)</option>
+                                        <?php
+                                            if($wargaIbuTampil == 0){
+                                                echo "<option value='0' selected>WNA (Warga Negara Asing)</option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                            }elseif($wargaIbuTampil == 1) {
+                                                echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
-                                    <input type="number" class="form-control" name="nik_ibu" required>
+                                    <input type="number" class="form-control" name="nik_ibu"
+                                        value="<?php echo $nikIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
-                                    <input type="text" class="form-control" name="lahir_ibu" required>
+                                    <input type="text" class="form-control" name="lahir_ibu"
+                                        value="<?php echo $tempatIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
-                                    <input type="date" class="form-control" name="tanggal_ibu" required>
+                                    <input type="date" class="form-control" name="tanggal_ibu"
+                                        value="<?php echo $tanggalIbuTampil; ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
                                         Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
@@ -1086,55 +1376,289 @@
                                     <label for=""><b>Pendidikan Terakhir</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pendidikan_ibu" required>
-                                        <option value="" selected></option>
-                                        <option value="SD">SD</option>
-                                        <option value="SLTP">SLTP</option>
-                                        <option value="SLTA">SLTA</option>
-                                        <option value="D3">D3</option>
-                                        <option value="S1/D4">S1/D4</option>
-                                        <option value="S2">S2</option>
-                                        <option value="S3">S3</option>
+                                        <?php
+                                            if($pendidikamIbuTampil == "SD"){
+                                                echo "<option value='SD' selected>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikamIbuTampil == "SLTP"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP' selected>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikamIbuTampil == "SLTA"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA' selected>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikamIbuTampil == "D3"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3' selected>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikamIbuTampil == "S1/D4") {
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3' >D3</option>";
+                                                echo "<option value='S1/D4' selected>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikamIbuTampil == "S2"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2' selected>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikamIbuTampil == "S3") {
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3' selected>S3</option>";
+                                            }else {
+                                                echo "<option value=''></option>";
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pekerjaan Utama</b></label>
                                     <select class="form-select" aria-label="Default select example" name="pekerjaan_ibu"
                                         required>
-                                        <option value="" selected></option>
-                                        <option value="Tidak Bekerja">Tidak Bekerja</option>
-                                        <option value="Pensiunan">Pensiunan</option>
-                                        <option value="PNS">PNS</option>
-                                        <option value="TNI/POLRI">TNI / Polri</option>
-                                        <option value="Dosen/Guru">Dosen / Guru</option>
-                                        <option value="Pegawai Swasta">Pegawai Swasta</option>
-                                        <option value="Wiraswasta">Wiraswasta</option>
-                                        <option value="Buruh (Tani/Pabrik/Bangunan)">Buruh (Tani / Pabrik / Bangunan)
-                                        </option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <?php
+                                            if($pekerjaanIbuTampil == "Tidak Bekerja") {
+                                                echo "<option value='Tidak Bekerja' selected>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "Pensiunan") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan' selected>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "PNS") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS' selected>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "TNI/POLRI") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI' selected>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "Dosen/Guru") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru' selected>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "Pegawai Swasta") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta' selected>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "Wiraswasta") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta' selected>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "Buruh (Tani/Pabrik/Bangunan)") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)' selected>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanIbuTampil == "Lainnya") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya' selected>Lainnya</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Penghasilan Rata - Rata</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_ibu" required>
-                                        <option value="" selected></option>
-                                        <option value="Kurang Dari 5000000">Kurang Dari Rp 5.000.000</option>
-                                        <option value="5000000-10000000">Rp 5.000.000 - Rp 10.000.000
-                                        </option>
-                                        <option value="10000000-20000000">Rp 10.000.000 - Rp 20.000.000
-                                        </option>
-                                        <option value="20000000-30000000">Rp 20.000.000 - Rp 30.000.000
-                                        </option>
-                                        <option value="30000000-50000000">Rp 30.000.000 - Rp 50.000.000
-                                        </option>
-                                        <option value="Diatas 50000000">Lebih Dari Rp 50.000.000</option>
+                                        <?php
+                                            if($penghasilanIbuTampil == "Kurang Dari 5000000") {
+                                                echo "<option value='Kurang Dari 5000000' selected>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "5000000-10000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000' selected>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "10000000-20000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000' selected>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "20000000-30000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' selected>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "30000000-50000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000' selected>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "Diatas 50000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }
+                                        ?>
                                     </select>
                                     <label style="font-style: italic; color: grey;">NB : Penghasilan Dalam 1
                                         Bulan</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
-                                    <input type="text" class="form-control" name="hp_ibu" required>
+                                    <input type="text" class="form-control" name="hp_ibu"
+                                        value="<?php echo $hpIbuTampil; ?>" required>
                                 </div><br>
                                 <!-- End Data Ibu Kandung -->
 
@@ -1146,28 +1670,42 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
-                                    <input type="text" class="form-control" name="nama_wali" required>
+                                    <input type="text" class="form-control" name="nama_wali"
+                                        value="<?php echo $namaWaliTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
                                     <select class="form-select" aria-label="Default select example" name="warga_wali"
                                         required>
-                                        <option value="-" selected>-</option>
-                                        <option value="WNI">WNI (Warga Negara Indonesia)</option>
-                                        <option value="WNA">WNA (Warga Negara Asing)</option>
+                                        <?php
+                                            if($wargaWaliTampil == 0){
+                                                echo "<option value='0' selected>WNA (Warga Negara Asing)</option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                            }elseif($wargaWaliTampil == 1) {
+                                                echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
-                                    <input type="text" class="form-control" name="nik_wali" required>
+                                    <input type="text" class="form-control" name="nik_wali"
+                                        value="<?php echo $nikWaliTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
-                                    <input type="text" class="form-control" name="lahir_wali" required>
+                                    <input type="text" class="form-control" name="lahir_wali"
+                                        value="<?php echo $tempatWaliTampil; ?>" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
-                                    <input type="date" class="form-control" name="tanggal_wali" required>
+                                    <input type="date" class="form-control" name="tanggal_wali"
+                                        value="<?php echo $tanggalWaliTampil; ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
                                         Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
@@ -1175,55 +1713,289 @@
                                     <label for=""><b>Pendidikan Terakhir</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pendidikan_wali" required>
-                                        <option value="-" selected>-</option>
-                                        <option value="SD">SD</option>
-                                        <option value="SLTP">SLTP</option>
-                                        <option value="SLTA">SLTA</option>
-                                        <option value="D3">D3</option>
-                                        <option value="S1/D4">S1/D4</option>
-                                        <option value="S2">S2</option>
-                                        <option value="S3">S3</option>
+                                        <?php
+                                            if($pendidikanWaliTampil == "SD"){
+                                                echo "<option value='SD' selected>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanWaliTampil == "SLTP"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP' selected>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanWaliTampil == "SLTA"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA' selected>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanWaliTampil == "D3"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3' selected>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanWaliTampil == "S1/D4") {
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3' >D3</option>";
+                                                echo "<option value='S1/D4' selected>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanWaliTampil == "S2"){
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2' selected>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }elseif($pendidikanWaliTampil == "S3") {
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3' selected>S3</option>";
+                                            }else {
+                                                echo "<option value=''></option>";
+                                                echo "<option value='SD'>SD</option>";
+                                                echo "<option value='SLTP'>SLTP</option>";
+                                                echo "<option value='SLTA'>SLTA</option>";
+                                                echo "<option value='D3'>D3</option>";
+                                                echo "<option value='S1/D4'>S1/D4</option>";
+                                                echo "<option value='S2'>S2</option>";
+                                                echo "<option value='S3'>S3</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pekerjaan Utama</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="pekerjaan_wali" required>
-                                        <option value="-" selected>-</option>
-                                        <option value="Tidak Bekerja">Tidak Bekerja</option>
-                                        <option value="Pensiunan">Pensiunan</option>
-                                        <option value="PNS">PNS</option>
-                                        <option value="TNI/POLRI">TNI / Polri</option>
-                                        <option value="Dosen/Guru">Dosen / Guru</option>
-                                        <option value="Pegawai Swasta">Pegawai Swasta</option>
-                                        <option value="Wiraswasta">Wiraswasta</option>
-                                        <option value="Buruh (Tani/Pabrik/Bangunan)">Buruh (Tani / Pabrik / Bangunan)
-                                        </option>
-                                        <option value="Lainnya">Lainnya</option>
+                                        <?php
+                                            if($pekerjaanWaliTampil == "Tidak Bekerja") {
+                                                echo "<option value='Tidak Bekerja' selected>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "Pensiunan") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan' selected>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "PNS") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS' selected>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "TNI/POLRI") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI' selected>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "Dosen/Guru") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru' selected>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "Pegawai Swasta") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta' selected>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "Wiraswasta") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta' selected>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "Buruh (Tani/Pabrik/Bangunan)") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)' selected>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }elseif($pekerjaanWaliTampil == "Lainnya") {
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya' selected>Lainnya</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
+                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='PNS'>PNS</option>";
+                                                echo "<option value='TNI/POLRI'>TNI / Polri</option>";
+                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
+                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
+                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
+                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                </option>";
+                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Penghasilan Rata - Rata</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_wali" required>
-                                        <option value="-" selected>-</option>
-                                        <option value="Kurang Dari 5000000">Kurang Dari Rp 5.000.000</option>
-                                        <option value="5000000-10000000">Rp 5.000.000 - Rp 10.000.000
-                                        </option>
-                                        <option value="10000000-20000000">Rp 10.000.000 - Rp 20.000.000
-                                        </option>
-                                        <option value="20000000-30000000">Rp 20.000.000 - Rp 30.000.000
-                                        </option>
-                                        <option value="30000000-50000000">Rp 30.000.000 - Rp 50.000.000
-                                        </option>
-                                        <option value="Diatas 50000000">Lebih Dari Rp 50.000.000</option>
+                                        <?php
+                                            if($penghasilanWaliTampil == "Kurang Dari 5000000") {
+                                                echo "<option value='Kurang Dari 5000000' selected>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "5000000-10000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000' selected>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "10000000-20000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000' selected>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "20000000-30000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' selected>Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "30000000-50000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000' selected>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "Diatas 50000000") {
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
+                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                </option>";
+                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                </option>";
+                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                </option>";
+                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                </option>";
+                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                            }
+                                        ?>
                                     </select>
                                     <label style="font-style: italic; color: grey;">NB : Penghasilan Dalam 1
                                         Bulan</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
-                                    <input type="text" class="form-control" name="hp_wali" required>
+                                    <input type="text" class="form-control" name="hp_wali"
+                                        value="<?php echo $hpWaliTampil; ?>" required>
                                 </div><br>
                                 <!-- End Data Wali -->
 
