@@ -1028,7 +1028,7 @@
                                                 echo "<option value='Meninggal'>Meninggal</option>";
                                                 echo "<option value='Tidak Tahu' selected>Tidak Diketahui</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Hidup'>Masih Hidup</option>";
                                                 echo "<option value='Meninggal'>Meninggal</option>";
                                                 echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
@@ -1048,7 +1048,7 @@
                                                 echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }
@@ -1134,7 +1134,7 @@
                                                 echo "<option value='S2'>S2</option>";
                                                 echo "<option value='S3' selected>S3</option>";
                                             }else {
-                                                echo "<option value=''></option>";
+                                                echo "<option value='-'></option>";
                                                 echo "<option value='SD'>SD</option>";
                                                 echo "<option value='SLTP'>SLTP</option>";
                                                 echo "<option value='SLTA'>SLTA</option>";
@@ -1251,7 +1251,7 @@
                                                 </option>";
                                                 echo "<option value='Lainnya' selected>Lainnya</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
                                                 echo "<option value='Pensiunan'>Pensiunan</option>";
                                                 echo "<option value='PNS'>PNS</option>";
@@ -1338,7 +1338,7 @@
                                                 </option>";
                                                 echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
                                                 echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
                                                 </option>";
@@ -1393,7 +1393,7 @@
                                                 echo "<option value='Meninggal'>Meninggal</option>";
                                                 echo "<option value='Tidak Tahu' selected>Tidak Diketahui</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Hidup'>Masih Hidup</option>";
                                                 echo "<option value='Meninggal'>Meninggal</option>";
                                                 echo "<option value='Tidak Tahu'>Tidak Diketahui</option>";
@@ -1413,7 +1413,7 @@
                                                 echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }
@@ -1499,7 +1499,7 @@
                                                 echo "<option value='S2'>S2</option>";
                                                 echo "<option value='S3' selected>S3</option>";
                                             }else {
-                                                echo "<option value=''></option>";
+                                                echo "<option value='-'></option>";
                                                 echo "<option value='SD'>SD</option>";
                                                 echo "<option value='SLTP'>SLTP</option>";
                                                 echo "<option value='SLTA'>SLTA</option>";
@@ -1616,7 +1616,7 @@
                                                 </option>";
                                                 echo "<option value='Lainnya' selected>Lainnya</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
                                                 echo "<option value='Pensiunan'>Pensiunan</option>";
                                                 echo "<option value='PNS'>PNS</option>";
@@ -1703,7 +1703,7 @@
                                                 </option>";
                                                 echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
                                                 echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
                                                 </option>";
@@ -1752,7 +1752,7 @@
                                                 echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }
@@ -1838,7 +1838,7 @@
                                                 echo "<option value='S2'>S2</option>";
                                                 echo "<option value='S3' selected>S3</option>";
                                             }else {
-                                                echo "<option value=''></option>";
+                                                echo "<option value='-'></option>";
                                                 echo "<option value='SD'>SD</option>";
                                                 echo "<option value='SLTP'>SLTP</option>";
                                                 echo "<option value='SLTA'>SLTA</option>";
@@ -1955,7 +1955,7 @@
                                                 </option>";
                                                 echo "<option value='Lainnya' selected>Lainnya</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
                                                 echo "<option value='Pensiunan'>Pensiunan</option>";
                                                 echo "<option value='PNS'>PNS</option>";
@@ -2042,7 +2042,7 @@
                                                 </option>";
                                                 echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected></option>";
                                                 echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
                                                 echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
                                                 </option>";
