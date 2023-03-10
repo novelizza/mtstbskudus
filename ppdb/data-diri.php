@@ -117,7 +117,6 @@
         $hp_ibu = $_POST['hp_ibu'];
         
         $nama_wali = $_POST['nama_wali'];
-        $status_wali = $_POST['status_wali'];
         $warga_wali = $_POST['warga-wali'];
         $nik_wali = $_POST['nik_wali'];
         $lahir_wali = $_POST['lahir_wali'];
@@ -147,7 +146,6 @@
                     echo "<script>alert('NIK WALI HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
                 }else {
                     $nama_wali = $_POST['nama_wali'];
-                    $status_wali = $_POST['status_wali'];
                     $warga_wali = $_POST['warga-wali'];
                     $nik_wali = $_POST['nik_wali'];
                     $lahir_wali = $_POST['lahir_wali'];
@@ -159,7 +157,6 @@
                 }
             }elseif($_POST['nama_wali'] == NULL || $_POST['nama_wali'] == "-") {
                 $nama_wali = NULL;
-                $status_wali = NULL;
                 $warga_wali = NULL;
                 $nik_wali = NULL;
                 $lahir_wali = NULL;
@@ -191,7 +188,6 @@
                 'penghasilan_rata_rata_ibu' => $penghasilan_ibu,
                 'no_hp_ibu' => $hp_ibu,
                 'nama_lengkap_wali' => $nama_wali,
-                'status_wali' => $status_wali,
                 'kewarganegaraan_wali' => $warga_wali,
                 'nik_wali' => $nik_wali,
                 'tempat_lahir_wali' => $lahir_wali,
@@ -985,16 +981,6 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
                                     <input type="text" class="form-control" name="nama_wali" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <label for=""><b>Status</b></label>
-                                    <select class="form-select" aria-label="Default select example" name="status_wali"
-                                        required>
-                                        <option value="-" selected></option>
-                                        <option value="Hidup">Masih Hidup</option>
-                                        <option value="Meninggal">Meninggal</option>
-                                        <option value="Tidak Tahu">Tidak Diketahui</option>
-                                    </select>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>

@@ -212,7 +212,13 @@
                 </div><br>
                 <div class="row g-3">
                     <?php
-                        if($isLengkap == 0) {
+                        if($isLengkap == 0 && $tujuan_masuk == "MPTS") {
+                            echo "<div class='col-md-12'>
+                                <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: grey; color: white; width: 100%;' onclick='return false;'>
+                                    <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
+                                </a>
+                            </div>";
+                        }elseif($isLengkap == 0 && $tujuan_masuk == "MTS") {
                             echo "
                                 <div class='col-md-12'>
                                     <a class='btn' href='cetak-kartu-tes.php'
@@ -221,7 +227,13 @@
                                     </a>
                                 </div>
                             ";
-                        }elseif($isLengkap == 1) {
+                        }elseif($isLengkap == 1 && $tujuan_masuk == "MPTS") {
+                            echo "<div class='col-md-12'>
+                                <a href='cetak-bukti-pembayaran.php' class='btn' style='background-color: grey; color: white; width: 100%;' onclick='return false;'>
+                                    <i class='bi bi-printer-fill'></i><span> Cetak Bukti Pembayaran</span>
+                                </a>
+                            </div>";
+                        }elseif($isLengkap == 1 && $tujuan_masuk == "MTS") {
                             echo "
                                 <div class='col-md-12'>
                                     <a class='btn' href='cetak-kartu-tes.php'
@@ -230,8 +242,6 @@
                                     </a>
                                 </div>
                             ";
-                        }else {
-                            "";
                         }
                     ?>
                     <?php
