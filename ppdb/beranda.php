@@ -168,6 +168,9 @@
                                     NULL;
                                 }
                             ?>
+                            <h4><span class='badge bg-warning' style='width: 100%;'>Mohon Cek Kembali Data Diri Anda
+                                    (Data Siswa, Data Ortu, Data Alamat dan Data Prestasi)
+                                    7!</span></h4>
 
                         </div>
                     </div>
@@ -291,7 +294,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <b><?php echo $status_va; ?></b>
+                                        <b>NISN</b>
                                     </div>
                                     <div class="col-md-4">
                                         <p><?php echo $nisn; ?></p>

@@ -662,44 +662,53 @@
                             aria-labelledby="home-tab">
                             <form class="row g-3" action="" method="post">
                                 <?php
-                                    // $curl = curl_init();
+                                    $curlSISWATAMPIL = curl_init();
 
-                                    // curl_setopt_array($curl, array(
-                                    //   CURLOPT_URL => 'http://localhost:4000/api/siswa/data-siswa',
-                                    //   CURLOPT_RETURNTRANSFER => true,
-                                    //   CURLOPT_ENCODING => '',
-                                    //   CURLOPT_MAXREDIRS => 10,
-                                    //   CURLOPT_TIMEOUT => 0,
-                                    //   CURLOPT_FOLLOWLOCATION => true,
-                                    //   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                                    //   CURLOPT_CUSTOMREQUEST => 'GET',
-                                    //   CURLOPT_HTTPHEADER => array(
-                                    //     'session: '.$session.''
-                                    //   ),
-                                    // ));
+                                    curl_setopt_array($curlSISWATAMPIL, array(
+                                      CURLOPT_URL => 'http://localhost:4000/api/siswa/data-siswa',
+                                      CURLOPT_RETURNTRANSFER => true,
+                                      CURLOPT_ENCODING => '',
+                                      CURLOPT_MAXREDIRS => 10,
+                                      CURLOPT_TIMEOUT => 0,
+                                      CURLOPT_FOLLOWLOCATION => true,
+                                      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                      CURLOPT_CUSTOMREQUEST => 'GET',
+                                      CURLOPT_HTTPHEADER => array(
+                                        'session: '.$session.''
+                                      ),
+                                    ));
                                     
-                                    // $responseDataSiswa = curl_exec($curl);
-                                    // $objectSiswa = json_decode($responseDataSiswa);
+                                    $responseDataSiswa = curl_exec($curlSISWATAMPIL);
+                                    $objectSiswa = json_decode($responseDataSiswa);
 
-                                    // if($objectSiswa->response == 200) {
-                                    //     $resultSiswa = $objectSiswa->result;
-                                    //     $nik = $resultSiswa->nik;
-                                    //     $kewarganegaraan = $resultSiswa->kewarganegaraan;
-                                    //     $jekel = $resultSiswa->jenis_kelamin;
-                                    //     $saudara = $resultSiswa->jumlah_saudara;
-                                    //     // $anakKe = $resultSiswa->
-                                    // } else {
-                                    //     // handle error response
-                                    //     echo 'Error: ' . $object->response . '<br>';
-                                    //     echo 'Message: ' . $object->message . '<br>';
-                                    // }
+                                    if($objectSiswa->response == 200) {
+                                        $resultSiswa = $objectSiswa->result;
+                                        $nikTampil = $resultSiswa->nik;
+                                        $kewarganegaraanTampil = $resultSiswa->kewarganegaraan;
+                                        $jekelTampil = $resultSiswa->jenis_kelamin;
+                                        $saudaraTampil = $resultSiswa->jumlah_saudara;
+                                        $anakKeTampil = $resultSiswa->anak_ke;
+                                        $agamaTampil = $resultSiswa->agama;
+                                        $citaTampil = $resultSiswa->cita_cita;
+                                        $noTampil = $resultSiswa->no_hp;
+                                        $biayaTampil = $resultSiswa->yang_membiayai;
+                                        $kebutuhanTampil = $resultSiswa->kebutuhanKhusus;
+                                        $praSekolahTampil = $resultSiswa->prasekolah;
+                                        $kipTampil = $resultSiswa->kip;
+                                        $kkTampil = $resultSiswa->kk;
+                                        $kepalaTampil = $resultSiswa->kepala_keluarga;
+                                    } else {
+                                        // handle error response
+                                        echo 'Error: ' . $objectSiswa->response . '<br>';
+                                        echo 'Message: ' . $objectSiswa->message . '<br>';
+                                    }
                                     
-                                    // curl_close($curl);
+                                    curl_close($curlSISWATAMPIL);
                                 ?>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
                                     <input type="number" class="form-control" name="nik_siswa"
-                                        value="<?php echo $nik; ?>" required>
+                                        value="<?php echo $nikTampil; ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : NIK bisa ditemukan di
                                         Kartu Keluargaaa</label>
                                 </div>
@@ -707,21 +716,13 @@
                                     <label for=""><b>Kewarganegaraan</b></label>
                                     <select class="form-select" aria-label="Default select example" name="warga_siswa"
                                         required>
-                                        <option value="" selected></option>
+                                        <option value="<?php echo $kewarganegaraan; ?>" selected>
+                                            <?php 
+                                        if($kewarganegaraanTampil == 1){ echo "WANI (Warga Negara Indonesia"; }elseif($kewarganegaraanTampil == 0){ echo "WNA (Warga Negara Asing";}else {"";} ?>
+                                        </option>
                                         <option value="1">WNI (Warga Negara Indonesia)</option>
                                         <option value="0">WNA (Warga Negara Asing)</option>
                                     </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <label for=""><b>Tempat Lahir</b></label>
-                                    <input type="text" class="form-control" name="tempat_siswa" required>
-                                </div>
-                                <div class="col-sm-12">
-                                    <label for=""><b>Tanggal Lahir</b></label>
-                                    <input type="date" class="form-control" name="tanggal_siswa" required>
-                                    <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir
-                                        Sesuai
-                                        Dengan KK Dengan Format Tangga/Bulan/Tahun</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Jenis Kelamin</b></label>
@@ -729,11 +730,13 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Jumlah Saudara</b></label>
-                                    <input type="text" class="form-control" name="saudara_siswa" required>
+                                    <input type="text" class="form-control" name="saudara_siswa"
+                                        value="<?php echo $saudaraTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Anak Ke-</b></label>
-                                    <input type="text" class="form-control" name="anak_siswa" required>
+                                    <input type="text" class="form-control" name="anak_siswa"
+                                        value="<?php echo $anakKeTampil ;?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Agama</b></label>
@@ -741,11 +744,13 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Cita - Cita</b></label>
-                                    <input type="text" class="form-control" name="cita_siswa" required>
+                                    <input type="text" class="form-control" name="cita_siswa"
+                                        value="<?php echo $citaTampil ;?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP Siswa</b></label>
-                                    <input type="text" class="form-control" name="hp_siswa" required>
+                                    <input type="text" class="form-control" name="hp_siswa"
+                                        value="<?php echo $noTampil ;?>" required>
                                     <label style="font-style: italic; color: grey;">Isi "-" Jika Tidak Punya Nomor
                                         HP</label>
                                 </div>
@@ -784,22 +789,21 @@
                                         Prasekolah</label>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Asal Sekolah</b></label>
-                                    <input type="text" class="form-control" name="sekolah_siswa" required>
-                                </div>
-                                <div class="col-md-12">
                                     <label for=""><b>Nomor KIP (Kartu Indonesia Pintar)</b></label>
-                                    <input type="number" class="form-control" name="kip_siswa">
+                                    <input type="number" class="form-control" name="kip_siswa"
+                                        value="<?php echo $kipTampil ;?>">
                                     <label style="font-style: italic; color: grey;">NB : Isi Jika Mempunyai
                                         KIP</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor KK (Kartu Keluarga)</b></label>
-                                    <input type="number" class="form-control" name="kk_siswa" required>
+                                    <input type="number" class="form-control" name="kk_siswa"
+                                        value="<?php echo $kkTampil ;?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Kepala Keluarga</b></label>
-                                    <input type="text" class="form-control" name="kepala_siswa" required>
+                                    <input type="text" class="form-control" name="kepala_siswa"
+                                        value="<?php echo $kepalaTampil ;?>" required>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-lg" name="data_diri_siswa"
@@ -812,6 +816,66 @@
                         <!-- Data Diri Orang Tua / Wali -->
                         <div class="tab-pane fade" id="profile-justified" role="tabpanel" aria-labelledby="profile-tab">
                             <form class="row g-3" action="" method="post">
+                                <?php
+
+                                $curlORTUTAMPIL = curl_init();
+
+                                curl_setopt_array($curlORTUTAMPIL, array(
+                                CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
+                                CURLOPT_RETURNTRANSFER => true,
+                                CURLOPT_ENCODING => '',
+                                CURLOPT_MAXREDIRS => 10,
+                                CURLOPT_TIMEOUT => 0,
+                                CURLOPT_FOLLOWLOCATION => true,
+                                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                CURLOPT_CUSTOMREQUEST => 'GET',
+                                CURLOPT_HTTPHEADER => array(
+                                    'session: '.$session.''
+                                ),
+                                ));
+
+                                $responseORTU = curl_exec($curlORTUTAMPIL);
+                                $objectDataOrtu = json_decode($responseORTU);
+                                
+                                if($objectDataOrtu->response == 200){
+                                    $resultOrtu = $objectDataOrtu->result;
+                                    $namaAyahTampil = $resultOrtu->nama_lengkap_ayah;
+                                    $statusAyahTampil = $resultOrtu->status_ayah;
+                                    $wargaAyahTampil = $resultOrtu->kewarganegaraan_ayah;
+                                    $nikAyahTampil = $resultOrtu->nik_ayah;
+                                    $tempatAyahTampil = $resultOrtu->tempat_lahir_ayah;
+                                    $tanggalAyahTampil = $resultOrtu->tanggal_lahir_ayah;
+                                    $pendidikanAyahTampil = $resultOrtu->pendidikan_terakhir_ayah;
+                                    $pekerjaanAyahTampil = $resultOrtu->pekerjaan_utama_ayah;
+                                    $penghasilanAyahTampil = $resultOrtu->penghasilan_rata_rata_ayah;
+                                    $hpAyahTampil = $resultOrtu->no_hp_ayah;
+                                    $namaIbuTampil = $resultOrtu->nama_lengkap_ibu;
+                                    $statusIbuTampil = $resultOrtu->status_ibu;
+                                    $wargaIbuTampil = $resultOrtu->kewarganegaraan_ibu;
+                                    $nikIbuTampil = $resultOrtu->nik_ibu;
+                                    $tempatIbuTampil = $resultOrtu->tempat_lahir_ibu;
+                                    $tanggalIbuTampil = $resultOrtu->tanggal_lahir_ibu;
+                                    $pendidikamIbuTampil = $resultOrtu->pendidikan_terakhir_ibu;
+                                    $pekerjaanIbuTampil = $resultOrtu->pekerjaan_utama_ibu;
+                                    $penghasilanIbuTampil = $resultOrtu->penghasilan_rata_rata_ibu;
+                                    $hpIbuTampil = $resultOrtu->no_hp_ibu;
+                                    $namaWaliTampil = $resultOrtu->nama_lengkap_wali;
+                                    $wargaWaliTampil = $resultOrtu->kewarganegaraan_wali;
+                                    $nikWaliTampil = $resultOrtu->nik_wali;
+                                    $tempatWaliTampil = $resultOrtu->tempat_lahir_wali;
+                                    $tanggalWaliTampil = $resultOrtu->tanggal_lahir_wali;
+                                    $pendidikanWaliTampil = $resultOrtu->pendidikan_terakhir_wali;
+                                    $pekerjaanWaliTampil = $resultOrtu->pekerjaan_utama_wali;
+                                    $penghasilanWaliTampil = $resultOrtu->penghasilan_rata_rata_wali;
+                                    $hpWaliTampil = $resultOrtu->no_hp_wali;
+                                }else {
+                                    // handle error response
+                                    echo 'Error: ' . $objectDataOrtu->response . '<br>';
+                                    echo 'Message: ' . $objectDataOrtu->message . '<br>';
+                                }
+
+                                curl_close($curlORTUTAMPIL);
+                            ?>
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Data
