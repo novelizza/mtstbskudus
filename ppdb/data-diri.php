@@ -1774,7 +1774,8 @@
                                     <input type="date" class="form-control" name="tanggal_wali"
                                         value="<?php echo $tanggalWaliTampil; ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
-                                        Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
+                                        Dengan KK Dengan Format Tanggal/Bulan/Tahun (Jika tidak ada wali, isi
+                                        01/01/0001)</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Pendidikan Terakhir</b></label>
@@ -2079,6 +2080,65 @@
                         <div class="tab-pane fade" id="contact-justified" role="tabpanel" aria-labelledby="contact-tab">
                             <!-- Data Alamat Ayah Kandung -->
                             <form class="row g-3" action="" method="post">
+                                <?php
+
+                                    $curlALAMAT = curl_init();
+
+                                    curl_setopt_array($curlALAMAT, array(
+                                    CURLOPT_URL => 'http://localhost:4000/api/siswa/data-alamat',
+                                    CURLOPT_RETURNTRANSFER => true,
+                                    CURLOPT_ENCODING => '',
+                                    CURLOPT_MAXREDIRS => 10,
+                                    CURLOPT_TIMEOUT => 0,
+                                    CURLOPT_FOLLOWLOCATION => true,
+                                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                    CURLOPT_CUSTOMREQUEST => 'GET',
+                                    CURLOPT_HTTPHEADER => array(
+                                        'session: d02cea9eb0f2a278586240d8fde91e19'
+                                    ),
+                                    ));
+
+                                    $responseALAMAT = curl_exec($curlALAMAT);
+                                    $objectALAMAT = json_decode($responseALAMAT);
+                                    if($objectALAMAT->response == 200){
+                                        $resultOrtu = $objectDataOrtu->result;
+                                        $namaAyahTampil = $resultOrtu->nama_lengkap_ayah;
+                                        $statusAyahTampil = $resultOrtu->status_ayah;
+                                        $wargaAyahTampil = $resultOrtu->kewarganegaraan_ayah;
+                                        $nikAyahTampil = $resultOrtu->nik_ayah;
+                                        $tempatAyahTampil = $resultOrtu->tempat_lahir_ayah;
+                                        $tanggalAyahTampil = $resultOrtu->tanggal_lahir_ayah;
+                                        $pendidikanAyahTampil = $resultOrtu->pendidikan_terakhir_ayah;
+                                        $pekerjaanAyahTampil = $resultOrtu->pekerjaan_utama_ayah;
+                                        $penghasilanAyahTampil = $resultOrtu->penghasilan_rata_rata_ayah;
+                                        $hpAyahTampil = $resultOrtu->no_hp_ayah;
+                                        $namaIbuTampil = $resultOrtu->nama_lengkap_ibu;
+                                        $statusIbuTampil = $resultOrtu->status_ibu;
+                                        $wargaIbuTampil = $resultOrtu->kewarganegaraan_ibu;
+                                        $nikIbuTampil = $resultOrtu->nik_ibu;
+                                        $tempatIbuTampil = $resultOrtu->tempat_lahir_ibu;
+                                        $tanggalIbuTampil = $resultOrtu->tanggal_lahir_ibu;
+                                        $pendidikamIbuTampil = $resultOrtu->pendidikan_terakhir_ibu;
+                                        $pekerjaanIbuTampil = $resultOrtu->pekerjaan_utama_ibu;
+                                        $penghasilanIbuTampil = $resultOrtu->penghasilan_rata_rata_ibu;
+                                        $hpIbuTampil = $resultOrtu->no_hp_ibu;
+                                        $namaWaliTampil = $resultOrtu->nama_lengkap_wali;
+                                        $wargaWaliTampil = $resultOrtu->kewarganegaraan_wali;
+                                        $nikWaliTampil = $resultOrtu->nik_wali;
+                                        $tempatWaliTampil = $resultOrtu->tempat_lahir_wali;
+                                        $tanggalWaliTampil = $resultOrtu->tanggal_lahir_wali;
+                                        $pendidikanWaliTampil = $resultOrtu->pendidikan_terakhir_wali;
+                                        $pekerjaanWaliTampil = $resultOrtu->pekerjaan_utama_wali;
+                                        $penghasilanWaliTampil = $resultOrtu->penghasilan_rata_rata_wali;
+                                        $hpWaliTampil = $resultOrtu->no_hp_wali;
+                                    }else {
+                                        // handle error response
+                                        echo 'Error: ' . $objectALAMAT->response . '<br>';
+                                        echo 'Message: ' . $objectALAMAT->message . '<br>';
+                                    }
+    
+                                    curl_close($curlALAMAT);
+                                ?>
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Data
