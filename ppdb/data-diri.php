@@ -43,6 +43,7 @@
             'yang_membiayai' => $biaya_siswa,
             'kebutuhan_khusus' => $kebutuhan_siswa,
             'prasekolah' => $prasekolah,
+            'asal_sekolah' => $sekolah_siswa,
             'kip' => $kip_siswa,
             'kk' => $kk_siswa, 
             'kepala_keluarga' => $kepala_siswa
@@ -694,6 +695,7 @@
                                         $biayaTampil = $resultSiswa->yang_membiayai;
                                         $kebutuhanTampil = $resultSiswa->kebutuhanKhusus;
                                         $praSekolahTampil = $resultSiswa->prasekolah;
+                                        $asalSekolahTampil = $resultSiswa->asal_sekolah;
                                         $kipTampil = $resultSiswa->kip;
                                         $kkTampil = $resultSiswa->kk;
                                         $kepalaTampil = $resultSiswa->kepala_keluarga;
@@ -710,18 +712,25 @@
                                     <input type="number" class="form-control" name="nik_siswa"
                                         value="<?php echo $nikTampil; ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : NIK bisa ditemukan di
-                                        Kartu Keluargaaa</label>
+                                        Kartu Keluarga dan Harus 16 Digit</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
                                     <select class="form-select" aria-label="Default select example" name="warga_siswa"
                                         required>
-                                        <option value="<?php echo $kewarganegaraan; ?>" selected>
-                                            <?php 
-                                        if($kewarganegaraanTampil == 1){ echo "WANI (Warga Negara Indonesia"; }elseif($kewarganegaraanTampil == 0){ echo "WNA (Warga Negara Asing";}else {"";} ?>
-                                        </option>
-                                        <option value="1">WNI (Warga Negara Indonesia)</option>
-                                        <option value="0">WNA (Warga Negara Asing)</option>
+                                        <?php
+                                            if($kewarganegaraanTampil == 0){
+                                                echo "<option value='0' selected>WNA (Warga Negara Asing)</option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                            }elseif($kewarganegaraanTampil == 1) {
+                                                echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }else {
+                                                echo "<option value='' selected></option>";
+                                                echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
+                                                echo "<option value='0'>WNA (Warga Negara Asing)</option>";
+                                            }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-md-12">
@@ -751,7 +760,7 @@
                                     <label for=""><b>Nomor HP Siswa</b></label>
                                     <input type="text" class="form-control" name="hp_siswa"
                                         value="<?php echo $noTampil ;?>" required>
-                                    <label style="font-style: italic; color: grey;">Isi "-" Jika Tidak Punya Nomor
+                                    <label style="font-style: italic; color: grey;">NB: Isi "-" Jika Tidak Punya Nomor
                                         HP</label>
                                 </div>
                                 <div class="col-md-12">
@@ -787,6 +796,13 @@
                                     </label><br>
                                     <label style="font-style: italic; color: grey;">Kosongi Jika Anda Tidak
                                         Prasekolah</label>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for=""><b>Asal Sekolah</b></label>
+                                    <input type="number" class="form-control" name="sekolah_siswa"
+                                        value="<?php echo $asalSekolahTampil ;?>">
+                                    <label style="font-style: italic; color: grey;">NB : Asal Sekolah Harus Lebih Dari 3
+                                        Huruf</label>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor KIP (Kartu Indonesia Pintar)</b></label>
@@ -883,7 +899,8 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
-                                    <input type="text" class="form-control" name="nama_ayah" required>
+                                    <input type="text" class="form-control" name="nama_ayah"
+                                        value="<?php echo $namaAyahTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Status</b></label>
@@ -906,15 +923,18 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
-                                    <input type="number" class="form-control" name="nik_ayah" required>
+                                    <input type="number" class="form-control" name="nik_ayah"
+                                        value="<?php echo $nikAyahTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
-                                    <input type="text" class="form-control" name="lahir_ayah" required>
+                                    <input type="text" class="form-control" name="lahir_ayah"
+                                        value="<?php echo $tempatAyahTampil; ?>" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
-                                    <input type="date" class="form-control" name="tanggal_ayah" required>
+                                    <input type="date" class="form-control" name="tanggal_ayah"
+                                        value="<?php echo $tanggalAyahTampil ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
                                         Dengan KK Dengan Format Tanggal/Bulan/Tahun</label>
                                 </div>
