@@ -12,6 +12,7 @@
             header('location: login.php');
             exit;
         }
+    
         
     if(isset($_POST['data_diri_siswa'])) {
         $nik_siswa = $_POST['nik_siswa'];
@@ -660,9 +661,45 @@
                         <div class="tab-pane fade show active" id="home-justified" role="tabpanel"
                             aria-labelledby="home-tab">
                             <form class="row g-3" action="" method="post">
+                                <?php
+                                    $curl = curl_init();
+
+                                    curl_setopt_array($curl, array(
+                                      CURLOPT_URL => 'http://localhost:4000/api/siswa/data-siswa',
+                                      CURLOPT_RETURNTRANSFER => true,
+                                      CURLOPT_ENCODING => '',
+                                      CURLOPT_MAXREDIRS => 10,
+                                      CURLOPT_TIMEOUT => 0,
+                                      CURLOPT_FOLLOWLOCATION => true,
+                                      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                      CURLOPT_CUSTOMREQUEST => 'GET',
+                                      CURLOPT_HTTPHEADER => array(
+                                        'session: '.$session.''
+                                      ),
+                                    ));
+                                    
+                                    $responseDataSiswa = curl_exec($curl);
+                                    $objectSiswa = json_decode($responseDataSiswa);
+
+                                    if($objectSiswa->response == 200) {
+                                        $resultSiswa = $objectSiswa->result;
+                                        $nik = $resultSiswa->nik;
+                                        $kewarganegaraan = $resultSiswa->kewarganegaraan;
+                                        $jekel = $resultSiswa->jenis_kelamin;
+                                        $saudara = $resultSiswa->jumlah_saudara;
+                                        // $anakKe = $resultSiswa->
+                                    } else {
+                                        // handle error response
+                                        echo 'Error: ' . $object->response . '<br>';
+                                        echo 'Message: ' . $object->message . '<br>';
+                                    }
+                                    
+                                    curl_close($curl);
+                                ?>
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
-                                    <input type="number" class="form-control" name="nik_siswa" required>
+                                    <input type="number" class="form-control" name="nik_siswa"
+                                        value="<?php echo $nik; ?>" required>
                                     <label style="font-style: italic; color: grey;">NB : NIK bisa ditemukan di
                                         Kartu Keluargaaa</label>
                                 </div>
