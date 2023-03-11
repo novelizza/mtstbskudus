@@ -140,7 +140,7 @@
             echo "<script>alert('NIK IBU HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
         }elseif(strlen($nik_ibuu) > 16){
             echo "<script>alert('NIK IBU HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
-        }elseif($nama_wali != NULL) {
+        }elseif($nama_wali != NULL && $nama_wali != "-") {
             if(strlen($nik_wali) <16 ){
                 echo "<script>alert('NIK WALI HARUS TERDIRI DARI 16 DIGIT! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
             }elseif(strlen($nik_wali) > 16) {
