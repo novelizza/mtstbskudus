@@ -619,6 +619,7 @@
         // Handle error
         }else {
             // echo curl_exec($curl);
+            $response;
             echo "<script>alert('INPUT DATA PRESTASI 3 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 2!'); window.location.href = 'data-diri.php';</script>";
         }
     }
