@@ -2477,7 +2477,7 @@
                                     if($objectPPPP->response == 200) {
                                         $resultP = $objectPPPP->result;
 
-                                        $prestasires1 = $resultP->prestasi1;
+                                        $prestasires1 = $resultP->prestasi2;
                                         $tahunres1 = $prestasires1->tahun;
                                         $nama_lombares1 = $prestasires1->nama_lomba;
                                         $bidang_lombares1 = $prestasires1->bidang_lomba;
