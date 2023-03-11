@@ -2502,7 +2502,9 @@
                                         $peringkatres3 = $prestasires3->peringkat_diraih;
 
                                     }
-                                     echo 
+
+                                    echo $prestasi2;
+                                    echo $prestasi3;
 
                                     curl_close($curlPRESTASI);
                                 ?>
