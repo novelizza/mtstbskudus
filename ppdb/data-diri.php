@@ -464,7 +464,7 @@
         $tingkat1 = $_POST['tingkat_1'];
         $peringkat1 = $_POST['peringkat_1'];
 
-        $data_prestasi = array(
+        $data_prestasi1 = array(
             'prestasi_ke' => $prestasi1,
             'tahun' => $tahun1,
             'nama_lomba' => $nama1,
@@ -485,7 +485,7 @@
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => http_build_query($data_prestasi),
+        CURLOPT_POSTFIELDS => http_build_query($data_prestasi1),
         CURLOPT_HTTPHEADER => array(
             'session:'.$session.'',
             'Content-Type: application/x-www-form-urlencoded'
@@ -2424,7 +2424,7 @@
                                     <input type="text" class="form-control" name="tingkat_1" required>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Peirngkat Yang Diraih</b></label>
+                                    <label for=""><b>Peringkat Yang Diraih</b></label>
                                     <input type="text" class="form-control" name="peringkat_1" required>
                                 </div>
                                 <div class="text-center">
