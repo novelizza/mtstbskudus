@@ -2468,19 +2468,6 @@
                                     
                                     $responsePRESTASI = curl_exec($curlPRESTASI);
                                     $objectPRESTAST = json_decode($responsePRESTASI,true);
-
-                                    echo $objectPRESTAST;
-
-                                    // if($objectPRESTAST->response == 200) {
-                                    //     $resultPrestasi = $objectPRESTAST->response;
-                                    //     'prestasi_ke' = $resultPrestasi->pretasi_ke,
-                                    //     'tahun' = $resultPrestasi->tahun,
-                                    //     'nama_lomba' => $nama3,
-                                    //     'bidang_lomba' => $bidang3,
-                                    //     'nama_penyelenggara' => $penyelenggara3,
-                                    //     'lomba_tingkat' => $tingkat3,
-                                    //     'peringkat_diraih' => $peringkat3
-                                    // }
                                     curl_close($curl);
                                 ?>
                                 <div class="col-md-12">
