@@ -2473,11 +2473,11 @@
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP, true);
-                                    foreach($resultPPP['result'] as $ppp) {
-                                        echo $ppp['nama_lomba'];
-                                    }
                                     
-                                    echo $objectPPPP['result'];
+                                    $resultPPP = $objectPPPP['result'];
+                                    $nama_lomba = $resultPPP['nama_lomba'];
+
+                                    echo $nama_lomba;
                                     
                                     curl_close($curlPRESTASI);
                                 ?>
