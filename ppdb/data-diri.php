@@ -2242,7 +2242,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
                                     <textarea class="form-control" style="height: 100px" name="alamat_lengkap_ayah"
-                                        value="<?php echo $alamatAyahTampil; ?>" required></textarea>
+                                        required><?php echo $alamatAyahTampil; ?></textarea>
                                 </div><br>
                                 <!-- End Data Alamat Ayah Kandung -->
 
@@ -2274,37 +2274,37 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Kabupaten / Kota</b></label>
                                     <input type="text" class="form-control" name="kabupaten_ibu"
-                                        value="<?php echo $kabupatenIbuTampil; ?>" required>>
+                                        value="<?php echo $kabupatenIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kecamatan</b></label>
                                     <input type="text" class="form-control" name="kecamatan_ibu"
-                                        value="<?php echo $kecamatanIbuTampil; ?>" required>>
+                                        value="<?php echo $kecamatanIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kelurahan</b></label>
                                     <input type="text" class="form-control" name="kelurahan_ibu"
-                                        value="<?php echo $kelurahanIbuTampil; ?>" required>>
+                                        value="<?php echo $kelurahanIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
                                     <input type="number" class="form-control" name="rt_ibu"
-                                        value="<?php echo $rtIbuTampil; ?>" required>>
+                                        value="<?php echo $rtIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RW</b></label>
                                     <input name="rw_ibu" type="number" class="form-control"
-                                        value="<?php echo $rwIbuTampil; ?>" required>>
+                                        value="<?php echo $rwIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
                                     <input type="number" class="form-control" name="pos_ibu"
-                                        value="<?php echo $posIbuTampil; ?>" required>>
+                                        value="<?php echo $posIbuTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
                                     <textarea name="alamat_lengkap_ibu" class="form-control" style="height: 100px"
-                                        value="<?php echo $alamatIbuTampil; ?>" required>></textarea>
+                                        required><?php echo $alamatIbuTampil; ?></textarea>
                                 </div><br>
                                 <!-- End Data Alamat Ibu Kandung -->
 
@@ -2366,7 +2366,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
                                     <textarea name="alamat_lengkap_wali" class="form-control" style="height: 100px"
-                                        value="<?php echo $alamatWaliTampil; ?>" required></textarea>
+                                        required><?php echo $alamatWaliTampil; ?></textarea>
                                 </div><br>
                                 <!-- End Data Alamat Wali -->
 
@@ -2397,37 +2397,37 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Kabupaten / Kota</b></label>
                                     <input type="text" class="form-control" name="kabupaten_siswa"
-                                        value="<?php echo $kabupatenSiswaTampil; ?>" required>>
+                                        value="<?php echo $kabupatenSiswaTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kecamatan</b></label>
                                     <input type="text" class="form-control" name="kecamatan_siswa"
-                                        value="<?php echo $kecamatanSiswaTampil; ?>" required>>
+                                        value="<?php echo $kecamatanSiswaTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kelurahan</b></label>
                                     <input type="text" class="form-control" name="kelurahan_siswa"
-                                        value="<?php echo $kelurahanSiswaTampil; ?>" required>>
+                                        value="<?php echo $kelurahanSiswaTampil; ?>" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RT</b></label>
                                     <input type="number" class="form-control" name="rt_siswa"
-                                        value="<?php echo $rtSiswaTampil; ?>" required>>
+                                        value="<?php echo $rtSiswaTampil; ?>" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>RW</b></label>
                                     <input type="number" class="form-control" name="rw_siswa"
-                                        value="<?php echo $rwSiswaTampil; ?>" required>>
+                                        value="<?php echo $rwSiswaTampil; ?>" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for=""><b>Kode Pos</b></label>
                                     <input type="number" class="form-control" name="pos_siswa"
-                                        value="<?php echo $posSiswaTampil; ?>" required>>
+                                        value="<?php echo $posSiswaTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Alamat Lengkap</b></label>
                                     <textarea class="form-control" style="height: 100px" name="alamat_lengkap_siswa"
-                                        value="<?php echo $alamatSiswaTampil; ?>" required>></textarea>
+                                        required><?php echo $alamatSiswaTampil; ?></textarea>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Pondok Pesantren</b></label>
