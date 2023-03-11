@@ -208,6 +208,7 @@
                     ));
 
                     $response = curl_exec($curl);
+                    curl_close($curl);
                     
 
                         if (curl_errno($curl)) {
@@ -215,10 +216,9 @@
                         echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
                         // Handle error
                     }else {
-                        // echo curl_exec($curl);
+                        echo $response;
                         echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
                     }
-                    curl_close($curl);
                 // }elseif($nik_walii == NULL || $nik_wali == "-"){
                 //     $nama_wali = NULL;
                 //     $warga_wali = NULL;
