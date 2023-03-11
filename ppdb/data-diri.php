@@ -612,7 +612,7 @@
 
         $response = curl_exec($curl);
 
-        curl_close($curl);
+        // curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
             echo "<script>alert('INPUT DATA PRESTASI 3 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
@@ -622,6 +622,7 @@
             $response;
             echo "<script>alert('INPUT DATA PRESTASI 3 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 2!'); window.location.href = 'data-diri.php';</script>";
         }
+        curl_close($curl);
     }
 ?>
 
