@@ -736,7 +736,7 @@
                                         $citaTampil = $resultSiswa->cita_cita;
                                         $noTampil = $resultSiswa->no_hp;
                                         $biayaTampil = $resultSiswa->yang_membiayai;
-                                        $kebutuhanTampil = $resultSiswa->kebutuhanKhusus;
+                                        $kebutuhanTampil = $resultSiswa->kebutuhan_khusus;
                                         $praSekolahTampil = $resultSiswa->prasekolah;
                                         $asalSekolahTampil = $resultSiswa->asal_sekolah;
                                         $kipTampil = $resultSiswa->kip;
