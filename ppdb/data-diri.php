@@ -2476,7 +2476,7 @@
 
                                     if($objectPPPP == 200) {
                                         $resultP = $objectPPPP['result'];
-                                        $nama_lomba = $resultP->nama_lomba;
+                                        $nama_lomba = $resultP[0];
                                     }
 
                                     echo $nama_lomba;
