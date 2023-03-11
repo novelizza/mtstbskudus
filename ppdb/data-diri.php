@@ -906,7 +906,7 @@
                                         Prasekolah</label>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Asal Sekolah</b></label>
+                                    <label for=""><b>Asal Sekolah (SD/MI)</b></label>
                                     <input type="text" class="form-control" name="sekolah_siswa"
                                         value="<?php echo $asalSekolahTampil ;?>">
                                     <label style="font-style: italic; color: grey;">NB : Asal Sekolah Harus Lebih Dari 3
