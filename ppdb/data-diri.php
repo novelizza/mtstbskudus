@@ -192,7 +192,7 @@
                     $curl = curl_init();
 
                     curl_setopt_array($curl, array(
-                    CURLOPT_URL => 'https://image.mtsnutbs.sch.id/siswa/data-orangtua',
+                    CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,
@@ -216,7 +216,8 @@
                         echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
                         // Handle error
                     }else {
-                        echo $data_ortu;
+                        // echo $data_ortu;
+                        echo $response;
                         // echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
                     }
                 // }elseif($nik_walii == NULL || $nik_wali == "-"){
