@@ -381,11 +381,6 @@
             $ponpes = "";
         }
 
-        // echo $tinggal_ayah;
-        // echo $tinggal_ibu;
-        // echo $tinggal_wali;
-        // echo $tinggal_siswa;
-
         $data_alamat_all = array(
             'tinggal_luar_negeri_ayah' => $tinggal_ayah,
             'kepemilikan_rumah_ayah' => $milik_rumah_ayah,
@@ -444,7 +439,7 @@
 
         $response = curl_exec($curl);
 
-        curl_close($curl);
+        // curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
             echo $response;
@@ -455,6 +450,7 @@
             echo $response;
             echo "<script>alert('INPUT DATA ALAMAT BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
         }
+        curl_close($curl);
     }
 
     if(isset($_POST['data_prestasi_siswa_1'])) {
