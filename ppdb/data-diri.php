@@ -501,7 +501,7 @@
         // Handle error
         }else {
             // echo curl_exec($curl);
-            echo "<script>alert('INPUT DATA PRESTASI 1 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 2!'); window.location.href = 'data-diri.php';</script>";
+            echo "<script>alert('INPUT DATA PRESTASI 1 BERHASIL!'); window.location.href = 'data-diri.php';</script>";
         }
     }
 
@@ -551,7 +551,7 @@
         // Handle error
         }else {
             // echo curl_exec($curl);
-            echo "<script>alert('INPUT DATA PRESTASI 2 BERHASIL! SILAHKAN LANJUT UNTUK MENGISI PRESTASTI 3!'); window.location.href = 'data-diri.php';</script>";
+            echo "<script>alert('INPUT DATA PRESTASI 2 BERHASIL!'); window.location.href = 'data-diri.php';</script>";
         }
     }
 
