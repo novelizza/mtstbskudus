@@ -2473,7 +2473,7 @@
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP, true);
-                                    $resultPPP = $objectPPPP['result'];
+                                    $resultPPP = $objectPPPP['result']['nama_lomba'];
                                     
                                     
                                     
