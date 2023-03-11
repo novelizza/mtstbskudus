@@ -2469,7 +2469,7 @@
                                     $responsePRESTASI = curl_exec($curlPRESTASI);
                                     $objectPRESTASI = json_decode($responsePRESTASI, true);
 
-                                    echo $objectPRESTASI['response'];
+                                    echo $responsePRESTASI;
 
                                     
                                     curl_close($curlPRESTASI);
