@@ -2473,7 +2473,8 @@
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP, true);
-                                    $resultPPP = $objectPPPP['response'];
+                                    $resultPPP = $objectPPPP['result'];
+                                    
                                     
                                     
                                     curl_close($curlPRESTASI);
