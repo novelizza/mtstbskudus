@@ -217,8 +217,8 @@
                         // Handle error
                     }else {
                         // echo $data_ortu;
-                        echo $response;
-                        // echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
+                        // echo $response;
+                        echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
                     }
                 // }elseif($nik_walii == NULL || $nik_wali == "-"){
                 //     $nama_wali = NULL;
