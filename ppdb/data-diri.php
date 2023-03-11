@@ -1273,84 +1273,84 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_ayah" required>
                                         <?php
-                                            if($penghasilanAyahTampil == "Kurang Dari 5000000") {
-                                                echo "<option value='Kurang Dari 5000000' selected>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                            if($penghasilanAyahTampil == "Kurang Dari 500000") {
+                                                echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "5000000-10000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000' selected>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "500000-1000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000' selected>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "10000000-20000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "1000000-2000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000' selected>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000' selected>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "20000000-30000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "2000000-300000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' selected>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000' selected>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "30000000-50000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "3000000-5000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000' selected>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000' selected>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "Diatas 50000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanAyahTampil == "Diatas 5000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
+                                                echo "<option value='DIATAS 5000000' selected>Lebih Dari Rp 5.000.000</option>";
                                             }else {
                                                 echo "<option value='-' selected>-</option>";
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
                                             }
                                         ?>
                                     </select>
@@ -1638,84 +1638,84 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_ibu" required>
                                         <?php
-                                            if($penghasilanIbuTampil == "Kurang Dari 5000000") {
-                                                echo "<option value='Kurang Dari 5000000' selected>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                            if($penghasilanIbuTampil == "Kurang Dari 500000") {
+                                                echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanIbuTampil == "5000000-10000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000' selected>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "500000-1000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000' selected>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanIbuTampil == "10000000-20000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "1000000-2000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000' selected>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000' selected>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanIbuTampil == "20000000-30000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "2000000-300000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' selected>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000' selected>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanIbuTampil == "30000000-50000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "3000000-5000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000' selected>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000' selected>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanIbuTampil == "Diatas 50000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanIbuTampil == "Diatas 5000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
+                                                echo "<option value='DIATAS 5000000' selected>Lebih Dari Rp 5.000.000</option>";
                                             }else {
                                                 echo "<option value='-' selected>-</option>";
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
                                             }
                                         ?>
                                     </select>
@@ -1978,84 +1978,84 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_wali" required>
                                         <?php
-                                            if($penghasilanWaliTampil == "Kurang Dari 5000000") {
-                                                echo "<option value='Kurang Dari 5000000' selected>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                            if($penghasilanWaliTampil == "Kurang Dari 500000") {
+                                                echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanWaliTampil == "5000000-10000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000' selected>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "500000-1000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000' selected>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanWaliTampil == "10000000-20000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "1000000-2000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000' selected>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000' selected>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000'>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanWaliTampil == "20000000-30000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "2000000-300000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' selected>Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000' selected>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanWaliTampil == "30000000-50000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "3000000-5000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000' selected>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000' selected>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
-                                            }elseif($penghasilanWaliTampil == "Diatas 50000000") {
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
+                                            }elseif($penghasilanWaliTampil == "Diatas 5000000") {
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000' selected>Lebih Dari Rp 50.000.000</option>";
+                                                echo "<option value='DIATAS 5000000' selected>Lebih Dari Rp 5.000.000</option>";
                                             }else {
                                                 echo "<option value='-' selected>-</option>";
-                                                echo "<option value='Kurang Dari 5000000'>Kurang Dari Rp 5.000.000</option>";
-                                                echo "<option value='5000000-10000000'>Rp 5.000.000 - Rp 10.000.000
+                                                echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
+                                                echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
-                                                echo "<option value='10000000-20000000'>Rp 10.000.000 - Rp 20.000.000
+                                                echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='20000000-30000000' >Rp 20.000.000 - Rp 30.000.000
+                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
-                                                echo "<option value='30000000-50000000'>Rp 30.000.000 - Rp 50.000.000
+                                                echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
-                                                echo "<option value='Diatas 50000000'>Lebih Dari Rp 50.000.000</option>";
+                                                echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
                                             }
                                         ?>
                                     </select>
