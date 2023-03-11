@@ -447,10 +447,12 @@
         curl_close($curl);
         if (curl_errno($curl)) {
             $errorMessage = curl_error($curl);
+            echo $response;
             echo "<script>alert('INPUT DATA ALAMAT GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
         // Handle error
         }else {
             // echo curl_exec($curl);
+            echo $response;
             echo "<script>alert('INPUT DATA ALAMAT BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
         }
     }
