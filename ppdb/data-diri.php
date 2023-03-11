@@ -2484,6 +2484,23 @@
                                         $penyelenggarares1 = $prestasires1->nama_penyelenggara;
                                         $lomba_tingkatres1 = $prestasires1->lomba_tingkat;
                                         $peringkatres1 = $prestasires1->peringkat_diraih;
+
+                                        $prestasires2 = $resultP->prestasi2;
+                                        $tahunres2 = $prestasires2->tahun;
+                                        $nama_lombares2 = $prestasires2->nama_lomba;
+                                        $bidang_lombares2 = $prestasires2->bidang_lomba;
+                                        $penyelenggarares2 = $prestasires2->nama_penyelenggara;
+                                        $lomba_tingkatres2 = $prestasires2->lomba_tingkat;
+                                        $peringkatres2 = $prestasires2->peringkat_diraih;
+
+                                        $prestasires3 = $resultP->prestasi3;
+                                        $tahunres3 = $prestasires3->tahun;
+                                        $nama_lombares3 = $prestasires3->nama_lomba;
+                                        $bidang_lombares3 = $prestasires3->bidang_lomba;
+                                        $penyelenggarares3 = $prestasires3->nama_penyelenggara;
+                                        $lomba_tingkatres3 = $prestasires3->lomba_tingkat;
+                                        $peringkatres3 = $prestasires3->peringkat_diraih;
+
                                     }
 
                                     curl_close($curlPRESTASI);
