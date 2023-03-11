@@ -2467,7 +2467,7 @@
                                     <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_2"
                                         style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
                                 </div>
-                            </form>
+                            </form><br>
                             <form class="row g-3" action="" method="post">
                                 <div class="col-md-12">
                                     <span class="badge"
