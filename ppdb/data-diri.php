@@ -2449,6 +2449,40 @@
                         <div class="tab-pane fade show" id="contact1-justified" role="tabpanel"
                             aria-labelledby="home-tab">
                             <form class="row g-3" action="" method="post">
+                                <?php
+                                    $curlPRESTASI = curl_init();
+
+                                    curl_setopt_array($curlPRESTASI, array(
+                                    CURLOPT_URL => 'image.mtstbskudus.sch.id/api/siswa/data-prestasi',
+                                    CURLOPT_RETURNTRANSFER => true,
+                                    CURLOPT_ENCODING => '',
+                                    CURLOPT_MAXREDIRS => 10,
+                                    CURLOPT_TIMEOUT => 0,
+                                    CURLOPT_FOLLOWLOCATION => true,
+                                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                    CURLOPT_CUSTOMREQUEST => 'GET',
+                                    CURLOPT_HTTPHEADER => array(
+                                        'session: '.$session.''
+                                    ),
+                                    ));
+                                    
+                                    $responsePRESTASI = curl_exec($curlPRESTASI);
+                                    $objectPRESTAST = json_decode($responsePRESTASI,true);
+
+                                    echo $objectPRESTAST;
+
+                                    // if($objectPRESTAST->response == 200) {
+                                    //     $resultPrestasi = $objectPRESTAST->response;
+                                    //     'prestasi_ke' = $resultPrestasi->pretasi_ke,
+                                    //     'tahun' = $resultPrestasi->tahun,
+                                    //     'nama_lomba' => $nama3,
+                                    //     'bidang_lomba' => $bidang3,
+                                    //     'nama_penyelenggara' => $penyelenggara3,
+                                    //     'lomba_tingkat' => $tingkat3,
+                                    //     'peringkat_diraih' => $peringkat3
+                                    // }
+                                    curl_close($curl);
+                                ?>
                                 <div class="col-md-12">
                                     <span class="badge"
                                         style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Prestasi
