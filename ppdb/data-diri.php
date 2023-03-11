@@ -2471,7 +2471,7 @@
                                 // echo $objectPRESTASI;
 
                                 
-                                curl_close($curl);
+                                curl_close($curlPRESTASI);
                             ?>
                             <form class="row g-3" action="" method="post">
                                 <div class="col-md-12">
