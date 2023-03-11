@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <b>Nama Calon Siswa</b>
+                                        <b>Nama Siswa</b>
                                     </div>
                                     <div class="col">
                                         <p>: <?php echo $nama_lengkap; ?></p>
@@ -173,68 +173,9 @@
                     </div>
                 </div><!-- End Card with an image on left -->
 
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">
-                                <center>
-                                    Tes Imla' Pegon
-                                </center>
-                            </th>
-                            <th scope="col">
-                                <center>
-                                    Tes CBT
-                                </center>
-                            </th>
-                            <th scope="col">
-                                <center>
-                                    Tes Baca Al-Qur'an
-                                </center>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="width: 33%">
-                                <center>
-                                    <div style="height: 200px; position: relative;">
-                                        <span
-                                            style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
-                                            (...........................) <br>
-                                            <i>Nama terang dan ttd</i>
-                                        </span>
-                                    </div>
-                                </center>
-                            </td>
-                            <td style="width: 33%">
-                                <center>
-                                    <div style="height: 200px; position: relative;">
-                                        <span
-                                            style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
-                                            (...........................) <br>
-                                            <i>Nama terang dan ttd</i>
-                                        </span>
-                                    </div>
-                                </center>
-                            </td>
-                            <td style="width: 33%">
-                                <center>
-                                    <div style="height: 200px; position: relative;">
-                                        <span
-                                            style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0);">
-                                            (...........................) <br>
-                                            <i>Nama terang dan ttd</i>
-                                        </span>
-                                    </div>
-                                </center>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
                 <b><i>
                         <p>*Keterangan :</p>
-                        <p>1. Kartu harap dibawa ketika mengikuti tes seleksi.</p>
+                        <p>1. Bukti Pembayaran Harap Disimpan Dengan Baik.</p>
                         <p>2. Tes seleksi dilaksanakan mulai pukul 08.00 WIB.</p></b></i>
 
     </main>
