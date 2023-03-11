@@ -98,7 +98,7 @@
     if(isset($_POST['data_ortu_wali'])) {
         $nama_ayah = $_POST['nama_ayah'];
         $status_ayah = $_POST['status_ayah'];
-        $warga_ayah = $_POST['warga-ayah'];
+        $warga_ayah = $_POST['warga_ayah'];
         $nik_ayah = $_POST['nik_ayah'];
         $lahir_ayah = $_POST['lahir_ayah'];
         $tanggal_ayah = $_POST['tanggal_ayah'];
@@ -109,7 +109,7 @@
 
         $nama_ibu = $_POST['nama_ibu'];
         $status_ibu = $_POST['status_ibu'];
-        $warga_ibu = $_POST['warga-ibu'];
+        $warga_ibu = $_POST['warga_ibu'];
         $nik_ibu = $_POST['nik_ibu'];
         $lahir_ibu = $_POST['lahir_ibu'];
         $tanggal_ibu = $_POST['tanggal_ibu'];
@@ -119,7 +119,7 @@
         $hp_ibu = $_POST['hp_ibu'];
         
         $nama_wali = $_POST['nama_wali'];
-        $warga_wali = $_POST['warga-wali'];
+        $warga_wali = $_POST['warga_wali'];
         $nik_wali = $_POST['nik_wali'];
         $lahir_wali = $_POST['lahir_wali'];
         $tanggal_wali = $_POST['tanggal_wali'];
