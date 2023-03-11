@@ -137,8 +137,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <center>
-                                            <h2><i class="bi bi-check-circle-fill"
-                                                    style="background-color: #4ECB71;"></i></h2>
+                                            <h2><i class="bi bi-check-circle-fill" style="color: #4ECB71;"></i></h2>
                                             <h4><?php echo $va; ?></h4>
                                             <h4>PEMBAYARAN TELAH BERHASIL!</h4>
                                         </center>
@@ -150,27 +149,23 @@
                                                 <p>: <?php echo $nisn; ?></p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <b>Nama Calon Siswa</b>
-                                            </div>
-                                            <div class="col">
-                                                <p>: <?php echo $nama_lengkap; ?></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <b>Tempat, Tanggal Lahir</b>
-                                            </div>
-                                            <div class="col">
-                                                <p>: <?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
-                                            </div>
-                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <b>Nama Calon Siswa</b>
                                     </div>
                                     <div class="col">
-                                        <img src="https://image.mtsnutbs.sch.id/avatar/<?php echo $avatar; ?>"
-                                            class="img-fluid rounded-start" alt="..."
-                                            style="margin:10px; height: 150px; width: 150px; float: right;">
+                                        <p>: <?php echo $nama_lengkap; ?></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <b>Tempat, Tanggal Lahir</b>
+                                    </div>
+                                    <div class="col">
+                                        <p>: <?php echo $tempat_lahir; ?>, <?php echo $tanggal_lahir; ?></p>
                                     </div>
                                 </div>
                             </div>
