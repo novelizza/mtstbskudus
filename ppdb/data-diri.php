@@ -2449,6 +2449,11 @@
                         <div class="tab-pane fade show" id="contact1-justified" role="tabpanel"
                             aria-labelledby="home-tab">
                             <form class="row g-3" action="" method="post">
+                                <div class="col-md-12">
+                                    <span class="badge"
+                                        style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Prestasi
+                                        1</span>
+                                </div>
                                 <?php
                                     $curlPRESTASI = curl_init();
 
@@ -2471,11 +2476,6 @@
                                     curl_close($curlPRESTASI);
                                     echo $responsePPP;
                                 ?>
-                                <div class="col-md-12">
-                                    <span class="badge"
-                                        style="background-color: #4ECB71; width: 100%; float: left; font-size: 16px;">Prestasi
-                                        1</span>
-                                </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi1" value="1">
