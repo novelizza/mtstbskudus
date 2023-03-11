@@ -2074,7 +2074,7 @@
                                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                                     CURLOPT_CUSTOMREQUEST => 'GET',
                                     CURLOPT_HTTPHEADER => array(
-                                        'session: d02cea9eb0f2a278586240d8fde91e19'
+                                        'session: '.$session.''
                                     ),
                                     ));
 
