@@ -2453,26 +2453,23 @@
                                     $curlPRESTASI = curl_init();
 
                                     curl_setopt_array($curlPRESTASI, array(
-                                    CURLOPT_URL => 'image.mtstbskudus.sch.id/api/siswa/data-prestasi',
-                                    CURLOPT_RETURNTRANSFER => true,
-                                    CURLOPT_ENCODING => '',
-                                    CURLOPT_MAXREDIRS => 10,
-                                    CURLOPT_TIMEOUT => 0,
-                                    CURLOPT_FOLLOWLOCATION => true,
-                                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                                    CURLOPT_CUSTOMREQUEST => 'GET',
-                                    CURLOPT_HTTPHEADER => array(
+                                      CURLOPT_URL => 'image.mtstbskudus.sch.id/api/siswa/data-prestasi',
+                                      CURLOPT_RETURNTRANSFER => true,
+                                      CURLOPT_ENCODING => '',
+                                      CURLOPT_MAXREDIRS => 10,
+                                      CURLOPT_TIMEOUT => 0,
+                                      CURLOPT_FOLLOWLOCATION => true,
+                                      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                      CURLOPT_CUSTOMREQUEST => 'GET',
+                                      CURLOPT_HTTPHEADER => array(
                                         'session: '.$session.''
-                                    ),
+                                      ),
                                     ));
                                     
-                                    $responsePRESTASI = curl_exec($curlPRESTASI);
-                                    $objectPRESTASI = json_decode($responsePRESTASI, true);
-
-                                    echo $responsePRESTASI;
-
+                                    $responsePPP = curl_exec($curlPRESTASI);
                                     
                                     curl_close($curlPRESTASI);
+                                    echo $responsePPP;
                                 ?>
                                 <div class="col-md-12">
                                     <span class="badge"
