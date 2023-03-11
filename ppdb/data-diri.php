@@ -2473,12 +2473,13 @@
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP, true);
-                                    $resultPPP = $objectPPPP['result']['nama_lomba'];
+                                    foreach($resultPPP['result'] as $ppp) {
+                                        echo $ppp['nama_lomba'];
+                                    }
                                     
                                     
                                     
                                     curl_close($curlPRESTASI);
-                                    echo $resultPPP;
                                 ?>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
