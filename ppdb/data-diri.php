@@ -789,7 +789,7 @@
                                                 echo "<option value='1' selected>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }else {
-                                                echo "<option value='' selected></option>";
+                                                echo "<option value='-' selected>-</option>";
                                                 echo "<option value='1'>WNI (Warga Negara Indonesia)</option>";
                                                 echo "<option value='0'>WNA (Warga Negara Asing)</option>";
                                             }
@@ -1762,7 +1762,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
                                     <input type="text" class="form-control" name="nik_wali"
-                                        value="<?php echo $nikWaliTampil; ?>" required>
+                                        value="<?php echo $nikWaliTampil; ?>">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
