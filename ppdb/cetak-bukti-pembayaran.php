@@ -175,8 +175,7 @@
 
                 <b><i>
                         <p>*Keterangan :</p>
-                        <p>1. Bukti Pembayaran Harap Disimpan Dengan Baik.</p>
-                        <p>2. Tes seleksi dilaksanakan mulai pukul 08.00 WIB.</p></b></i>
+                        <p>1. Bukti Pembayaran Harap Disimpan Dengan Baik.</p></b></i>
 
     </main>
 
