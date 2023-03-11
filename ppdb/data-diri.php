@@ -2503,9 +2503,6 @@
 
                                     }
 
-                                    echo $prestasi2;
-                                    echo $prestasi3;
-
                                     curl_close($curlPRESTASI);
                                 ?>
                                 <div class="col-md-12">
