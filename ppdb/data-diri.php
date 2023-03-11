@@ -1744,7 +1744,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
                                     <input type="text" class="form-control" name="nik_wali"
-                                        value="<?php echo $nikWaliTampil; ?>">
+                                        value="<?php echo $nikWaliTampil; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
