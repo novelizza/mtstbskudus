@@ -2474,7 +2474,7 @@
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP);
 
-                                    if($objectPPPP == 200) {
+                                    if($objectPPPP->response == 200) {
                                         $resultP = $objectPPPP->result;
 
                                         $prestasires1 = $resultP->prestasi1;
@@ -2502,6 +2502,7 @@
                                         $peringkatres3 = $prestasires3->peringkat_diraih;
 
                                     }
+                                     echo 
 
                                     curl_close($curlPRESTASI);
                                 ?>
