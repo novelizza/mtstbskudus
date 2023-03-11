@@ -217,7 +217,7 @@
                         // Handle error
                     }else {
                         // echo $data_ortu;
-                        // echo $response;
+                        echo $response;
                         // echo "<script>alert('INPUT DATA DIRI ORANG TUA/WALI BERHASIL! SILAHKAN LANJUT UNTUK MENGISI DATA ALAMAT DAN PRESTASTI!'); window.location.href = 'data-diri.php';</script>";
                     }
                 // }elseif($nik_walii == NULL || $nik_wali == "-"){
@@ -1279,7 +1279,7 @@
                                                 </option>";
                                                 echo "<option value='1000000-2000000'>Rp 1.000.000 - Rp 2.000.000
                                                 </option>";
-                                                echo "<option value='2000000-3000000'>Rp 2.000.000 - Rp 3.000.000
+                                                echo "<option value='2000000-300000'>Rp 2.000.000 - Rp 3.000.000
                                                 </option>";
                                                 echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
@@ -1306,7 +1306,7 @@
                                                 echo "<option value='3000000-5000000'>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
                                                 echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "2000000-300000") {
+                                            }elseif($penghasilanAyahTampil == "2000000-3000000") {
                                                 echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
