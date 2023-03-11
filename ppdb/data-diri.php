@@ -2477,7 +2477,7 @@
                                     if($objectPPPP->response == 200) {
                                         $resultP = $objectPPPP->result;
 
-                                        $prestasires1 = $resultP->prestasi2;
+                                        $prestasires1 = $resultP->prestasi1;
                                         $tahunres1 = $prestasires1->tahun;
                                         $nama_lombares1 = $prestasires1->nama_lomba;
                                         $bidang_lombares1 = $prestasires1->bidang_lomba;
@@ -2553,27 +2553,33 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi2" value="2">
-                                    <input type="number" class="form-control" name="tahun_lomba_2" required>
+                                    <input type="number" class="form-control" name="tahun_lomba_2"
+                                        value="<?php echo $tahunres2; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control" name="nama_lomba_2" required>
+                                    <input type="text" class="form-control" name="nama_lomba_2"
+                                        value="<?php echo $nama_lombares2; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control" name="bidang_lomba_2" required>
+                                    <input type="text" class="form-control" name="bidang_lomba_2"
+                                        value="<?php echo $bidang_lombares2; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control" name="penyelenggara_2" required>
+                                    <input type="text" class="form-control" name="penyelenggara_2"
+                                        value="<?php echo $penyelenggarares2; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control" name="tingkat_2" required>
+                                    <input type="text" class="form-control" name="tingkat_2"
+                                        value="<?php echo $lomba_tingkatres2; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peringkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control" name="peringkat_2" required>
+                                    <input type="text" class="form-control" name="peringkat_2"
+                                        value="<?php echo $peringkatres2; ?>" required>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_2"
@@ -2589,27 +2595,33 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi3" value="3">
-                                    <input type="number" class="form-control" name="tahun_lomba_3" required>
+                                    <input type="number" class="form-control" name="tahun_lomba_3"
+                                        value="<?php echo $tahunres3; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control" name="nama_lomba_3" required>
+                                    <input type="text" class="form-control" name="nama_lomba_3"
+                                        value="<?php echo $nama_lombares3; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control" name="bidang_lomba_3" required>
+                                    <input type="text" class="form-control" name="bidang_lomba_3"
+                                        value="<?php echo $bidang_lombares3; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control" name="penyelenggara_3" required>
+                                    <input type="text" class="form-control" name="penyelenggara_3"
+                                        value="<?php echo $penyelenggarares3; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control" name="tingkat_3" required>
+                                    <input type="text" class="form-control" name="tingkat_3"
+                                        value="<?php echo $lomba_tingkatres3; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peringkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control" name="peringkat_3" required>
+                                    <input type="text" class="form-control" name="peringkat_3"
+                                        value="<?php echo $peringkatres3; ?>" required>
                                 </div><br>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_3"
