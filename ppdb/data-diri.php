@@ -189,10 +189,10 @@
                         'no_hp_wali' => $hp_wali
                     );
         
-                    $curlPOSTORTU = curl_init();
+                    $curl = curl_init();
 
-                    curl_setopt_array($curlPOSTORTU, array(
-                    CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
+                    curl_setopt_array($curl, array(
+                    CURLOPT_URL => 'https://image.mtsnutbs.sch.id/siswa/data-orangtua',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,
@@ -202,16 +202,16 @@
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_POSTFIELDS => http_build_query($data_ortu),
                     CURLOPT_HTTPHEADER => array(
-                        'session: '.$session.'',
+                        'session: 1f6f25d751f291a41b18cc7b85d783d1',
                         'Content-Type: application/x-www-form-urlencoded'
                     ),
                     ));
 
-                    $response = curl_exec($curlPOSTORTU);
-        
-                    curl_close($curlPOSTORTU);
-                        if (curl_errno($curlPOSTORTU)) {
-                        $errorMessage = curl_error($curlPOSTORTU);
+                    $response = curl_exec($curl);
+                    curl_close($curl);
+
+                        if (curl_errno($curl)) {
+                        $errorMessage = curl_error($curlP);
                         echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
                         // Handle error
                     }else {
