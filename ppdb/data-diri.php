@@ -2472,41 +2472,52 @@
                                     ));
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
-                                    $objectPPPP = json_decode($responsePPP, true);
+                                    $objectPPPP = json_decode($responsePPP);
 
                                     if($objectPPPP == 200) {
-                                        $resultP = $objectPPPP['result'];
-                                        $nama_lomba = $resultP[0];
+                                        $resultP = $objectPPPP->result;
+
+                                        $prestasires1 = $resultP->prestasi1;
+                                        $tahunres1 = $prestasires1->tahun;
+                                        $nama_lombares1 = $prestasires1->nama_lomba;
+                                        $bidang_lombares1 = $prestasires1->bidang_lomba;
+                                        $penyelenggarares1 = $prestasires1->nama_penyelenggara;
+                                        $lomba_tingkatres1 = $prestasires1->lomba_tingkat;
+                                        $peringkatres1 = $prestasires1->peringkat_diraih;
                                     }
 
-                                    echo $nama_lomba;
-                                    
                                     curl_close($curlPRESTASI);
                                 ?>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
                                     <input type="hidden" class="form-control" name="prestasi1" value="1">
-                                    <input type="number" class="form-control" name="tahun_lomba_1" required>
+                                    <input type="number" class="form-control" name="tahun_lomba_1"
+                                        value="<?php echo $tahunres1; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lomba</b></label>
-                                    <input type="text" class="form-control" name="nama_lomba_1" required>
+                                    <input type="text" class="form-control" name="nama_lomba_1"
+                                        value="<?php echo $nama_lombares1; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Bidang Lomba</b></label>
-                                    <input type="text" class="form-control" name="bidang_lomba_1" required>
+                                    <input type="text" class="form-control" name="bidang_lomba_1"
+                                        value="<?php echo $bidang_lombares1; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Penyelenggara</b></label>
-                                    <input type="text" class="form-control" name="penyelenggara_1" required>
+                                    <input type="text" class="form-control" name="penyelenggara_1"
+                                        value="<?php echo $penyelenggarares1; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Lomba Tingkat</b></label>
-                                    <input type="text" class="form-control" name="tingkat_1" required>
+                                    <input type="text" class="form-control" name="tingkat_1"
+                                        value="<?php echo $lomba_tingkatres1; ?>" required>
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Peringkat Yang Diraih</b></label>
-                                    <input type="text" class="form-control" name="peringkat_1" required>
+                                    <input type="text" class="form-control" name="peringkat_1"
+                                        value="<?php echo $peringkatres1; ?>" required>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-lg" name="data_prestasi_siswa_1"
