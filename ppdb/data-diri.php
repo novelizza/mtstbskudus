@@ -189,9 +189,9 @@
                         'no_hp_wali' => $hp_wali
                     );
         
-                    $curl = curl_init();
-        
-                    curl_setopt_array($curl, array(
+                    $curlPOSTORTU = curl_init();
+
+                    curl_setopt_array($curlPOSTORTU, array(
                     CURLOPT_URL => 'http://localhost:4000/api/siswa/data-orangtua',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
@@ -206,12 +206,12 @@
                         'Content-Type: application/x-www-form-urlencoded'
                     ),
                     ));
+
+                    $response = curl_exec($curlPOSTORTU);
         
-                    $response = curl_exec($curl);
-        
-                    curl_close($curl);
-                        if (curl_errno($curl)) {
-                        $errorMessage = curl_error($curl);
+                    curl_close($curlPOSTORTU);
+                        if (curl_errno($curlPOSTORTU)) {
+                        $errorMessage = curl_error($curlPOSTORTU);
                         echo "<script>alert('INPUT DATA ORANG TUA/WALI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
                         // Handle error
                     }else {
@@ -2182,6 +2182,15 @@
                                     <label for=""><b>Status Kepemilikan Rumah</b></label>
                                     <select class="form-select" aria-label="Default select example"
                                         name="milik_rumah_ayah">
+                                        <?php
+                                            if($milikRumahAyahTampil == "Milik Sendiri") {
+                                                echo "<option value='MILIK SENDIRI' selected>Milik Sendiri</option>";
+                                                echo "";
+                                                echo "";
+                                                echo "";
+                                                echo "";
+                                            }
+                                        ?>
                                         <option value="" selected></option>
                                         <option value="MILIK SENDIRI">Milik Sendiri</option>
                                         <option value="MILIK ORANG TUA">Milik Orang Tua</option>
