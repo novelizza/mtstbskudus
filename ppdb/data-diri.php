@@ -2473,9 +2473,11 @@
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP, true);
+                                    $resultPPP = $objectPPPP['response'];
+                                    
                                     
                                     curl_close($curlPRESTASI);
-                                    echo $objectPPPP['response'];
+                                    echo $resultPPP;
                                 ?>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
