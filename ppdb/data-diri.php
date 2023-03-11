@@ -2474,8 +2474,12 @@
                                     $responsePPP = curl_exec($curlPRESTASI);
                                     $objectPPPP = json_decode($responsePPP, true);
                                     
-                                    $resultPPP = $objectPPPP['result'];
-                                    $nama_lomba = $resultPPP['nama_lomba'];
+                                    $resultPPP = $objectPPPP['response'];
+
+                                    if($objectPPPP == 200) {
+                                        $resultP = $objectPPPP['result'];
+                                        $nama_lomba = $resultP['nama_lomba'];
+                                    }
 
                                     echo $nama_lomba;
                                     
