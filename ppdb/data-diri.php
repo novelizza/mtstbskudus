@@ -2477,7 +2477,7 @@
                                         echo $ppp['nama_lomba'];
                                     }
                                     
-                                    
+                                    echo $objectPPPP['result'];
                                     
                                     curl_close($curlPRESTASI);
                                 ?>
