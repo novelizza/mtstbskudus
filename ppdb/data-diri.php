@@ -471,7 +471,7 @@
             'bidang_lomba' => $bidang1,
             'nama_penyelenggara' => $penyelenggara1,
             'lomba_tingkat' => $tingkat1,
-            'peringkat_yang_diraih' => $peringkat1
+            'peringkat_diraih' => $peringkat1
         );
 
         $curl = curl_init();
@@ -521,7 +521,7 @@
             'bidang_lomba' => $bidang2,
             'nama_penyelenggara' => $penyelenggara2,
             'lomba_tingkat' => $tingkat2,
-            'peringkat_yang_diraih' => $peringkat2
+            'peringkat_diraih' => $peringkat2
         );
 
         $curl = curl_init();
@@ -571,7 +571,7 @@
             'bidang_lomba' => $bidang3,
             'nama_penyelenggara' => $penyelenggara3,
             'lomba_tingkat' => $tingkat3,
-            'peringkat_yang_diraih' => $peringkat3
+            'peringkat_diraih' => $peringkat3
         );
 
         $curl = curl_init();
@@ -2460,7 +2460,7 @@
                                     <input type="text" class="form-control" name="tingkat_2" required>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Peirngkat Yang Diraih</b></label>
+                                    <label for=""><b>Peringkat Yang Diraih</b></label>
                                     <input type="text" class="form-control" name="peringkat_2" required>
                                 </div>
                                 <div class="text-center">
@@ -2496,7 +2496,7 @@
                                     <input type="text" class="form-control" name="tingkat_3" required>
                                 </div>
                                 <div class="col-md-12">
-                                    <label for=""><b>Peirngkat Yang Diraih</b></label>
+                                    <label for=""><b>Peringkat Yang Diraih</b></label>
                                     <input type="text" class="form-control" name="peringkat_3" required>
                                 </div><br>
                                 <div class="text-center">
