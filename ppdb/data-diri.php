@@ -2458,7 +2458,7 @@
                                     $curlPRESTASI = curl_init();
 
                                     curl_setopt_array($curlPRESTASI, array(
-                                      CURLOPT_URL => 'image.mtstbskudus.sch.id/api/siswa/data-prestasi',
+                                      CURLOPT_URL => 'http://localhost:4000/api/siswa/data-prestasi',
                                       CURLOPT_RETURNTRANSFER => true,
                                       CURLOPT_ENCODING => '',
                                       CURLOPT_MAXREDIRS => 10,
