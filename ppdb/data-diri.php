@@ -202,7 +202,7 @@
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_POSTFIELDS => http_build_query($data_ortu),
                     CURLOPT_HTTPHEADER => array(
-                        'session: 1f6f25d751f291a41b18cc7b85d783d1',
+                        'session: '.$session.'',
                         'Content-Type: application/x-www-form-urlencoded'
                     ),
                     ));
