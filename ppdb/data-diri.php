@@ -2472,9 +2472,10 @@
                                     ));
                                     
                                     $responsePPP = curl_exec($curlPRESTASI);
+                                    $objectPPPP = json_decode($responsePPP, true);
                                     
                                     curl_close($curlPRESTASI);
-                                    echo $responsePPP;
+                                    echo $objectPPPP;
                                 ?>
                                 <div class="col-md-12">
                                     <label for=""><b>Tahun</b></label>
