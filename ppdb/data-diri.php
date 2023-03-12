@@ -830,7 +830,7 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="kebutuhan_siswa" required>
                                         <?php
-                                            if($kebutuhanTampil == 0 {
+                                            if($kebutuhanTampil == 0) {
                                                 echo "<option value='0' selected>Ya</option>";
                                                 echo "<option value='1'>Tidak</option>";
                                             }elseif($kebutuhanTampil == 1) {
