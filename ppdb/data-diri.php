@@ -2625,6 +2625,12 @@
                                         style="background-color: #4ECB71; border-color: #4ECB71; width: 100%;">SIMPAN</button>
                                 </div>
                             </form>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="beranda.php" class="btn btn-success" name="data_prestasi_siswa_3"
+                                        style="width: 100%;">SELESAIKAN PENDAFTARAN</a>
+                                </div>
+                            </div>
                         </div>
                         <!-- End Data Prestasi -->
                     </div><!-- End Default Tabs -->
