@@ -236,22 +236,22 @@
                                 </a>
                             </div>";
                         }elseif($isLengkap == 1 && $tujuan_masuk == "MTS") {
-                            // echo "
-                            //     <div class='col-md-12'>
-                            //         <a class='btn' href='cetak-kartu-tes.php'
-                            //             style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
-                            //             <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
-                            //         </a>
-                            //     </div>
-                            // ";
-                             echo "
+                            echo "
                                 <div class='col-md-12'>
-                                    <button class='btn' onClick='false'
-                                        style='background-color: grey; color: white; width: 100%;' name='cetak_kartu_tes'>
-                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes Saat Ini Dalam Perbaikan</span>
-                                    </button>
+                                    <a class='btn' href='cetak-kartu-tes.php'
+                                        style='background-color: #4E53CB; color: white; width: 100%;' name='cetak_kartu_tes'>
+                                        <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes</span>
+                                    </a>
                                 </div>
                             ";
+                            //  echo "
+                            //     <div class='col-md-12'>
+                            //         <button class='btn' onClick='false'
+                            //             style='background-color: grey; color: white; width: 100%;' name='cetak_kartu_tes'>
+                            //             <i class='bi bi-printer-fill'></i><span> Cetak Kartu Tes Saat Ini Dalam Perbaikan</span>
+                            //         </button>
+                            //     </div>
+                            // ";
                         }
                     ?>
                     <?php
