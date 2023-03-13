@@ -147,7 +147,7 @@
                                             </div>
                                             <div class="col">
                                                 <?php
-                                                echo $id_ujian;
+                                                // echo $id_ujian;
                                                     if($id_ujian <= 200){
                                                         echo "<p>: Senin, 1 Mei 2023 M </p>";
                                                         if($id_ujian <= 20){
