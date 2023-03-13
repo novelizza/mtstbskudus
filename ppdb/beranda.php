@@ -139,6 +139,9 @@
                     <li class="dropdown" style="background-color: #0275d8;">
                         <a href=""><span> Akun</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
+                            <li><a href="/foto-brosur.php">Brosur</a></li>
+                        </ul>
+                        <ul>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </li>
