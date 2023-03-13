@@ -42,7 +42,7 @@
 
             $status_va = $result->statusVa;
             $isLengkap = $result->isLengkap;
-
+            
             $data_siswa = $result->data_siswa;
             
             $id_akun_siswa = $data_siswa->id_akun_siswa;
