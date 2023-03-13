@@ -180,101 +180,11 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
                                         <td><a href="detail-siswa.php" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacobs</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">7</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">8</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                        <td><a href="#" class="btn btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">9</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-primary" style="width: 100%;">MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">10</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
-                                        <td><span class="badge bg-info" style="width: 100%;">MI/MPTS</span></td>
-                                        <td><a href="#" class="btn  btn-sm"
                                                 style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a>
                                         </td>
                                     </tr>

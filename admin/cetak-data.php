@@ -208,9 +208,9 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>1122334455667788</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>0811223344</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td><span class="badge bg-success" style="width: 100%;">MTS</span></td>
                                     </tr>
                                 </tbody>
