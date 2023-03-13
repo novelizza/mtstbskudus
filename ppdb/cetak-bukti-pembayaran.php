@@ -41,10 +41,6 @@
             $result = $object->result;
 
             $status_va = $result->statusVa;
-            $dataUjianSiswa = $result->dataUjian;
-            $id_ujian = $dataUjianSiswa->id_ujian;
-            $id_akun_ujian = $dataUjianSiswa->id_akun_siswa;
-            $nomor_ujian = $dataUjianSiswa->nomor_ujian;
 
 
             $data_siswa = $result->data_siswa;
@@ -151,7 +147,7 @@
                                                 <b>NISN</b>
                                             </div>
                                             <div class="col">
-                                                <p>: <?php echo $nomor_ujian; ?></p>
+                                                <p>: <?php echo $nisn; ?></p>
                                             </div>
                                         </div>
 
@@ -162,7 +158,7 @@
                                         <b>Nama Siswa</b>
                                     </div>
                                     <div class="col">
-                                        <p>: <?php echo $id_ujian; ?></p>
+                                        <p>: <?php echo $nama_lengkap; ?></p>
                                     </div>
                                 </div>
                                 <div class="row">
