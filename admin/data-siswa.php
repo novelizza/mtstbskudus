@@ -248,9 +248,9 @@
                                                 if($row['tujuan_masuk'] === "MTS") {
                                                     $tujuanMasuk = '<span class="badge bg-success" style="width: 100%;">MTS</span>';
                                                 }elseif($row['tujuan_masuk' === "MPTS"]) {
-                                                    $tujuanMasuk = '<span class="badge bg-primary" style="width: 100%;">MTS</span>';
+                                                    $tujuanMasuk = '<span class="badge bg-primary" style="width: 100%;">MPTS</span>';
                                                 }else {
-                                                    $tujuanMasuk = '<span class="badge bg-info" style="width: 100%;">MTS</span>';
+                                                    $tujuanMasuk = '<span class="badge bg-info" style="width: 100%;">Daftar Ulang dari MI</span>';
                                                 }
                                                 echo '<td>'. $tujuanMasuk .' </td>';
                                                 echo '<td> <a href="detail-siswa.php" class="btn  btn-sm"
