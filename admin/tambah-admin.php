@@ -6,35 +6,43 @@
     $session = $_SESSION['session'];
     $session_expiry = $_SESSION['session_expiry'];
 
-    // $curl = curl_init();
+    if(isset($_POST['tambah_admin'])) {
+        $nama_lengkap = $_POST['nama_admin'];
+        $nip = $_POST['nip_admin'];
+        $username_admin = $_POST['username_admin'];
+        $password_admin - $_POST['password_admin'];
 
-    // curl_setopt_array($curl, array(
-    // CURLOPT_URL => 'http://localhost:4000/api/admin/dashboard',
-    // CURLOPT_RETURNTRANSFER => true,
-    // CURLOPT_ENCODING => '',
-    // CURLOPT_MAXREDIRS => 10,
-    // CURLOPT_TIMEOUT => 0,
-    // CURLOPT_FOLLOWLOCATION => true,
-    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    // CURLOPT_CUSTOMREQUEST => 'GET',
-    // CURLOPT_HTTPHEADER => array(
-    //     'session: '.$session.''
-    // ),
-    // ));
+        $curl = curl_init();
 
-    // $response = curl_exec($curl);
-    // $object = json_decode($response);
+        $data_admin = array(
+            'nama_lengkap' => $nama_lengkap,
+            'nip' => $nip,
+            'username' => $username_admin,
+            'password' => $password_admin
+        );
 
-    // if($object->response == 200) {
-    //     $result = $object->result;
-    //     $allSiswa = $result->allSiswa;
-    //     $allMTSSiswa = $result->allMTSSiswa;
-    //     $allMPTSSiswa = $result->AllMPTSSiswa;
-    // }
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/add-admin',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => http_build_query($data_admin),
+        CURLOPT_HTTPHEADER => array(
+            'session: '.$session.'',
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
 
-    // curl_close($curl);
-    // echo $response;
+        $response = curl_exec($curl);
 
+        curl_close($curl);
+        echo $response;
+    }
+    
     if(time() > $session_expiry) {
         header('location: login.php');
         session_destroy();
@@ -214,27 +222,31 @@
                             <h5 class="card-title">
                             </h5>
 
-                            <form action="">
+                            <form action="" method="post">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">NIP</label>
-                                        <input type="number" class="form-control" id="inputEmail5">
+                                        <input type="number" class="form-control" id="inputEmail5" name="nip_admin"
+                                            required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="inputEmail5">
+                                        <input type="text" class="form-control" id="inputEmail5" name="nama_admin"
+                                            required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="inputEmail5">
+                                        <input type="text" class="form-control" id="inputEmail5" name="username_admin"
+                                            required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="inputEmail5">
+                                        <input type="password" class="form-control" id="inputEmail5"
+                                            name="password_admin" required>
                                     </div>
                                     <div class="col-md-12">
-                                        <button class="btn btn-success" style="width: 100%;"
-                                            type="submit">SIMPAN</button>
+                                        <button class="btn btn-success" style="width: 100%;" type="submit"
+                                            name="tambah_admin">SIMPAN</button>
                                     </div>
                                 </div>
                             </form>
