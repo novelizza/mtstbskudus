@@ -171,8 +171,7 @@
                                                 <b>Ruang Tes</b>
                                             </div>
                                             <div class="col">
-                                                <p>:
-                                                    <?php
+                                                <?php
                                                     // echo "<p>: Ruang Kelas 1</p>";
                                                         // for ($i = 1; $i <= 600; $i++) {
                                                         //     if ($id_ujian % 20 == 0) {
@@ -189,7 +188,6 @@
                                                             break;
                                                         }
                                                     ?>
-                                                </p>
                                             </div>
                                         </div>
                                         <div class="row">
