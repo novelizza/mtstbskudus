@@ -186,6 +186,7 @@
                                                         foreach ($data_id_ujian as $id_ujian) {
                                                             $nomor_ruang_kelas = ceil($id_ujian/20); // Hitung nomor ruang kelas berdasarkan nilai id_ujian
                                                             echo "<p>: Ruang Kelas " . $nomor_ruang_kelas . "</p>";
+                                                            break;
                                                         }
                                                     ?>
                                                 </p>
