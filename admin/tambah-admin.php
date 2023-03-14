@@ -49,7 +49,7 @@
         // Handle error
         }else {
             // echo $response;
-            echo "<script>alert('TAMBAH DATA ADMIN BERHASIL!'); window.location.href = 'data-admin.php.php';</script>";
+            echo "<script>alert('TAMBAH DATA ADMIN BERHASIL!'); window.location.href = 'data-admin.php';</script>";
         }
     }
     

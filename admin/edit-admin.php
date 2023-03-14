@@ -17,6 +17,9 @@ function session_expired($session_expiry) {
     }
 }
 
+if(isset($_POST['edit_admin'])){
+    
+}
 
     $curl = curl_init();
 
@@ -58,7 +61,7 @@ function session_expired($session_expiry) {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        if($password == "" || $password == NULL) {
+        if($password === "" || $password == NULL) {
             $data_baru_no_pass = array(
                 'nama_lengkap' => $nama,
                 'nip' => $nip,
@@ -68,7 +71,7 @@ function session_expired($session_expiry) {
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://localhost:4000/api/admin/add-admin',
+            CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/add-admin',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -85,14 +88,16 @@ function session_expired($session_expiry) {
 
             $response = curl_exec($curl);
 
-            if($response) {
-                header('location: data-admin.php');
-                exit;
-            }else {
-                echo curl_error($curl);
-            }
-
             curl_close($curl);
+
+            if (curl_errno($curl)) {
+                $errorMessage = curl_error($curl);
+                echo "<script>alert('EDIT DATA ADMIN GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'edit-admin.php';</script>";
+            // Handle error
+            }else {
+                // echo $response;
+                echo "<script>alert('EDIT DATA ADMIN BERHASIL!'); window.location.href = 'data-admin.php';</script>";
+            }
         }else {
             $data_baru = array(
                 'nama_lengkap' => $nama,
@@ -104,7 +109,7 @@ function session_expired($session_expiry) {
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://localhost:4000/api/admin/add-admin',
+            CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/add-admin',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -121,14 +126,16 @@ function session_expired($session_expiry) {
 
             $response = curl_exec($curl);
 
-            if($response) {
-                header('location: data-admin.php');
-                exit;
-            }else {
-                echo curl_error($curl);
-            }
-
             curl_close($curl);
+
+            if (curl_errno($curl)) {
+                $errorMessage = curl_error($curl);
+                echo "<script>alert('EDIT DATA ADMIN GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'edit-admin.php';</script>";
+            // Handle error
+            }else {
+                // echo $response;
+                echo "<script>alert('EDIT DATA ADMIN BERHASIL!'); window.location.href = 'data-admin.php';</script>";
+            }
         }
     }
 ?>
@@ -305,7 +312,7 @@ function session_expired($session_expiry) {
                             <h5 class="card-title">
                             </h5>
 
-                            <form action="">
+                            <form action="" method="post">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">NIP</label>
