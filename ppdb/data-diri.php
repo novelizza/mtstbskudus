@@ -621,9 +621,9 @@
 
         // Proses respon dari server (opsional)
         if ($response === false) {
-            echo "<script>alert('INPUT DATA UJIAN GAGAL!'); window.location.href = 'data-diri.php';</script>";
+            echo "<script>alert('pendaftaran gagal, silahkan cek data anda!'); window.location.href = 'data-diri.php';</script>";
         }else {
-            echo "<script>alert('INPUT DATA UJIAN BERHASIL!'); window.location.href = 'beranda.php';</script>";
+            echo "<script>alert('Pendaftaran berhasil, semua data sudah tersimpan dan langkah selanjutnya silahkan cetak kartu!'); window.location.href = 'beranda.php';</script>";
             
         }
 

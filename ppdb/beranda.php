@@ -172,7 +172,7 @@
                                 }
                             ?>
                             <h4><span class='badge bg-warning' style='width: 100%;'>Mohon Cek Kembali Data Diri Anda
-                                    (Data Siswa, Data Ortu, Data Alamat dan Data Prestasi)</span></h4>
+                                    (Data Siswa, Data Ortu, Data Alamat dan Data Prestasi) Lalu menekan tombol SELESAIKAN PENDAFTARAN</span></h4>
 
                         </div>
                     </div>
