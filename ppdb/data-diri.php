@@ -604,36 +604,32 @@
     }
     
     if(isset($_POST['daftar_ujian'])) {
-        $curl = curl_init();
+        $ch = curl_init();
 
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'http://localhost:4000/api/siswa/ujian',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => '',
-            CURLOPT_HTTPHEADER => array(
-                'session:'.$session.'',
-                'Content-Type: application/x-www-form-urlencoded'
-            ),
-        ));
+        // Set opsi untuk pengiriman data
+        curl_setopt($ch, CURLOPT_URL, "http://localhost:4000/api/siswa/ujian");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, '');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        $response = curl_exec($curl);
+        // Eksekusi pengiriman data
+        $response = curl_exec($ch);
 
-        curl_close($curl);
-        if (curl_errno($curl)) {
-            $errorMessage = curl_error($curl);
-            echo "<script>alert('INPUT DATA DIRI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
-        // Handle error
+        // Tutup koneksi cURL
+        curl_close($ch);
+
+        // Proses respon dari server (opsional)
+        if ($response) {
+              echo $response;
         }else {
-            // echo curl_exec($curl);
-            // echo "<script>alert('INPUT DATA DIRI BERHASIL!'); window.location.href = 'beranda.php';</script>";
             echo $response;
         }
+
+
+
+
+
+
     }
 ?>
 
