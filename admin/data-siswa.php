@@ -253,7 +253,7 @@
                                                     $tujuanMasuk = '<span class="badge bg-info" style="width: 100%;">Daftar Ulang dari MI</span>';
                                                 }
                                                 echo '<td>'. $tujuanMasuk .' </td>';
-                                                echo '<td> <a href="detail-siswa.php" class="btn  btn-sm"
+                                                echo '<td> <a href="detail-siswa.php?nomor='. $row['id_akun_siswa'].'" class="btn  btn-sm"
                                                 style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a> </td>';
                                                 echo '</tr>';
                                           
