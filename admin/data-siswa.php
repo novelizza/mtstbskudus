@@ -213,6 +213,7 @@
                                         $response = curl_exec($curl);
                                         
                                         curl_close($curl);
+                                        echo $response;
                                     ?>
                                     <tr>
                                         <th scope="row">1</th>
