@@ -172,7 +172,6 @@
                                             </div>
                                             <div class="col">
                                                 <?php
-                                                echo $id_ujian;
                                                     // echo "<p>: Ruang Kelas 1</p>";
                                                         // for ($i = 1; $i <= 600; $i++) {
                                                         //     if ($id_ujian % 20 == 0) {
