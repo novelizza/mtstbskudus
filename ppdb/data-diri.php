@@ -2651,10 +2651,12 @@
                                 </div>
                             </form><br>
                             <div class="row">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-success" name="daftar_ujian"
-                                        style="width: 100%;">SELESAIKAN PENDAFTARAN</button>
-                                </div>
+                                <form action="" method="post">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-success" name="daftar_ujian"
+                                            style="width: 100%;">SELESAIKAN PENDAFTARAN</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <!-- End Data Prestasi -->
