@@ -244,7 +244,10 @@
                                                 echo '<td>' . $counter . '</td>';
                                                 echo '<td>' . $row['nisn'] . '</td>';
                                                 echo '<td>' . $row['nama_lengkap'] . '</td>';
-                                                echo '<td>' . $row['nomor_hp'] . '</td>';
+                                                echo '<td>' . $row['no_hp'] . '</td>';
+                                                echo '<td> - </td>';
+                                                echo '<td> <a href="detail-siswa.php" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a> </td>';
                                                 echo '</tr>';
                                           
                                                 $counter++;
