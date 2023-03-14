@@ -7,7 +7,7 @@
     $session_expiry = $_SESSION['session_expiry'];
 
     if(isset($_POST['tambah_admin'])) {
-        echo "<script>alert('INPUT DATA PRESTASI 3 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+        // echo "<script>alert('INPUT DATA PRESTASI 3 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
 
         $nama_lengkap = $_POST['nama_admin'];
         $nip = $_POST['nip_admin'];
