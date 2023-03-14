@@ -604,11 +604,12 @@
     }
     
     if(isset($_POST['daftar_ujian'])) {
+        echo "<script>alert('INPUT DATA UJIAN BERHASIL!'); window.location.href = 'data-diri.php';</script>";
         $ch = curl_init();
 
         // Set opsi untuk pengiriman data
         curl_setopt($ch, CURLOPT_URL, "http://localhost:4000/api/siswa/ujian");
-        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, '');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -624,11 +625,6 @@
         }else {
             echo $response;
         }
-
-
-
-
-
 
     }
 ?>
