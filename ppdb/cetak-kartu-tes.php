@@ -176,8 +176,6 @@
                                                         for ($i = 1; $i <= 600; $i++) {
                                                             if ($i % 20 == 0) {
                                                                 echo "Ruang Kelas " . ($i / 20) . "<br>";
-                                                            } else {
-                                                                echo $i . "<br>";
                                                             }
                                                         }
                                                     ?>
