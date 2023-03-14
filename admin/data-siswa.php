@@ -181,7 +181,7 @@
                         <div class="card-body">
                             <h5 class="card-title"></h5>
 
-                            <table class="table table-borderless datatable">
+                            <!-- <table class="table table-borderless datatable">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
@@ -192,8 +192,8 @@
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <?php
+                                <tbody> -->
+                            <?php
                                         $curl = curl_init();
 
                                         curl_setopt_array($curl, array(
@@ -211,11 +211,53 @@
                                         ));
                                         
                                         $response = curl_exec($curl);
-                                        
+                                        $response_err = curl_error($curl);
                                         curl_close($curl);
-                                        echo $response;
+
+                                        // echo $response;
+
+                                        if ($err) {
+                                            echo 'Error: ' . $err;
+                                          } else {
+                                            $data = json_decode($response, true);
+                                          
+                                            if ($data['response'] === 200) {
+                                              $result = $data['result'];
+                                          
+                                              $counter = 1;
+                                          
+                                              echo '<table class="table table-borderless datatable">';
+                                              echo '<thead>';
+                                              echo '<tr>';
+                                              echo '<th scope="col">No</th>';
+                                              echo '<th scope="col">NISN</th>';
+                                              echo '<th scope="col">NAMA LENGKAP</th>';
+                                              echo '<th scope="col">NOMOR HP</th>';
+                                              echo '<th scope="col">STATUS SISWA</th>';
+                                              echo '<th scope="col">AKSI</th>';
+                                              echo '</tr>';
+                                              echo '</thead>';
+                                              echo '<tbody>';
+                                          
+                                              foreach ($result as $row) {
+                                                echo '<tr>';
+                                                echo '<td>' . $counter . '</td>';
+                                                echo '<td>' . $row['nisn'] . '</td>';
+                                                echo '<td>' . $row['nama_lengkap'] . '</td>';
+                                                echo '<td>' . $row['nomor_hp'] . '</td>';
+                                                echo '</tr>';
+                                          
+                                                $counter++;
+                                              }
+                                          
+                                              echo '</tbody>';
+                                              echo '</table>';
+                                            } else {
+                                              echo 'Error: ' . $data['message'];
+                                            }
+                                        }
                                     ?>
-                                    <tr>
+                            <!-- <tr>
                                         <th scope="row">1</th>
                                         <td></td>
                                         <td></td>
@@ -226,7 +268,7 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
 
                         </div>
 
