@@ -40,7 +40,15 @@
         $response = curl_exec($curl);
 
         curl_close($curl);
-        echo $response;
+        
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            // echo "<script>alert('INPUT DATA PRESTASI 3 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+        // Handle error
+        }else {
+            echo $response;
+            // echo "<script>alert('INPUT DATA PRESTASI 3 BERHASIL!'); window.location.href = 'data-diri.php';</script>";
+        }
     }
     
     if(time() > $session_expiry) {
