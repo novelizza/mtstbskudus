@@ -615,7 +615,7 @@
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
-            // CURLOPT_POSTFIELDS => http_build_query($data_prestasi),
+            CURLOPT_POSTFIELDS => '',
             CURLOPT_HTTPHEADER => array(
                 'session:'.$session.'',
                 'Content-Type: application/x-www-form-urlencoded'
@@ -631,7 +631,8 @@
         // Handle error
         }else {
             // echo curl_exec($curl);
-            echo "<script>alert('INPUT DATA DIRI BERHASIL!'); window.location.href = 'beranda.php';</script>";
+            // echo "<script>alert('INPUT DATA DIRI BERHASIL!'); window.location.href = 'beranda.php';</script>";
+            echo $response;
         }
     }
 ?>
