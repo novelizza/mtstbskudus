@@ -174,11 +174,18 @@
                                                 <p>:
                                                     <?php
                                                     // echo "<p>: Ruang Kelas 1</p>";
-                                                        for ($i = 1; $i <= 600; $i++) {
-                                                            if ($id_ujian % 20 == 0) {
-                                                                echo "<p>: Ruang Kelas " . ($i / 20) . "</p>";
-                                                            }
-                                                            break;
+                                                        // for ($i = 1; $i <= 600; $i++) {
+                                                        //     if ($id_ujian % 20 == 0) {
+                                                        //         echo "<p>: Ruang Kelas " . ($i / 20) . "</p>";
+                                                        //     }
+                                                        //     break;
+                                                        // }
+                                                        $data_id_ujian = range(1, 600); // array berisi angka dari 1 hingga 600
+
+                                                        // Proses pembagian ke dalam kelas
+                                                        foreach ($data_id_ujian as $id_ujian) {
+                                                            $nomor_ruang_kelas = ceil($id_ujian/20); // Hitung nomor ruang kelas berdasarkan nilai id_ujian
+                                                            echo "<p>: Ruang Kelas " . $nomor_ruang_kelas . "</p>";
                                                         }
                                                     ?>
                                                 </p>
