@@ -182,7 +182,7 @@
                                                         $data_id_ujian = range(1, 600); // array berisi angka dari 1 hingga 600
 
                                                         // Proses pembagian ke dalam kelas
-                                                        foreach ($data_id_ujian as $id_ujian) {
+                                                        foreach ($data_id_ujian as $id_data_ujian) {
                                                             $nomor_ruang_kelas = ceil($id_ujian/20); // Hitung nomor ruang kelas berdasarkan nilai id_ujian
                                                             echo "<p>: Ruang Tes " . $nomor_ruang_kelas . "</p>";
                                                             break;
