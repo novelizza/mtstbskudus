@@ -233,7 +233,7 @@
                                               echo '<th scope="col">NISN</th>';
                                               echo '<th scope="col">NAMA LENGKAP</th>';
                                               echo '<th scope="col">NOMOR HP</th>';
-                                              echo '<th scope="col">STATUS SISWA</th>';
+                                              echo '<th scope="col">TUJUAN MASUK</th>';
                                               echo '<th scope="col">AKSI</th>';
                                               echo '</tr>';
                                               echo '</thead>';
@@ -245,7 +245,14 @@
                                                 echo '<td>' . $row['nisn'] . '</td>';
                                                 echo '<td>' . $row['nama_lengkap'] . '</td>';
                                                 echo '<td>' . $row['no_hp'] . '</td>';
-                                                echo '<td> - </td>';
+                                                if($row['tujuan_masuk'] === "MTS") {
+                                                    $tujuanMasuk = '<span class="badge bg-success" style="width: 100%;">MTS</span>';
+                                                }elseif($row['tujuan_masuk' === "MPTS"]) {
+                                                    $tujuanMasuk = '<span class="badge bg-primary" style="width: 100%;">MTS</span>';
+                                                }else {
+                                                    $tujuanMasuk = '<span class="badge bg-info" style="width: 100%;">MTS</span>';
+                                                }
+                                                echo '<td>'. $tujuanMasuk .' </td>';
                                                 echo '<td> <a href="detail-siswa.php" class="btn  btn-sm"
                                                 style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a> </td>';
                                                 echo '</tr>';
