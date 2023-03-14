@@ -620,10 +620,11 @@
         curl_close($ch);
 
         // Proses respon dari server (opsional)
-        if ($response) {
-            echo "<script>alert('INPUT DATA UJIAN BERHASIL!'); window.location.href = 'beranda.php';</script>";
-        }else {
+        if ($response === false) {
             echo "<script>alert('INPUT DATA UJIAN GAGAL!'); window.location.href = 'data-diri.php';</script>";
+        }else {
+            echo "<script>alert('INPUT DATA UJIAN BERHASIL!'); window.location.href = 'beranda.php';</script>";
+            
         }
 
     }
