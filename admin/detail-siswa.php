@@ -1,4 +1,45 @@
 <?php
+
+    session_start();
+
+    $username = $_SESSION['username'];
+    $session = $_SESSION['session'];
+    $session_expiry = $_SESSION['session_expiry'];
+
+    function session_expired($session_expiry) {
+        $current_time = time();
+        if ($current_time > $session_expiry) {
+            header('location: login.php');
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $id_akun_siswa = $_GET['nomor'];
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/detail-siswa',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_POSTFIELDS => 'id_akun_siswa='.$id_akun_siswa.'',
+    CURLOPT_HTTPHEADER => array(
+        'session: '.$session.'',
+        'Content-Type: application/x-www-form-urlencoded'
+    ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    echo $response;
     
 ?>
 
