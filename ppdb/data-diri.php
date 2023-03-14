@@ -604,7 +604,6 @@
     }
     
     if(isset($_POST['daftar_ujian'])) {
-        echo "<script>alert('INPUT DATA UJIAN BERHASIL!'); window.location.href = 'data-diri.php';</script>";
         $ch = curl_init();
 
         // Set opsi untuk pengiriman data
