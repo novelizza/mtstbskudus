@@ -173,11 +173,11 @@
                                             <div class="col">
                                                 <p>:
                                                     <?php
-                                                        for ($i = 1; $i <= 600; $i++) {
-                                                            if ($i % 20 == 0) {
-                                                                echo "Ruang Kelas " . ($i / 20) . "<br>";
-                                                            }
-                                                        }
+                                                        // for ($i = 1; $i <= 600; $i++) {
+                                                        //     if ($i % 20 == 0) {
+                                                        //         echo "Ruang Kelas " . ($i / 20) . "<br>";
+                                                        //     }
+                                                        // }
                                                     ?>
                                                 </p>
                                             </div>
