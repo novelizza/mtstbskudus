@@ -177,8 +177,8 @@
                                                         for ($i = 1; $i <= 600; $i++) {
                                                             if ($id_ujian % 20 == 0) {
                                                                 echo "<p>: Ruang Kelas " . ($i / 20) . "</p>";
-                                                                break;
                                                             }
+                                                            break;
                                                         }
                                                     ?>
                                                 </p>
