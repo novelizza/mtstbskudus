@@ -611,6 +611,7 @@
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, '');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('session:'.$session.'', 'Content-Type: application/x-www-form-urlencoded'));
 
         // Eksekusi pengiriman data
         $response = curl_exec($ch);
