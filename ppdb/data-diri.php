@@ -602,6 +602,38 @@
             echo "<script>alert('INPUT DATA PRESTASI 3 BERHASIL!'); window.location.href = 'data-diri.php';</script>";
         }
     }
+    
+    if(isset($_POST['daftar_ujian'])) {
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'http://localhost:4000/api/siswa/ujian',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            // CURLOPT_POSTFIELDS => http_build_query($data_prestasi),
+            CURLOPT_HTTPHEADER => array(
+                'session:'.$session.'',
+                'Content-Type: application/x-www-form-urlencoded'
+            ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            echo "<script>alert('INPUT DATA DIRI GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
+        // Handle error
+        }else {
+            // echo curl_exec($curl);
+            echo "<script>alert('INPUT DATA DIRI BERHASIL!'); window.location.href = 'beranda.php';</script>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -2627,8 +2659,8 @@
                             </form><br>
                             <div class="row">
                                 <div class="col">
-                                    <a href="beranda.php" class="btn btn-success" name="data_prestasi_siswa_3"
-                                        style="width: 100%;">SELESAIKAN PENDAFTARAN</a>
+                                    <button type="submit" class="btn btn-success" name="daftar_ujian"
+                                        style="width: 100%;">SELESAIKAN PENDAFTARAN</button>
                                 </div>
                             </div>
                         </div>
