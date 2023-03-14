@@ -148,108 +148,12 @@
                                             <div class="col">
                                                 <?php
                                                 // echo $id_ujian;
-                                                    if($id_ujian <= 200){
+                                                    if($id_ujian <= 600){
                                                         echo "<p>: Senin, 1 Mei 2023 M </p>";
-                                                        if($id_ujian <= 20){
-                                                            $ruangKelas = "Ruang Kelas 1";
-                                                        }elseif($id_ujian <= 21 && $id_ujian <= 40) {
-                                                            $ruangKelas = "Ruang Kelas 2";
-                                                        }elseif($id_ujian <= 41 && $id_ujian <= 60) {
-                                                            $ruangKelas = "Ruang Kelas 3";
-                                                        }elseif($id_ujian <= 61 && $id_ujian <= 80) {
-                                                            $ruangKelas = "Ruang Kelas 4";
-                                                        }elseif($id_ujian <= 81 && $id_ujian <= 100) {
-                                                            $ruangKelas = "Ruang Kelas 5";
-                                                        }elseif($id_ujian <= 101 && $id_ujian <= 120) {
-                                                            $ruangKelas = "Ruang Kelas 6";
-                                                        }elseif($id_ujian <= 121 && $id_ujian <= 140) {
-                                                            $ruangKelas = "Ruang Kelas 7";
-                                                        }elseif($id_ujian <= 141 && $id_ujian <= 160) {
-                                                            $ruangKelas = "Ruang Kelas 8";
-                                                        }elseif($id_ujian <= 161 && $id_ujian <= 180) {
-                                                            $ruangKelas = "Ruang Kelas 9";
-                                                        }elseif($id_ujian <= 181 && $id_ujian <= 200) {
-                                                            $ruangKelas = "Ruang Kelas 10";
-                                                        }else {
-                                                            $ruangKelas = "Hari Selanjutnya";
-                                                        }
-                                                    }elseif($id_ujian <= 201 && $id_ujian <= 400){
+                                                    }elseif($id_ujian <= 601 && $id_ujian <= 1200){
                                                         echo "<p>: Selasa, 2 Mei 2023 M </p>";
-                                                        if($id_ujian <= 201){
-                                                            $ruangKelas = "Ruang Kelas 1";
-                                                        }elseif($id_ujian <= 221 && $id_ujian <= 240) {
-                                                            $ruangKelas = "Ruang Kelas 2";
-                                                        }elseif($id_ujian <= 241 && $id_ujian <= 260) {
-                                                            $ruangKelas = "Ruang Kelas 3";
-                                                        }elseif($id_ujian <= 261 && $id_ujian <= 280) {
-                                                            $ruangKelas = "Ruang Kelas 4";
-                                                        }elseif($id_ujian <= 281 && $id_ujian <= 300) {
-                                                            $ruangKelas = "Ruang Kelas 5";
-                                                        }elseif($id_ujian <= 301 && $id_ujian <= 320) {
-                                                            $ruangKelas = "Ruang Kelas 6";
-                                                        }elseif($id_ujian <= 321 && $id_ujian <= 340) {
-                                                            $ruangKelas = "Ruang Kelas 7";
-                                                        }elseif($id_ujian <= 341 && $id_ujian <= 360) {
-                                                            $ruangKelas = "Ruang Kelas 8";
-                                                        }elseif($id_ujian <= 361 && $id_ujian <= 380) {
-                                                            $ruangKelas = "Ruang Kelas 9";
-                                                        }elseif($id_ujian <= 381 && $id_ujian <= 400) {
-                                                            $ruangKelas = "Ruang Kelas 10";
-                                                        }else {
-                                                            $ruangKelas = "Hari Selanjutnya";
-                                                        }
-                                                    }elseif($id_ujian <= 401 && $id_ujian <= 600){
-                                                        echo "<p>: Rabu, 3 Mei 2023 M </p>";
-                                                        if($id_ujian <= 401){
-                                                            $ruangKelas = "Ruang Kelas 1";
-                                                        }elseif($id_ujian <= 421 && $id_ujian <= 440) {
-                                                            $ruangKelas = "Ruang Kelas 2";
-                                                        }elseif($id_ujian <= 441 && $id_ujian <= 460) {
-                                                            $ruangKelas = "Ruang Kelas 3";
-                                                        }elseif($id_ujian <= 461 && $id_ujian <= 480) {
-                                                            $ruangKelas = "Ruang Kelas 4";
-                                                        }elseif($id_ujian <= 481 && $id_ujian <= 500) {
-                                                            $ruangKelas = "Ruang Kelas 5";
-                                                        }elseif($id_ujian <= 501 && $id_ujian <= 520) {
-                                                            $ruangKelas = "Ruang Kelas 6";
-                                                        }elseif($id_ujian <= 521 && $id_ujian <= 540) {
-                                                            $ruangKelas = "Ruang Kelas 7";
-                                                        }elseif($id_ujian <= 541 && $id_ujian <= 560) {
-                                                            $ruangKelas = "Ruang Kelas 8";
-                                                        }elseif($id_ujian <= 561 && $id_ujian <= 580) {
-                                                            $ruangKelas = "Ruang Kelas 9";
-                                                        }elseif($id_ujian <= 581 && $id_ujian <= 600) {
-                                                            $ruangKelas = "Ruang Kelas 10";
-                                                        }else {
-                                                            $ruangKelas = "Hari Selanjutnya";
-                                                        }
-                                                    }elseif($id_ujian <=601 && $id_ujian <= 800){
-                                                        echo "<p>: Kamis, 4 Mei 2023 M </p>";
-                                                        if($id_ujian <= 601){
-                                                            $ruangKelas = "Ruang Kelas 1";
-                                                        }elseif($id_ujian <= 621 && $id_ujian <= 640) {
-                                                            $ruangKelas = "Ruang Kelas 2";
-                                                        }elseif($id_ujian <= 641 && $id_ujian <= 660) {
-                                                            $ruangKelas = "Ruang Kelas 3";
-                                                        }elseif($id_ujian <= 661 && $id_ujian <= 680) {
-                                                            $ruangKelas = "Ruang Kelas 6";
-                                                        }elseif($id_ujian <= 681 && $id_ujian <= 700) {
-                                                            $ruangKelas = "Ruang Kelas 5";
-                                                        }elseif($id_ujian <= 701 && $id_ujian <= 720) {
-                                                            $ruangKelas = "Ruang Kelas 6";
-                                                        }elseif($id_ujian <= 721 && $id_ujian <= 740) {
-                                                            $ruangKelas = "Ruang Kelas 7";
-                                                        }elseif($id_ujian <= 741 && $id_ujian <= 760) {
-                                                            $ruangKelas = "Ruang Kelas 8";
-                                                        }elseif($id_ujian <= 761 && $id_ujian <= 780) {
-                                                            $ruangKelas = "Ruang Kelas 9";
-                                                        }elseif($id_ujian <= 781 && $id_ujian <= 800) {
-                                                            $ruangKelas = "Ruang Kelas 10";
-                                                        }else {
-                                                            $ruangKelas = "Hari Selanjutnya";
-                                                        }
                                                     }else {
-                                                        echo "<p>: Sabtu, 6 Mei 2023 M </p>";
+                                                        echo "<p>: Next Day </p>";
                                                     }
                                                 ?>
                                             </div>
@@ -269,7 +173,13 @@
                                             <div class="col">
                                                 <p>:
                                                     <?php
-                                                        $ruangKelas;
+                                                        for ($i = 1; $i <= 600; $i++) {
+                                                            if ($i % 20 == 0) {
+                                                                echo "Ruang Kelas " . ($i / 20) . "<br>";
+                                                            } else {
+                                                                echo $i . "<br>";
+                                                            }
+                                                        }
                                                     ?>
                                                 </p>
                                             </div>
