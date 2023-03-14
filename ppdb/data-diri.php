@@ -620,13 +620,10 @@
         curl_close($ch);
 
         // Proses respon dari server (opsional)
-        if (curl_errno($curl)) {
-            $errorMessage = curl_error($curl);
-            echo "<script>alert('INPUT DATA UJIAN GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'data-diri.php';</script>";
-        // Handle error
-        }else {
-            // echo curl_exec($curl);
+        if ($response) {
             echo "<script>alert('INPUT DATA UJIAN BERHASIL!'); window.location.href = 'beranda.php';</script>";
+        }else {
+            echo "<script>alert('INPUT DATA UJIAN GAGAL!'); window.location.href = 'data-diri.php';</script>";
         }
 
     }
