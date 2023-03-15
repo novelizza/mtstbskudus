@@ -292,9 +292,13 @@
                                         <input type="hidden" class="form-control" name="id_siswa_akun"
                                             value="<?= $row['id_akun_siswa']; ?>" required>
                                     </div>
+                                </form>
                             </td>
-                            <td><button type="submit" class="btn  btn-sm" name="simpan_tes"
-                                    style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
+                            <td>
+                                <form action="" method="post">
+                                    <button type="submit" class="btn  btn-sm" name="simpan_tes"
+                                        style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
+                                </form>
                             </td>
                             <?php
                             echo '</tr>';
@@ -309,8 +313,6 @@
                             }
                             }
                             ?>
-
-                            </form>
 
                         </div>
 
