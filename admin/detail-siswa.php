@@ -145,7 +145,7 @@
         $tahun1 = $data_prestasi1->tahun;
         $nama_lomba1 = $data_prestasi1->nama_lomba;
         $bidang_lomba1 = $data_prestasi1->bidang_lomba;
-        $nama_penyelenggara = $data_prestasi1->nama_penyelenggara;
+        $nama_penyelenggara1 = $data_prestasi1->nama_penyelenggara1;
         $lomba_tingkat1 = $data_prestasi1->lomba_tingkat;
         $peringkat_diraih1 = $data_prestasi1->peringkat_diraih;
 
@@ -153,7 +153,7 @@
         $tahun2 = $data_prestasi2->tahun;
         $nama_lomba2 = $data_prestasi2->nama_lomba;
         $bidang_lomba2 = $data_prestasi2->bidang_lomba;
-        $nama_penyelenggara = $data_prestasi2->nama_penyelenggara;
+        $nama_penyelenggara2 = $data_prestasi2->nama_penyelenggara2;
         $lomba_tingkat2 = $data_prestasi2->lomba_tingkat;
         $peringkat_diraih2 = $data_prestasi2->peringkat_diraih;
 
@@ -161,7 +161,7 @@
         $tahun3 = $data_prestasi3->tahun;
         $nama_lomba3 = $data_prestasi3->nama_lomba;
         $bidang_lomba3 = $data_prestasi3->bidang_lomba;
-        $nama_penyelenggara = $data_prestasi3->nama_penyelenggara;
+        $nama_penyelenggara3 = $data_prestasi3->nama_penyelenggara3;
         $lomba_tingkat3 = $data_prestasi3->lomba_tingkat;
         $peringkat_diraih3 = $data_prestasi3->peringkat_diraih;
 
@@ -702,12 +702,12 @@
                                                     <b>PERINGKAT YANG DIRAIH</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    2019 <br>
-                                                    LOMBA MEMASAK <br>
-                                                    KULINER <br>
-                                                    KEMENTRIAN PARIWISATA <br>
-                                                    NASIONAL <br>
-                                                    2 <br>
+                                                    <?= $tahun1; ?> <br>
+                                                    <?= $nama_lomba1; ?> <br>
+                                                    <?= $bidang_lomba1; ?> <br>
+                                                    <?= $nama_penyelenggara1; ?> <br>
+                                                    <?= $lomba_tingkat1; ?> <br>
+                                                    <?= $peringkat_diraih1; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -729,12 +729,12 @@
                                                     <b>PERINGKAT YANG DIRAIH</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    2019 <br>
-                                                    LOMBA MEMASAK <br>
-                                                    KULINER <br>
-                                                    KEMENTRIAN PARIWISATA <br>
-                                                    NASIONAL <br>
-                                                    2 <br>
+                                                    <?= $tahun1; ?> <br>
+                                                    <?= $nama_lomba2; ?> <br>
+                                                    <?= $bidang_lomba2; ?> <br>
+                                                    <?= $nama_penyelenggara2; ?> <br>
+                                                    <?= $lomba_tingkat2; ?> <br>
+                                                    <?= $peringkat_diraih2; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -756,12 +756,12 @@
                                                     <b>PERINGKAT YANG DIRAIH</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    2019 <br>
-                                                    LOMBA MEMASAK <br>
-                                                    KULINER <br>
-                                                    KEMENTRIAN PARIWISATA <br>
-                                                    NASIONAL <br>
-                                                    2 <br>
+                                                    <?= $tahun1; ?> <br>
+                                                    <?= $nama_lomba3; ?> <br>
+                                                    <?= $bidang_lomba3; ?> <br>
+                                                    <?= $nama_penyelenggara3; ?> <br>
+                                                    <?= $lomba_tingkat3; ?> <br>
+                                                    <?= $peringkat_diraih3; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
