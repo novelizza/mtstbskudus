@@ -75,6 +75,8 @@
         $tempat_lahir_ayah = $data_orang_tua->tempat_lahir_ayah;
         $tanggal_lahir_ayah = $data_orang_tua->tanggal_lahir_ayah;
         $pendidikan_terakhir_ayah = $data_orang_tua->pendidikan_terakhir_ayah;
+        $pekerjaan_utama_ayah = $data_orang_tua->pekerjaan_utama_ayah;
+        $penghasilan_rata_rata_ayah = $data_orang_tua->penghasilan_rata_rata_ayah;
         $no_hp_ayah = $data_orang_tua->no_hp_ayah;
 
         $nama_lengkap_ibu = $data_orang_tua->nama_lengkap_ibu;
@@ -84,6 +86,8 @@
         $tempat_lahir_ibu = $data_orang_tua->tempat_lahir_ibu;
         $tanggal_lahir_ibu = $data_orang_tua->tanggal_lahir_ibu;
         $pendidikan_terakhir_ibu = $data_orang_tua->pendidikan_terakhir_ibu;
+        $pekerjaan_utama_ibu = $data_orang_tua->pekerjaan_utama_ibu;
+        $penghasilan_rata_rata_ibu = $data_orang_tua->penghasilan_rata_rata_ibu;
         $no_hp_ibu = $data_orang_tua->no_hp_ibu;
 
         $nama_lengkap_wali = $data_orang_tua->nama_lengkap_wali;
@@ -93,6 +97,8 @@
         $tempat_lahir_wali = $data_orang_tua->tempat_lahir_wali;
         $tanggal_lahir_wali = $data_orang_tua->tanggal_lahir_wali;
         $pendidikan_terakhir_wali = $data_orang_tua->pendidikan_terakhir_wali;
+        $pekerjaan_utama_wali = $data_orang_tua->pekerjaan_utama_wali;
+        $penghasilan_rata_rata_wali = $data_orang_tua->penghasilan_rata_rata_wali;
         $no_hp_wali = $data_orang_tua->no_hp_wali;
 
         $data_alamat = $result->data_alamat;
@@ -431,16 +437,16 @@
                                                     <b>NOMOR HP</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    JOKOWI <br>
-                                                    MASIH HIDUP <br>
-                                                    INDONESIA <br>
-                                                    1122334455667788 <br>
-                                                    KUDUS <br>
-                                                    1975-05-26 <br>
-                                                    S2 <br>
-                                                    DOSEN / GURU <br>
-                                                    5.000.000 - 10.000.000 <br>
-                                                    081122334455 <br>
+                                                    <?= $nama_lengkap_ayah; ?> <br>
+                                                    <?= $status_ayah; ?> <br>
+                                                    <?= $kewarganegaraan_ayah; ?> <br>
+                                                    <?= $nik_ayah; ?> <br>
+                                                    <?= $tempat_lahir_ayah; ?> <br>
+                                                    <?= $tanggal_lahir_ayah; ?> <br>
+                                                    <?= $pendidikan_terakhir_ayah; ?> <br>
+                                                    <?= $pekerjaan_utama_ayah; ?> <br>
+                                                    <?= $penghasilan_rata_rata_ayah; ?><br>
+                                                    <?= $no_hp_ayah; ?><br>
                                                 </div>
                                             </div>
                                         </div>
@@ -466,16 +472,16 @@
                                                     <b>NOMOR HP</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    BUKOWI <br>
-                                                    MASIH HIDUP <br>
-                                                    INDONESIA <br>
-                                                    1122334455667788 <br>
-                                                    KUDUS <br>
-                                                    1975-05-26 <br>
-                                                    S2 <br>
-                                                    DOSEN / GURU <br>
-                                                    5.000.000 - 10.000.000 <br>
-                                                    081122334455 <br>
+                                                    <?= $nama_lengkap_ibu; ?> <br>
+                                                    <?= $status_ibu; ?> <br>
+                                                    <?= $kewarganegaraan_ibu; ?> <br>
+                                                    <?= $nik_ibu; ?> <br>
+                                                    <?= $tempat_lahir_ibu; ?> <br>
+                                                    <?= $tanggal_lahir_ibu; ?> <br>
+                                                    <?= $pendidikan_terakhir_ibu; ?> <br>
+                                                    <?= $pekerjaan_utama_ibu; ?> <br>
+                                                    <?= $penghasilan_rata_rata_ibu; ?> <br>
+                                                    <?= $no_hp_ibu; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -501,16 +507,16 @@
                                                     <b>NOMOR HP</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
+                                                    <?= $nama_lengkap_wali; ?> <br>
+                                                    <?= $status_wali; ?> <br>
+                                                    <?= $kewarganegaraan_wali; ?> <br>
+                                                    <?= $nik_wali; ?> <br>
+                                                    <?= $tempat_lahir_wali; ?> <br>
+                                                    <?= $pendidikan_terakhir_wali; ?> <br>
+                                                    <?= $pekerjaan_utama_wali; ?> <br>
+                                                    <?= $pekerjaan_utama_wali; ?> <br>
+                                                    <?= $penghasilan_rata_rata_wali; ?> <br>
+                                                    <?= $no_hp_wali; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
