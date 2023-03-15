@@ -247,7 +247,8 @@
                                             <option value='1'>MTS</option>
                                             <option value='2'>MPTS</option>
                                         </select>
-                                        <input type="text" class="form-control" name="cita_siswa" required>
+                                        <input type="number" class="form-control" name="cita_siswa"
+                                            value="<?= $row['id_akun_siswa']; ?>" required>
                                     </div>
                             </td>
                             <td><button type="submit" class="btn  btn-sm"
