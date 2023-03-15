@@ -1744,12 +1744,11 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Nama Lengkap</b></label>
                                     <input type="text" class="form-control" name="nama_wali"
-                                        value="<?php echo $namaWaliTampil; ?>" required>
+                                        value="<?php echo $namaWaliTampil; ?>">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Kewarganegaraan</b></label>
-                                    <select class="form-select" aria-label="Default select example" name="warga_wali"
-                                        required>
+                                    <select class="form-select" aria-label="Default select example" name="warga_wali">
                                         <?php
                                             if($wargaWaliTampil == 0){
                                                 echo "<option value='0' selected>WNA (Warga Negara Asing)</option>";
@@ -1768,17 +1767,17 @@
                                 <div class="col-md-12">
                                     <label for=""><b>NIK</b></label>
                                     <input type="text" class="form-control" name="nik_wali"
-                                        value="<?php echo $nikWaliTampil; ?>" required>
+                                        value="<?php echo $nikWaliTampil; ?>">
                                 </div>
                                 <div class="col-md-12">
                                     <label for=""><b>Tempat Lahir</b></label>
                                     <input type="text" class="form-control" name="lahir_wali"
-                                        value="<?php echo $tempatWaliTampil; ?>" required>
+                                        value="<?php echo $tempatWaliTampil; ?>">
                                 </div>
                                 <div class="col-sm-12">
                                     <label for=""><b>Tanggal Lahir</b></label>
                                     <input type="date" class="form-control" name="tanggal_wali"
-                                        value="<?php echo $tanggalWaliTampil; ?>" required>
+                                        value="<?php echo $tanggalWaliTampil; ?>">
                                     <label style="font-style: italic; color: grey;">NB : Pastikan Tanggal Lahir Sesuai
                                         Dengan KK Dengan Format Tanggal/Bulan/Tahun (Jika tidak ada wali, isi
                                         01/01/0001)</label>
@@ -1786,7 +1785,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Pendidikan Terakhir</b></label>
                                     <select class="form-select" aria-label="Default select example"
-                                        name="pendidikan_wali" required>
+                                        name="pendidikan_wali">
                                         <?php
                                             if($pendidikanWaliTampil == "SD"){
                                                 echo "<option value='SD' selected>SD</option>";
@@ -1860,7 +1859,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Pekerjaan Utama</b></label>
                                     <select class="form-select" aria-label="Default select example"
-                                        name="pekerjaan_wali" required>
+                                        name="pekerjaan_wali">
                                         <?php
                                             if($pekerjaanWaliTampil == "TIDAK BEKERJA") {
                                                 echo "<option value='TIDAK BEKERJA' selected>TIDAK BEKERJA</option>";
@@ -1980,7 +1979,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Penghasilan Rata - Rata</b></label>
                                     <select class="form-select" aria-label="Default select example"
-                                        name="penghasilan_wali" required>
+                                        name="penghasilan_wali">
                                         <?php
                                             if($penghasilanWaliTampil == "KURANG DARI 500000") {
                                                 echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
@@ -2069,7 +2068,7 @@
                                 <div class="col-md-12">
                                     <label for=""><b>Nomor HP</b></label>
                                     <input type="text" class="form-control" name="hp_wali"
-                                        value="<?php echo $hpWaliTampil; ?>" required>
+                                        value="<?php echo $hpWaliTampil; ?>">
                                     <label style="font-style: italic; color: grey;">NB : Isi "-" Jika Wali Tidak Punya
                                         Nomor Hp</label>
                                 </div><br>
