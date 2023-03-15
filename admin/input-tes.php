@@ -226,7 +226,7 @@
                                               echo '<th scope="col">NISN</th>';
                                               echo '<th scope="col">NAMA LENGKAP</th>';
                                               echo '<th scope="col">NOMOR HP</th>';
-                                              echo '<th scope="col">TUJUAN MASUK</th>';
+                                              echo '<th scope="col">DITERIMA DI</th>';
                                               echo '<th scope="col">AKSI</th>';
                                               echo '</tr>';
                                               echo '</thead>';
@@ -238,30 +238,32 @@
                                                 echo '<td>' . $row['nisn'] . '</td>';
                                                 echo '<td>' . $row['nama_lengkap'] . '</td>';
                                                 echo '<td>' . $row['no_hp'] . '</td>';
-                                                if($row['tujuan_masuk'] === "MTS") {
-                                                    $tujuanMasuk = '<span class="badge bg-success" style="width: 100%;">MTS</span>';
-                                                }elseif($row['tujuan_masuk' === "MPTS"]) {
-                                                    $tujuanMasuk = '<span class="badge bg-primary" style="width: 100%;">MPTS</span>';
-                                                }else {
-                                                    $tujuanMasuk = '<span class="badge bg-info" style="width: 100%;">Daftar Ulang dari MI</span>';
-                                                }
-                                                echo '<td>'. $tujuanMasuk .' </td>';
-                                                echo '<td> <a href="detail-siswa.php?nomor='. $row['id_akun_siswa'].'" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a> </td>';
-                                                echo '</tr>';
-                                          
-                                                $counter++;
-                                              }
-                                          
-                                              echo '</tbody>';
-                                              echo '</table>';
-                                            } else {
-                                              echo 'Error: ' . $data['message'];
-                                            }
-                                        }
                                     ?>
+                            <td>
+                                <form class="row">
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="Masukkan Nilai Tes">
+                                    </div>
+                            </td>
+                            <td><button type="submit" class="btn  btn-sm"
+                                    style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
+                                </form>
+                            </td>
+                            <?php
+                            echo '</tr>';
 
-                            <table class="table table-borderless datatable">
+                            $counter++;
+                            }
+
+                            echo '</tbody>';
+                            echo '</table>';
+                            } else {
+                            echo 'Error: ' . $data['message'];
+                            }
+                            }
+                            ?>
+
+                            <!-- <table class="table table-borderless datatable">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
@@ -291,7 +293,7 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
 
                         </div>
 
