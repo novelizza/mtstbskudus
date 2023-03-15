@@ -625,7 +625,7 @@
                                                     <b>RT</b><br>
                                                     <b>RW</b><br>
                                                     <b>KODE POS</b><br>
-                                                    <b>ALAMAT</b><br>
+                                                    <b>ALAMAT</b><br><br><br>
                                                     <b>PONDOK PESANTREN</b><br>
                                                 </div>
                                                 <div class="col">
@@ -657,8 +657,8 @@
                                                     <b>KELURAHAN / DESA</b><br>
                                                     <b>RT</b><br>
                                                     <b>RW</b><br>
-                                                    <b>ALAMAT</b><br>
                                                     <b>KODE POS</b><br>
+                                                    <b>ALAMAT</b><br>
                                                 </div>
                                                 <div class="col">
                                                     <?= $provinsi_wali; ?> <br>
@@ -667,8 +667,8 @@
                                                     <?= $kelurahan_desa_wali; ?> <br>
                                                     <?= $RT_wali; ?> <br>
                                                     <?= $RW_wali; ?> <br>
-                                                    <?= $alamat_wali; ?> <br>
                                                     <?= $kode_pos_wali; ?> <br>
+                                                    <?= $alamat_wali; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
