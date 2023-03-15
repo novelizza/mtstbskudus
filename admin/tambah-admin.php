@@ -14,6 +14,8 @@
         $username_admin = $_POST['username_admin'];
         $password_admin - $_POST['password_admin'];
 
+        echo "<script>alert('INPUT DATA PRESTASI 3 GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!');</script>";
+
         $data_admin = array(
             'nama_lengkap' => $nama_lengkap,
             'nip' => $nip,
@@ -238,23 +240,19 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">NIP</label>
-                                        <input type="number" class="form-control" id="inputEmail5" name="nip_admin"
-                                            required>
+                                        <input type="number" class="form-control" name="nip_admin" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="inputEmail5" name="nama_admin"
-                                            required>
+                                        <input type="text" class="form-control" name="nama_admin" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="inputEmail5" name="username_admin"
-                                            required>
+                                        <input type="text" class="form-control" name="username_admin" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="inputEmail5"
-                                            name="password_admin" required>
+                                        <input type="password" class="form-control" name="password_admin" required>
                                     </div>
                                     <div class="col-md-12">
                                         <button class="btn btn-success" style="width: 100%;" type="submit"
