@@ -21,7 +21,7 @@
         $akun_id_siswa = $_POST['id_siswa_akun'];
         
         $data_tes = array(
-            'id_akun_siswa' => 83,
+            'id_akun_siswa' => $akun_id_siswa,
             // 'nilai' => 90,
             'keterangan' => 2
         );
