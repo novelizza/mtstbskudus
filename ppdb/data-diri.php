@@ -1157,117 +1157,117 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="pekerjaan_ayah" required>
                                         <?php
-                                            if($pekerjaanAyahTampil == "Tidak Bekerja") {
-                                                echo "<option value='Tidak Bekerja' selected>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                            if($pekerjaanAyahTampil == "TIDAK BEKERJA") {
+                                                echo "<option value='TIDAK BEKERJA' selected>Tidak Bekerja</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanAyahTampil == "Pensiunan") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan' selected>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanAyahTampil == "PENSIUNAN") {
+                                                echo "<option value='TIDAK BEKERJA'>Tidak Bekerja</option>";
+                                                echo "<option value='PENSIUNAN' selected>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($pekerjaanAyahTampil == "PNS") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>Tidak Bekerja</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS' selected>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWATA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($pekerjaanAyahTampil == "TNI/POLRI") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>Tidak Bekerja</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI' selected>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanAyahTampil == "Dosen/Guru") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanAyahTampil == "DOSEN/GURU") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru' selected>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU' selected>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanAyahTampil == "Pegawai Swasta") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanAyahTampil == "PEGAWAI SWASTA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta' selected>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA' selected>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanAyahTampil == "Wiraswasta") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanAyahTampil == "WIRASWASTA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta' selected>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA' selected>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanAyahTampil == "Buruh (Tani/Pabrik/Bangunan)") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanAyahTampil == "BURUH (TANI/PABRIK/BANGUNAN)") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)' selected>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)' selected>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanAyahTampil == "Lainnya") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanAyahTampil == "LAINNYA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya' selected>Lainnya</option>";
+                                                echo "<option value='LAINNYA' selected>LAINNYA</option>";
                                             }else {
                                                 echo "<option value='-' selected>-</option>";
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }
                                         ?>
                                     </select>
@@ -1522,117 +1522,117 @@
                                     <select class="form-select" aria-label="Default select example" name="pekerjaan_ibu"
                                         required>
                                         <?php
-                                            if($pekerjaanIbuTampil == "Tidak Bekerja") {
-                                                echo "<option value='Tidak Bekerja' selected>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                            if($pekerjaanIbuTampil == "TIDAK BEKERJA") {
+                                                echo "<option value='TIDAK BEKERJA' selected>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanIbuTampil == "Pensiunan") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan' selected>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanIbuTampil == "PENSIUNAN") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN' selected>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($pekerjaanIbuTampil == "PNS") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS' selected>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($pekerjaanIbuTampil == "TNI/POLRI") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI' selected>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanIbuTampil == "Dosen/Guru") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanIbuTampil == "DOSEN/GURU") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru' selected>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU' selected>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanIbuTampil == "Pegawai Swasta") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanIbuTampil == "PEGAWAI SWASTA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta' selected>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA' selected>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanIbuTampil == "Wiraswasta") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanIbuTampil == "WIRASWASTA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta' selected>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA' selected>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanIbuTampil == "Buruh (Tani/Pabrik/Bangunan)") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanIbuTampil == "BURUH (TANI/PABRIK/BANGUNAN)") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)' selected>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)' selected>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanIbuTampil == "Lainnya") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanIbuTampil == "LAINNYA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya' selected>Lainnya</option>";
+                                                echo "<option value='LAINNYA' selected>LAINNYA</option>";
                                             }else {
                                                 echo "<option value='-' selected>-</option>";
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }
                                         ?>
                                     </select>
@@ -1862,117 +1862,117 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="pekerjaan_wali" required>
                                         <?php
-                                            if($pekerjaanWaliTampil == "Tidak Bekerja") {
-                                                echo "<option value='Tidak Bekerja' selected>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                            if($pekerjaanWaliTampil == "TIDAK BEKERJA") {
+                                                echo "<option value='TIDAK BEKERJA' selected>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanWaliTampil == "Pensiunan") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan' selected>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanWaliTampil == "PENSIUNAN") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN' selected>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($pekerjaanWaliTampil == "PNS") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS' selected>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($pekerjaanWaliTampil == "TNI/POLRI") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI' selected>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanWaliTampil == "Dosen/Guru") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanWaliTampil == "DOSEN/GURU") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru' selected>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU' selected>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanWaliTampil == "Pegawai Swasta") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanWaliTampil == "PEGAWAI SWASTA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta' selected>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA' selected>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanWaliTampil == "Wiraswasta") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanWaliTampil == "WIRASWASTA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta' selected>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA' selected>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanWaliTampil == "Buruh (Tani/Pabrik/Bangunan)") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanWaliTampil == "BURUH (TANI/PABRIK/BANGUNAN)") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)' selected>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)' selected>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
-                                            }elseif($pekerjaanWaliTampil == "Lainnya") {
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
+                                            }elseif($pekerjaanWaliTampil == "LAINNYA") {
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya' selected>Lainnya</option>";
+                                                echo "<option value='LAINNYA' selected>LAINNYA</option>";
                                             }else {
                                                 echo "<option value='-' selected>-</option>";
-                                                echo "<option value='Tidak Bekerja'>Tidak Bekerja</option>";
-                                                echo "<option value='Pensiunan'>Pensiunan</option>";
+                                                echo "<option value='TIDAK BEKERJA'>TIDAK BEKERJA</option>";
+                                                echo "<option value='PENSIUNAN'>PENSIUNAN</option>";
                                                 echo "<option value='PNS'>PNS</option>";
                                                 echo "<option value='TNI/POLRI'>TNI / Polri</option>";
-                                                echo "<option value='Dosen/Guru'>Dosen / Guru</option>";
-                                                echo "<option value='Pegawai Swasta'>Pegawai Swasta</option>";
-                                                echo "<option value='Wiraswasta'>Wiraswasta</option>";
-                                                echo "<option value='Buruh (Tani/Pabrik/Bangunan)'>Buruh (Tani / Pabrik / Bangunan)
+                                                echo "<option value='DOSEN/GURU'>Dosen / Guru</option>";
+                                                echo "<option value='PEGAWAI SWASTA'>PEGAWAI SWASTA</option>";
+                                                echo "<option value='WIRASWASTA'>WIRASWASTA</option>";
+                                                echo "<option value='BURUH (TANI/PABRIK/BANGUNAN)'>Buruh (Tani / Pabrik / Bangunan)
                                                 </option>";
-                                                echo "<option value='Lainnya'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }
                                         ?>
                                     </select>
@@ -2194,38 +2194,38 @@
                                                 echo "<option value='MILIK ORANG TUA'>Milik Orang Tua</option>";
                                                 echo "<option value='RUMAH DINAS'>Rumah Dinas</option>";
                                                 echo "<option value='SEWA/KONTRAK'>Sewa / Kontrak</option>";
-                                                echo "<option value='LAINNYA'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($milikRumahAyahTampil == "MILIK ORANG TUA") {
                                                 echo "<option value='MILIK SENDIRI'>Milik Sendiri</option>";
                                                 echo "<option value='MILIK ORANG TUA' selected>Milik Orang Tua</option>";
                                                 echo "<option value='RUMAH DINAS'>Rumah Dinas</option>";
                                                 echo "<option value='SEWA/KONTRAK'>Sewa / Kontrak</option>";
-                                                echo "<option value='LAINNYA'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($milikRumahAyahTampil == "RUMAH DINAS") {
                                                 echo "<option value='MILIK SENDIRI'>Milik Sendiri</option>";
                                                 echo "<option value='MILIK ORANG TUA'>Milik Orang Tua</option>";
                                                 echo "<option value='RUMAH DINAS' selected>Rumah Dinas</option>";
                                                 echo "<option value='SEWA/KONTRAK'>Sewa / Kontrak</option>";
-                                                echo "<option value='LAINNYA'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($milikRumahAyahTampil == "SEWA/KONTRAK") {
                                                 echo "<option value='MILIK SENDIRI'>Milik Sendiri</option>";
                                                 echo "<option value='MILIK ORANG TUA'>Milik Orang Tua</option>";
                                                 echo "<option value='RUMAH DINAS'>Rumah Dinas</option>";
                                                 echo "<option value='SEWA/KONTRAK' selected>Sewa / Kontrak</option>";
-                                                echo "<option value='LAINNYA'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }elseif($milikRumahAyahTampil == "LAINNYA") {
                                                 echo "<option value='MILIK SENDIRI'>Milik Sendiri</option>";
                                                 echo "<option value='MILIK ORANG TUA'>Milik Orang Tua</option>";
                                                 echo "<option value='RUMAH DINAS'>Rumah Dinas</option>";
                                                 echo "<option value='SEWA/KONTRAK'>Sewa / Kontrak</option>";
-                                                echo "<option value='LAINNYA' selected>Lainnya</option>";
+                                                echo "<option value='LAINNYA' selected>LAINNYA</option>";
                                             }else {
                                                 echo "<option value='-' selected></option>";
                                                 echo "<option value='MILIK SENDIRI'>Milik Sendiri</option>";
                                                 echo "<option value='MILIK ORANG TUA'>Milik Orang Tua</option>";
                                                 echo "<option value='RUMAH DINAS'>Rumah Dinas</option>";
                                                 echo "<option value='SEWA/KONTRAK'>Sewa / Kontrak</option>";
-                                                echo "<option value='LAINNYA'>Lainnya</option>";
+                                                echo "<option value='LAINNYA'>LAINNYA</option>";
                                             }
                                         ?>
                                     </select>
