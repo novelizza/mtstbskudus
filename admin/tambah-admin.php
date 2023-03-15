@@ -14,14 +14,14 @@
         $username_admin = $_POST['username_admin'];
         $password_admin - $_POST['password_admin'];
 
-        $curl = curl_init();
-
         $data_admin = array(
             'nama_lengkap' => $nama_lengkap,
             'nip' => $nip,
             'username' => $username_admin,
             'password' => $password_admin
         );
+
+        $curl = curl_init();
 
         curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/add-admin',
