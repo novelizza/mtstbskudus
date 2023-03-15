@@ -295,7 +295,6 @@
                             </td>
                             <td><button type="submit" class="btn  btn-sm" name="simpan_tes"
                                     style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                </form>
                             </td>
                             <?php
                             echo '</tr>';
@@ -310,6 +309,8 @@
                             }
                             }
                             ?>
+
+                            </form>
 
                         </div>
 
