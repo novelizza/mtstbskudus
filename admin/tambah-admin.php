@@ -24,7 +24,7 @@
         );
 
         curl_setopt_array($curl, array(
-        CURLOPT_URL => 'http://localhost:4000/api/admin/add-admin',
+        CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/add-admin',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
