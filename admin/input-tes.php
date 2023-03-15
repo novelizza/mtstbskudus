@@ -16,6 +16,7 @@
     }
 
     if(isset($_POST['simpan_tes'])) {
+        echo "<script>alert('TAMBAH DATA BERHASIL!'); window.location.href = 'input-tes.php';</script>";
         $diterima = $_POST['diterima_di'];
         $akun_id_siswa = $_POST['id_siswa_akun'];
         
