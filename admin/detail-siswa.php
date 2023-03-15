@@ -131,6 +131,16 @@
         $alamat_wali = $data_alamat->alamat_wali;
         $kode_pos_wali = $data_alamat->kode_pos_wali;
 
+        $provinsi_siswa = $data_alamat->provinsi_siswa;
+        $kabupaten_kota_siswa = $data_alamat->kabupaten_kota_siswa;
+        $kecamatan_siswa = $data_alamat->kecamatan_siswa;
+        $kelurahan_desa_siswa = $data_alamat->kelurahan_desa_siswa;
+        $RT_siswa = $data_alamat->RT_siswa;
+        $RW_siswa = $data_alamat->RW_siswa;
+        $alamat_siswa = $data_alamat->alamat_siswa;
+        $kode_pos_siswa = $data_alamat->kode_pos_siswa;
+        $pondok_pesantren = $data_alamat->pondok_pesantren;
+
         $data_prestasi1 = $result->data_prestasi1;
         $tahun1 = $data_prestasi1->tahun;
         $nama_lomba1 = $data_prestasi1->nama_lomba;
@@ -554,16 +564,16 @@
                                                     <b>KODE POS</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    TIDAK <br>
-                                                    MILIK SENDIRI <br>
-                                                    JAWA TENGAH <br>
-                                                    KUDUS <br>
-                                                    GEBOG <br>
-                                                    BESITO <br>
-                                                    04 <br>
-                                                    04 <br>
-                                                    JL. OKE MAKMUR NO 14 <br>
-                                                    59354 <br>
+                                                    <?= $tinggal_luar_negeri_ayah; ?> <br>
+                                                    <?= $kepemilikan_rumah_ayah; ?> <br>
+                                                    <?= $provinsi_ayah; ?> <br>
+                                                    <?= $kabupaten_kota_ayah; ?> <br>
+                                                    <?= $kecamatan_ayah; ?> <br>
+                                                    <?= $kelurahan_desa_ayah; ?> <br>
+                                                    <?= $RT_ayah; ?> <br>
+                                                    <?= $RW_ayah; ?> <br>
+                                                    <?= $alamat_ayah; ?> <br>
+                                                    <?= $kode_pos_ayah; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -577,8 +587,6 @@
                                         <div class="card-body"><br>
                                             <div class="row">
                                                 <div class="col">
-                                                    <b>SAMA DENGAN AYAH</b><br>
-                                                    <b>STATUS KEPEMILIKAN RUMAH</b><br>
                                                     <b>PROVINSI</b><br>
                                                     <b>KABUPATEN / KOTA</b><br>
                                                     <b>KECAMATAN</b><br>
@@ -589,16 +597,14 @@
                                                     <b>KODE POS</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    YA <br>
-                                                    MILIK SENDIRI <br>
-                                                    JAWA TENGAH <br>
-                                                    KUDUS <br>
-                                                    GEBOG <br>
-                                                    BESITO <br>
-                                                    04 <br>
-                                                    04 <br>
-                                                    JL. OKE MAKMUR NO 14 <br>
-                                                    59354 <br>
+                                                    <?= $provinsi_ibu; ?> <br>
+                                                    <?= $kabupaten_kota_ibu; ?> <br>
+                                                    <?= $kecamatan_ibu; ?> <br>
+                                                    <?= $kelurahan_desa_ibu; ?> <br>
+                                                    <?= $RT_ibu; ?> <br>
+                                                    <?= $RW_ibu; ?> <br>
+                                                    <?= $alamat_ibu; ?> <br>
+                                                    <?= $kode_pos_ibu; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -612,8 +618,6 @@
                                         <div class="card-body"><br>
                                             <div class="row">
                                                 <div class="col">
-                                                    <b>SAMA DENGAN AYAH</b><br>
-                                                    <b>STATUS KEPEMILIKAN RUMAH</b><br>
                                                     <b>PROVINSI</b><br>
                                                     <b>KABUPATEN / KOTA</b><br>
                                                     <b>KECAMATAN</b><br>
@@ -622,18 +626,18 @@
                                                     <b>RW</b><br>
                                                     <b>ALAMAT</b><br>
                                                     <b>KODE POS</b><br>
+                                                    <b>PONDOK PESANTREN</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    YA <br>
-                                                    MILIK SENDIRI <br>
-                                                    JAWA TENGAH <br>
-                                                    KUDUS <br>
-                                                    GEBOG <br>
-                                                    BESITO <br>
-                                                    04 <br>
-                                                    04 <br>
-                                                    JL. OKE MAKMUR NO 14 <br>
-                                                    59354 <br>
+                                                    <?= $provinsi_siswa; ?> <br>
+                                                    <?= $kecamatan_siswa; ?> <br>
+                                                    <?= $kabupaten_kota_siswa; ?> <br>
+                                                    <?= $kelurahan_desa_siswa; ?> <br>
+                                                    <?= $RT_siswa; ?> <br>
+                                                    <?= $RW_siswa; ?> <br>
+                                                    <?= $alamat_siswa; ?> <br>
+                                                    <?= $kode_pos_siswa; ?> <br>
+                                                    <?= $pondok_pesantren; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -647,8 +651,6 @@
                                         <div class="card-body"><br>
                                             <div class="row">
                                                 <div class="col">
-                                                    <b>SAMA DENGAN AYAH</b><br>
-                                                    <b>STATUS KEPEMILIKAN RUMAH</b><br>
                                                     <b>PROVINSI</b><br>
                                                     <b>KABUPATEN / KOTA</b><br>
                                                     <b>KECAMATAN</b><br>
@@ -659,16 +661,14 @@
                                                     <b>KODE POS</b><br>
                                                 </div>
                                                 <div class="col">
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
-                                                    - <br>
+                                                    <?= $provinsi_wali; ?> <br>
+                                                    <?= $kecamatan_wali; ?> <br>
+                                                    <?= $kabupaten_kota_wali; ?> <br>
+                                                    <?= $kelurahan_desa_wali; ?> <br>
+                                                    <?= $RT_wali; ?> <br>
+                                                    <?= $RW_wali; ?> <br>
+                                                    <?= $alamat_wali; ?> <br>
+                                                    <?= $kode_pos_wali; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
