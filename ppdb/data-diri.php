@@ -1277,7 +1277,7 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_ayah" required>
                                         <?php
-                                            if($penghasilanAyahTampil == "Kurang Dari 500000") {
+                                            if($penghasilanAyahTampil == "KURANG DARI 500000") {
                                                 echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
@@ -1642,7 +1642,7 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_ibu" required>
                                         <?php
-                                            if($penghasilanIbuTampil == "Kurang Dari 500000") {
+                                            if($penghasilanIbuTampil == "KURANG DARI 500000") {
                                                 echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
@@ -1982,7 +1982,7 @@
                                     <select class="form-select" aria-label="Default select example"
                                         name="penghasilan_wali" required>
                                         <?php
-                                            if($penghasilanWaliTampil == "Kurang Dari 500000") {
+                                            if($penghasilanWaliTampil == "KURANG DARI 500000") {
                                                 echo "<option value='KURANG DARI 500000' selected>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
