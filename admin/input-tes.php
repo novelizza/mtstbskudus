@@ -22,6 +22,7 @@
         
         $data_tes = array(
             'id_akun_siswa' => $akun_id_siswa,
+            'nilai' => 90,
             'keterangan' => $diterima
         );
 
