@@ -145,7 +145,7 @@
         $tahun1 = $data_prestasi1->tahun;
         $nama_lomba1 = $data_prestasi1->nama_lomba;
         $bidang_lomba1 = $data_prestasi1->bidang_lomba;
-        $nama_penyelenggara1 = $data_prestasi1->nama_penyelenggara1;
+        $nama_penyelenggara1 = $data_prestasi1->nama_penyelenggara;
         $lomba_tingkat1 = $data_prestasi1->lomba_tingkat;
         $peringkat_diraih1 = $data_prestasi1->peringkat_diraih;
 
@@ -153,7 +153,7 @@
         $tahun2 = $data_prestasi2->tahun;
         $nama_lomba2 = $data_prestasi2->nama_lomba;
         $bidang_lomba2 = $data_prestasi2->bidang_lomba;
-        $nama_penyelenggara2 = $data_prestasi2->nama_penyelenggara2;
+        $nama_penyelenggara2 = $data_prestasi2->nama_penyelenggara;
         $lomba_tingkat2 = $data_prestasi2->lomba_tingkat;
         $peringkat_diraih2 = $data_prestasi2->peringkat_diraih;
 
@@ -161,7 +161,7 @@
         $tahun3 = $data_prestasi3->tahun;
         $nama_lomba3 = $data_prestasi3->nama_lomba;
         $bidang_lomba3 = $data_prestasi3->bidang_lomba;
-        $nama_penyelenggara3 = $data_prestasi3->nama_penyelenggara3;
+        $nama_penyelenggara3 = $data_prestasi3->nama_penyelenggara;
         $lomba_tingkat3 = $data_prestasi3->lomba_tingkat;
         $peringkat_diraih3 = $data_prestasi3->peringkat_diraih;
 
