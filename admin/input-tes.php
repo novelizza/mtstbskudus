@@ -242,7 +242,11 @@
                             <td>
                                 <form class="row">
                                     <div class="col">
-                                        <input type="number" class="form-control" placeholder="Masukkan Nilai Tes">
+                                        <select class="form-select" aria-label="Default select example"
+                                            name="kebutuhan_siswa" required>
+                                            <option value='1'>MTS</option>
+                                            <option value='2'>MPTS</option>
+                                        </select>
                                     </div>
                             </td>
                             <td><button type="submit" class="btn  btn-sm"
@@ -262,38 +266,6 @@
                             }
                             }
                             ?>
-
-                            <!-- <table class="table table-borderless datatable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">NISN</th>
-                                        <th scope="col">Nama Siswa</th>
-                                        <th scope="col">Nomor HP</th>
-                                        <th scope="col">Nilai</th>
-                                        <th scope="col">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <form class="row">
-                                                <div class="col">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="Masukkan Nilai Tes">
-                                                </div>
-                                        </td>
-                                        <td><button type="submit" class="btn  btn-sm"
-                                                style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> -->
 
                         </div>
 
