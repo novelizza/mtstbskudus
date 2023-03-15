@@ -22,8 +22,8 @@
         
         $data_tes = array(
             'id_akun_siswa' => 83,
-            'nilai' => 90,
-            'keterangan' => 0
+            // 'nilai' => 90,
+            'keterangan' => 2
         );
 
         $curl = curl_init();
