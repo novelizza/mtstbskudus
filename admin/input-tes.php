@@ -18,13 +18,13 @@
     if(isset($_POST['simpan_tes'])) {
         // echo "<script>alert('TAMBAH DATA BERHASIL!'); window.location.href = 'input-tes.php';</script>";
         $diterima = $_POST['diterima_di'];
-        $akun_id_siswa = $_POST['id_siswa_akun'];
+        $id_akun_siswa = $_POST['id_akun_siswa'];
         
-        $data_tes = array(
-            'id_akun_siswa' => $akun_id_siswa,
-            // 'nilai' => 90,
-            'keterangan' => 2
-        );
+        // $data_tes = array(
+        //     'id_akun_siswa' => $akun_id_siswa,
+        //     // 'nilai' => 90,
+        //     'keterangan' => 2
+        // );
 
         $curl = curl_init();
 
@@ -37,7 +37,7 @@
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'PUT',
-        CURLOPT_POSTFIELDS => 'id_akun_siswa='.$akun_id_siswa.'&keterangan='.$diterima.'',
+        CURLOPT_POSTFIELDS => 'id_akun_siswa='.$id_akun_siswa.'&keterangan='.$diterima.'',
         CURLOPT_HTTPHEADER => array(
             'session: '.$session.'',
             'Content-Type: application/x-www-form-urlencoded'
@@ -290,7 +290,7 @@
                                             <option value='1'>MTS</option>
                                             <option value='2'>MPTS</option>
                                         </select>
-                                        <input type="number" class="form-control" name="id_siswa_akun"
+                                        <input type="number" class="form-control" name="id_akun_siswa"
                                             value="<?= $row['id_akun_siswa']; ?>" required>
                                     </div>
                                 </td>
