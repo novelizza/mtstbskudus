@@ -15,6 +15,47 @@
         }
     }
 
+    if(isset($_POST['simpan_tes'])) {
+        $diterima = $_POST['diterima_di'];
+        $akun_id_siswa = $_POST['id_siswa_akun'];
+        
+        $data_tes = array(
+            'id_akun_siswa' => $akun_id_siswa,
+            'keterangan' => $diterima
+        );
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'http://localhost:4000/api/admin/nilai',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'PUT',
+        CURLOPT_POSTFIELDS => http_build_query($data_tes),
+        CURLOPT_HTTPHEADER => array(
+            'session: '.$session.'',
+            'Content-Type: application/x-www-form-urlencoded'
+        ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+
+        if (curl_errno($curl)) {
+            $errorMessage = curl_error($curl);
+            echo "<script>alert('TAMBAH DATA GAGAL! ULANGI LAGI DAN PASTIKAN DATA YANG ANDA MASUKKAN SUDAH BENAR!'); window.location.href = 'input-tes.php';</script>";
+        // Handle error
+        }else {
+            // echo $response;
+            echo "<script>alert('TAMBAH DATA BERHASIL!'); window.location.href = 'input-tes.php';</script>";
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -240,10 +281,10 @@
                                                 echo '<td>' . $row['no_hp'] . '</td>';
                                     ?>
                             <td>
-                                <form class="row">
+                                <form class="row" action="" method="post">
                                     <div class="col">
                                         <select class="form-select" aria-label="Default select example"
-                                            name="kebutuhan_siswa" required>
+                                            name="diterima_di" required>
                                             <option value='1'>MTS</option>
                                             <option value='2'>MPTS</option>
                                         </select>
@@ -251,7 +292,7 @@
                                             value="<?= $row['id_akun_siswa']; ?>" required>
                                     </div>
                             </td>
-                            <td><button type="submit" class="btn  btn-sm"
+                            <td><button type="submit" class="btn  btn-sm" name="simpan_tes"
                                     style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
                                 </form>
                             </td>
