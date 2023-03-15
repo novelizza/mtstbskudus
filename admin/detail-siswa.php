@@ -560,8 +560,8 @@
                                                     <b>KELURAHAN / DESA</b><br>
                                                     <b>RT</b><br>
                                                     <b>RW</b><br>
-                                                    <b>ALAMAT</b><br>
                                                     <b>KODE POS</b><br>
+                                                    <b>ALAMAT</b><br>
                                                 </div>
                                                 <div class="col">
                                                     <?= $tinggal_luar_negeri_ayah; ?> <br>
@@ -572,8 +572,8 @@
                                                     <?= $kelurahan_desa_ayah; ?> <br>
                                                     <?= $RT_ayah; ?> <br>
                                                     <?= $RW_ayah; ?> <br>
-                                                    <?= $alamat_ayah; ?> <br>
                                                     <?= $kode_pos_ayah; ?> <br>
+                                                    <?= $alamat_ayah; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -593,8 +593,8 @@
                                                     <b>KELURAHAN / DESA</b><br>
                                                     <b>RT</b><br>
                                                     <b>RW</b><br>
-                                                    <b>ALAMAT</b><br>
                                                     <b>KODE POS</b><br>
+                                                    <b>ALAMAT</b><br>
                                                 </div>
                                                 <div class="col">
                                                     <?= $provinsi_ibu; ?> <br>
@@ -603,8 +603,8 @@
                                                     <?= $kelurahan_desa_ibu; ?> <br>
                                                     <?= $RT_ibu; ?> <br>
                                                     <?= $RW_ibu; ?> <br>
-                                                    <?= $alamat_ibu; ?> <br>
                                                     <?= $kode_pos_ibu; ?> <br>
+                                                    <?= $alamat_ibu; ?> <br>
                                                 </div>
                                             </div>
                                         </div>
@@ -624,8 +624,8 @@
                                                     <b>KELURAHAN / DESA</b><br>
                                                     <b>RT</b><br>
                                                     <b>RW</b><br>
-                                                    <b>ALAMAT</b><br>
                                                     <b>KODE POS</b><br>
+                                                    <b>ALAMAT</b><br>
                                                     <b>PONDOK PESANTREN</b><br>
                                                 </div>
                                                 <div class="col">
@@ -635,8 +635,8 @@
                                                     <?= $kelurahan_desa_siswa; ?> <br>
                                                     <?= $RT_siswa; ?> <br>
                                                     <?= $RW_siswa; ?> <br>
-                                                    <?= $alamat_siswa; ?> <br>
                                                     <?= $kode_pos_siswa; ?> <br>
+                                                    <?= $alamat_siswa; ?> <br>
                                                     <?= $pondok_pesantren; ?> <br>
                                                 </div>
                                             </div>
