@@ -55,7 +55,7 @@
         }else {
             // echo $response;
             // echo "<script>alert('TAMBAH DATA BERHASIL!'); window.location.href = 'input-tes.php';</script>";
-            echo "<script>alert('".$response."'); window.location.href = 'input-tes.php';</script>";
+            echo "<script>alert('".$siswa."'); window.location.href = 'input-tes.php';</script>";
         }
     }
 
