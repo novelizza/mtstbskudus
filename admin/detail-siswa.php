@@ -21,7 +21,7 @@
     $curl = curl_init();
 
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://image.mtsnutbs.sch.id/admin/detail-siswa',
+    CURLOPT_URL => 'http://localhost:4000/api/admin/detail-siswa',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,

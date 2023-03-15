@@ -1,44 +1,18 @@
 <?php
     session_start();
 
-    // access the stored session data
     $username = $_SESSION['username'];
     $session = $_SESSION['session'];
     $session_expiry = $_SESSION['session_expiry'];
 
-    // $curl = curl_init();
-
-    // curl_setopt_array($curl, array(
-    // CURLOPT_URL => 'http://localhost:4000/api/admin/dashboard',
-    // CURLOPT_RETURNTRANSFER => true,
-    // CURLOPT_ENCODING => '',
-    // CURLOPT_MAXREDIRS => 10,
-    // CURLOPT_TIMEOUT => 0,
-    // CURLOPT_FOLLOWLOCATION => true,
-    // CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    // CURLOPT_CUSTOMREQUEST => 'GET',
-    // CURLOPT_HTTPHEADER => array(
-    //     'session: '.$session.''
-    // ),
-    // ));
-
-    // $response = curl_exec($curl);
-    // $object = json_decode($response);
-
-    // if($object->response == 200) {
-    //     $result = $object->result;
-    //     $allSiswa = $result->allSiswa;
-    //     $allMTSSiswa = $result->allMTSSiswa;
-    //     $allMPTSSiswa = $result->AllMPTSSiswa;
-    // }
-
-    // curl_close($curl);
-    // echo $response;
-
-    if(time() > $session_expiry) {
-        header('location: login.php');
-        session_destroy();
-        exit;
+    function session_expired($session_expiry) {
+        $current_time = time();
+        if ($current_time > $session_expiry) {
+            header('location: login.php');
+            return true;
+        } else {
+            return false;
+        }
     }
 
 ?>
