@@ -625,7 +625,7 @@
                                                     <b>RT</b><br>
                                                     <b>RW</b><br>
                                                     <b>KODE POS</b><br>
-                                                    <b>ALAMAT</b><br><br><br>
+                                                    <b>ALAMAT</b><br><br>
                                                     <b>PONDOK PESANTREN</b><br>
                                                 </div>
                                                 <div class="col">
