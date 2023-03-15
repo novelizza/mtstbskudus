@@ -21,9 +21,9 @@
         $akun_id_siswa = $_POST['id_siswa_akun'];
         
         $data_tes = array(
-            'id_akun_siswa' => $akun_id_siswa,
+            'id_akun_siswa' => 83,
             'nilai' => 90,
-            'keterangan' => 1
+            'keterangan' => 0
         );
 
         $curl = curl_init();
