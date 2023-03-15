@@ -171,8 +171,14 @@
                                     NULL;
                                 }
                             ?>
-                            <h4><span class='badge bg-warning' style='width: 100%;'>Mohon Cek Kembali Data Diri Anda
-                                    (Data Siswa, Data Ortu, Data Alamat dan Data Prestasi) Lalu menekan tombol SELESAIKAN PENDAFTARAN</span></h4>
+                            <h4><span class='badge bg-warning' style='width: 100%;'>
+                                    <center>
+                                        Mohon Cek Kembali Data Diri Anda
+                                        (Data Siswa, Data Ortu, Data Alamat dan Data Prestasi) <br>
+                                        Lalu menekan tombol
+                                        SELESAIKAN PENDAFTARAN
+                                    </center>
+                                </span></h4>
 
                         </div>
                     </div>
