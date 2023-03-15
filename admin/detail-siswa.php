@@ -61,7 +61,7 @@
         $no_hp = $data_siswa->no_hp;
         $yang_membiayai = $data_siswa->yang_membiayai;
         $kebutuhan_khusus = $data_siswa->kebutuhan_khusus;
-        $pra_sekolah = $data_siswa->pra_sekolah;
+        $pra_sekolah = $data_siswa->prasekolah;
         $asal_sekolah = $data_siswa->asal_sekolah;
         $kip = $data_siswa->kip;
         $kk = $data_siswa->kk;
@@ -377,7 +377,13 @@
                                             <?= $yang_membiayai; ?> <br>
                                             <?= $kebutuhan_khusus; ?> <br>
                                             <?= $pra_sekolah; ?> <br>
-                                            <?= $kip; ?> <br>
+                                            <?php
+                                                if($kip != "" || $kip != "-") {
+                                                    echo $kip;
+                                                }else {
+                                                    echo '-';
+                                                }
+                                            ?> <br>
                                             <?= $kk; ?> <br>
                                             <?= $kepala_keluarga; ?> <br>
                                         </div>
