@@ -37,9 +37,126 @@
     ));
 
     $response = curl_exec($curl);
+    $object = json_decode($response);
+
+    if($object->response == 200) {
+        $result = $object->result;
+
+        $data_akun_siswa = $result->data_akun_siswa;
+        $avatar = $data_akun_siswa->avatar;
+        $username_siswa = $data_akun_siswa->username;
+        $nama_lengkap = $data_akun_siswa->nama_lengkap;
+        $nisn = $data_akun_siswa->nisn;
+        $tempat_lahir = $data_akun_siswa->tempat_lahir;
+        $tanggal_lahir = $data_akun_siswa->tanggal_lahir;
+        $tahun_masuk = $data_akun_siswa->tahun_masuk;
+        $tujuan_masuk = $data_akun_siswa->tujuan_masuk;
+        
+        $data_siswa = $result->data_siswa;
+        $nik = $data_siswa->nik;
+        $kewarganegaraan = $data_siswa->kewarganegaraan;
+        $jumlah_saudara = $data_siswa->jumlah_saudara;
+        $anak_ke = $data_siswa->anak_ke;
+        $cita_cite = $data_siswa->cita_cita;
+        $no_hp = $data_siswa->no_hp;
+        $yang_membiayai = $data_siswa->yang_membiayai;
+        $kebutuhan_khusus = $data_siswa->kebutuhan_khusus;
+        $pra_sekolah = $data_siswa->pra_sekolah;
+        $asal_sekolah = $data_siswa->asal_sekolah;
+        $kip = $data_siswa->kip;
+        $kk = $data_siswa->kk;
+        $kepala_keluarga = $data_siswa->kepala_keluarga;
+
+        $data_orang_tua = $result->data_orang_tua;
+        $nama_lengkap_ayah = $data_orang_tua->nama_lengkap_ayah;
+        $status_ayah = $data_orang_tua->status_ayah;
+        $kewarganegaraan_ayah = $data_orang_tua->kewarganegaraan_ayah;
+        $nik_ayah = $data_orang_tua->nik_ayah;
+        $tempat_lahir_ayah = $data_orang_tua->tempat_lahir_ayah;
+        $tanggal_lahir_ayah = $data_orang_tua->tanggal_lahir_ayah;
+        $pendidikan_terakhir_ayah = $data_orang_tua->pendidikan_terakhir_ayah;
+        $no_hp_ayah = $data_orang_tua->no_hp_ayah;
+
+        $nama_lengkap_ibu = $data_orang_tua->nama_lengkap_ibu;
+        $status_ibu = $data_orang_tua->status_ibu;
+        $kewarganegaraan_ibu = $data_orang_tua->kewarganegaraan_ibu;
+        $nik_ibu = $data_orang_tua->nik_ibu;
+        $tempat_lahir_ibu = $data_orang_tua->tempat_lahir_ibu;
+        $tanggal_lahir_ibu = $data_orang_tua->tanggal_lahir_ibu;
+        $pendidikan_terakhir_ibu = $data_orang_tua->pendidikan_terakhir_ibu;
+        $no_hp_ibu = $data_orang_tua->no_hp_ibu;
+
+        $nama_lengkap_wali = $data_orang_tua->nama_lengkap_wali;
+        $status_wali = $data_orang_tua->status_wali;
+        $kewarganegaraan_wali = $data_orang_tua->kewarganegaraan_wali;
+        $nik_wali = $data_orang_tua->nik_wali;
+        $tempat_lahir_wali = $data_orang_tua->tempat_lahir_wali;
+        $tanggal_lahir_wali = $data_orang_tua->tanggal_lahir_wali;
+        $pendidikan_terakhir_wali = $data_orang_tua->pendidikan_terakhir_wali;
+        $no_hp_wali = $data_orang_tua->no_hp_wali;
+
+        $data_alamat = $result->data_alamat;
+        $tinggal_luar_negeri_ayah = $data_alamat->tinggal_luar_negeri_ayah;
+        $kepemilikan_rumah_ayah = $data_alamat->kepemilikan_rumah_ayah;
+        $provinsi_ayah = $data_alamat->provinsi_ayah;
+        $kabupaten_kota_ayah = $data_alamat->kabupaten_kota_ayah;
+        $kecamatan_ayah = $data_alamat->kecamatan_ayah;
+        $kelurahan_desa_ayah = $data_alamat->kelurahan_desa_ayah;
+        $RT_ayah = $data_alamat->RT_ayah;
+        $RW_ayah = $data_alamat->RW_ayah;
+        $alamat_ayah = $data_alamat->alamat_ayah;
+        $kode_pos_ayah = $data_alamat->kode_pos_ayah;
+
+        $provinsi_ibu = $data_alamat->provinsi_ibu;
+        $kabupaten_kota_ibu = $data_alamat->kabupaten_kota_ibu;
+        $kecamatan_ibu = $data_alamat->kecamatan_ibu;
+        $kelurahan_desa_ibu = $data_alamat->kelurahan_desa_ibu;
+        $RT_ibu = $data_alamat->RT_ibu;
+        $RW_ibu = $data_alamat->RW_ibu;
+        $alamat_ibu = $data_alamat->alamat_ibu;
+        $kode_pos_ibu = $data_alamat->kode_pos_ibu;
+
+        $provinsi_wali = $data_alamat->provinsi_wali;
+        $kabupaten_kota_wali = $data_alamat->kabupaten_kota_wali;
+        $kecamatan_wali = $data_alamat->kecamatan_wali;
+        $kelurahan_desa_wali = $data_alamat->kelurahan_desa_wali;
+        $RT_wali = $data_alamat->RT_wali;
+        $RW_wali = $data_alamat->RW_wali;
+        $alamat_wali = $data_alamat->alamat_wali;
+        $kode_pos_wali = $data_alamat->kode_pos_wali;
+
+        $data_prestasi1 = $result->data_prestasi1;
+        $tahun1 = $data_prestasi1->tahun;
+        $nama_lomba1 = $data_prestasi1->nama_lomba;
+        $bidang_lomba1 = $data_prestasi1->bidang_lomba;
+        $nama_penyelenggara = $data_prestasi1->nama_penyelenggara;
+        $lomba_tingkat1 = $data_prestasi1->lomba_tingkat;
+        $peringkat_diraih1 = $data_prestasi1->peringkat_diraih;
+
+        $data_prestasi2 = $result->data_prestasi2;
+        $tahun2 = $data_prestasi2->tahun;
+        $nama_lomba2 = $data_prestasi2->nama_lomba;
+        $bidang_lomba2 = $data_prestasi2->bidang_lomba;
+        $nama_penyelenggara = $data_prestasi2->nama_penyelenggara;
+        $lomba_tingkat2 = $data_prestasi2->lomba_tingkat;
+        $peringkat_diraih2 = $data_prestasi2->peringkat_diraih;
+
+        $data_prestasi3 = $result->data_prestasi3;
+        $tahun3 = $data_prestasi3->tahun;
+        $nama_lomba3 = $data_prestasi3->nama_lomba;
+        $bidang_lomba3 = $data_prestasi3->bidang_lomba;
+        $nama_penyelenggara = $data_prestasi3->nama_penyelenggara;
+        $lomba_tingkat3 = $data_prestasi3->lomba_tingkat;
+        $peringkat_diraih3 = $data_prestasi3->peringkat_diraih;
+
+    }else {
+        // handle error response
+        echo 'Error: ' . $object->response . '<br>';
+        echo 'Message: ' . $object->message . '<br>';
+    }
 
     curl_close($curl);
-    echo $response;
+    // echo $response;
     
 ?>
 
@@ -239,29 +356,35 @@
                                             <b>NAMA KEPALA KELUARGA</b><br>
                                         </div>
                                         <div class="col">
-                                            Handoko Prabowo <br>
-                                            1122334455667788 <br>
-                                            Indonesia <br>
-                                            1122334455667788 <br>
-                                            KUDUS <br>
-                                            2010-11-18 <br>
+                                            <?= $nama_lengkap; ?> <br>
+                                            <?= $nisn; ?> <br>
+                                            <?php
+                                                if($kewarganegaraan == true) {
+                                                    echo 'WNI (Warga Negara Indonesia)';
+                                                }else {
+                                                    echo 'WNA (Warga Negara Asing)';
+                                                }
+                                            ?> <br>
+                                            <?= $nik; ?> <br>
+                                            <?= $tempat_lahir; ?> <br>
+                                            <?= $tanggal_lahir; ?> <br>
                                             LAKI - LAKI <br>
-                                            3 <br>
-                                            1 <br>
+                                            <?= $jumlah_saudara; ?> <br>
+                                            <?= $anak_ke; ?> <br>
                                             ISLAM <br>
-                                            DOKTER <br>
-                                            081122334455 <br>
-                                            ORANG TUA <br>
-                                            TIDAK <br>
-                                            TK / RA <br>
-                                            - <br>
-                                            1122334455667788 <br>
-                                            JOKOWI <br>
+                                            <?= $cita_cite; ?> <br>
+                                            <?= $no_hp; ?> <br>
+                                            <?= $yang_membiayai; ?> <br>
+                                            <?= $kebutuhan_khusus; ?> <br>
+                                            <?= $pra_sekolah; ?> <br>
+                                            <?= $kip; ?> <br>
+                                            <?= $kk; ?> <br>
+                                            <?= $kepala_keluarga; ?> <br>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <img src="../assets/img/Kementerian_Agama_new_logo.png" alt="" srcset=""
+                                    <img src="https://image.mtsnutbs.sch.id/avatar/<?= $avatar; ?>" alt="" srcset=""
                                         style="width: 200px; height: 200px; float: right;">
                                 </div>
                             </div>
