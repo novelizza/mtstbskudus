@@ -17,8 +17,8 @@
 
     if(isset($_POST['simpan_tes'])) {
         // echo "<script>alert('TAMBAH DATA BERHASIL!'); window.location.href = 'input-tes.php';</script>";
-        $diterima = $_POST['diterima_di'];
-        $id_akun_siswa = $_POST['id_akun_siswa'];
+        $diterima = $_POST['keterangan'];
+        $siswa = $_POST['siswa'];
         
         // $data_tes = array(
         //     'id_akun_siswa' => $akun_id_siswa,
@@ -37,7 +37,7 @@
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'PUT',
-        CURLOPT_POSTFIELDS => 'id_akun_siswa='.$id_akun_siswa.'&nilai=90&keterangan='.$diterima.'',
+        CURLOPT_POSTFIELDS => 'id_akun_siswa='.$siswa.'&keterangan='.$diterima.'',
         CURLOPT_HTTPHEADER => array(
             'session: '.$session.'',
             'Content-Type: application/x-www-form-urlencoded'
@@ -286,11 +286,11 @@
                                 <td>
                                     <div class="col">
                                         <select class="form-select" aria-label="Default select example"
-                                            name="diterima_di" required>
+                                            name="keterangan" required>
                                             <option value='1'>MTS</option>
                                             <option value='2'>MPTS</option>
                                         </select>
-                                        <input type="number" class="form-control" name="id_akun_siswa"
+                                        <input type="number" class="form-control" name="siswa"
                                             value="<?= $row['id_akun_siswa']; ?>" required>
                                     </div>
                                 </td>
