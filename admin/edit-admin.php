@@ -329,12 +329,12 @@ if(isset($_POST['edit_admin'])){
                                         <input type="text" class="form-control" id="inputEmail5" name="username"
                                             value="<?php echo $result_username; ?>" required>
                                     </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <label for="inputEmail5" class="form-label">Password Baru</label>
                                         <input type="password" class="form-control" id="inputEmail5" name="password">
                                         <label for="inputEmail5" class="form-label"><i>NB : Kosongkan Jika Anda Tidak
                                                 Ingin Merubah Password Anda</i></label>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-12">
                                         <button class="btn btn-success" style="width: 100%;" name="edit-admin"
                                             type="submit">SIMPAN</button>
