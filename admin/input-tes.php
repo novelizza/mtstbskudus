@@ -227,8 +227,8 @@
 
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-
-                            <?php
+                            <form action="" method="post">
+                                <?php
                                         $curl = curl_init();
 
                                         curl_setopt_array($curl, array(
@@ -281,8 +281,7 @@
                                                 echo '<td>' . $row['nama_lengkap'] . '</td>';
                                                 echo '<td>' . $row['no_hp'] . '</td>';
                                     ?>
-                            <td>
-                                <form class="row" action="" method="post">
+                                <td>
                                     <div class="col">
                                         <select class="form-select" aria-label="Default select example"
                                             name="diterima_di" required>
@@ -292,15 +291,14 @@
                                         <input type="hidden" class="form-control" name="id_siswa_akun"
                                             value="<?= $row['id_akun_siswa']; ?>" required>
                                     </div>
-                                </form>
-                            </td>
-                            <td>
-                                <form action="" method="post">
+                                </td>
+                                <td>
+                                    <!-- <form action="" method="post"> -->
                                     <button type="submit" class="btn  btn-sm" name="simpan_tes"
                                         style="width: 100%; background-color: #4ECB71; color: white;">SIMPAN</button>
-                                </form>
-                            </td>
-                            <?php
+                                    <!-- </form> -->
+                                </td>
+                                <?php
                             echo '</tr>';
 
                             $counter++;
@@ -313,6 +311,7 @@
                             }
                             }
                             ?>
+                            </form>
 
                         </div>
 
