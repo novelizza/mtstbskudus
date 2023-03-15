@@ -186,6 +186,81 @@
                         <div class="card-body">
                             <h5 class="card-title"></h5>
 
+                            <?php
+                                        $curl = curl_init();
+
+                                        curl_setopt_array($curl, array(
+                                          CURLOPT_URL => 'http://localhost:4000/api/admin/datamts-siswa',
+                                          CURLOPT_RETURNTRANSFER => true,
+                                          CURLOPT_ENCODING => '',
+                                          CURLOPT_MAXREDIRS => 10,
+                                          CURLOPT_TIMEOUT => 0,
+                                          CURLOPT_FOLLOWLOCATION => true,
+                                          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                          CURLOPT_CUSTOMREQUEST => 'GET',
+                                          CURLOPT_HTTPHEADER => array(
+                                            'session: '.$session.''
+                                          ),
+                                        ));
+                                        
+                                        $response = curl_exec($curl);
+                                        $response_err = curl_error($curl);
+                                        curl_close($curl);
+
+                                        // echo $response;
+
+                                        if ($err) {
+                                            echo 'Error: ' . $err;
+                                          } else {
+                                            $data = json_decode($response, true);
+                                          
+                                            if ($data['response'] === 200) {
+                                              $result = $data['result'];
+                                          
+                                              $counter = 1;
+                                          
+                                              echo '<table class="table table-borderless datatable">';
+                                              echo '<thead>';
+                                              echo '<tr>';
+                                              echo '<th scope="col">No</th>';
+                                              echo '<th scope="col">NISN</th>';
+                                              echo '<th scope="col">NAMA LENGKAP</th>';
+                                              echo '<th scope="col">NOMOR HP</th>';
+                                              echo '<th scope="col">TUJUAN MASUK</th>';
+                                              echo '<th scope="col">AKSI</th>';
+                                              echo '</tr>';
+                                              echo '</thead>';
+                                              echo '<tbody>';
+                                          
+                                              foreach ($result as $row) {
+                                                echo '<tr>';
+                                                echo '<td>' . $counter . '</td>';
+                                                echo '<td>' . $row['nisn'] . '</td>';
+                                                echo '<td>' . $row['nama_lengkap'] . '</td>';
+                                                echo '<td>' . $row['no_hp'] . '</td>';
+                                                if($row['tujuan_masuk'] === "MTS") {
+                                                    $tujuanMasuk = '<span class="badge bg-success" style="width: 100%;">MTS</span>';
+                                                }elseif($row['tujuan_masuk' === "MPTS"]) {
+                                                    $tujuanMasuk = '<span class="badge bg-primary" style="width: 100%;">MPTS</span>';
+                                                }else {
+                                                    $tujuanMasuk = '<span class="badge bg-info" style="width: 100%;">Daftar Ulang dari MI</span>';
+                                                }
+                                                echo '<td>'. $tujuanMasuk .' </td>';
+                                                echo '<td> <a href="detail-siswa.php?nomor='. $row['id_akun_siswa'].'" class="btn  btn-sm"
+                                                style="width: 100%; background-color: #4ECB71; color: white;">DETAIL</a> </td>';
+                                                echo '</tr>';
+                                          
+                                                $counter++;
+                                              }
+                                          
+                                              echo '</tbody>';
+                                              echo '</table>';
+                                            } else {
+                                              echo 'Error: ' . $data['message'];
+                                            }
+                                        }
+                                    ?>
+
                             <table class="table table-borderless datatable">
                                 <thead>
                                     <tr>
