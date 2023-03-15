@@ -375,10 +375,16 @@
                                             <?= $cita_cite; ?> <br>
                                             <?= $no_hp; ?> <br>
                                             <?= $yang_membiayai; ?> <br>
-                                            <?= $kebutuhan_khusus; ?> <br>
+                                            <?php
+                                                if($kebutuhan_khusus == true) {
+                                                    echo "Ya";
+                                                }else {
+                                                    echo "Tidak";
+                                                }
+                                             $kebutuhan_khusus; ?> <br>
                                             <?= $pra_sekolah; ?> <br>
                                             <?php
-                                                if($kip != "" || $kip != "-") {
+                                                if($kip != "" || $kip != "-" || $kip != " ") {
                                                     echo $kip;
                                                 }else {
                                                     echo '-';
