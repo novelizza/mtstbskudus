@@ -1332,7 +1332,7 @@
                                                 echo "<option value='3000000-5000000' selected>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
                                                 echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
-                                            }elseif($penghasilanAyahTampil == "Diatas 5000000") {
+                                            }elseif($penghasilanAyahTampil == "DIATAS 5000000") {
                                                 echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
@@ -1697,7 +1697,7 @@
                                                 echo "<option value='3000000-5000000' selected>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
                                                 echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
-                                            }elseif($penghasilanIbuTampil == "Diatas 5000000") {
+                                            }elseif($penghasilanIbuTampil == "DIATAS 5000000") {
                                                 echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
@@ -2037,7 +2037,7 @@
                                                 echo "<option value='3000000-5000000' selected>Rp 3.000.000 - Rp 5.000.000
                                                 </option>";
                                                 echo "<option value='DIATAS 5000000'>Lebih Dari Rp 5.000.000</option>";
-                                            }elseif($penghasilanWaliTampil == "Diatas 5000000") {
+                                            }elseif($penghasilanWaliTampil == "DIATAS 5000000") {
                                                 echo "<option value='KURANG DARI 500000'>Kurang Dari Rp 500.000</option>";
                                                 echo "<option value='500000-1000000'>Rp 500.000 - Rp 1.000.000
                                                 </option>";
