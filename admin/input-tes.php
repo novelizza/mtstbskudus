@@ -37,11 +37,7 @@
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'PUT',
-        CURLOPT_POSTFIELDS => array(
-            'id_akun_siswa' => $akun_id_siswa,
-            // 'nilai' => 90,
-            'keterangan' => 2
-        ),
+        CURLOPT_POSTFIELDS => 'id_akun_siswa='.$akun_id_siswa.'&keterangan='.$diterima.'',
         CURLOPT_HTTPHEADER => array(
             'session: '.$session.'',
             'Content-Type: application/x-www-form-urlencoded'
